@@ -1,0 +1,7 @@
+Portal API version included in CB: Tag 1.0.0.00 - SVN revision 21987
+Portal API version included in CB: Tag 1.0.0.02 - SVN revision 75207
+Portal API version included in CB: Tag 1.0.0.04 - SVN revision 79267 - 24/04/2012
+Portal API version included in CB: Tag 1.0.0.06 - SVN revision 95776 - 05/11/2012
+Portal API version included in CB: Tag 1.0.0.12 - SVN revision 110861 - 16/04/2013
+Portal API version included in CB: Tag 1.0.0.13 - SVN revision 112196 - 15/05/2013
+Portal API version included in CB: Tag 1.1.0.00 - SVN revision 138827 - 15/04/2014

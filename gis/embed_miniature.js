@@ -1,0 +1,1 @@
+document.write('<embed id="miniature" name="miniature" width="100" height="100" src="./gis_scripts/gis_miniature.php" type="image/svg+xml"></embed>');

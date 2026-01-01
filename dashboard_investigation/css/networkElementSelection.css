@@ -1,0 +1,198 @@
+/**
+*	Styles CSS utilisés
+*	par le module networkElementSelection
+*
+*
+* 
+ - MAJ CCT1 le 04/09/08 : mise en conformité avec les normes W3c (suite au mail de mickael Lebreton / AQL)
+	ligne 60 : Suppression du 0. Il ne faut pas utiliser de mentions numériques pour la position en même temps qu'une mention textuelle (i.e. right).
+	ligne 115 : ajout d'un "#" devant le code couleur
+*
+*
+*/
+
+
+/*
+	Style du texte dans la zone 'options' (bouton view selection...)
+*/
+.freeInputFieldNaSelection{
+	/*border:1px #aba9a9 solid; 
+	border-top: 1px #c6c5c5 solid;
+	border-right: 1px #c6c5c5 solid;*/
+	padding:4px; 
+	width:110px; 
+	/*float:left; */
+	/*background-color:#dad8d8;*/
+	font : normal 8pt Arial, sans-serif;
+}
+
+/*
+	Style de la zone où apparaissent les boutons save / reset.
+*/
+.buttonsNaSelection {
+	float: right;
+}
+/*
+	Style des boutons reset / save
+*/
+.buttonNaSelection {
+	font : normal 8pt Verdana, Arial, sans-serif;
+	border: 1px #929292 solid;
+	border-right: 1px #c6c5c5 solid;
+	border-bottom: 1px #c6c5c5 solid;
+	cursor: pointer;
+}
+/*
+	Style de la zone contenant les boutons d'options, save, reset.
+*/
+.toolsNaSelection{
+	padding:5px; 
+	height:30px; 
+	background-color:#ececec; 
+	margin:2px;
+}
+/*
+	Style du div contenant le message 'loading content'
+*/
+.loadingNaSelectionContent{
+	font : normal 9pt Verdana, Arial, sans-serif;
+	color: #000000;
+	/*background: transparent url(../images/loading_anim.gif) no-repeat 0 right; */
+	background: transparent url(../images/loading_anim.gif) no-repeat right; 
+	margin-left: 4px;
+	padding-right: 20px;
+}
+
+/*
+	Style du titre d'un onglet
+*/
+.accordion_title{
+	color:#000;
+	font-weight:bold;
+	background-color:#dad8d8;
+	padding:3px;
+	cursor:pointer;
+	border-bottom:1px #fff solid;
+	border-top:1px #fff solid;
+	font : normal 8pt Verdana, Arial, sans-serif;
+        text-indent: 20px;
+}
+.accordion_element{
+	height:100px;
+	overflow:auto;
+	font : normal 8pt Verdana, Arial, sans-serif;
+	border:1px #dad8d8 solid;
+	border-top:none;
+}
+.accordion_content{
+	background-color:#FF0000;
+}
+.zoneSaisie{
+	font : normal 8pt Verdana, Arial, sans-serif;
+	border: 1px #929292 solid;
+}
+
+
+.window_select_na_class{
+	position:absolute;
+	display:none;
+	border: 1px solid #b5b4b3;
+	border-right: 1px #000 solid;
+	border-bottom: 1px #000 solid;
+	z-index:100000;
+	text-align:left;
+	background-color: #f0efee;
+}
+
+.contenu_na_selection_class{
+	background-color: #fff;
+	padding:2px;
+	width:400px;
+}
+
+.barre_titre{
+	background-color: #b5b4b3;
+	background-repeat: repeat-x;
+	color : #fff;
+	font : bold 9pt Verdana, Arial, sans-serif; 
+	/*cursor:move;*/
+	padding:5px;
+	width:400px;
+}
+.barre_titre_span{
+	background-color: #b5b4b3;
+	padding-left : 6px;
+	padding-right : 6px;
+}
+
+.bouton_view_selection{
+	background: transparent url(../images/page_white_text.png) no-repeat 0 0; 
+	border: none;
+	cursor:pointer;
+	width:16px;
+	height:16px;
+}
+.bouton_go{
+	background-color: #fff;
+	border: none;
+	cursor:default;
+	width:2px;
+	height:2px;
+}
+.zoneTexteStyleNeSelection{
+	border: #7F9DB9 1px solid;
+	font: 8pt verdana, arial, helvetica;
+	color: #585858;
+	background-color: #ffffff;
+}
+.addInNeSelection_btn{
+	background: transparent url(../images/add.png) no-repeat 0 0; 
+	border: none;
+	cursor:pointer;
+	width:16px;
+	height:16px;
+}
+.deleteInNeSelection_btn{
+	background: transparent url(../images/delete.png) no-repeat 0 0; 
+	border: none;
+	cursor:pointer;
+	width:16px;
+	height:16px;
+}
+.boutonNeSelectionDeleteElement{
+	background: transparent url(../images/bullet_delete.png) no-repeat 0 0; 
+	border: none;
+	cursor:pointer;
+	width:16px;
+	height:16px;
+}
+
+.networkElementSelectionError{
+	background-color: #FF0000;
+	padding: 3px;
+}
+
+
+div.autocomplete {
+  position:absolute;
+  width:250px;
+  background-color:white;
+  border:1px solid #888;
+  margin:0px;
+  padding:0px;
+}
+
+div.autocomplete ul {
+  list-style-type:none;
+  margin:0px;
+  padding:0px;
+}
+div.autocomplete ul li.selected { background-color: #ffb;}
+div.autocomplete ul li {
+  list-style-type:none;
+  display:block;
+  margin:0;
+  padding:2px;
+  height:20px;
+  cursor:pointer;
+}

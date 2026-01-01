@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://astellia/ta/api/xpert" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="test"
+	targetNamespace="http://astellia/ta/api/xpert">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://astellia/ta/api/xpert">
+			<xsd:element name="ErrorCode" type="tns:ErrorCode"></xsd:element>
+			<xsd:simpleType name="ErrorCode">
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="eOk"></xsd:enumeration>
+					<xsd:enumeration value="eNotConnected"></xsd:enumeration>
+					<xsd:enumeration value="eProductIdNotFound"></xsd:enumeration>
+					<xsd:enumeration value="eAgregationLevelNotFound"></xsd:enumeration>
+					<xsd:enumeration value="eNotAllowed"></xsd:enumeration>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:complexType name="Products">
+				<xsd:sequence>
+					<xsd:element name="list" type="tns:Product" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		
+			<xsd:complexType name="Product">
+				<xsd:sequence>
+					<xsd:element name="m_iId" type="xsd:int" minOccurs="1" maxOccurs="1"></xsd:element>
+					<xsd:element name="m_sLabel" type="xsd:string" minOccurs="1" maxOccurs="1"></xsd:element>
+					<xsd:element name="m_sIp" type="xsd:string" minOccurs="1" maxOccurs="1"></xsd:element>
+					<xsd:element name="m_sDirectory"
+						type="xsd:string" minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_bMasterTopo"
+						type="xsd:boolean" minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_sSshUser" type="xsd:string" minOccurs="1" maxOccurs="1"></xsd:element>
+					<xsd:element name="m_sSshPass" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+					<xsd:element name="m_iProductType" type="xsd:string" minOccurs="1" maxOccurs="1"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="Indicators">
+				<xsd:sequence>
+					<xsd:element name="list" type="tns:Indicator" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		
+			<xsd:complexType name="Indicator">
+				<xsd:sequence>
+					<xsd:element name="m_sId" type="xsd:string" minOccurs="1" maxOccurs="1"></xsd:element>
+					<xsd:element name="m_sCode" type="xsd:string"
+						minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_sLabel" type="xsd:string"
+						minOccurs="1" maxOccurs="1">
+					</xsd:element>
+
+					<xsd:element name="m_eType" type="tns:IndicatorType"
+						minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_sAggregationFormula"
+						type="xsd:string" minOccurs="0" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_sComment" type="xsd:string"
+						minOccurs="0" maxOccurs="1">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		
+			<xsd:simpleType name="IndicatorType">
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="raw"></xsd:enumeration>
+					<xsd:enumeration value="kpi"></xsd:enumeration>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:complexType name="StringArray">
+				<xsd:sequence>
+					<xsd:element name="list" type="xsd:string" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="NetworkElements">
+				<xsd:sequence>
+					<xsd:element name="list" type="tns:NetworkElement" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		
+			<xsd:complexType name="NetworkElement">
+				<xsd:sequence>
+
+					<xsd:element name="m_sCode" type="xsd:string" minOccurs="1" maxOccurs="1"></xsd:element>
+					<xsd:element name="m_sLabel" type="xsd:string" minOccurs="1" maxOccurs="1"></xsd:element>
+					<xsd:element name="m_sNetworkAggregation"
+						type="xsd:string" minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_fAzimuth" type="xsd:float" minOccurs="1" maxOccurs="1"></xsd:element>
+					<xsd:element name="m_fLatitude" type="xsd:float" minOccurs="1"></xsd:element>
+					<xsd:element name="m_fLongitude" type="xsd:float" minOccurs="1" maxOccurs="1"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="APIDataExports">
+				<xsd:sequence>
+					<xsd:element name="list" type="tns:DataExport" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		
+			<xsd:complexType name="DataExport">
+				<xsd:sequence>
+					<xsd:element name="m_sExportId" type="xsd:string"
+						minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_sExportDir" type="xsd:string"
+						minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_sFileName" type="xsd:string"
+						minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_sFieldSeparator"
+						type="xsd:string" minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_sTimeAggregation"
+						type="xsd:string" minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_sNetworkAggregation"
+						type="xsd:string" minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_sExportName" type="xsd:string"
+						minOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_sFamily" type="xsd:string"
+						minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_bGenerateHourOnDay"
+						type="xsd:boolean" minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_bShowNetworkHierarchy"
+						type="xsd:boolean" minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_bUseCodeKPInRAW"
+						type="xsd:boolean" minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_bUseCodeNAAndNE"
+						type="xsd:boolean" minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_bAddTopoFile"
+						type="xsd:boolean" minOccurs="1" maxOccurs="1">
+					</xsd:element>
+					<xsd:element name="m_iType" type="xsd:int" minOccurs="1" maxOccurs="1"></xsd:element>
+					<xsd:element name="m_indicators"
+						type="tns:Indicator" minOccurs="0" maxOccurs="unbounded">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="connectionRequest">
+		<wsdl:part name="sLogin" type="xsd:string">
+			<wsdl:documentation>Login of the astellia user</wsdl:documentation>
+		</wsdl:part>
+		<wsdl:part name="sPassword" type="xsd:string"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="connectionResponse">
+		<wsdl:part name="eErrorCode" type="tns:ErrorCode" />
+	</wsdl:message>
+	<wsdl:message name="disconnectionRequest">
+		<wsdl:part name="disconnectionRequest" type="xsd:string"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="disconnectionResponse">
+		<wsdl:part name="disconnectionResponse" type="xsd:string"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getProductsRequest">
+		<wsdl:part name="getProducts" type="xsd:string"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getProductsResponse">
+		<wsdl:part name="products" type="tns:Products"></wsdl:part>
+		<wsdl:part name="eErrorCode" type="tns:ErrorCode"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getProductsRequest1">
+		<wsdl:part name="getProductsRequest1" type="xsd:string"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="disconnectionRequest1">
+		<wsdl:part name="disconnectionRequest1" type="xsd:string"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="disconnectionResponse1">
+		<wsdl:part name="disconnectionResponse1" type="xsd:string"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="NewOperationRequest">
+		<wsdl:part name="NewOperationRequest" type="xsd:string"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="NewOperationResponse">
+		<wsdl:part name="NewOperationResponse" type="xsd:string"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="disconnectionResponse2">
+		<wsdl:part name="eErrorCode" type="tns:ErrorCode"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="disconnectionRequest2">
+		<wsdl:part name="dummy" type="xsd:int"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getProductsRequest2">
+		<wsdl:part name="dummy2" type="xsd:int"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getKpiAndCounterRequest1">
+		<wsdl:part name="iProductId" type="xsd:int"></wsdl:part>
+		<wsdl:part name="sFamily" type="xsd:string"></wsdl:part>
+
+		<wsdl:part name="bDetailed" type="xsd:boolean"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getKpiAndCounterResponse1">
+		<wsdl:part name="indicators" type="tns:Indicators"></wsdl:part>
+		<wsdl:part name="eErrorCode" type="tns:ErrorCode"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getFamilyRequest1">
+		<wsdl:part name="iProductId2" type="xsd:int"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getFamilyResponse1">
+		<wsdl:part name="families" type="tns:StringArray"></wsdl:part>
+		<wsdl:part name="eErrorCode" type="tns:ErrorCode"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getNetworkAggregationLevelsRequest1">
+		<wsdl:part name="iProductId3" type="xsd:int"></wsdl:part>
+		<wsdl:part name="sFamily" type="xsd:string"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getNetworkAggregationLevelsResponse1">
+		<wsdl:part name="networkAgregationLevels"
+			type="tns:StringArray">
+		</wsdl:part>
+		<wsdl:part name="eErrorCode" type="tns:ErrorCode"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getAllNetworkElementsRequest1">
+		<wsdl:part name="iProductId4" type="xsd:int"></wsdl:part>
+		<wsdl:part name="sAgregationLevel" type="xsd:string"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getAllNetworkElementsResponse1">
+		<wsdl:part name="networkElements" type="tns:NetworkElements"></wsdl:part>
+		<wsdl:part name="eErrorCode" type="tns:ErrorCode"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getDataExportsRequest1">
+		<wsdl:part name="iProductId5" type="xsd:int"></wsdl:part>
+		<wsdl:part name="sFamily" type="xsd:string"></wsdl:part>
+		<wsdl:part name="iType" type="xsd:int"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getDataExportsResponse1">
+		<wsdl:part name="APIDataExports" type="tns:APIDataExports"></wsdl:part>
+		<wsdl:part name="eErrorCode" type="tns:ErrorCode"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="setDataExportsRequest1">
+		<wsdl:part name="iProductId6" type="xsd:int"></wsdl:part>
+		<wsdl:part name="APIDataExports" type="tns:APIDataExports"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="setDataExportsResponse1">
+		<wsdl:part name="eErrorCode" type="tns:ErrorCode"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getTimeAgregationRequest1">
+		<wsdl:part name="iProductId7" type="xsd:int"></wsdl:part>
+		<wsdl:part name="sFamily" type="xsd:string"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getTimeAgregationResponse1">
+		<wsdl:part name="timeAgregations" type="tns:StringArray"></wsdl:part>
+		<wsdl:part name="eErrorCode" type="tns:ErrorCode"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getChildrenNetworkElementsRequest1">
+		<wsdl:part name="iProductId8" type="xsd:int"></wsdl:part>
+		<wsdl:part name="sParentName" type="xsd:string"></wsdl:part>
+		<wsdl:part name="sParentType" type="xsd:string"></wsdl:part>
+		<wsdl:part name="sChildrenType" type="xsd:string"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getChildrenNetworkElementsResponse1">
+		<wsdl:part name="networkElements" type="tns:NetworkElements"></wsdl:part>
+		<wsdl:part name="eErrorCode" type="tns:ErrorCode"></wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="ApiXpert">
+		<wsdl:operation name="connection">
+			<wsdl:documentation>Connection to the Xpert API</wsdl:documentation>
+			<wsdl:input message="tns:connectionRequest" />
+			<wsdl:output message="tns:connectionResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="disconnection">
+            <wsdl:documentation>Disconnection of the Xpert API</wsdl:documentation>
+            <wsdl:input message="tns:disconnectionRequest2"></wsdl:input>
+            <wsdl:output message="tns:disconnectionResponse2"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getProducts">
+            <wsdl:documentation>List all known product</wsdl:documentation>
+
+            <wsdl:input message="tns:getProductsRequest2"></wsdl:input>
+            <wsdl:output message="tns:getProductsResponse"></wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="getKpiAndCounter">
+			<wsdl:documentation>List all kpi and counter available</wsdl:documentation>
+			<wsdl:input message="tns:getKpiAndCounterRequest1"></wsdl:input>
+			<wsdl:output message="tns:getKpiAndCounterResponse1"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getFamily">
+			<wsdl:documentation>List all the family available</wsdl:documentation>
+			<wsdl:input message="tns:getFamilyRequest1"></wsdl:input>
+			<wsdl:output message="tns:getFamilyResponse1"></wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="getNetworkAggregationLevels">
+			<wsdl:documentation>Return all network aggregation level available</wsdl:documentation>
+			<wsdl:input message="tns:getNetworkAggregationLevelsRequest1"></wsdl:input>
+			<wsdl:output message="tns:getNetworkAggregationLevelsResponse1"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getAllNetworkElements">
+			<wsdl:documentation>Return all network elements which match aggregation level give as input</wsdl:documentation>
+			<wsdl:input message="tns:getAllNetworkElementsRequest1"></wsdl:input>
+			<wsdl:output message="tns:getAllNetworkElementsResponse1"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getDataExports">
+			<wsdl:documentation>Return the list of configured DataExport in the specified product</wsdl:documentation>
+			<wsdl:input message="tns:getDataExportsRequest1"></wsdl:input>
+			<wsdl:output message="tns:getDataExportsResponse1"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="setDataExports">
+			<wsdl:documentation>Update DataExport configuration in the specified product.</wsdl:documentation>
+			<wsdl:input message="tns:setDataExportsRequest1"></wsdl:input>
+			<wsdl:output message="tns:setDataExportsResponse1"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getTimeAgregation">
+			<wsdl:documentation>Return the list of time aggregation available in the product.</wsdl:documentation>
+			<wsdl:input message="tns:getTimeAgregationRequest1"></wsdl:input>
+			<wsdl:output message="tns:getTimeAgregationResponse1"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getChildrenNetworkElements">
+			<wsdl:documentation>Return all children network element of a parent one. </wsdl:documentation>
+			<wsdl:input message="tns:getChildrenNetworkElementsRequest1"></wsdl:input>
+			<wsdl:output message="tns:getChildrenNetworkElementsResponse1"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="testSOAP" type="tns:ApiXpert">
+
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="connection">
+
+			<soap:operation
+				soapAction="http://astellia/ta/api/xpert/connection" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="disconnection">
+
+
+
+			<soap:operation
+				soapAction="http://astellia/ta/api/xpert/disconnection" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getProducts">
+
+
+			<soap:operation
+				soapAction="http://astellia/ta/api/xpert/getProducts" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="getKpiAndCounter">
+
+			<soap:operation
+				soapAction="http://astellia/ta/api/xpert/getKpiAndCounter" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getFamily">
+
+			<soap:operation
+				soapAction="http://astellia/ta/api/xpert/getFamily" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="getNetworkAggregationLevels">
+
+			<soap:operation
+				soapAction="http://astellia/ta/api/xpert/getNetworkAggregationLevels" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getAllNetworkElements">
+
+			<soap:operation
+				soapAction="http://astellia/ta/api/xpert/getAllNetworkElements" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getDataExports">
+
+			<soap:operation
+				soapAction="http://astellia/ta/api/xpert/getDataExports" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="setDataExports">
+
+			<soap:operation
+				soapAction="http://astellia/ta/api/xpert/setDataExports" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getTimeAgregation">
+
+			<soap:operation
+				soapAction="http://astellia/ta/api/xpert/getTimeAgregation" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getChildrenNetworkElements">
+
+			<soap:operation
+				soapAction="http://astellia/ta/api/xpert/getChildrenNetworkElement" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="test">
+		<wsdl:documentation>T&amp;A API for Xpert.</wsdl:documentation>
+		<wsdl:port binding="tns:testSOAP" name="testSOAP">
+			<soap:address
+				location="http://ast1816/~jerome/TA_CB_HEAD/api/xpert/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

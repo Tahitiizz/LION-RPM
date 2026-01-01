@@ -1,0 +1,38 @@
+/* habillage de l'en-tête - 30/07/2008 slc */
+
+#header {
+	position:relative;
+	padding-bottom:0px;
+	background:url('../images/bandeau2008/header_background_white.png') top repeat-x;
+	height:80px;
+	font : normal 7pt Verdana, Arial, sans-serif;color : #585858;
+}
+
+#header div.left-side {
+	float:left;
+	background:url('../images/bandeau2008/bg.png') top left no-repeat;
+	width:700px;height:75px;
+}
+
+#header div.right-side {
+	position:absolute; right:0; top:0;
+}
+
+#header div.product {
+	position:absolute; top:15px; right:540px;
+	text-align:right;
+}
+
+
+#header div.date {
+	position:absolute; bottom:6px; right:2px;
+	z-index: 5;
+}
+
+#header div.toolbar {
+	position:absolute; bottom:5px; right:0;
+	height:17px; width:500px;
+	background: transparent url('../images/bandeau2008/toolbar_background.png') repeat-x left;
+}
+
+

@@ -1,0 +1,16 @@
+saai_interface	saai_module
+1	def
+4	gsm
+8	gb
+16	iu
+32	iub
+64	isup
+256	umts
+1024	core
+4096	abis
+5	hpg
+15	roaming
+35	huawei
+45	ericsson
+25	alc
+9999	bp

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Astellia | Titre de votre page</title>
+
+	<script type="text/javascript" src="js/prototype.js"></script>
+
+	<link rel="stylesheet" href="css/header2008.css" type="text/css"/>
+	<link rel="stylesheet" href="css/menu2008.css" type="text/css"/>
+
+	<style type="text/css">
+		body {margin:0;padding:0;}
+	</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header">
+	<div class="left-side"></div>
+
+	<div class="product">
+		<img src="images/bandeau2008/logo_trouble_ticketing.png" />
+	</div>
+
+	<div class="right-side">
+		<img align="right" src="images/bandeau2008/logo_Astellia.png" style="margin-top:5px;margin-right:5px;" />
+	</div>
+
+
+	<div class="toolbar"><img src="images/bandeau2008/toolbar_debut.png"/><img
+		src="images/bandeau2008/bouton_about_pos1.gif"
+		onclick="window.open ('about.html', 'about_window', config='height=300, width=274, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no, top=200, left=200');return false;"
+		/><!-- img src="images/bandeau2008/bouton_suivant.gif"
+		/ --><img src="images/bandeau2008/bouton_fin.gif"/>
+	</div>
+	
+	<!-- Mettre ici l'appel aux fonctions date / heure si besoins, sinon supprimer le div -->
+	<div class="date">
+		30-07-2008 11:32 / W31-2008
+	</div>
+
+</div>
+
+<!-- MENU -->
+<div id="menu_container">
+	<ol id='menu'><li><a href='#' class='nohref'>MENU 1</a><ol><li><a href='#' class='nohref'>sub menu 1</a><ol><li><a href="#">sub sub menu 1</a></li><li><a href="#">sub sub menu 2</a></li></ol></li></ol></li></ol>
+</div>
+
+
+<script type='text/javascript' src='js/menu.js'></script>
+
+
+
+<!-- Fin Bandeau2008 -->
+
+
+
+
+<div style="margin-left:50px;width:500px;font-family: Arial;font-size:12px;">
+	<h2>Bandeau 2008</h2>
+	<p>L'en-tête utilise des <strong>DIVs classiques</strong>, ainsi que du positionnement absolu afin de placer les éléments. Le positionnement est définit dans <strong>header.css</strong></p>
+	<p>Le menu est constitué de <strong>listes OL imbriquées</strong>. Tout l'habillage de ces listes est piloté par <strong>menu.css</strong>.
+	<br/>Attention à ne pas mettre d'espaces entre les tags du menu, pour ne pas ajouter des nodes #text dans le DOM du menu.
+	<br/>Toute l'intéractivité du menu est pilotée dans <strong>menu.js</strong>.</p>
+	<p>Le doctype utilisé est <pre>DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd"</pre></p>
+</div>
+
+
+
+
+</body>
+</html>
+

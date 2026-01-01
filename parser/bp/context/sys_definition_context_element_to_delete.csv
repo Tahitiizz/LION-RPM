@@ -1,0 +1,6 @@
+sdcetd_id	sdcetd_table
+corporate	sys_global_parameters
+id_country	sys_global_parameters
+alarm_missing_files_temporization	sys_global_parameters
+path_to_admin_doc	sys_global_parameters
+path_to_user_doc	sys_global_parameters

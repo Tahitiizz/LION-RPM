@@ -1,0 +1,1 @@
+document.write('<embed name="map" type="image/svg+xml" width="400" height="400" src="./gis_scripts/create_gismap.php" wmode="transparent"></embed>');

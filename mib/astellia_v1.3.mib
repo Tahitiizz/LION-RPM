@@ -1,0 +1,108 @@
+
+--   ASTELLIA MIB
+--
+--   This Specification is supplied "AS IS", and Astellia makes
+--   no warranty, either express or implied, as to the use,
+--   operation, condition, or performance of the Specification.
+
+
+Astellia-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+     enterprises
+          FROM RFC1155-SMI
+     OBJECT-TYPE
+          FROM RFC-1212;
+
+astellia       OBJECT IDENTIFIER ::= { enterprises 4318 }
+
+probeName OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..50))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The name of the Astellia probe."
+     ::= { astellia 1 }
+
+appName        OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..50))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The name of the Astellia application."
+     ::= { astellia 2 }
+
+alarmGroup     OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..50))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The name of the alarm group."
+     ::= { astellia 3 }
+
+alarmDate     OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..50))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The date of the alarm."
+     ::= { astellia 4 }
+
+alarmType      OBJECT-TYPE
+     SYNTAX INTEGER {
+		critical(1),
+		major(2),
+		minor(3),
+		information(4),
+		warning(5)
+     }
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The result of this product's diagnostic test(s)."
+     ::= { astellia 5 } 
+
+alarmName     OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..50))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The name of the alarm."
+     ::= { astellia 6 }
+
+alarmDesc     OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..255))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The description of the alarm."
+     ::= { astellia 7 }
+
+alarmDomain     OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..50))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The domain of the alarm ie Board number, BSC number,..."
+     ::= { astellia 8 }
+
+alarmInfos    OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..50))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "Complementary information about the alarm."
+     ::= { astellia 9 }
+
+alarmDest     OBJECT-TYPE
+     SYNTAX INTEGER {
+		local(1),
+		general(2)
+     }
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "Destination of the alarm."
+     ::= { astellia 10 }
+
+END

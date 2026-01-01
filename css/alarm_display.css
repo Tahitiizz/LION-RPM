@@ -1,0 +1,112 @@
+/*
+	Styles utilisés pour l'affichage des alarmes en partie USER
+*/
+hr{
+	margin-bottom: 5px;
+	color: #929292;
+	background-color: #929292;
+	height: 2px;
+	border: 0;
+}
+h1{
+	font : 	bold 12pt Trebuchet MS,Verdana, Arial, sans-serif;
+	color : #929292;
+	height: 20px;
+	margin: 0px !important;
+}
+th{
+	color: #fff;
+	background-color : #929292;
+	font : 	normal 9pt Verdana, Arial, sans-serif;
+	text-align: left;
+}
+img{
+	text-decoration: none;
+	border : none;
+}
+td{
+	border_bottom : 1px #fff solid;
+}
+tr{
+	color: #000;
+	font : 	normal 9pt Verdana, Arial, sans-serif;
+	text-align: left;
+}
+a{
+	color : #000;
+}
+
+#alarm_screen{
+	
+}
+
+/*
+	Zone de choix du timesramp en mode alarm management
+*/
+#select_ta{
+	background-color:#e0e0e0;
+	border: 1px #c7c5c5 solid; 
+	padding:2px; 
+	padding-left:30px; 
+	height:25px; 
+	margin-left:20px;
+	/*width:530px;*/
+}
+
+/*
+	Zone d'en-tête
+*/
+#en_tete{
+	padding:2px; 
+	height:10px; 
+	margin-left:20px;
+	border:0px #c7c5c5 solid; 
+	margin-top:3px;
+}
+
+/*
+	Zone de sélection de la time aggregation
+*/
+#choix_ta{
+	background-color:#fff; 
+	margin-left:20px;
+	margin-top:0px;
+	padding:2px;
+	border:1px #c7c5c5 solid; 
+	margin-top:3px;
+}
+
+
+#to_the_top{
+	margin-left:20px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+a{
+	font : normal 9pt Verdana, Arial, sans-serif;
+	text-decoration:none;
+	cursor:pointer;
+	color:#585858;
+}
+a:hover{
+	font : normal 9pt Verdana, Arial, sans-serif;
+}
+
+.fondGrisAlarme{
+	background-color:#d3d3d3; 
+}
+
+/*
+	Div général
+*/
+.contenu{
+	width:950px; 
+	margin-left:20px; 
+	margin-top:10px;
+}
+
+/*  forçage du display pour les liens - test */
+.force_font{
+	font : normal 9pt Verdana, Arial, sans-serif;
+}

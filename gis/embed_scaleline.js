@@ -1,0 +1,1 @@
+document.write('<embed id="scaleline" name="scaleline" width="140" height="30" src="./gis_scripts/scale_line.svg" type="image/svg+xml" border="0" wmode="transparent"></embed>');

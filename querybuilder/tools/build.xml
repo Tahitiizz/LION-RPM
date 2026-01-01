@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Querybuilder" basedir=".">
+	<target name="ExtJSBuild" description="build ExtJs code">
+		<echo message="Build ExtJS code"/>
+		<exec executable="1_create jsb file.bat"/>
+		<exec executable="2_build app.bat"/>
+		<exec executable="3_move files.bat"/>
+	</target>
+</project> 

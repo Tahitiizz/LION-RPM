@@ -1,0 +1,11 @@
+parameters	value	configure	client_type	label	comment	category	order_parameter
+activate_capacity_planing	0	1	customisateur	ErlangB availability	0 : ErlangB function not available in KPI builder, 1 : ErlangB function available in KPI builder	2	19
+activate_trx_charge_in_topo	0	1	customisateur	Parameters Trx and Charge In Topology	Parameters trx and charge are used in topology	2	20
+activation_source_availability	0	1	customisateur	Source Availability Activation	1= Activate Source Availability / 0 = Deactivate Source Availability	2	22
+gis	1	1	customisateur	Gis mode	0 = GIS module is deactivated ; 1 = 2D and 3D GIS are activated; 2 = 3D GIS only is activated (limited mode for multi SRID countries)	2	4
+label_bts_gearth	Element	0			Label of BTS in exported Google Earth File		
+link_to_AA	1	1	customisateur	Link To Activity Analysis	0 = deactivate, 1 = activate link to Activity Analysis on contextuel menu	2	6
+module	bp	0	customisateur	Module Name	Name of the module (must be set with lower characters e.g iu,gb)		
+path_to_product_doc	/doc/	1	customisateur	Path to product documentation	Path to product documentation (path and file name), example: /doc/doc.pdf	1	20
+product_name	TA Gateway	1	customisateur	Product Name	Name of the product	2	9
+product_version	5.1.0.1	1	customisateur	Product Version	Version of the product	2	10

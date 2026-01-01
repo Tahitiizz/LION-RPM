@@ -1,0 +1,19 @@
+/* FormProcessor stylesheet */
+.stdFPTable { background-color:#f8f8f8; }
+.stdFPTitle { font:bold 10pt verdana,arial; color:#0f62a2; }
+.stdFPReqTitle { font:bold 10pt verdana,arial; color:#0f62a2; }
+.stdFPReqStar { font:bold 10pt verdana,arial; color:red; }
+.stdFPLayoutTitle { font:bold 10pt verdana,arial; color:#0f62a2; }
+.stdFPCheckBoxTitle  { font:bold 10pt verdana,arial; color:#0f62a2; }
+.stdFPRadioTitle  { font:bold 10pt verdana,arial; color:#0f62a2; }
+.stdFPError { font:bold 10pt verdana,arial; color:#aa1020; }
+.stdFPComment { font:normal 8pt verdana,arial; color:#555555; }
+.stdFPButton,
+.stdFPSubmitButton { font:bold 10pt verdana,arial; background-color:#0f62a2; color:white; /*height:27px;*/ }
+.stdFPText { font:normal 9pt verdana,arial; color:#555555; }
+.stdFPFatalError { font:bold 11pt verdana,arial; color:#ff0000; }
+.stdFPGroupTbl { border:2px solid #f0f0f0; }
+.stdFPGroupTitleCell { font:bold 10pt verdana,arial; color:#000000; text-align:center; background-color:#f0f0f0; }
+.stdFPOuterTable { background-color:#ffffff; }
+.stdFPOuterTableHeaderCell { font:bold 10pt verdana,arial,helvetica; text-align:center; color:white; background-color:#0f62a2; }
+.stdFPOuterTableContentCell { background-color:#f0f0f0; }

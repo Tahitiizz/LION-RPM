@@ -1,0 +1,66 @@
+<html>
+<!--
+/*
+ * 28/07/2011 SPD1: Querybuilder V2 - Main page used to generate querybuilder jsb3 file (used for build) 
+ */
+-->
+<head>
+	<title> page used to generate querybuilder jsb3 file </title>
+	<link rel="stylesheet" type="text/css" href="../../js/ext4/resources/css/ext-all-gray.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/QueryBuilder.css" />
+</head>
+<body>
+	<div id="taHeader"></div>
+	<div id="header"></div>	
+	<div id="menu_container"></div>
+	<span class="chemin"></span>
+	
+	<script type="text/javascript" src="../../js/ext4/ext-debug.js"></script>
+		
+	<script type="text/javascript">
+	
+		// Move header and menu_container in the ta Header panel (use for fullscreen mode)
+		Ext.get('taHeader').appendChild(Ext.get('header'))
+		Ext.get('taHeader').appendChild(Ext.get('menu_container'))
+	
+		// Config for finding js files
+		Ext.Loader.setPath({
+			'Ext.ux.querybuilder': '../js',
+			'Ext.ux': '../js'
+		});	
+		    	
+		// Load require files
+		Ext.require('Ext.ux.message');
+		Ext.require('Ext.ux.querybuilder.locale');
+		
+		// Load require files
+	    Ext.require('Ext.ux.querybuilder.App');
+		Ext.require('Ext.state.CookieProvider');
+		        
+	    // When ready
+	    Ext.onReady(function () {    
+	    
+		    // Compute querybuilder path
+		    var urlPath = window.location.pathname;    
+		    var cookiePath = urlPath.substring(0, urlPath.lastIndexOf('/php/'));
+	
+			// Set stateful propertie by default to false (to avoid ExtJS create a lot of cookie to save state components)
+			Ext.override(Ext.Component,{ stateful:false });
+	           
+	    	// create the cookie provider, set path and expires parameters
+		    var cp = new Ext.state.CookieProvider({
+		       path: cookiePath,										   	// cookies valid only in querybuilder path
+		       expires: new Date(new Date().getTime()+(1000*60*60*24*61)) 	//61 days	       
+		   	});
+		   	
+	    	// State manager (to save UI settings in a cookie)
+			Ext.state.Manager.setProvider(cp);
+			
+	    	// Create querybuilder app
+	        var qb = new Ext.ux.querybuilder.App();
+	    });  
+	      
+	</script>
+	
+</body>
+</html>

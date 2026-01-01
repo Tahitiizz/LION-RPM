@@ -1,0 +1,68 @@
+/* 
+
+ 17/08/2010 MMT création du fichier dans le cadre du bug bz 16753
+
+ 14/09/2010 MMT
+     -  bz 17882 probleme de hover sur les jour sous IE6
+     -  Redistribuer la largeur des combo mois + années pour que les mois apparaissent tous en entier
+
+ specifie les modifs de style du datepicker JQuery pour T&A, base sur le style JQueryui
+'smoothness'
+documentation est dans http://jqueryui.com/demos/datepicker
+
+*/
+
+/*
+ *reduire la taille generale
+ */
+.ui-datepicker {font-size: 12px}
+
+.ui-datepicker .ui-datepicker-buttonpane button { float: right}
+
+
+
+/*
+ *mettre en evidence le jour d'aujourd'hui'
+ */
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+   border:1px solid #aa3333;
+}
+
+
+/*
+ *reduire la taille des cases pour display IE plus correct
+ */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+   font:8pt Verdana,Arial,sans-serif;
+}
+
+
+
+/*
+ * 14/09/2010 MMT
+ * Redistribuer la largeur des combo mois + années pour que les mois apparaissent tous en entier
+ */
+.ui-datepicker select.ui-datepicker-month{
+   width:62%;
+   font-size:11px;
+}
+.ui-datepicker select.ui-datepicker-year {
+   width:36%;
+   font-size:11px;
+}
+ 
+/* 14/09/2010 MMT  bz 17882 probleme de hover sur les jour sous IE6 */
+a.ui-state-hover{
+    text-decoration: none !important;
+    font:8pt Verdana,Arial,sans-serif !important;
+}
+
+/*
+ *reduire la taille des boutton prev/next pour display FF plus correct
+ * 15/09/2010 MMT  bz 17882 la regle a.ui-state-hover affecte les bouton prev/next
+ */
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+   height:1.6em ;
+   font:10pt Verdana,Arial,sans-serif !important;
+}
+

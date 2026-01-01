@@ -1,0 +1,1061 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" onload="init(evt)" zoomAndPan="disable">
+<script type="text/javascript">
+<![CDATA[
+
+	// Variables propres au SVG
+
+	var svgdoc;
+	var root;
+	var mapName			= 'gisview';
+	var html_container	= 'map';
+	var top_document	= window.parent.document;
+	var svgns			= "http://www.w3.org/2000/svg";
+
+	// Variables d'entrée
+
+	var mapSVG;
+	var initial_viewbox	= Array();
+	var topWidth		= 0;		// largeur du embed
+	var topHeight		= 0;		// hauteur du embed	
+	var tab_paliers		= Array();
+	var current_zoom;
+	var max_vb			= Array();	// viewbox maximale
+	var lock_action		= false;
+	var current_action	= window.getCurrentAction();
+	var raster			= false;
+
+	// Variables locales
+
+	var original_zoom;
+	var flag_click		= false;	// etat du click (appuyé : true, relaché : false)
+	var newrect			= "";		// rectangle de selection au format SVG
+	var startx			= 0;		// coordonnée x lors du click (sert pour le tracé du rectangle de sel.)
+	var starty			= 0;		// coordonnée y lors du click (sert pour le tracé du rectangle de sel.)
+	var xsvg			= 0;		// coordonnée x de la souris (après transformation) 
+	var ysvg			= 0;		// coordonnée y de la souris (après transformation)
+	var old_viewbox		= Array();	// sert uniquement pour l'animation
+	var move_viewbox	= true;		// determine si l'on bouge la viewbox (zoom ou deplacement) ou non
+	var reload_map		= false;	// indique si l'on doit recharger la map lors d'un callback
+	var desc_in_na		= false;	// indique si l'on descend dans les niveaux de na et, dans ce cas, entraine le rechargement de la legende
+	var saved_style		= Array();	// permet de sauvegarder les styles des layers lors des modifs de leurs propriétés
+
+	var timer;						// référence au 'setTimeout()'. Permet d'arreter le declenchement de l'action qui lui est associée via 'clearTimeout()'
+	var timer_flag;
+
+	var timer_init;
+	var first_load = true;
+
+	var x_info;
+	var y_info;
+
+	// Variables de sortie
+
+	var loading			= false;	// sortie et locale : determine si un loading est en cours ou non
+	var new_viewbox		= Array();	// coordonnees de la nouvelle viewbox
+
+	// Declaration des liaison HTML->SVG 
+
+	window.parent.initCtrlParameters = InitCtrlParameters;
+	window.parent.setCurrentAction = SetCurrentAction;
+	window.parent.lockGIS = LockGIS;
+	window.parent.isLock = IsLock;
+	window.parent.targetReady = TargetReady;
+	window.parent.initialViewBox = InitialViewBox;
+	window.parent.showProcessing = ShowProcessing;
+	window.parent.majLayersPptes = MajLayersPptes;
+	window.parent.majLayersOrder = MajLayersOrder;
+	window.parent.addRemoveLayers = AddRemoveLayers;
+	window.parent.updateViewBox = UpdateViewBox;
+	window.parent.resizeMap		= ResizeMap;
+
+	// Fonction d'initialisation, déclenchée au chargement du SVG
+
+	function init(evt){
+
+		svgdoc	= evt.target.ownerDocument;
+		root	= svgdoc.documentElement;
+		mapSVG	= svgdoc.getElementById(mapName);
+
+		//timer_init = setTimeout('setInitialBox()', 100);	// Note : n'est peut être plus nécessaire
+
+		// Declaration des EventListeners liés aux actions de la souris
+
+		root.addEventListener("mousemove", mousemove, false);
+		root.addEventListener("mouseup", mouseup, false);
+		root.addEventListener("mousedown", mousedown, false);
+	}  
+
+	function InitCtrlParameters(paliers, zoom, viewbox, viewbox_max, raster_svg)
+	{
+		try
+		{
+			tab_paliers		= paliers.split(',');
+			current_zoom	= zoom;
+			original_zoom	= zoom;
+			max_vb			= viewbox_max.split(',');
+			initial_viewbox	= viewbox.split(/ /);
+			raster			= raster_svg;
+
+			topWidth		= top_document.getElementById(html_container).width;
+			topHeight		= top_document.getElementById(html_container).height;
+
+			root.setAttribute('width', topWidth);
+			root.setAttribute('height', topHeight);
+
+			var fond_map = root.getElementById('fond_map');
+
+			fond_map.setAttribute('width', topWidth);
+			fond_map.setAttribute('height', topHeight);
+
+			if (viewbox != ""){
+				drawScaleLine(initial_viewbox);
+			}
+			else
+			{
+				//var targetScaleLineSVG = top_document.embeds['scaleline'].getSVGDocument();
+				//targetScaleLineSVG.getElementById("root").setAttribute('style', 'display:none');
+			}
+		}
+		catch (e){}
+	}
+
+	// Fonction permettant de définir l'action courante
+
+	function SetCurrentAction(action_to_set){
+		current_action = action_to_set;
+	}
+
+	function TargetReady(){
+		if(first_load){	// 1er chargement du SVG : on recupere les valeurs initiales du SVG
+			first_load = false;
+			setInitialBox();
+		}
+		else	// cas du rechargement du SVG
+		{
+			loading = false;
+			if (root.getElementById('rect_selection') != null) root.removeChild(root.getElementById('rect_selection'));
+			if (root.getElementById('img_load') != null) root.removeChild(root.getElementById('img_load'));
+		
+			root.addEventListener("mousemove", mousemove, false);
+			root.addEventListener("mouseup", mouseup, false);
+			root.addEventListener("mousedown", mousedown, false);
+		}
+	}
+
+	// Fonction permettant de definir la box SVG et la viewBox initiale en fonction de la fenetre HTML parente
+
+	function setInitialBox(){
+
+		var svg_target	= top_document.embeds['map'].getSVGDocument();
+		var target_root	= svg_target.getElementById('root');
+		var viewbox		= target_root.getAttribute("viewBox").split(/ /);
+
+		if (initial_viewbox.length == 0)
+		{
+			for (var i=0;i<viewbox.length;i++)
+			{
+				initial_viewbox[i] = viewbox[i];
+			}
+		}
+	}
+
+	// Fonction déclenchée lors de l'appui d'un bouton de la souris
+
+	function mousedown(evt){
+
+		// On teste si les infos d'initialisation ont bien été définies sinon, on les redefinies
+
+		if (tab_paliers.length == 0) window.reInitCtrlParameters();
+		
+		if(disableRightClick(evt, true) == true) return;
+		if(lock_action) return;
+
+		startx = evt.getClientX();
+		starty = evt.getClientY();
+
+		if (current_action == "zoom_in")
+		{
+			zoomDragRect(evt, "start");
+			flag_click = true;
+		}
+	}
+
+	// Fonction déclenchée lors du déplacement de la souris
+
+	function mousemove(evt){
+
+		if(lock_action) return;
+
+		// Initialisation du timer servant à la detection des infos des na en fonction des coordonnées de la souris
+
+		timer_flag = false;
+
+		clearTimeout(timer);	// On detruit l'ancien timer
+
+		getMouseCoords(evt);
+
+		timer = setTimeout("searchNaInfo()", 500);	// Declaration du nouveau timer
+
+		// Si le bouton de la souris est pressé c'est que l'on est en cours de tracage du rectangle de selection
+
+		if(flag_click)
+		{			
+			if(Math.abs(startx-evt.getClientX())>0 && Math.abs(starty-evt.getClientX())>0)
+			{
+				zoomDragRect(evt, "finish");
+			}
+		}
+	}
+
+	// Fonction déclenchée lors du relachement d'un des boutons de la souris
+
+	function mouseup(evt){
+
+		if(disableRightClick(evt, false) == true) return;
+		if (lock_action) return;
+
+		flag_click = false;
+
+		var current_x = evt.getClientX();
+		var current_y = evt.getClientY();
+
+		try
+		{
+			if ((startx/current_x == 1) && (starty/current_y == 1))	// Cas d'un click simple (la position du curseur de départ et d'arrivée est la même)
+			{
+				launchAction(evt);
+			}
+			else if (current_action == "zoom_in")	// Cas du tracé du rectangle de selection (disponible uniquement pour l'action "zoom_in")
+			{
+				var target_root	= top_document.embeds['map'].getSVGDocument().getElementById('root');
+				var viewbox		= target_root.getAttribute("viewBox").split(/ /);
+
+				// Ratio x et y de la viewbox par rapport à la fenetre svg
+
+				var ratioVB_x = viewbox[2] / topWidth;
+				var ratioVB_y = viewbox[3] / topHeight;
+				
+				var nextX		= (Number(viewbox[0]))+Number(newrect.getAttribute("x"))*ratioVB_x;
+				var nextY		= (Number(viewbox[1]))+Number(newrect.getAttribute("y"))*ratioVB_y;
+				var nextWidth	= newrect.getAttribute("width")*ratioVB_x;
+				var nextHeight	= newrect.getAttribute("height")*ratioVB_y;
+
+				if (root.getElementById('rect_selection') == null) return false;
+				
+				if (nextWidth > nextHeight)
+				{
+					var nextHeightSave = nextHeight;
+					nextHeight = (nextWidth/Number(topWidth))*Number(topHeight);
+					nextY = nextY - (nextHeight - nextHeightSave)/2;
+				}
+				else
+				{
+					var nextWidthSave = nextWidth;
+					nextWidth = (nextHeight/Number(topHeight))*Number(topWidth);
+					nextX = nextX - (nextWidth - nextWidthSave)/2;
+				}
+
+				root.removeChild(newrect);
+
+				// Ajout
+
+				current_zoom = Number(initial_viewbox[2])/nextWidth;
+
+				if(current_zoom > tab_paliers[tab_paliers.length-1]){
+					current_zoom = tab_paliers[tab_paliers.length-1];
+					
+					nextWidthTmp	= nextWidth;
+					nextHeightTmp	= nextHeight;
+					nextWidth		= max_vb[2]/current_zoom;
+					nextHeight		= max_vb[3]/current_zoom;
+					nextX			+= (nextWidthTmp - nextWidth)/2;
+					nextY			+= (nextHeightTmp - nextHeight)/2;
+				}
+
+				old_viewbox = viewbox;
+				new_viewbox = Array(nextX, nextY, nextWidth, nextHeight);
+
+				updateMapMiniature();
+				changeViewBox();
+			}	
+		}
+		catch(error){}
+	}
+
+	// Fonction permettant de lancer l'action choisie dans la fenêtre parente (zoom in/out, deplacement)
+
+	function launchAction(evt){
+		
+		if (current_action == undefined) current_action = window.getCurrentAction();
+
+		switch(current_action)
+		{
+			case 'zoom_in'	:	zoom(evt, "in");
+			break;
+			case 'zoom_out'	:	zoom(evt, "out");
+			break;
+			case 'move'		:	moveBox(evt);
+			break;
+			default		:	return;
+		}
+	}
+
+	function zoomDragRect(evt, action){
+
+		if (action == "start")
+		{
+			try
+			{
+				var svg_target	= top_document.embeds['map'].getSVGDocument();
+				var target_root	= svg_target.getElementById('root');
+
+				var vb = target_root.getAttribute("viewBox").split(/ /);
+				var rapport_vb_svg = vb[2]/topWidth;
+
+				newrect = svgdoc.createElementNS(svgns,"rect");
+				newrect.setAttribute("id", "rect_selection");
+				newrect.setAttribute("x", startx);
+				newrect.setAttribute("y", starty);
+				newrect.setAttribute("width","0");
+				newrect.setAttribute("height","0");
+				newrect.setAttribute("fill","none");
+				newrect.setAttribute("stroke","black");
+				newrect.setAttribute("stroke-width","1px");
+				root.appendChild(newrect);				
+			}
+			catch (error){}
+		}
+		else
+		{
+			//show_na_information = true;
+
+			var rect_width = 0;
+			var rect_height = 0;
+
+			var client_x = evt.getClientX();
+			var client_y = evt.getClientY();
+
+			if (Number(client_x) > Number(startx))
+			{
+				rect_width = client_x-startx;
+			}
+			else
+			{
+				rect_width = startx-client_x;
+				newrect.setAttribute("x", startx-rect_width);
+			}
+
+			if (Number(client_y) > Number(starty))
+			{
+				rect_height = client_y-starty;
+			}
+			else
+			{
+				rect_height = starty-client_y;
+				newrect.setAttribute("y", starty-rect_height);
+			}
+
+			newrect.setAttribute("width", rect_width);
+			newrect.setAttribute("height", rect_height);
+			
+			//root.appendChild(newrect);
+		}
+	}
+
+	// Fonction de gestion du zoom (2 types de zoom : "in" = "zoom avant" / "out" = "zoom arrière")
+
+	function zoom(evt, zoom_type)
+	{
+		if(disableRightClick(evt, false) == true) return;
+
+		var debug = "";	// Temp
+
+		var zoom		= 1;
+		var next_zoom	= 0;
+		var prec_zoom	= 0;
+		
+		var zoom_min_found = false;
+		var zoom_max_found = false;
+
+		// Si le zoom courant ne fait pas partie du tableau de zooms, on recherche la valeur dans le tableau la plus proche du zoom courant
+
+		//debug += "tab_paliers : "+tab_paliers.join(',')+"\n";
+		debug += "current_zoom : "+current_zoom+"\n";
+
+		if(tab_paliers.in_array(current_zoom) == false) current_zoom = getCurrentZoom(current_zoom);
+
+		//var current_zoom_next = current_zoom;
+		//var current_zoom_prec = current_zoom;
+
+		debug += "tab_paliers.in_array : "+tab_paliers.in_array(current_zoom)+"\n";
+		debug += "current_zoom : "+current_zoom+"\n";
+
+		// Definition du prochain zoom
+
+		for (var i=0;i<tab_paliers.length;i++)
+		{
+			if (tab_paliers[i] == current_zoom)
+			{
+				// Recherche du zoom precedent ("zoom out")
+				if(i > 0){
+					prec_zoom = tab_paliers[i-1]/tab_paliers[i];
+					current_zoom_prec = tab_paliers[i-1];
+				}
+				else
+				{
+					zoom_min_found = true;
+					//alert('zoom minimum atteint');
+					prec_zoom = 1;
+					current_zoom_prec = current_zoom;
+				}
+
+				// Recherche du zoom suivant ("zoom in")
+				if(i < tab_paliers.length-1){
+					next_zoom = tab_paliers[i+1]/tab_paliers[i];
+					current_zoom_next = tab_paliers[i+1];
+				}
+				else
+				{
+					zoom_max_found = true;
+					//alert('zoom maximum atteint');
+					next_zoom = 1;
+					current_zoom_next = current_zoom;
+				}
+			}
+		}
+
+		if (zoom_type == "in")
+		{
+			zoom = next_zoom;
+			current_zoom = current_zoom_next;
+		}
+		else if (zoom_type == "out")
+		{
+			zoom = prec_zoom;
+			current_zoom = current_zoom_prec;
+		}
+
+		var svg_target	= top_document.embeds['map'].getSVGDocument();
+		var target_root	= svg_target.getElementById('root');
+
+		var viewbox		= target_root.getAttribute("viewBox").split(/ /);
+
+		// Recuperation des coordonnees du curseur
+
+		xm = evt.getClientX();
+		ym = evt.getClientY();
+
+		// Ratio x et y de la viewbox par rapport à la fenetre svg
+
+		var ratioVB_x = viewbox[2] / topWidth;//target_root.getAttribute("width");
+		var ratioVB_y = viewbox[3] / topHeight;//target_root.getAttribute("height");
+
+		// Nouvelles tailles de la viewbox apres zoom
+
+		if ((zoom_min_found && zoom_type == "out") || (zoom_max_found && zoom_type == "in"))
+		{
+			if (zoom_min_found)
+			{
+				var nextWidth	= max_vb[2];
+				var nextHeight	= max_vb[3];
+				
+				if (Number(nextWidth) >= Number(nextHeight))
+				{
+					var xsvg	= max_vb[0];
+					var ysvg	= max_vb[1]-(Number(nextWidth)-Number(nextHeight))/2;
+					nextHeight	= (nextWidth/topWidth)*topHeight;	
+				}
+				else
+				{
+					var xsvg	= max_vb[0]-(Number(nextHeight)-Number(nextWidth))/2;
+					var ysvg	= max_vb[1];
+					nextWidth	= (nextHeight/topHeight)*topWidth;
+				}
+			}
+			else	// zoom_max_found
+			{
+				var nextWidth	= max_vb[2]/current_zoom;
+				var nextHeight	= max_vb[3]/current_zoom;
+
+				// On determine les nouvelles coordonnees appliquées a la viewBox apres zoom
+
+				var xsvg = Number(viewbox[0])+(xm)*ratioVB_x-(nextWidth/2);
+				var ysvg = Number(viewbox[1])+(ym)*ratioVB_y-(nextHeight/2);		
+			}
+		}
+		else
+		{
+			var nextWidth = viewbox[2]/zoom;
+			var nextHeight = viewbox[3]/zoom;
+
+			// On determine les nouvelles coordonnees appliquées a la viewBox apres zoom
+
+			var xsvg = Number(viewbox[0])+(xm)*ratioVB_x-(nextWidth/2);
+			var ysvg = Number(viewbox[1])+(ym)*ratioVB_y-(nextHeight/2);
+		}
+
+		// On modifie la viewBox
+
+		old_viewbox = viewbox;
+		new_viewbox = Array(xsvg, ysvg, nextWidth, nextHeight);
+
+		debug += "after - current_zoom : "+current_zoom+"\n";
+		debug += "new_viewbox : "+new_viewbox+"\n";
+
+		updateMapMiniature();
+		changeViewBox();
+	}
+
+	// Fonction permettant de deplacer la viewbox
+
+	function moveBox(evt){
+
+		var svg_target	= top_document.embeds['map'].getSVGDocument();
+		var target_root	= svg_target.getElementById('root');
+
+		var viewbox		= target_root.getAttribute("viewBox").split(/ /);
+
+		// Recuperation des coordonnees du curseur
+
+		xm = evt.getClientX();
+		ym = evt.getClientY();
+
+		// Ratio x et y de la viewbox par rapport à la fenetre svg
+
+		var ratioVB_x = viewbox[2] / topWidth;//target_root.getAttribute("width");
+		var ratioVB_y = viewbox[3] / topHeight;//target_root.getAttribute("height");
+
+		// On determine les nouvelles coordonnees appliquées a la viewBox apres zoom
+
+		var xsvg = Number(viewbox[0])+(xm)*ratioVB_x-(viewbox[2]/2);
+		var ysvg = Number(viewbox[1])+(ym)*ratioVB_y-(viewbox[3]/2);
+
+		// On modifie la viewBox
+
+		old_viewbox = viewbox;//Array(viewbox[0], viewbox[1], viewbox[2], viewbox[3]);
+		new_viewbox = Array(xsvg, ysvg, viewbox[2], viewbox[3]);
+
+		updateMapMiniature();
+		changeViewBox();
+	}
+
+	// Fonction permettant de modifier la viewbox (plus précisement ses attributs : x, y, width, height)
+
+	function changeViewBox(){
+		
+		if (loading == false)
+		{
+			//window.sendStatut('Loading layers...');
+			//window.setGisLoading(true);
+
+			lock_action		= true;
+			move_viewbox	= true;
+			loading			= true;
+			reload_map		= true;
+
+			//updateMiniature();
+
+			animateViewBox();
+
+			setLoadingScreen();
+
+			getURL("./gis_manager.php?action=update_vb&x="+new_viewbox[0]+"&width="+new_viewbox[2]+"&y="+new_viewbox[1]+"&height="+new_viewbox[3]+"&current_zoom="+current_zoom, callback);
+		}
+	}
+
+	// Fonction d'animation de la viewbox (effet de transition entre 2 viewbox)
+
+	function animateViewBox() {
+		try
+		{
+			var svg_target	= top_document.embeds['map'].getSVGDocument();
+			var target_root	= svg_target.getElementById('root');
+			var anim		= svg_target.getElementById("anim");
+
+			anim.setAttribute('values', old_viewbox[0]+" "+old_viewbox[1]+" "+old_viewbox[2]+" "+old_viewbox[3]+';'+new_viewbox[0]+" "+new_viewbox[1]+" "+new_viewbox[2]+" "+new_viewbox[3]);
+			anim.beginElement();
+
+			target_root.setAttribute("viewBox", new_viewbox[0]+" "+new_viewbox[1]+" "+new_viewbox[2]+" "+new_viewbox[3]);			
+		}
+		catch (e){
+			InitialViewBox();
+		}
+	}
+
+	// Fonction permettant de construire le message de "Loading" affichée lors du déclenchement d'une action
+
+	function setLoadingScreen(){
+
+		root.removeEventListener("mousemove", mousemove, false);
+		root.removeEventListener("mouseup", mouseup, false);
+		root.removeEventListener("mousedown", mousedown, false);
+
+		var vb = root.getAttribute("viewBox").split(/ /);
+
+		var img_load = svgdoc.createElementNS(svgns, "image");
+
+		img_load.setAttribute("id", "img_load");
+		img_load.setAttributeNS('http://www.w3.org/2000/xlink/namespace/', 'xlink:href', '../gis_icons/loading_gis.png'); 
+		img_load.setAttribute("x", (topWidth-195)/2);
+		img_load.setAttribute("y", (topHeight-41)/2);
+		img_load.setAttribute("width", 196);
+		img_load.setAttribute("height", 41);
+
+		root.appendChild(img_load);
+	}
+
+	// Fonction permettant de définir le verrouillage / déverrouillage du SVG
+
+	function LockGIS(is_lock){
+		lock_action = is_lock;
+	}
+
+	// Fonction permettant de renvoyer l'état de blocage/déblocage du SVG
+
+	function IsLock(){
+		return lock_action;
+	}
+
+	// Fonction appelée lors du resultat d'un 'getUrl()'
+
+	function callback(data) {
+
+		lock_action	= false;
+		loading		= false;
+
+		if (root.getElementById('rect_selection') != null) root.removeChild(root.getElementById('rect_selection'));
+		if (root.getElementById('img_load') != null) root.removeChild(root.getElementById('img_load'));
+
+		root.addEventListener("mousemove", mousemove, false);
+		root.addEventListener("mouseup", mouseup, false);
+		root.addEventListener("mousedown", mousedown, false);
+
+		if (reload_map)
+		{
+			top_document.embeds['map'].reload();
+			reload_map = false;
+			drawScaleLine(Array());
+		}
+		
+		if (desc_in_na)
+		{
+			window.reloadLegend();
+			window.reloadLayers();
+
+			desc_in_na = false;
+		}		
+	}
+
+	// Fonction déterminant le zoom courant dans le tableau de zooms
+
+	function getCurrentZoom(actual_zoom)
+	{
+		var real_zoom = 1;
+
+		if (actual_zoom >= tab_paliers[tab_paliers.length-1]) {
+			real_zoom = tab_paliers[tab_paliers.length-1];
+		}
+		else if (actual_zoom <= tab_paliers[0]) {
+			real_zoom = tab_paliers[0];
+		}
+		else
+		{
+			for (var i=0; i < (tab_paliers.length)-1; i++) {
+				if ((actual_zoom >= tab_paliers[i]) && (actual_zoom <= tab_paliers[i+1])) {
+					
+					var actual_zoom_min = actual_zoom-tab_paliers[i];
+					var actual_zoom_max = tab_paliers[i+1]-actual_zoom;
+			
+					if (actual_zoom_min <= actual_zoom_max) {
+						real_zoom = tab_paliers[i];
+					}
+					else 
+					{
+						real_zoom = tab_paliers[i+1];
+					}
+				}
+			}
+		}
+		return real_zoom;
+	}
+
+	// Fonction de calcul des coordonnées dans la viewbox en fonction de celle-ci, de la taille du document SVG
+	// et des coordonnées réelles du pointeur de la souris
+
+	function getMouseCoords(evt){
+		try
+		{
+			var target_root	= top_document.embeds['map'].getSVGDocument().getElementById('root');
+			var viewbox		= target_root.getAttribute("viewBox").split(/ /);
+
+			// Recuperation des coordonnees du curseur
+
+			var xm = evt.getClientX();
+			var ym = evt.getClientY();
+
+			// Ratio x et y de la viewbox par rapport à la fenetre svg
+
+			var ratioVB_x = viewbox[2] / root.getAttribute("width");
+			var ratioVB_y = viewbox[3] / root.getAttribute("height");
+
+			// On determine les nouvelles coordonnees appliquées a la viewBox apres zoom
+
+			xsvg = (Number(viewbox[0]))+xm*ratioVB_x;
+			ysvg = (Number(viewbox[1]))+ym*ratioVB_y;
+
+			if(xsvg > Number(viewbox[0])+Number(viewbox[2])) xsvg = Number(viewbox[0])+Number(viewbox[2]);
+			if(ysvg > Number(viewbox[1])+Number(viewbox[3])) ysvg = Number(viewbox[1])+Number(viewbox[3]);
+
+			//showCoordinates(xsvg, ysvg);			
+		}
+		catch (error){}
+	}
+
+	// Fonction permettant de desactiver le click-droit lors de la navigation et de lancer à la place la fonction associée à cette action
+
+	function disableRightClick(evt, launchAction){
+		if(evt.button == 2){
+			if (launchAction) NaDesc();
+			evt.preventDefault();
+			return true;
+		}
+	}
+
+	// Fonction permettant de lancer la descente d'un niveau de na
+
+	function NaDesc(){
+		if ((loading == false) && (lock_action == false))
+		{
+			desc_in_na		= true;
+			move_viewbox	= false;
+			lock_action		= true;
+			reload_map		= true;
+
+			//window.sendStatut('Loading layers...');
+			//window.setGisLoading(true);
+			
+			setLoadingScreen();
+			
+			getURL("./gis_manager.php?action=desc_in_na", callback);	
+		}
+	}
+
+	// Fonction de recherche des infos des na en fonction de la position de la souris
+
+	function searchNaInfo(){
+
+		if (xsvg == x_info && ysvg == y_info)
+		{
+			return;
+		}
+		else
+		{
+			x_info = xsvg;
+			y_info = ysvg;
+		}
+
+		timer_flag = true;
+
+		showNaInformation('Loading infos...|| ');
+
+		clearTimeout(timer);	// Destruction du timer
+
+		getURL("./gis_manager.php?action=show_na_information&x="+xsvg+"&y="+ysvg, callbackInfo);
+	}
+
+	// Fonction retour du 'setTimeout()'. Va afficher les infos récupérees depuis le serveur
+
+	function callbackInfo(data){
+		showNaInformation(data.content);
+	}
+
+	// Fonction d'affichage des infos des na
+
+	function showNaInformation(na_text){
+		try
+		{
+			window.updateDataInformation(na_text);
+		}
+		catch (e){}
+	}
+
+	// Fonction permettant de modifier les propriétés (background, border) d'un layer
+
+	function MajLayersPptes(id_layer, background, border){
+
+		lock_action		= true;
+		move_viewbox	= false;
+		loading			= true;
+		//desc_in_na		= true;	// Pas le cas ici mais permet de recharger la fenêtre des layers
+
+		setLoadingScreen();
+
+		if (raster)
+		{
+			reload_map = true;
+			getURL("./gis_manager.php?action=change_layers_pptes&layer="+id_layer+"&background="+background+"&border="+border, callback);
+		}
+		else
+		{
+			var svg_target		= top_document.embeds['map'].getSVGDocument();
+			
+			var layer			= svg_target.getElementById(id_layer);
+			var parent_child	= layer.parentNode.childNodes;
+
+			if ((!background) && (!border))
+			{
+				layer.setAttribute('display', 'none');
+			}
+			else
+			{
+				layer.setAttribute('display', 'block');
+
+				var childnodes = layer.childNodes;
+
+				for (i=0;i<childnodes.length;i++)
+				{
+					var style_ref	= childnodes.item(i).getAttribute("style_ref");//.split(';');
+
+					childnodes.item(i).setAttribute("style", style_ref);
+
+					if(background == false){
+						var style = style_ref.split(';');
+
+						for (var j=0;j<style.length;j++)
+						{
+							if (style[j].indexOf("fill-opacity") != -1)
+							{
+								style[j] = "fill-opacity:0";
+							}
+						}
+
+						childnodes.item(i).setAttribute("style", style.join(';'));
+					}
+
+					if(border == false){
+						var style = style_ref.split(';');
+
+						for (var j=0;j<style.length;j++)
+						{
+							if (style[j].indexOf("stroke-opacity") != -1)
+							{
+								style[j] = "stroke-opacity:0";
+							}
+						}
+
+						childnodes.item(i).setAttribute("style", style.join(';'));
+					}
+				}
+			}
+			reload_map = false;
+			getURL("./gis_manager.php?action=change_layers_pptes&layer="+id_layer+"&background="+background+"&border="+border, callback);
+		}
+	}
+
+	// Fonction permettant de modifier l'ordre des layers
+
+	function MajLayersOrder(id_layer_up, id_layer_down){
+
+		lock_action		= true;
+		move_viewbox	= false;
+		loading			= true;
+		desc_in_na		= true;	// Pas le cas ici mais permet de recharger la fenêtre des layers
+
+		setLoadingScreen();
+
+		if (raster){
+			reload_map = true;
+		}
+		else
+		{
+			reload_map = false;
+	
+			var svg_target	= top_document.embeds['map'].getSVGDocument();
+
+			var gisview		= svg_target.getElementById('gisview');
+			var layer_up	= svg_target.getElementById(id_layer_up);
+			var layer_down	= svg_target.getElementById(id_layer_down);
+
+			gisview.insertBefore(layer_down, layer_up);		
+		}
+		
+		getURL("./gis_manager.php?action=change_layers_order&layer_up="+id_layer_up+"&layer_down="+id_layer_down, callback);
+	}
+
+	// Fonction permettant d'ajouter ou de supprimer des layers
+
+	function AddRemoveLayers(action, layers_list){
+
+		lock_action		= true;
+		move_viewbox	= false;
+		loading			= true;
+		desc_in_na		= true;	// Pas le cas ici mais permet de recharger la fenêtre des layers
+		reload_map		= true;
+
+		setLoadingScreen();
+
+		var url = "";
+
+		if (action == "add")
+		{
+			url = "./gis_manager.php?action=add_layers&layers_added="+layers_list;
+		}
+		else if (action == "remove")
+		{
+			url = "./gis_manager.php?action=remove_layers&layers_removed="+layers_list;
+
+			if (!raster)
+			{
+				reload_map = false;
+				
+				var layers_to_remove = layers_list.split(';');
+
+				var svg_target	= top_document.embeds['map'].getSVGDocument();
+				var gisview		= svg_target.getElementById('gisview');
+
+				for (var i=0;i<layers_to_remove.length;i++)
+				{
+					gisview.removeChild(svg_target.getElementById(layers_to_remove[i]));
+				}
+			}
+		}
+		getURL(url, callback);
+	}
+
+	// Fonction permettant de revenir à la view_box d'origine
+
+	function InitialViewBox(){
+		var target_root	= top_document.embeds['map'].getSVGDocument().getElementById('root');
+
+		current_zoom	= original_zoom;
+		old_viewbox		= target_root.getAttribute("viewBox").split(/ /);
+		new_viewbox		= Array(initial_viewbox[0], initial_viewbox[1], initial_viewbox[2], initial_viewbox[3]);
+		
+		updateMapMiniature();
+		changeViewBox();
+	}
+
+	// Fonction permettant de construire l'echelle
+
+	function drawScaleLine(viewbox){
+
+		if (viewbox.length == 0)
+		{
+			var target_root	= top_document.embeds['map'].getSVGDocument().getElementById('root');
+			var viewbox		= target_root.getAttribute("viewBox").split(/ /);		
+		}
+
+		var rapport_vb_svg = viewbox[2]/topWidth;
+
+		var x1_line = Number(viewbox[0])+10*rapport_vb_svg;
+		var x2_line = x1_line+100*rapport_vb_svg;
+
+		var nb_kms = (Math.ceil((x2_line-x1_line)/10))/100;
+
+		(nb_kms < 1) ? nb_kms = (nb_kms*1000)+" m" : nb_kms += " kms";
+
+		window.changeScaleLineValue(nb_kms);
+	}
+
+	// Fonction permettant de mettre à jour la vue de la map dans la miniature
+
+	function updateMapMiniature(){
+
+		var targetMiniatureSVG = top_document.embeds['miniature'].getSVGDocument();
+		
+		var map_view = targetMiniatureSVG.getElementById('map_view');
+
+		var map_view_x = Number(new_viewbox[0])+Number((new_viewbox[2]-map_view.getAttribute('width'))/2);
+		var map_view_y = Number(new_viewbox[1])+Number((new_viewbox[3]-map_view.getAttribute('height'))/2);
+
+		map_view.setAttribute('x', map_view_x);
+		map_view.setAttribute('y', map_view_y);
+	}
+
+	// Fonction permettant de mettre à jour la viewbox
+
+	function UpdateViewBox(viewbox){
+		
+		var target_root	= top_document.embeds['map'].getSVGDocument().getElementById('root');
+
+		old_viewbox		= target_root.getAttribute("viewBox").split(/ /);
+		new_viewbox		= Array(viewbox[0], viewbox[1], viewbox[2], viewbox[3]);
+		
+		changeViewBox();
+	}
+
+	// Fonction permettant de redimensionner la fenetre de la map et du controle
+
+	function ResizeMap(){
+		topWidth		= top_document.getElementById(html_container).width;
+		topHeight		= top_document.getElementById(html_container).height;
+
+		root.setAttribute('width', topWidth);
+		root.setAttribute('height', topHeight);
+
+		var fond_map = root.getElementById('fond_map');
+
+		fond_map.setAttribute('width', topWidth);
+		fond_map.setAttribute('height', topHeight);
+
+		var target_root	= top_document.embeds['map'].getSVGDocument().getElementById('root');
+
+		target_root.setAttribute('width', topWidth);
+		target_root.setAttribute('height', topHeight);
+	}
+
+	// Fonction permettant de construire le message de "Processing" affichée lors du déclenchement de la rasterisation
+
+	function ShowProcessing(processing){
+
+		if (processing)
+		{
+			loading = true;
+
+			root.removeEventListener("mousemove", mousemove, false);
+			root.removeEventListener("mouseup", mouseup, false);
+			root.removeEventListener("mousedown", mousedown, false);
+
+			var vb = root.getAttribute("viewBox").split(/ /);
+
+			var img_load = svgdoc.createElementNS(svgns, "image");
+
+			img_load.setAttribute("id", "img_load");
+			img_load.setAttributeNS('http://www.w3.org/2000/xlink/namespace/', 'xlink:href', '../gis_icons/processing_gis.png'); 
+			img_load.setAttribute("x", (topWidth-195)/2);
+			img_load.setAttribute("y", (topHeight-41)/2);
+			img_load.setAttribute("width", 196);
+			img_load.setAttribute("height", 41);
+
+			root.appendChild(img_load);
+		}
+		else
+		{
+			loading = false;
+			if (root.getElementById('img_load') != null) root.removeChild(root.getElementById('img_load'));
+		
+			root.addEventListener("mousemove", mousemove, false);
+			root.addEventListener("mouseup", mouseup, false);
+			root.addEventListener("mousedown", mousedown, false);
+		}
+	}
+
+	// Extension de la fonction JS 'Array' pour effectuer une recherche rapide dans un tableau
+
+	Array.prototype.in_array = function(array_value){
+		var tab_str = this.join("|");				// On transforme le tableau en chaine
+		if(tab_str.indexOf(array_value) == -1){		// Si "array_value" n'est pas trouvée, 'indexOf()' ne renvoie pas la position mais -1
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+
+]]>
+</script>
+<rect id="fond_map" x="0" y="0" style="fill-color:white;fill-opacity:0"/>
+
+
+</svg>

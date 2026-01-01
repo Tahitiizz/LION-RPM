@@ -1,0 +1,83 @@
+.floatLeft {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+.popupWarning {
+	margin-top: 10px;
+	color: red;
+}
+
+.warningPopup {
+	text-align: left;
+}
+
+.dataReprocess {
+	margin-top: 5px;
+}
+
+.dataReprocess form {
+	margin: 0px;
+}
+
+.dataReprocessUnavailable {
+	text-align: center;
+	margin-top: 6px;
+}
+
+.dataReprocess .mode {
+	margin: 5px 0 5px 30px;
+}
+
+.dataReprocessArea {
+	display: none;
+	margin: 5px 10px;
+	padding: 5px;
+	border: 1px solid #7F9DB9;
+}
+
+.dataReprocessDates select {
+	width: 150px;
+	height: 120px;
+}
+
+.dataReprocessConnections select {
+	width: 200px;
+	height: 90px;
+}
+
+.dataReprocessDates, .dataReprocessConnections {
+	margin: 5px 15px 5px 15px;
+	display: none;
+	float: left;
+}
+
+.dataReprocessDatesTitle, .dataReprocessConnectionsTitle {
+	height: 16px;
+	margin-bottom: 2px;
+}
+.dataReprocessDatesTitle span {
+	vertical-align: top;
+}
+
+.dataReprocessSelectAllConnections {
+	margin: 10px auto 0 auto;
+	text-align: center;
+}
+.dataReprocessSelectAllConnections input {
+	width: 150px;
+}
+
+.dataReprocessExecute {
+	display: none;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.dataReprocessTitle {
+	margin-left: 30px;
+	cursor: pointer;
+}

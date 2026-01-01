@@ -1,0 +1,10 @@
+saao_idoperator	saao_name
+0	None
+1	=
+2	!=
+3	<
+4	>
+5	<=
+6	>=
+7	in
+8	not in

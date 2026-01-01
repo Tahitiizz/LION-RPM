@@ -1,0 +1,344 @@
+<?php
+/*
+*	@cb40000@
+*
+*	14/11/2007 - Copyright Acurio
+*
+*	Composant de base version cb_4.0.0.00
+*
+*	maj 11/01/2008 - maxime : On sauvegarde le fichier pour l'export des rapports
+ *
+ * 01/03/2011 MMT bz 19628 utilisation de REP_PHYSIQUE_NIVEAU_0
+*/
+?>
+<?php
+/**
+ * Classe de création d'un fichier Word à partir d'un tableau. Pour l'instant, utilisée uniquement pour les alarmes
+ * 
+ * @author BAC
+ * @copyright Astellia
+ * @version 1.0
+ * 	
+ */
+
+//01/03/2011 MMT bz 19628 utilisation de REP_PHYSIQUE_NIVEAU_0
+include_once(REP_PHYSIQUE_NIVEAU_0."class/export_word.class.php");
+require_once(REP_PHYSIQUE_NIVEAU_0.'class/htmlparser.inc');
+
+class Word_HTML_Table {
+
+	private $_typeTableau;
+	private $_sous_mode;
+	private $_alarm_result_limit_nb;
+	private $_debug;
+	private $_word = null;
+
+	public function __construct($word_filepath, $word_filename, $header_img, $header_title, $sous_mode, $save_file = false){
+		
+		$this->_sous_mode = $sous_mode;
+		$this->_save_file = $save_file;
+		$this->_alarm_result_limit_nb = get_sys_global_parameters("alarm_result_limit");
+		$this->_debug = get_sys_debug('alarm_export_pdf');   // Affichage du mode debug
+		$this->_word_filepath = $word_filepath;	
+		// Debut de la generation du document word
+		
+		$this->_word = new export_word($word_filename);
+		
+		$this->_word->set_format_page('landscape');
+		$this->_word->set_font_title('Arial',11,'#000000');
+		$this->_word->create_header($header_img['operator'], $header_img['client'], $header_title);
+		$this->_word->create_footer();		
+	}
+	
+	/**
+	 * Renvoie la largeur de la colonne définie par défaut
+	 *
+	 *	- maj 11/04/2007 Gwénaël :
+	 *			suppression de la colonne "Critical level" (la largeur était de 22)
+	 *			modification de la largeur de "Alarm name" de +11 (ancienne valeur 45)
+	 *			modification de la largeur de "Trigger - Threshold" de +11 (ancienne valeur 55)
+	 *
+	 * @param int $colNumber : numéro de la colonne
+	 * @return int
+	 */
+	
+	/**
+	 * Renvoie un tableau de largeurs de colonnes
+	 * 
+	 * @return array $col_array tableau de largeurs de colonnes
+	 */
+
+	private function getColWidth()
+	{
+		$col_array = array();
+		
+		if ( $this->_typeTableau == 'iterative' ) {
+			if($this->axe3){
+				if ($this->_sous_mode == 'condense')
+				{
+					$col_array = array(5.6, 2.8, 3.2, 4.5, 6.6, 1.8, 1.5, 2.6, 3.5, 3.5);
+				}
+				else if ($this->_sous_mode == 'elem_reseau')
+				{
+					$col_array = array(3.2, 5.6, 2.8, 4.5, 6.6, 1.8, 1.5, 2.6, 3.5, 3.5);
+				}
+				else
+				{
+					$col_array = array(4.5, 2.8, 3.2, 4.5, 6.6, 1.8, 1.5, 2.6, 3.5, 3.5);
+				}
+			}
+			else 
+			{
+				$col_array = array(1.8, 2, 6, 1.8, 2, 6, 2, 2, 4);
+			}
+		}
+		elseif ( $this->_typeTableau == 'dynamic' ) {
+                    // Mantis 4178 : split additional details into two columns : nouvelles dimensions de colonnes
+                    $col_array = array(5.6, 2.6, 4.2, 5.6, 1.8, 1.5, 1.8, 1.5, 3.0);
+		}
+		elseif ( $this->_typeTableau == 'additionnalFieldIterative' ) {
+			$col_array = array(1.8, 6, 2);
+		}
+		elseif ( $this->_typeTableau == 'additionnalField' ) {
+			$col_array = array(6, 2);
+		}
+		elseif ( $this->_typeTableau == 'topworst' ) {
+			$col_array = array(2, 6, 1.8, 2, 6, 2, 2);
+		}
+		else 
+		{
+			if($this->axe3){
+				if ($this->_sous_mode == 'condense')
+				{
+					$col_array = array(5.6, 2.5, 3.2, 4.5, 6.6, 1.8, 1.5, 2.6, 3.5, 3.5);
+				}
+				else if ($this->_sous_mode == 'elem_reseau')
+				{
+					$col_array = array(3.2, 5.6, 2.8, 4.5, 6.6, 1.8, 1.5, 2.6, 3.5, 3.5);
+				}
+				else
+				{
+					$col_array = array(4.5, 2.8, 3.2, 4.5, 6.6, 1.8, 1.5, 2.6, 3.5, 3.5);
+				}
+			}
+			else 
+			{
+				if ($this->_sous_mode == 'condense')
+				{
+                                    // Mantis 4178 : split additional details into two columns 
+                                    // ajustement des largeurs s'il n'y a pas de "additional details"
+					$col_array = array(5.7, 3.6, 5.3, 6.6, 1.8, 1.5, 3.0);
+				}
+				else if ($this->_sous_mode == 'elem_reseau')
+				{
+					$col_array = array(3.2, 5.6, 2.8, 6.6, 1.8, 1.5, 2.6, 3.5, 3.5);
+				}
+				else if ($this->_sous_mode == 'detail')
+				{
+					$col_array = array(4.5, 4.5, 2.5, 2.5, 4.5, 2.5, 2.5, 3.5, 3.5);
+				}
+				else
+				{
+					$col_array = array(4.5, 2.8, 3.2, 6.6, 1.8, 1.5, 2.6, 3.5, 3.5);
+				}
+			}
+		}
+		if($this->_sous_mode == "autre"){
+			$col_array = array(3.5);
+		}
+		
+		// Cas où il s'agit d'une alarme qui a trop de résultats. il n'y a alors que 2 colonnes affichées.
+
+		if($this->display_error_style){
+			$col_array = array(2, 10);
+		}
+		
+		return $col_array;
+	}
+
+	/**
+	 * Nettoyage d'une chaine de ces caracteres html
+	 *
+	 * @param string $html
+	 * @return string $html chaine purgée
+	 */
+
+	function ReplaceHTML($html){
+		$html = str_replace( '<li>', "\n<br> - " , $html );
+		$html = str_replace( '<LI>', "\n - " , $html );
+		$html = str_replace( '</ul>', "\n\n" , $html );
+		$html = str_replace( '<strong>', "<b>" , $html );
+		$html = str_replace( '</strong>', "</b>" , $html );
+		$html = str_replace( '&#160;', "\n" , $html );
+		$html = str_replace( '&nbsp;', " " , $html );
+		$html = str_replace( '&quot;', "\"" , $html );
+		$html = str_replace( '&#39;', "'" , $html );
+		return $html;
+	}
+
+	/**
+	 * - modif 11/01/2008 Gwénaêl : modif pour prendre en comptre les liens externes
+	 * 
+	 */
+	function parseTable($Table){
+		$_var='';
+		$htmlText = $Table;
+		$parser = new HtmlParser ($htmlText);
+		while ($parser->parse()) {
+			if(strtolower($parser->iNodeName)=='table')
+			{
+				if($parser->iNodeType == NODE_TYPE_ENDELEMENT)
+					$_var .='/::';
+				else
+					$_var .='::';
+			}
+
+			if(strtolower($parser->iNodeName)=='tr')
+			{
+				if($parser->iNodeType == NODE_TYPE_ENDELEMENT)
+					$_var .='!-:'; //opening row
+				else
+					$_var .=':-!'; //closing row
+			}
+			if(strtolower($parser->iNodeName)=='td' && $parser->iNodeType == NODE_TYPE_ENDELEMENT)
+			{
+				$_var .='#,#';
+			}
+			if ($parser->iNodeName=='Text' && isset($parser->iNodeValue))
+			{
+				$_var .= $parser->iNodeValue;
+			}
+			// modif 11/01/2008 Gwénaël
+				// ajout des liens externes
+			if ( $parser->iNodeName=='a' ) {
+				if ( $parser->iNodeType == NODE_TYPE_ENDELEMENT )
+					$_var .= '<¤a>';
+				else
+					$_var .= '<a href="'.str_replace('::', '§§', str_replace('/', '¤', $parser->iNodeAttributes['href'])).'">';
+			}
+		}
+		$elems = split(':-!',str_replace('/','',str_replace('::','',str_replace('!-:','',$_var)))); //opening row
+		foreach($elems as $key=>$value)
+		{
+			if(trim($value)!='')
+			{
+				$elems2 = split('#,#',$value);
+				array_pop($elems2);
+				// modif 11/01/2008 Gwénaël
+				$elems2 = str_replace('§§', '::', str_replace('¤', '/', $elems2));
+				$data[] = $elems2;
+			}
+		}
+		return $data;
+	}
+
+	function writeContent($tab_html){
+		global $repertoire_physique_niveau0;
+
+		$title_tmp = "";
+
+		for ($num_page=0; $num_page<count($tab_html); $num_page++) {
+			
+			// Titre de l'alarme
+			
+			$title = $tab_html[$num_page][0];
+			// Si le titre ne change pas entre 2 tableaux de resultats, on met le titre à vide pour rester sur la même page dans le word (nouveau titre => nouvelle page)
+			($title == $title_tmp) ? $title = "" : $title_tmp = $title;
+
+			// Création des tableaux de résultats
+			
+			$html = "<br>".$tab_html[$num_page][1]."<br>";
+			$this->display_error_style = false;
+			$html = $this->ReplaceHTML($html);
+			$this->axe3 = $flag_axe3;
+
+			//Search for a table
+			$start = strpos(strtolower($html),'<table');
+			$end = strpos(strtolower($html),'</table');
+			
+			if($start!==false && $end!==false) {
+
+				$tableVar = substr($html,$start,$end-$start);
+				$tableData = $this->parseTable($tableVar);
+
+				for($i=1;$i<=count($tableData[0]);$i++) {
+					if($this->CurOrientation=='L')
+						$w[] = abs(120/(count($tableData[0])-1))+24;
+					else
+						$w[] = abs(120/(count($tableData[0])-1))+5;
+				}
+
+				// En fonction des deux premiers noms des colonnes on détermine le type de tableau qui est affiché
+				// ce qui permet de savoir la largeur de chaque colonne du tableau
+
+				if ( trim($tableData[0][0]) == 'Date' && trim($tableData[0][1]) == 'Critical level' )
+					$this->_typeTableau = 'iterative';
+				elseif ( trim($tableData[0][0]) == 'Date' && trim($tableData[0][1]) == 'Additional field' )
+					$this->_typeTableau = 'additionnalFieldIterative';
+				elseif ( trim($tableData[0][0]) == 'Additional field' )
+					$this->_typeTableau = 'additionnalField';
+				elseif ( trim($tableData[0][0]) == 'Critical level' && trim($tableData[0][1]) == 'Threshold rawkpi' )
+					$this->_typeTableau = 'dynamic';
+				elseif ( trim($tableData[0][0]) == 'Critical level' && trim($tableData[0][1]) == 'Sort field' )
+					$this->_typeTableau = 'topworst';
+                                // Mantis 4178 : split additional details into two columns : détermination du type de tableau dynamic grâce aux nouvelles colonnes
+                                elseif ( trim($tableData[0][6]) == 'Average' && trim($tableData[0][7]) == 'Overrun (%)' )
+					$this->_typeTableau = 'dynamic';
+				else
+					$this->_typeTableau = 'default';
+					
+				// Création du header du tableau de résultats
+
+				$header	= $tableData[0];
+				array_walk(&$header, array($this, 'trimData'));	// On nettoie l'ensemble des valeurs du tableau '$header' des espaces en trop
+				
+				// Création du contenu du tableau de résultats
+				
+				$data = array();
+
+				for ($j=1; $j < count($tableData); $j++) {
+					$data_elt = $tableData[$j];
+					array_walk(&$data_elt, array($this, 'trimData'));	// On nettoie l'ensemble des valeurs du tableau '$data' des espaces en trop
+					$data[] = $data_elt;
+				}
+				
+				// Définition du tableau contenant les largeurs des colonnes du tableau de résultats
+
+				$col_size = $this->getColWidth();
+
+				if (count($header) > count($col_size))		// nbre de colonnes d'entetes > nbre de largeurs : taille par défaut des colonnes
+				{
+					$col_size = array();
+				}
+				else if (count($header) < count($col_size))	// nbre de colonnes d'entetes < nbre de largeurs : suppression des valeurs en trop du tableau de taille
+				{
+					$col_size = array_slice($col_size, 0 , count($header));
+				}
+				
+				// Ajout du tableau de résultats dans le fichier word
+				
+				$this->_word->add_tab($header,$data,$title, $col_size);
+			}
+		}
+		
+		// maj 11/01/2008 - maxime : On sauvegarde le fichier pour l'export des rapports
+		if( !$this->_save_file ){
+			$this->_word->generate_word_file(); // Generation du fichier word
+		}else{
+			$this->_word->save_file( $this->_word_filepath ); // Sauvegarde du fichier
+		}
+	}
+	
+	/**
+	 * Permet d'enlever les espaces en trop des elements d'un tableau
+	 *
+	 * @param string $elt element du tableau à nettoyer (passage par valeur)
+	 */
+
+	function trimData(&$elt)
+	{
+		$elt = trim($elt);
+	}
+
+}//Fin class
+?>

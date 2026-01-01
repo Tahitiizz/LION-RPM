@@ -1,0 +1,8 @@
+agregation_rank	agregation	agregation_type	on_off	agregation_label	agregation_level	source_default	mandatory	visible	ta_rattachement	commentaire	primaire	bh_list	bh_type	bh_ta_correspondance	bh_type_defaut
+0	hour	int4	1	Hour	1	hour	1	1	hour	la colonne agregation_level permet de determiner l'agreg min	1		normal	hour	1
+1	day	int4	1	Day	2	hour	1	1	day	la colonne agregation_level permet de determiner l'agreg min	1		normal	day	1
+3	week	int4	1	Week	3	day	1	1	week	la colonne agregation_level permet de determiner l'agreg min	1		normal	week	1
+4	month	int4	1	Month	3	day	1	1	month	la colonne agregation_level permet de determiner l'agreg min	1		normal	month	1
+5	day_bh	int4	1	Day BH	2	hour	1	1	day_bh	bh	0	bh	bh	day	
+6	week_bh	int4	1	Week BH	3	day_bh	1	1	week_bh	bh	0	bh	bh	week	
+7	month_bh	int4	1	Month BH	3	day_bh	1	1	month_bh	bh	0	bh	bh	month	

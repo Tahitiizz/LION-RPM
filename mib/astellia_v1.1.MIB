@@ -1,0 +1,228 @@
+
+--   ASTELLIA MIB
+--
+--   This Specification is supplied "AS IS", and Astellia makes
+--   no warranty, either express or implied, as to the use,
+--   operation, condition, or performance of the Specification.
+
+
+AstelliaMIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+     enterprises, NetworkAddress, IpAddress,
+     Counter, Gauge, TimeTicks
+          FROM RFC1155-SMI
+     OBJECT-TYPE
+          FROM RFC-1212;
+
+LAST-UPDATED "20041012-100000A" -- Midnight 12 October 2004
+ ORGANIZATION "ASTELLIA"
+ CONTACT-INFO "Support:   support@astellia.com"
+ DESCRIPTION    "This is the MIB module for the SNMP Agent Extensibility
+     Protocol (ASTELLIA).  This MIB module will be implemented by
+     the master agent.
+    "
+
+  REVISION     "20061227-100001B" -- Midnight 27 December 2006
+ DESCRIPTION
+    "Initial Version where last-updated object has been added"
+  ::= { mib-2  74 }
+
+astellia       OBJECT IDENTIFIER ::= { enterprises 4318 }
+
+probeName OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..50))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The name of the Astellia probe."
+     ::= { astellia 1 }
+
+appName        OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..50))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The name of the Astellia application."
+     ::= { astellia 2 }
+
+alarmGroup     OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..50))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The name of the alarm group."
+     ::= { astellia 3 }
+
+alarmDate     OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..50))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The date of the alarm."
+     ::= { astellia 4 }
+
+alarmType      OBJECT-TYPE
+     SYNTAX INTEGER {
+		Critical(0),
+		Major(1),
+		Minor(2),
+		Information(3),
+		Warning(4)
+     }
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The result of this product's diagnostic test(s)."
+     ::= { astellia 5 } 
+
+alarmName     OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..50))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The name of the alarm."
+     ::= { astellia 6 }
+
+alarmDesc     OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..255))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The description of the alarm."
+     ::= { astellia 7 }
+
+alarmDomain     OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..50))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "The domain of the alarm ie Board number, BSC number,..."
+     ::= { astellia 8 }
+
+alarmInfos    OBJECT-TYPE
+     SYNTAX OCTET STRING (SIZE(1..50))
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "Complementary information about the alarm."
+     ::= { astellia 9 }
+
+alarmDest     OBJECT-TYPE
+     SYNTAX INTEGER {
+		Local(0),
+		General(1)
+     }
+     ACCESS read-only
+     STATUS mandatory
+     DESCRIPTION
+          "Destination of the alarm."
+     ::= { astellia 10 }
+
+-- Traps are defined using the conventions in RFC 1215.
+
+appStart TRAP-TYPE
+     ENTERPRISE     astellia
+     VARIABLES { probeName, appName }
+     DESCRIPTION
+          "This trap is sent when the monitored app is started"
+     ::= 1
+
+appStop TRAP-TYPE
+     ENTERPRISE     astellia
+     VARIABLES { probeName, appName }
+     DESCRIPTION
+          "This trap is sent when the monitored app is stopped"
+     ::= 2
+
+appRun TRAP-TYPE
+     ENTERPRISE     astellia
+     VARIABLES { probeName, appName }
+     DESCRIPTION
+          "This trap is sent every 30s when app is running"
+     ::= 3
+
+alrmBeg TRAP-TYPE
+     ENTERPRISE     astellia
+     VARIABLES { 
+		probeName, appName,
+		alarmGroup,
+		alarmDate,
+		alarmType,
+		alarmName,
+		alarmDesc,
+		alarmDomain,
+		alarmInfos,
+		alarmDest
+			 }
+     DESCRIPTION
+          "This trap is sent when an alarm is detected by app"
+     ::= 4
+
+alrmEnd TRAP-TYPE
+     ENTERPRISE     astellia
+     VARIABLES { 
+		probeName, appName,
+		alarmGroup,
+		alarmDate,
+		alarmType,
+		alarmName,
+		alarmDesc,
+		alarmDomain,
+		alarmInfos,
+		alarmDest
+ 			 }
+     DESCRIPTION
+          "This trap is sent when an alarm is no more active"
+     ::= 5
+
+alrmDeact TRAP-TYPE
+     ENTERPRISE     astellia
+     VARIABLES { 
+		probeName, appName,
+		alarmGroup,
+		alarmDate,
+		alarmType,
+		alarmName,
+		alarmDesc,
+		alarmDomain,
+		alarmInfos,
+		alarmDest
+			 }
+     DESCRIPTION
+          "An alrmDeact is sent when an alarm is deactivated (Alerter only)"
+     ::= 6
+
+alrmRemoved TRAP-TYPE
+     ENTERPRISE     astellia
+     VARIABLES { 
+		probeName, appName,
+		alarmGroup,
+		alarmDate,
+		alarmType,
+		alarmName,
+		alarmDesc,
+		alarmDomain,
+		alarmInfos,
+		alarmDest
+			 }
+     DESCRIPTION
+          "An alrmRemoved is sent when an alarm is suppressed (Alerter only)"
+     ::= 7
+
+alrmGeneric TRAP-TYPE
+     ENTERPRISE     astellia
+     VARIABLES { 
+		probeName, appName,
+		alarmGroup,
+		alarmDate,
+		alarmType,
+		alarmName,
+		alarmDesc,
+		alarmDomain
+			 }
+     DESCRIPTION
+          "This trap is sent when an alarm is detected by app"
+     ::= 8
+
+END

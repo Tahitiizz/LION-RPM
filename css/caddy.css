@@ -1,0 +1,48 @@
+/* CSS-file for caddies pages
+
+ * @copyright acurio 2005
+ * @link christophe.chaput@acurio.com
+ * @since 2005-05-12
+ * @update 2005-05-13
+ * @author christophe CHAPUT
+ */
+
+body{
+	scrollbar-arrow-color : #424F7C;
+	scrollbar-face-color : #FFFFFF;
+	scrollbar-track-color : #F4F4F4;
+	scrollbar-highlight-color : #FFFFFF;
+	scrollbar-3dlight-color : #D0D0D0;
+	scrollbar-shadow-color : #FFFFFF;
+	scrollbar-darkshadow-color : #C0C0C0;
+}
+
+
+.caddyTxt {
+	font : bold 8pt Verdana, Arial, sans-serif;
+	color : #3C3C43;
+}
+
+.caddyTxtNormal {
+	font : normal 8pt Verdana, Arial, sans-serif;
+	color : #3C3C43;
+}
+.caddyTxtGras10 {
+	font : bold 10pt Verdana, Arial, sans-serif;
+	color : #3C3C43;
+}
+
+.borderGray {
+	border : 1px solid #636770;
+	border-left : 6px solid #636770;
+	background-color : #EAEBED;
+}
+
+
+
+
+
+
+
+
+

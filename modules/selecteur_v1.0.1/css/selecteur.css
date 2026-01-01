@@ -1,0 +1,131 @@
+
+/* 16/03/2009 - modif SPS : ajout de la propriete cursor pour l'element #calendar_selecteur_date */
+
+#selecteur {
+	position:relative;
+	padding-top:0px;
+	top:-10px;
+	/*background: url(../images/selecteur_cb41_w780.png) center no-repeat;*/
+}
+
+#selecteur_table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* 10/06/2011 OJT : Modification height/width pour DE TopNALevelForBHGraph */
+#selecteur fieldset{
+	margin:4px;
+	padding:4px 10px;
+	height:100px;
+	background: #eee url(../images/degrade_gris_vertical.png) repeat-x;
+	text-align: left;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 10px;
+}
+#selecteur_fieldset_time {	width: 205px; }
+
+
+#selecteur legend {
+	margin-bottom:4px;
+	padding-right:4px;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	color: #000000;
+	text-align: left;
+    background-color: #FFFFFF; /* 17/08/2010 OJT : Correction bz17374 pour DE Firefox */
+}
+
+#selecteur select, #selecteur input {
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 10px;
+}
+
+#selecteur_na_level,
+#selecteur_axe3,
+#selecteur_axe3_2
+{
+	width: 120px;
+}
+
+#selecteur_na_level li,
+#selecteur_axe3 li,
+#selecteur_axe3_2 li
+{
+	overflow:visible;
+	clip:auto;
+}
+
+
+#selecteur_date_div, #selecteur_hour_div, #selecteur_period_div { padding:2px 0 0 0; }
+
+/*
+ * 14/02/2011 OJT : DE Selecteur/Historique.
+ * Modifications CSS pour ajout du max et de l'icone d'avertissement
+ */
+div#selecteur_period_div{
+    clear:both;
+    height:20px;
+    text-align:right;
+}
+div#selecteur_period_div_warn{
+    float:right;
+    height:20px;
+    width:16px;
+    margin-left:2px;
+    padding:0;
+    background: url( ../images/warn.png ) center no-repeat;
+}
+
+/* 16/03/2009 - modif SPS : ajout de la propriete cursor pour l'element #calendar_selecteur_date */
+#calendar_selecteur_date {
+	cursor:pointer;
+}
+
+#selecteur_ta_level {margin-right:10px;}
+
+
+#selecteur_posted_array {
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 10px;
+}
+
+#selecteur .selecteur {
+	margin: 2px;
+}
+
+#selecteur fieldset{
+	background: #eee url(../images/box_background_bluestripe2.png) right top;
+	padding-right:15px;
+}
+#selecteur_submit {	background: #AAAAAA url(../images/bouton_display_bluestripe.png); }	
+#selecteur_save   {	background: #AAAAAA url(../images/bouton_save_bluestripe.png); }
+
+/* 18/11/2011 ACS BZ 21253 Displayed color of Raw/KPI on Dashboard and in User Manual is not same */
+option.kpi { color: green; }
+option.raw { color: orange; }
+
+#selecteur fieldset div.backgrd {
+	position:absolute;
+	top:10px;
+	left:0px;
+	width:100%;
+	bottom:0px;
+	z-index:-100;
+	filter:alpha(Opacity=0, FinishOpacity=100, Style=1, StartX=0, StartY=0, FinishX=0, FinishY=100);
+	background-color:#dddddd;
+}
+
+/* Bouton qui affiche / cache le sélecteur */
+#selecteur_toggle {
+	position:absolute;
+	top:140px;
+	left:0;
+	width:20px;
+	height:83px;
+    cursor:pointer;
+    z-index:99; /* 16/08/2010 OJT : Correction bz16754 pour DE Firefox */
+}

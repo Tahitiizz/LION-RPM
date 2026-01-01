@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sidebar Icons Preview</title>
+<style>
+  body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+  .icon-grid { display: grid; grid-template-columns: repeat(auto-fill, 100px); gap: 20px; justify-content: center; }
+  .icon-box { padding: 10px; border-radius: 8px; background: var(--bg); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .icon-box img { width: 32px; height: 32px; }
+  .light { --bg: #fff; color: #000; background: #f9f9f9; }
+  .dark { --bg: #1f2937; color: #f3f4f6; background: #111827; }
+  button { margin: 20px; padding: 8px 16px; cursor: pointer; }
+  footer { margin-top: 30px; font-size: 12px; opacity: 0.6; }
+</style>
+</head>
+<body class="light">
+<h1>Sidebar Icons Preview</h1>
+<button onclick="toggleTheme()">Toggle Light/Dark</button>
+<div id="icons" class="icon-grid">
+<div class="icon-box"><img src="currentColor/ic_coverage_qos.svg" alt="ic_coverage_qos"><div>ic_coverage_qos</div></div>
+<div class="icon-box"><img src="currentColor/ic_qos_ranking.svg" alt="ic_qos_ranking"><div>ic_qos_ranking</div></div>
+<div class="icon-box"><img src="currentColor/ic_qos_scoring.svg" alt="ic_qos_scoring"><div>ic_qos_scoring</div></div>
+<div class="icon-box"><img src="currentColor/ic_antenna_map.svg" alt="ic_antenna_map"><div>ic_antenna_map</div></div>
+<div class="icon-box"><img src="currentColor/ic_user_complaints.svg" alt="ic_user_complaints"><div>ic_user_complaints</div></div>
+<div class="icon-box"><img src="currentColor/ic_followup_complaints.svg" alt="ic_followup_complaints"><div>ic_followup_complaints</div></div>
+<div class="icon-box"><img src="currentColor/ic_user_surveys.svg" alt="ic_user_surveys"><div>ic_user_surveys</div></div>
+<div class="icon-box"><img src="currentColor/ic_notifications.svg" alt="ic_notifications"><div>ic_notifications</div></div>
+<div class="icon-box"><img src="currentColor/ic_problems.svg" alt="ic_problems"><div>ic_problems</div></div>
+<div class="icon-box"><img src="currentColor/ic_notification_manager.svg" alt="ic_notification_manager"><div>ic_notification_manager</div></div>
+<div class="icon-box"><img src="currentColor/ic_translations.svg" alt="ic_translations"><div>ic_translations</div></div>
+<div class="icon-box"><img src="currentColor/ic_faq.svg" alt="ic_faq"><div>ic_faq</div></div>
+<div class="icon-box"><img src="currentColor/ic_ticket_statistics.svg" alt="ic_ticket_statistics"><div>ic_ticket_statistics</div></div>
+<div class="icon-box"><img src="currentColor/ic_support_tickets.svg" alt="ic_support_tickets"><div>ic_support_tickets</div></div>
+<div class="icon-box"><img src="currentColor/ic_ticket_categories.svg" alt="ic_ticket_categories"><div>ic_ticket_categories</div></div>
+<div class="icon-box"><img src="currentColor/ic_users.svg" alt="ic_users"><div>ic_users</div></div>
+<div class="icon-box"><img src="currentColor/ic_roles.svg" alt="ic_roles"><div>ic_roles</div></div>
+<div class="icon-box"><img src="currentColor/ic_settings.svg" alt="ic_settings"><div>ic_settings</div></div>
+</div>
+<footer>Icons from <a href='https://lucide.dev' target='_blank'>Lucide.dev</a> — MIT License</footer>
+<script>
+function toggleTheme(){
+  const body = document.body;
+  if(body.classList.contains('light')){
+    body.classList.remove('light');
+    body.classList.add('dark');
+    document.querySelectorAll('img').forEach(img => img.src = img.src.replace('currentColor','gray'));
+  } else {
+    body.classList.remove('dark');
+    body.classList.add('light');
+    document.querySelectorAll('img').forEach(img => img.src = img.src.replace('gray','currentColor'));
+  }
+}
+</script>
+</body></html>
