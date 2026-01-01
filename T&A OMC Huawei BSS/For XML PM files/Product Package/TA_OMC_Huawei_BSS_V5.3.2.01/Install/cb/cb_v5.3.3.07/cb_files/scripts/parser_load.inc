@@ -1,0 +1,5 @@
+<?
+
+$fichierconfig="fichier_config";
+
+?>

@@ -1,0 +1,116 @@
+﻿===================================================================
+
+		T&A OMC Ericsson UTRAN  5.3
+		Version 5.3.2.01
+		Delivered on: 22/04/2016
+
+===================================================================
+
+Content:
+	T&A Base Component	: V 5.3.3.07
+	T&A Parser			: V 5.3.2.01
+	T&A Parser library	: 4.09
+	T&A Context			: V 5.3.2.00
+	T&A Installer		: V 3.15
+
+Installation:
+	Minimum product version required for upgrade	:	V 5.1.1.04
+
+Expertise /R&D level specifications:
+	EXP Application / Vendor	:	RO
+	EXP Restitution / Techno	:	RG
+	R&D All Products			:	T17
+	R&D Product Template		:	T19
+	R&D previous context		: 	V 5.3.1.03
+
+Tools:
+	T&A Expertise Specifications Converter	:	V 1.08
+	T&A Context Management					:	V 7.0.2.12
+	
+Fixed anomalies / Evolutions of version 5.3.2.01 :
+	-[Evolution]: New spec Vendor RO
+	- Bug 53227 - Flat_file_naming_template no reactivate for Node-B file 
+	- Bug 53265 - Activation delta counter failed
+	- Bug 53270 - Some counters are not defined in good family
+	
+Fixed anomalies / Evolutions of version 5.3.2.00 :
+	-[Evolution]: New spec Vendor RN
+	-[Evolution]: Managing cumulated counters
+	
+Fixed anomalies / Evolutions of version 5.3.1.03 :
+	Bug 44351 - [QAL][T&A OMC Ericsson UTRAN] RNC family not enabled by Optional Statistics.php
+	Bug 32729 - [QAL][T&A OMC Ericsson UTRAN] KPI have unit Nb but have negative value. 
+	
+Fixed anomalies / Evolutions of version 5.3.1.02 :
+	-[Evolution]: Network level id and label have been updated for RNC family
+	-[Evolution]: Network level label have been updated for Node-B family 
+	
+Fixed anomalies / Evolutions of version 5.3.1.01 :
+	Bug 44029 - [REC][T&A OMC Ericsson UTRAN] There is unwanted log displayed in demon
+	Bug 44031 - [REC][T&A OMC Ericsson UTRAN] In topology file some sub_element are not filled for rnc and nodeb familly 
+
+	
+Fixed anomalies / Evolutions of version 5.3.1.00:
+	-[Evolution]: Add family RNC
+	-Bug 42189 - [SUP][Ericsson UTRAN 5.3][AVP#NA][Eastlink Canada]:Package not compatible with Red Hat 5.8
+	-Bug 42665 - [REC][T&A OMC Ericsson UTRAN] Wrong value for multivalued counters where global counter is not activated
+
+
+Fixed anomalies / Evolutions of version 5.3.0.03:
+	-[Evolution]: Update of parser_lib to v4.09
+	
+Fixed anomalies / Evolutions of version 5.3.0.02:
+	- [Evolution]: La formation des id node-b,se,sse a été revue.
+
+Fixed anomalies / Evolutions of version 5.3.0.01:
+	-[Evolution]: Update of parser_lib to v4.08 (optional statistic for nodeb familly).
+	-[Evolution]: Node-B sourcefiles are now collected only if there is at least one Node-B counter activated in database.
+	- Bug 39923 - [REC][T&A OMC Ericsson UTRAN] Optional families are automatically parsed without considering the global parameter specif_enable_<family>
+	- Bug 39924 - [REC][T&A OMC Ericsson UTRAN] RNC ID are wrong in edw table for node-b familly
+	- Bug 39927 - [REC][T&A OMC Ericsson UTRAN] Node-b family can't be activated using optional_statistic script with option -e
+	- Bug 39997 - [REC][Ericsson UTRAN][Topology] Virtual network elements should exist
+	
+Fixed anomalies / Evolutions of version 5.3.0.00:
+	-[Evolution]: Update of base component to v5.3.0.17
+	-[Evolution]: Update of parser_lib to v4.07 (managing multivalued counters).
+
+Fixed anomalies / Evolutions of version 5.1.1.04:
+	- Bug 30191 : [SUP][T&A OMC Ericsson UTRAN V5.1.1.03][AVP NA] No data integrated when there is exactly one data hour per parallelized task		
+	
+Fixed anomalies / Evolutions of version 5.1.1.03:	
+	-[Evolution]: Update of parser_lib to v3.05 (task parallelism bug correction).
+	- Bug 30086 : [REC][T&A OMC Ericsson UTRAN] counters existing in SFR are proposed in automatic mapping
+	
+Fixed anomalies / Evolutions of version 5.1.1.02:
+	-[Evolution]: Update of parser_lib to v3.04 (task parallelism bug correction).
+	- Bug 29991 : [QAL][T&A OMC Ericsson UTRAN]: topology_last_update_date is reset after empty retrieve 
+	- Bug 29750 : [QAL][T&A OMC Ericsson UTRAN] Automatic mapping: two identical lines present in sys_field_reference_all
+	- Bug 29874 : [REC][T&A OMC Ericsson UTRAN] lines of edw_object_arc_ref and edw_object_ref tables are doubled
+	
+Fixed anomalies / Evolutions of version 5.1.1.01:
+	- Bug 29749 : [REC][T&A OMC Ericsson UTRAN] Topology upload not working properly
+	- Bug 29750 : [QAL][T&A OMC Ericsson UTRAN] Automatic mapping: two identical lines present in sys_field_reference_all 
+	-[Evolution]: Update of parser_lib to v3.02 (bug correction).
+	
+Fixed anomalies / Evolutions of version 5.1.1.00:
+	-[Evolution]: Update of parser_lib to v3.01 (adds task parallism).
+	- Bug 29099 : [QAL][T&A OMC Ericsson UTRAN]: Counters known in spec are present in automatic mapping
+	
+Fixed anomalies / Evolutions of version 5.1.0.04:
+	- Bug 28733 : [QAL][T&A OMC Ericsson UTRAN]: Rate KPI negative sometimes
+	
+Fixed anomalies / Evolutions of version 5.1.0.03:
+	-[Evolution]: Update of the base component to version 5.1.6.27 (refer to readme_cb_5.1.6.27.txt for more details about CB bug fixes).
+	
+Fixed anomalies / Evolutions of version 5.1.0.02:
+	-[Evolution]: Update of the base component to version 5.1.6.23 (refer to readme_cb_5.1.6.23.txt for more details about CB bug fixes).
+
+Fixed anomalies / Evolutions of version 5.1.0.01:
+	-[Evolution]: Update of the base component to version 5.1.6.19 (refer to readme_cb_5.1.6.19.txt for more details about CB bug fixes).
+	- Bug 27246 : [REC][T&A OMC Ericsson UTRAN][parser][5.1][TC47909] Missing error message when a NodeB file is integrated
+	
+Fixed anomalies / Evolutions of version 5.1.0.00:
+	- Bug 15736 : [QAL][T&A OMC Ericsson UTRAN][CB][5.0] With na_max_unique = 1 : previous network unused but not deleted in topology
+	- Bug 15159 : [REC][T&A OMC Ericsson UTRAN][CB][5.0][TC44295] Corrupted file: error message not explicit for empty file
+	- Bug 25498 : [QAL][T&A OMC Ericsson UTRAN] Counters not correctly specified in sys_field_reference
+	- Bug 26530 : [SUP][T&A OMC Ericsson UTRAN] Parsing is not done when cell name contain "-" character

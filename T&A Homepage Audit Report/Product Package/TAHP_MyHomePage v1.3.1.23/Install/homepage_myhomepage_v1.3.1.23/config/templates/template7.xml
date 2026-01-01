@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<template id="template7" title="template7">
+		<row rowspan='1'>
+			<widget colspan='1' type='gridarray' id='chart1' />
+		</row>
+</template>

@@ -1,0 +1,143 @@
+/*------------------------------------------- */
+/* css de la partie page automatique */
+/*------------------------------------------- */
+
+body{
+	scrollbar-arrow-color : #424F7C;
+	scrollbar-face-color : #E2E2E2;
+	scrollbar-track-color : #F4F4F4;
+	scrollbar-highlight-color : #FFFFFF;
+	scrollbar-3dlight-color : #D0D0D0;
+	scrollbar-shadow-color : #FFFFFF;
+	scrollbar-darkshadow-color : #C0C0C0;
+}
+
+a
+{
+  background-color : none;
+  text-decoration : none;
+}
+
+a:hover
+{
+  background-color : none;
+  text-decoration : none;
+}
+
+a:link
+{
+  background-color : none;
+  text-decoration : none;
+}
+
+.bouton{
+	border-right : 1px solid #585858;
+	border-bottom : 1px solid #585858;
+	border-top : 1px solid #C9C9C9;
+	border-left : 1px solid #C9C9C9;
+	font : normal 9pt Verdana, Arial, sans-serif;
+	background-image : url('../images/boutons/bouton_style_relief.gif');
+	background-repeat: no-repeat; 
+	padding-left : 5px;
+}
+.boutonRouge{
+	border-right : 1px solid #585858;
+	border-bottom : 1px solid #585858;
+	border-top : 1px solid #C9C9C9;
+	border-left : 1px solid #C9C9C9;
+	font : bold 9pt Verdana, Arial, sans-serif;
+	color : #FF0000;
+	background-image : url('../images/boutons/bouton_style_relief_rouge.gif');
+	background-repeat: no-repeat; 
+	padding-left : 5px;
+}
+.boutonVert{
+	border-right : 1px solid #585858;
+	border-bottom : 1px solid #585858;
+	border-top : 1px solid #C9C9C9;
+	border-left : 1px solid #C9C9C9;
+	font : bold 9pt Verdana, Arial, sans-serif;
+	color : #028A29;
+	background-image : url('../images/boutons/bouton_style_relief_vert.gif');
+	background-repeat: no-repeat; 
+	padding-left : 5px;
+}
+
+/*--------------------------------------------*/
+
+/*styles appliqués aux fieldset */
+.fieldsetRelief{
+	border : 1px solid #000000;
+	border-bottom : 1px solid #CCCCCC;
+	border-right : 1px solid #CCCCCC;
+	background-color : #DEDDDD;
+}
+
+.zoneTexte{
+	border : 1px solid #565656;
+	background-color : #fff;
+}
+
+.texteGris{
+	font : normal 9pt Verdana, Arial, sans-serif;
+	color : #585858;
+}
+.texteGrisPetit{
+	font : normal 8pt Verdana, Arial, sans-serif;
+	color : #585858;
+}
+.texteGrisBold{
+	font : bold 9pt Verdana, Arial, sans-serif;
+	color : #585858;
+}
+
+.tableauPauto{
+	border : 1px solid #545454;
+	background-color : #D4D4D4;	
+}
+.tableauPautoDotted{
+	border : 1px dotted #545454;
+	background-color : #D4D4D4;	
+}
+.tabPrincipal{
+	border : 1px dotted #787878;
+	background-image : url('../images/fonds/fond_selecteur.gif');
+}
+.tableauPautoDottedBlanc{
+	border : 1px dotted #545454;
+	background-color : #fff;	
+}
+.tabMenuPauto{
+	border : 1px dotted #465288;
+	background-color : #fff;
+}
+
+.tabFramePauto{
+	border : 1px dotted #787878;
+	background-image : url('../images/fonds/fond_selecteur.gif');
+}
+
+.tabPrincipalAffichagePauto{
+	border : 1px dotted #787878;
+}
+.fondTabSelecteur{
+	background-color : #D7D7D7;
+	border : 1px solid #787878;
+}
+.fondTabGraph{
+	background-color : #E8E8E8;
+	border : 1px solid #787878;
+}
+.fondCaseVide{
+	background-color : #FF9900;
+	border : 1px solid #787878;
+}
+.texteRouge{
+	font : normal 9pt Verdana, Arial, sans-serif;
+	color : #FF0000;
+}
+.texteRougeBold{
+	font : bold 9pt Verdana, Arial, sans-serif;
+	color : #FF0000;
+}
+

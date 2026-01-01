@@ -1,0 +1,90 @@
+parameters	value	configure	client_type	label	comment	category	order_parameter	specific
+activate_trx_charge_in_topo	0	0	customisateur	Parameters Trx and Charge In Topology	Parameters trx and charge are used in topology			0
+activation_source_availability	1	1	customisateur	Source Availability Activation	 1= Activate Source Availability / 0 = Deactivate Source Availability	2	22	0
+compute_mode	hourly	1	client	Compute Mode	'hourly' to setup aggregation calculation hour by hour, 'daily' to calculate all the hours of a day at the same time	3	5	0
+compute_switch_limit	8	1	customisateur	Limit hours to switch compute mode	Limit hours to switch compute mode	3	13	0
+gis	1	1	customisateur	Gis mode	0 = GIS module is deactivated ; 1 = 2D and 3D GIS are activated; 2 = 3D GIS only is activated (limited mode for multi SRID countries)	2	4	0
+history_day	180	1	client	Daily statistics history	Number of days of daily statistics are kept in Trending&Aggregation	3	7	0
+history_hour	7	1	client	Hourly statistics history	Number of days of hourly statistics are kept in Trending&Aggregation	3	6	0
+hour_to_compute	2008020600	0						0
+id_homepage	dshd.0091.01.call_setup_success_rate	0				4		0
+max_3rd_axis	10	1	customisateur	Number maximum of 3rd Axis	Number maximum of 3rd Axis elements uploaded in the Topology	2	17	0
+maximum_mapped_counters	1000	1	customisateur	Number of Counters/KPIs	Maximum number of active Counters/KPIs allowed	1	9	0
+module	huaran	0	customisateur	Module Name	Name of the module (must be set with lower characters e.g iu,gb)			0
+offset_day	386	0						0
+product_name	Huawei UTRAN	1	customisateur	Product Name	Name of the product	2	9	0
+product_version	5.1.0.02	1	customisateur	Product Version	Version of the product	2	10	0
+report_files_history	120	1	customisateur	Report Files History	Number of days of filed reports are kept in Trending&Aggregation (by default the value is set to 120)	4	13	0
+retrieve_delete_file	0	1	customisateur	Delete data files during retrieve process	0: delete disabled, 1: delete enabled	3	9	0
+retrieve_search_directory	1	1	customisateur	Search data files into sub-directories	0: sub-directories disabled, 1: sub-directories enabled	3	14	0
+topology_file_location	/home/astellia_huaran_50/upload/topology.csv	1	client	Topology file location	Full path to topology file	3	21	0
+vendor_name	Huawei	0	customisateur	Vendor Name	Vendor Name for the use or Global application			0
+alarm_critical_color	#FF0000	1	customisateur	'Critical' Alarm display color	Color used for the display of 'Critical' level alarms (default is set to #f88484)	4	1	0
+alarm_major_color	#fab308	1	customisateur	'Major' Alarm display color	Color used for the display of 'Major' level alarms (default is set to #fab308)	4	2	0
+alarm_management_autorefresh	300	1	customisateur	Alarm management Refresh	Alarm management automatic refresh periodicity	4	4	0
+alarm_minor_color	#f7fa08	1	customisateur	'Minor' Alarm display color	Color used for the display of 'Minor' level alarms (default is set to #f7fa08)	4	3	0
+alarm_result_limit	1000	1	customisateur	Alarm results limit	Maximum number of results allowed for an alarm (by default it is set to 1000)	3	3	0
+alarm_systems_activation	1	1	customisateur	Alarm Systems Activation	Activate/Deactivate the management alarm systems for files missing (0 = deactivate, 1 = activate)	2	2	0
+alarm_top_worst_result	10	1	customisateur	Top/Worst List results	Number of results by Top/Worst List (by default it is set to 10)	3	4	0
+ast_duration_delay	60	1	customisateur	Duration delay for capture end time	Delay in (s) substracted from capture end time to define data hour	3	11	0
+automatic_email_activation	1	1	customisateur	Automatic Email Activation	Activate/Deactivate the automatic email sending for alarms, reports (0=deactivate, 1=activate)	4	1	0
+autorefresh_delay	10	1	customisateur	Autorefresh delay	Delay in minute to refresh dashboards and GIS	4	16	0
+backup_database	/home/backup/	1	customisateur	Backup Database directory	Directory where the database backup is stored	1	5	0
+base_component_version	nil	0	customisateur	Base Component version	Version of the Base Component			0
+capture_duration	3600	1	client	Capture Duration	Time (sec.) during a capture has be performed by a probe (by default the value is set to 3600)	1	6	0
+compute_processing	day	0						0
+compute_switch		0						0
+dashboard_alarm	1	0				4		0
+dashboard_display_max_nb_queries_overtime	200	0			Maximum number of queries executed to find ne in Overtime			0
+filter_date_max	100	0						0
+filter_period_max	200	0				4		0
+gis_alarm	1	0				4		0
+history_month	60	1	client	Monthly statistics history	Number of months of monthly statistics are kept in Trending&Aggregation	3	8	0
+history_week	52	1	client	Weekly statistics history	Number of weeks of weekly statistics are kept in Trending&Aggregation	3	10	0
+investigation_dashboard_max_selection	15	1	customisateur	Investigation dashboard - Number of selection	Number of network elements allowed for selection in the Investigation dashboard (by default it is set to 15)	4	5	0
+label_bts_gearth	BTS	0			Label of BTS in exported Google Earth File			0
+link_to_AA	0	1	customisateur	Link To Activity Analysis	0 = deactivate, 1 = activate link to Activity Analysis on contextuel menu	2	6	0
+link_to_AA_history_db_servers	60	1	customisateur	Database and servers history for Activity Analysis	Number of days of data available in Trending&Aggregation (by default : 60 days)	2	7	0
+mail_reply	support@astellia.com	1	customisateur	Reply To	Reply email address used in the automatic email sendings	4	8	0
+max_na_key_exceeded	0	0						0
+max_nb_charts_onmouseover	20	1	customisateur	number of charts with interactive data	Maximum number of charts displayed in a dashboard that will contain interactive data	4	10	0
+max_nb_row_upload_topology	200	1	customisateur	Numbers maximum results displayed during a topology upload	Numbers maximum results displayed during a topology upload	4	11	0
+max_process_execution_time	240	1	customisateur	Maximum execution time of a process	Maximum execution time of a process (in minutes)	3	1	0
+mode_homepage	overtime	0				4		0
+na_label_character_max	30	1	customisateur	Number of characters displayed for network agregation label in the filter	Number of characters displayed for network agregation label in the filter	1	12	0
+nb_flat_file_uploaded	544	0						0
+nb_sources_expected	3	1	customisateur	Number of probes	Number of probes installed that provide data to Trending&Aggregation	1	13	0
+pdf_footer_text	Powered by Trending & Aggregation	0				4		0
+pdf_logo_dev	images/client/logo_client_pdf.png	0				4		0
+pdf_logo_operateur	images/bandeau/logo_operateur.jpg	0				4		0
+pdf_save_dir	png_file/	0				4		0
+power_by	Astellia	0				4		0
+publisher	Astellia	0				4		0
+report_files_dir	report_files/	0				4		0
+ri	1	1	customisateur	Reliability Indicator mode	Activation/Deactivation of the Reliability indicator in the graph. 1 = activated 0 = deactivated	2	11	0
+sep_axe3	|s|	0	customisateur	Axe3 separator	Separator used in axe3			0
+session_time	10	0				4		0
+snmp_activation	1	1	client	SNMP trap activation	0 = deactivate SNMP traps, 1 = activate SNMP traps	1	16	0
+snmp_port	162	1	client	SNMP Server Port	Port on which the SNMP Traps will be sent	1	17	0
+snmp_server	localhost	1	client	SNMP Server 	IP address of the server that will receive the SNMP Traps	1	18	0
+snmp_trap_format	1	1	client	SNMP trap format version 	Version of the format used to send SNMP traps (either 1 for version 1 or 2c)	1	19	0
+system_name	Trending&Aggregation	0						0
+tabgraph_color	deeppink	1	client	Tab color of graph	Possible named colors :&nbsp;<br />&nbsp;-&nbsp;deeppink<br />&nbsp;-&nbsp;hotpink<br />&nbsp;-&nbsp;magenta<br />&nbsp;-&nbsp;orangered<br />&nbsp;-&nbsp;red<br />&nbsp;-&nbsp;green<br />&nbsp;-&nbsp;blue<br />&nbsp;-&nbsp;yellow<br />&nbsp;-&nbsp;olivedrad<br />&nbsp;-&nbsp;brown<br />&nbsp;-&nbsp;cyan<br />&nbsp;-&nbsp;black<br />&nbsp;-&nbsp;aqua<br />&nbsp;-&nbsp;chocolate	4	20	0
+timer_killq_br	300	1	customisateur	Timer Builder Report	Maximum running time allowed for a query from the 'Query Builder' before it is automatically killed (by default it is set to 300 seconds)	4	12	0
+topology_auto	0	1	client	Automatic topology update	1=Enable 0=Disable automatic topology update. If set to 1, the parameter 'Topology file location' needs to be filled in	3	12	0
+update_coord_geo	1	0	customisateur	Update of x,y or azimuth	0=>not changes 1=>update of x,y or azimuth			0
+user_statistics	1	1	client	User statistics Mode	0 = display statistics on user connections, 1 = display statistics on number of pages viewed	4	14	0
+week_starts_on_monday	1	1	customisateur	First Day of the week	1 = Week starts on Monday 0 = Week starts on Sunday	4	15	0
+activate_capacity_planing	0	1	customisateur	ErlangB availability	0 : ErlangB function not available in KPI builder, 1 : ErlangB function available in KPI builder	2	19	0
+extrapolation_activate	0	1	customisateur	Extrapolation - Activation	Activate Datas Extrapolation	4		0
+extrapolation_nb_ta	10	1	customisateur	Extrapolation - Number of time agregations	Number of time aggregations on which search extrapolated datas	4		0
+automapping_last_update_date	20110101	0		Date of the last automapping	Date format : YYYYMMDD			1
+topology_max_hour_retrieved	20	0		Maximum limit of the number of the different collected hour files	Default value : 20 hours			1
+default_value_from_sfr	1	1	customisateur	Counter value when not present in PM files	1 = Default value when absent , 0 = NULL when absent	3	23	1
+default_value_from_sfr_non_numeric_value	0	1	customisateur	Counter value when non numeric value in PM files	1 = Default value when value is non numeric , 0 = NULL when value is non numeric	3	24	1
+path_to_product_doc		1	customisateur	Path to product documentation	Path to product documentation (path and file name), example: /doc/doc.pdf	1	15	0
+topo_update_label	0	1	customisateur	Update of topology label	0 = deactivate Update topology label, 1 = activate Update topology label	2	23	1
+query_builder_minium_free_disk_space	20	1	customisateur	Minimum free disk space (in %) required for Query Builder	This parameter is used to set the minimum free diskspace (in percent) required to launch a CSV export in Query Builder.	4	19	0
+query_builder_export_expiry_date	1	1	customisateur	Query Builder CSV export expiry date	Removes Query Builder CSV export older than x days.	4	19	0
+retrieve_single_process	0	0		switch to mono/multi process mode	0 = Multi process mode activated, 1 = mono process mode			1
+retrieve_perf_logs_enabled	0	0		Enable Performance log during retreive	0 = performance log disabled			1

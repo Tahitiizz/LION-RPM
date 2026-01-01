@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<general>
+	<gauges_ie>0</gauges_ie> <!-- 1 : Use IE gauges / Anything else : Use default -->
+	<autorefreshtimer>10000</autorefreshtimer><!-- Delay in milliseconds for autorefresh feature -->
+	<!-- Audit Report and Cells Surveillance configuration -->
+	<penalisationmode>0</penalisationmode><!-- penalisation mode for audit report and cells surveillance : 0 reference period or 1 consecutive periode-->
+	<referenceperiod>3</referenceperiod><!-- number of months before current month for penalisation reference, set to 3 by default-->
+	<mapid>worldHigh</mapid>
+</general>

@@ -1,0 +1,1127 @@
+{
+    "projectName": "Project Name",
+    "licenseText": "Copyright(c) 2011 Company Name",
+    "builds": [
+        {
+            "name": "All Classes",
+            "target": "all-classes.js",
+            "options": {
+                "debug": true
+            },
+            "files": [
+                {
+                    "path": "../js/",
+                    "name": "message.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "locale.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "Observable.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/state/",
+                    "name": "Provider.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/fx/",
+                    "name": "CubicBezier.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "KeyMap.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "Memento.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "ClickRepeater.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "TextMetrics.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "ZIndexManager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/",
+                    "name": "Layout.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "Floating.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "Template.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/panel/",
+                    "name": "Proxy.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "KeyNav.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "ComponentQuery.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "HashMap.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/",
+                    "name": "FieldAncestor.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/field/",
+                    "name": "VTypes.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "Tree.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/",
+                    "name": "Component.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/",
+                    "name": "ProgressBar.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/dd/",
+                    "name": "StatusProxy.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "Animate.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/fx/target/",
+                    "name": "Target.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/draw/",
+                    "name": "Color.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "AbstractManager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/boxOverflow/",
+                    "name": "None.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/boxOverflow/",
+                    "name": "Scroller.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/field/",
+                    "name": "Field.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/field/",
+                    "name": "Field.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "Operation.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "Filter.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/dd/",
+                    "name": "DragTracker.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "Offset.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "AbstractPlugin.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "Sorter.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/state/",
+                    "name": "Manager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/action/",
+                    "name": "Action.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "Connection.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "SortTypes.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "Grouper.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/",
+                    "name": "BoundList.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "Association.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "IdGenerator.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "validations.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/",
+                    "name": "Editor.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/field/",
+                    "name": "Trigger.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "Ajax.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/writer/",
+                    "name": "Writer.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "ResultSet.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/state/",
+                    "name": "CookieProvider.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/",
+                    "name": "AbstractContainer.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/",
+                    "name": "Container.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/",
+                    "name": "Anchor.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "XTemplate.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/fx/",
+                    "name": "Easing.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/",
+                    "name": "Button.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/",
+                    "name": "Auto.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/fx/",
+                    "name": "Queue.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/fx/target/",
+                    "name": "Element.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/fx/target/",
+                    "name": "CompositeElement.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/fx/target/",
+                    "name": "Sprite.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/fx/target/",
+                    "name": "CompositeSprite.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/fx/target/",
+                    "name": "Component.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/draw/",
+                    "name": "Draw.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/fx/",
+                    "name": "PropertyHandler.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/",
+                    "name": "AbstractDock.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/",
+                    "name": "Dock.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/",
+                    "name": "Tab.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "ComponentManager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "FocusManager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/field/",
+                    "name": "Text.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/",
+                    "name": "Labelable.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "ComponentDragger.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "Region.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/field/",
+                    "name": "TextArea.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/plugin/",
+                    "name": "DragDrop.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/dd/",
+                    "name": "DragDropManager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "AbstractMixedCollection.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "Sortable.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "MixedCollection.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/fx/",
+                    "name": "Manager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/fx/",
+                    "name": "Animator.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/fx/",
+                    "name": "Anim.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/menu/",
+                    "name": "Manager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/",
+                    "name": "CheckboxManager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "AbstractStore.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/",
+                    "name": "RadioManager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/state/",
+                    "name": "Stateful.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "AbstractComponent.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "Component.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/resizer/",
+                    "name": "Splitter.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/button/",
+                    "name": "Button.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/button/",
+                    "name": "Split.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/container/",
+                    "name": "AbstractContainer.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/container/",
+                    "name": "Container.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/container/",
+                    "name": "Viewport.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/",
+                    "name": "Border.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/panel/",
+                    "name": "Header.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/tab/",
+                    "name": "Tab.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/tab/",
+                    "name": "Bar.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/",
+                    "name": "FieldContainer.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/toolbar/",
+                    "name": "Fill.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "ProgressBar.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/field/",
+                    "name": "Base.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/field/",
+                    "name": "Text.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/field/",
+                    "name": "Checkbox.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/field/",
+                    "name": "TextArea.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/field/",
+                    "name": "Radio.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/header/",
+                    "name": "Container.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/column/",
+                    "name": "Column.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "UserQueriesTreeColumn.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "QbColumnAction.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/tree/",
+                    "name": "Column.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "CheckColumn.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/column/",
+                    "name": "Action.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/",
+                    "name": "RowNumberer.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/",
+                    "name": "AbstractFit.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/action/",
+                    "name": "Load.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/action/",
+                    "name": "Submit.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "Errors.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/plugin/",
+                    "name": "Editing.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "StoreManager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/selection/",
+                    "name": "Model.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/selection/",
+                    "name": "CellModel.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/selection/",
+                    "name": "RowModel.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/selection/",
+                    "name": "TreeModel.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/",
+                    "name": "Tip.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/picker/",
+                    "name": "Color.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "Types.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "Field.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "NodeInterface.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "ModelManager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "Editor.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/",
+                    "name": "CellEditor.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/plugin/",
+                    "name": "CellEditing.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "CellGridEditor.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/field/",
+                    "name": "Trigger.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/field/",
+                    "name": "Picker.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "FieldColorPicker.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/picker/",
+                    "name": "Month.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/picker/",
+                    "name": "Date.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/field/",
+                    "name": "Date.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "QbDatePicker.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "QbDateField.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/dd/",
+                    "name": "DragDrop.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/dd/",
+                    "name": "DD.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/dd/",
+                    "name": "DDProxy.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/dd/",
+                    "name": "DragSource.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "AggregationItem.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/panel/",
+                    "name": "DD.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/toolbar/",
+                    "name": "Item.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/toolbar/",
+                    "name": "Separator.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/boxOverflow/",
+                    "name": "Menu.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/",
+                    "name": "Box.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/",
+                    "name": "VBox.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/",
+                    "name": "Accordion.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/",
+                    "name": "HBox.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/toolbar/",
+                    "name": "Toolbar.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/panel/",
+                    "name": "AbstractPanel.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/panel/",
+                    "name": "Panel.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "AggPanel.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "TablePanel.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/window/",
+                    "name": "Window.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/window/",
+                    "name": "MessageBox.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "GraphParametersPanel.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/",
+                    "name": "Fit.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/",
+                    "name": "AbstractCard.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/container/",
+                    "name": "Card.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/tab/",
+                    "name": "Panel.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/",
+                    "name": "Basic.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/",
+                    "name": "Panel.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "InfoWindow.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "ExportOptionsWindow.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "GraphParametersWindow.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "GraphPanel.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "PreviewTab.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/panel/",
+                    "name": "Table.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/tip/",
+                    "name": "Tip.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "ValidationZone.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/tip/",
+                    "name": "ToolTip.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/tip/",
+                    "name": "QuickTip.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/tip/",
+                    "name": "QuickTipManager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/toolbar/",
+                    "name": "TextItem.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "LoadMask.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/selection/",
+                    "name": "DataViewModel.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/view/",
+                    "name": "AbstractView.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/view/",
+                    "name": "View.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/view/",
+                    "name": "Table.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/tree/",
+                    "name": "View.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/tree/",
+                    "name": "Panel.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "DownloadPanel.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/",
+                    "name": "View.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/",
+                    "name": "Panel.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "NetworkSelectionWindow.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "GridView.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/field/",
+                    "name": "Spinner.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/field/",
+                    "name": "Number.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/toolbar/",
+                    "name": "Paging.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/view/",
+                    "name": "BoundList.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/view/",
+                    "name": "BoundListKeyNav.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/form/field/",
+                    "name": "ComboBox.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "AbstractQbGridPanel.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "DataGridPanel.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "FilterGridPanel.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "QueryTab.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/writer/",
+                    "name": "Json.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/reader/",
+                    "name": "Reader.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/reader/",
+                    "name": "Json.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/proxy/",
+                    "name": "Proxy.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/proxy/",
+                    "name": "Server.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/proxy/",
+                    "name": "Ajax.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "Model.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "Store.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "NodeStore.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "TreeStore.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "FilterPanel.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "LeftPanel.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "QueriesStore.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "QueriesPanel.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "RightPanel.js"
+                },
+                {
+                    "path": "../js/",
+                    "name": "App.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "Point.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "Layer.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "PluginManager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/",
+                    "name": "Auto.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/resizer/",
+                    "name": "Resizer.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/resizer/",
+                    "name": "SplitterTracker.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/panel/",
+                    "name": "Tool.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/util/",
+                    "name": "CSS.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/",
+                    "name": "ColumnLayout.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/plugin/",
+                    "name": "HeaderResizer.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "ArrayStore.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/",
+                    "name": "Scroller.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/view/",
+                    "name": "TableChunker.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "Batch.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/",
+                    "name": "Request.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/dd/",
+                    "name": "DragZone.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/menu/",
+                    "name": "Item.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/menu/",
+                    "name": "KeyNav.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "ElementLoader.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/layout/component/",
+                    "name": "Draw.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/header/",
+                    "name": "DragZone.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/",
+                    "name": "LockingView.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/proxy/",
+                    "name": "Client.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/draw/",
+                    "name": "CompositeSprite.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/dd/",
+                    "name": "Registry.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/dd/",
+                    "name": "DDTarget.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/dd/",
+                    "name": "ScrollManager.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/view/",
+                    "name": "DragZone.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "ComponentLoader.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/menu/",
+                    "name": "CheckItem.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/menu/",
+                    "name": "Separator.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/menu/",
+                    "name": "Menu.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/",
+                    "name": "Lockable.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/proxy/",
+                    "name": "Memory.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/draw/",
+                    "name": "Surface.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/draw/",
+                    "name": "Component.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/dd/",
+                    "name": "DropTarget.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/dd/",
+                    "name": "DropZone.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/view/",
+                    "name": "DropZone.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/",
+                    "name": "ViewDropZone.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/header/",
+                    "name": "DropZone.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/grid/plugin/",
+                    "name": "HeaderReorderer.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/resizer/",
+                    "name": "ResizeTracker.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/data/reader/",
+                    "name": "Array.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "ShadowPool.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/draw/",
+                    "name": "Matrix.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/draw/",
+                    "name": "SpriteDD.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/",
+                    "name": "Shadow.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/draw/",
+                    "name": "Sprite.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/draw/engine/",
+                    "name": "Svg.js"
+                },
+                {
+                    "path": "../../../Query%20builder/js/ext4/src/draw/engine/",
+                    "name": "Vml.js"
+                }
+            ]
+        },
+        {
+            "name": "Application - Production",
+            "target": "app-all.js",
+            "compress": true,
+            "files": [
+                {
+                    "path": "",
+                    "name": "all-classes.js"
+                },
+                {
+                    "path": "",
+                    "name": "app.js"
+                }
+            ]
+        }
+    ],
+    "resources": []
+}

@@ -1,0 +1,5 @@
+<template id="template9" title="template9">
+		<row rowspan='1'>
+			<widget colspan='1' type='graphpanel' id='chart1' />
+		</row>
+</template>

@@ -1,0 +1,185 @@
+Changelog
+V3.17
+ - RQ5199: [AO-TA] remove write access to other on files and directories 
+V3.15
+ - Mantis 4700: [Hardware-HP] - Support HP Gen8 V2 - RHEL 6.5
+ - Mantis 2561: [DE MKT] Reverse Proxy - Prise en compte hostname dans les setups TA
+ - mise � jour lien vers SVN dans update_gen_inst
+V3.14
+ - Bug 42431[SUP][Eastlink Canada] Some of custom KPI are disabled after patch
+V3.13
+ - BZ 41791:  There are errors in demon file
+V3.12
+ - BZ 38513: Information on 'FTP connection' popup is not correct
+V3.11
+ - BZ 35923: Data mixed KPI are not calculated for Network and Vendor level
+V3.10
+ - BZ 30069: update of right on localSession.sqlite file
+V3.09
+ - Compatibility with redHat 6.2
+V3.08
+ - CB 5.2 can use only RHEL 5.5 and PHP 5.2.13 or higher
+ - configurePortal.sh launch with new parameters depending on previous PAA configuration (none, Lot1 or Lot2)
+ - Update of $min_previous_product_version_nb message
+V3.07
+ - Ajout du param�tre min_previous_product_version dans gen.conf pour pr�ciser la version minimale requise sur la version � patcher
+V3.06
+ - Activate Portal authentication selection code to be executed 
+ - Unicity column date in sys_versioning : Management all date formats
+V3.05
+ - BZ 24480 : Error after checking "date" from sys_versioning tables during migration on PostgreSQL 9.1.1
+V3.04
+ - Return to normal color text after warning shell message
+ - Add control on "date" field from table sys_versioning before migration or update application. Field content must be like "YYYY_MM_DD_HH_II[_SS]". Adding MPR SQL request to update date field. If update failed, second control stops script.
+ - Complete message when several IP are availabled
+ 
+V3.03
+ - Escape (double quote) message as parameter for function "add_log" and "show_msg"
+ - Check if this quick install can be apply (compatible) on existing application when user selects "Install new product" and writes an existing application�s name (i.e. avoid GSM quick_install on IU product)
+
+V3.02
+ - Alternate psql_bin for Postgresql 9.1 in parser installation script
+ - New gen.conf files takes values from backuped gen.conf file
+ - User application name choice is part of log file name
+ - Log file name is displayed when installation script stops on encountered errors during execution
+ - Gen.conf file must exist to create T&A package
+ - Delete context archive from source directory "source/context/TA_xxxxx.tar.bz2"
+ - Portal Authentication configuration supported for CB 5.1.5 or greater, executes CB tools/configurePortal.sh if exists
+ - Blank product name has been changed to "gateway" (instead of "bp") [product key check]
+
+V3.01
+ - Password is not showed on password window during update_gen_inst.sh
+ - BZ 23141 : Should display the warning message when enter the product name, which is the same as the existing product
+ - Bug on target directory for SH scripts : quick_install_ta.sh, install_parser.sh and quick_install_tools.sh
+ - Filtering on first caracter of version found on SVN in order to verify Quick Install full version and not branch during update_gen_inst.sh execution
+
+V3.0
+ - Rewrite generator scripts
+ - Delete unused parameters : nom_patch, ctx_name, ctx_version
+ - Check existing content into parser and context directories before generating full package (test not done in case of update package)
+ - Improve aborting process : delete "install" directory
+ - Fix bug 22165 : misspelled message "avaible" instead of "available"
+ - Add infos about php 5.2.13 for GIS (need bigger serialized objects)
+ - Add Date and time in install or patch log filename in order to keep installation
+ - Add comments in filelog to know actions done by user for action done on Red Hat and PHP version
+ - Add control on RedHat Release in quick install (with allowing overpass option)
+ - Red Hat release control : if CB is higher than 5.0.6.04 or 5.1.4.x, install is allowed
+ - Add minutes in parser date install inserted in sys_versioning
+ - Add "Product version" and "T&A Package Generator version" in sys_versioning
+ - Check and modify owner & permission on file homepage/config.xml to "astellia", "777"
+ - Add file of keys for product "Roaming RAN"
+ - Add Package Generator version in content part
+ - Add type_install in log (install, patch, migration) + database name
+ - Add previous version in log in case of patch or migration
+ - Add md5 feature to be disabled in quick_install
+ - Add product older than 5.0 in product list during installation
+ - Add progress bar when searching existing application
+ - List application name and not application database name during installation
+ - Define "ctx_name" & "ctx_version" into package_generator.sh
+ - Feature to change default network aggregation level from config.xml (homepage) during installation
+ - T&A connection is set before post_installation script launch (P1 cas de HPG - impossible d'activer le SA pour la connection par d�faut puisqu'elle n'existe pas [MPR])
+ - Rewrite quick installation script and logfile
+ - Add progress bar when installing product's component
+ - Cast parameters in SQL query for function exit_if_process_running() [BZ 22772]
+ - New update Package Generator script (for updating T&A Package Generator for version above 3.0)
+
+V2.19
+ - Blocage de l'installation dans le cas ou le port postgresql n'est pas 5432 par variable "$allowDifferentPostgresqlPort"
+ - Ajout des produits corporates compatibles dans la liste des produits compatible à migrer
+
+V2.18
+ - Inversion des 7ème et 8ème paramètres de la commande d'installation du CB (Postgresql Port | IP) => 7ème paramètre : IP, 8ème paramètre : postgresql Post
+
+V2.17
+ - dans le cas d'un produit blanc, la clé du produit n'est pas demandé pendant l'installation.
+ - ajout d'une popup pour la sélection du port Postgresql. Le numéro 5432 est affiché par défaut. Cette information est transmise au script d'installation du CB.
+
+V2.16
+ - génération automatique d'un fichier DeliveryNote.txt (gen_inst.sh) ou DeliveryNotePatch.txt (gen_patch.sh) contenant les informations du package. Le développeur complète ces fichiers en remplaçant les champs "xxxxx" par les informations correspondantes.
+
+V2.15
+ - ajout d'une popup de sélection d'IP lorsque plusieurs IP sont disponible ou pas d'IP trouvée pendant l'exécution du script
+ - ajout d'une popup de choix d'application à migrer si une application est déjà existante OU saisie du nom de la nouvelle application
+ - ajout d'une popup de gestion des clés si fichiers des clés présents sur le serveur (ces fichiers doivent en aucun cas être présent sur les serveur de production)
+ - ajout des fichiers de clés à déposer sur les serveurs de développement. EN AUCUN CAS SUR LES SERVEURS DE PRODUCTION
+ 
+V2.14
+ - suppression des doublons entre version de base et patch lorsque version patch non présente dans le package produit pour l'écriture du fichier produitInformation.csv
+
+V2.13
+ - désactivation de l'écrasement de la configuration cliente du fichier config.xml de la homepage produit
+ - suppression de l'exécution du SQL de correction du bug 19738 
+ - suppression des documentations PDF présente sur le SVN
+
+v2.12
+ - bz 19738 : modification du script post_installation.sh pour le Task Scheduler Signaling
+ - Evolution : Ajout de la gestion de version PHP lors de l'exécution du quick_install. Si la version PHP est inférieure à 5.2.13:
+   + l'installation est annulée en mode QUIET
+   + choix d'abandon de l'installation en mode graphique
+ - Ajout de la version du Gen_inst utilisé pour créer l'archive dans le quick_install_XXXX.sh généré (demande PGR)
+ - Ajout de la version du Gen_inst utilisé pour créer l'archive dans le fichier de log
+ 
+v2.11
+ - bz 19811 : modification du message sur le nom de l'appli, de la bd dans le cas de patch
+ - bz 20018 : lecture du code_module dans le fichier gen_conf au lieu de la table sys_field_reference
+ 
+v2.10
+ - report dans gen_patch de la modification faite sur le gen_inst (gestion du nom de product <> module)
+
+v2.9
+ - bz 19142 : passage du chemin absolu au lieu de . pour les scripts d'install CB et Parser
+
+v2.8
+ - correction d'un bug qui rajoutait un .sh en trop au nom du script parser dans gen_patch.sh
+ - gestion du cas particulier suivant : le module est différent du produit (ex: produit = gprs / module = gb)
+ - bz 19301 : modification du test sur la version cb (comportement différents pre/post version 5.0.3)
+ - homepage installation dialog page fixed : $res=$? => res=$?
+ 
+ v2.7
+ - ajout d'un dos2unix sur le fichier xbdd.inc et sur l'installation de la homepage
+ - la connexion par defaut est maintenant créée en cas d'installation (pas en cas de patch ou de migration)
+ - la sequence sys_definition_connection_id_connection_seq est incrementée si elle est égale à 1
+ - correction de l'option "-k" qui ne fonctionnait pas
+
+ v2.6
+ - suppression des fichiers .csv dans l'archive complète
+ - ajout du fichier 'gen.conf' qui permet d'externaliser la configuration de gen_inst.sh et gen_patch.sh
+
+ v2.5
+ - suppression des repertoire .svn et CVS lors de la création des archives
+ - generation du fichier productInformations.csv qui sert pour le publipostage de la doc d'installation
+ - ajout de "sysfieldreference restore" dans le TRAP du EXIT
+ - changement de comportement : par defaut le repertoire "install" est supprimé, avec l'option "-k" (keep) il est possible de le conserver
+
+ v2.4
+ - suppression du dernier parametre lors de l'appel au script d'installation de la homepage
+ - mise a jour du nom de l'application (sdp_label) avec le "product_name" de sgp si le nom n'a pas été personnalisé
+
+ v2.3
+ - correction de la fonction de sauvegarde sysdefmaster afin d'eviter un probleme si les fichiers temporaires sont vides
+
+ v2.2
+ - changement du code de detection du script d'installation de la homepage
+ - mise a jour du code de la fonction sysdefmaster (sauvegarde de la table _ref en plus)
+
+ v2.1
+ - lors de l'installation d'un patch CB, correction de l'appel a la fonction d'installation du CB. Si on est en mode d'installation de base ou bien en mode patch avec un CB superieur a 5.0.3, on appel install_cb_base, sinon on appel install_cb_patch
+
+ v2.0
+ - réunification des scripts quick_install et quick_install_patch en un seul, cependant il y a toujours gen_inst et gen_patch
+ - modularisation de l'installation : il est possible de choisir l'ordonnancement de l'installation pour les composants cb_base, cb_patch, parser, context
+ - appels à des scripts pre/post installation pour chaque composant, ce qui permet de sortir les parties spécifiques aux patchs dans des scripts externes, qui se trouvent dans le repertoire 'scripts'
+ - l'installation de base d'un parser ne necessite plus de lui passer le contexte en parametre (install_parser.sh)
+
+ v1.91
+ - ajout de la signature md5 de l'archive dans les scripts de quick_install et verification de celle-ci a l'install
+ - test d'extraction de tar avant de lancer l'extraction proprement dite dans les scripts de quick_install
+ - verification du repertoire courant au lancement des scripts de quick_install (qui doit etre /home/ta_install)
+ - refuse d'installer un patch si un process est en cours d'execution sur l'application concernee
+ - lors de l'installation d'un patch ou d'une migration, desactivation du lancement des process dans l'application, et restauration apres installation
+ 
+ v1.9
+ - supression du "yes|cp", pour "/bin/cp", c'est l'alias local qui faisait planter...
+ - appel de check_and_generate avant la creation du package
+ - ajoute de l'option "-s" qui produit uniquement un resume de cgc
+

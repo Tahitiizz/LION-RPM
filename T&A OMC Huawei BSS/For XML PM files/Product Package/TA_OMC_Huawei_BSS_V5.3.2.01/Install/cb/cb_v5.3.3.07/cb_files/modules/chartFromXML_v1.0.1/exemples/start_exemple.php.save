@@ -1,0 +1,47 @@
+<?php
+
+// include_once('../../../php/environnement_liens.php');
+// include_once('../../conf.modules.inc');
+
+$dir = $repertoire_physique_niveau0.'modules/chartFromXML_v1.0.0/exemples/';
+$dir = substr($dir,0,strrpos($dir,'/'));		// on est dans /chartFromXML_v.../exemples
+$dir = substr($dir,0,strrpos($dir,'/')) . '/';	// on est dans /chartFromXML_v.../
+define('MOD_CHARTFROMXML',$dir);
+define('BASE_JPGRAPH',$dir.'jpgraph-2.3.3/src/');
+
+$self = $_SERVER["PHP_SELF"];
+$self = substr($self,0,strrpos($self,'/'));
+$self = substr($self,0,strrpos($self,'/')) .'/';
+define('URL_CHARTFROMXML',$self);
+
+
+include_once(MOD_CHARTFROMXML . "class/graph.php");
+include_once(MOD_CHARTFROMXML . "class/SimpleXMLElement_Extended.php");
+include_once(MOD_CHARTFROMXML . "class/chartFromXML.php");
+
+?>
+
+
+<script type='text/javascript' src='<?php echo URL_CHARTFROMXML ?>js/prototype/prototype.js'> </script>
+<script type='text/javascript' src='<?php echo URL_CHARTFROMXML ?>js/prototype/window.js'> </script>
+<script type='text/javascript' src='<?php echo URL_CHARTFROMXML ?>js/prototype/scriptaculous.js'> </script>
+<script type='text/javascript' src='<?php echo URL_CHARTFROMXML ?>js/fenetres_volantes.js'></script>
+
+<link rel="stylesheet" type="text/css" href="<?php echo URL_CHARTFROMXML ?>css/global_interface.css" />
+
+
+
+<style type="text/css">
+.error {
+	margin: 5px;
+	border: 2px solid #990000;
+	padding: 5px;
+	background: #FFFF99;
+	font-weight: bold;
+	color: #990000;
+}
+.error .chartFromXML	{
+}
+</style>
+
+

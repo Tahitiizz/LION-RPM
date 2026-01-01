@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chart>
+	<properties>
+		<tabtitle>
+			<text>L: 40 cumulatedbars </text>
+			<text>R: - </text>
+			<text color="red"> no mark </text>
+			<text color="orange" font_size="8" font_family="FF_VERDANA"> no fill</text>
+
+		</tabtitle>
+		<left_axis_label>Nb</left_axis_label>
+		<right_axis_label>Number</right_axis_label>
+		<horizontal_line legend="50" color="firebrick3" yaxis="left">50</horizontal_line>
+
+		<margin_left>10</margin_left>
+		<margin_right>40</margin_right>
+		<margin_top>20</margin_top>
+		<margin_bottom>40</margin_bottom>
+		<width>900</width>
+		<height>400</height>
+		<legend_position>left</legend_position>
+	</properties>
+	<xaxis_labels title="years">
+		<label toto="2010" color="#0000FF">2000</label>
+		<label toto="2011" color="#0000FF">2001</label>
+		<label toto="2012" color="#0000FF">2002</label>
+		<label toto="2013" color="#0000FF">2003</label>
+		<label toto="2014" color="#3333FF">2004</label>
+		<label toto="2015" color="#6666FF">2005</label>
+		<label toto="2016" color="#9999FF">2006</label>
+		<label toto="2017" color="#CCCCFF">2007</label>
+		<label toto="2018" color="#CCCCCC">2008</label>
+		<label toto="2019">2009</label>
+		<label toto="2020">2010</label>
+	</xaxis_labels>
+
+	<datas>
+
+	
+		<data label="Kpi 0" type="cumulatedbar" stroke_color="#FFFFFF" fill_color="#FFFFFF" fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>72</value>
+									<value>100</value>
+									<value>80</value>
+									<value>21</value>
+
+									<value>56</value>
+									<value>2</value>
+									<value>91</value>
+									<value>34</value>
+									<value>14</value>
+									<value>76</value>
+
+									<value>7</value>
+							</data>
+			
+		<data label="Kpi 1" type="cumulatedbar" stroke_color="#CCFFFF" fill_color="#CCFFFF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>42</value>
+									<value>42</value>
+									<value>42</value>
+									<value>69</value>
+
+									<value>67</value>
+									<value>63</value>
+									<value>61</value>
+									<value>17</value>
+									<value>95</value>
+									<value>0</value>
+
+									<value>81</value>
+							</data>
+			
+		<data label="Kpi 2" type="cumulatedbar" stroke_color="#99FFFF" fill_color="#99FFFF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>16</value>
+									<value>51</value>
+									<value>48</value>
+									<value>14</value>
+
+									<value>63</value>
+									<value>1</value>
+									<value>32</value>
+									<value>39</value>
+									<value>35</value>
+									<value>3</value>
+
+									<value>39</value>
+							</data>
+			
+		<data label="Kpi 3" type="cumulatedbar" stroke_color="#66FFFF" fill_color="#66FFFF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>14</value>
+									<value>25</value>
+									<value>95</value>
+									<value>17</value>
+
+									<value>15</value>
+									<value>29</value>
+									<value>31</value>
+									<value>91</value>
+									<value>36</value>
+									<value>74</value>
+
+									<value>32</value>
+							</data>
+			
+		<data label="Kpi 4" type="cumulatedbar" stroke_color="#33FFFF" fill_color="#33FFFF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>78</value>
+									<value>42</value>
+									<value>100</value>
+									<value>41</value>
+
+									<value>3</value>
+									<value>16</value>
+									<value>35</value>
+									<value>3</value>
+									<value>97</value>
+									<value>51</value>
+
+									<value>55</value>
+							</data>
+			
+		<data label="Kpi 5" type="cumulatedbar" stroke_color="#00FFFF" fill_color="#00FFFF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>45</value>
+									<value>66</value>
+									<value>17</value>
+									<value>46</value>
+
+									<value>98</value>
+									<value>56</value>
+									<value>82</value>
+									<value>1</value>
+									<value>96</value>
+									<value>96</value>
+
+									<value>26</value>
+							</data>
+			
+		<data label="Kpi 6" type="cumulatedbar" stroke_color="#FFCCFF" fill_color="#FFCCFF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>90</value>
+									<value>12</value>
+									<value>42</value>
+									<value>19</value>
+
+									<value>44</value>
+									<value>33</value>
+									<value>56</value>
+									<value>17</value>
+									<value>65</value>
+									<value>34</value>
+
+									<value>59</value>
+							</data>
+			
+		<data label="Kpi 7" type="cumulatedbar" stroke_color="#CCCCFF" fill_color="#CCCCFF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>65</value>
+									<value>75</value>
+									<value>63</value>
+									<value>81</value>
+
+									<value>9</value>
+									<value>67</value>
+									<value>77</value>
+									<value>60</value>
+									<value>21</value>
+									<value>22</value>
+
+									<value>26</value>
+							</data>
+			
+		<data label="Kpi 8" type="cumulatedbar" stroke_color="#99CCFF" fill_color="#99CCFF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>38</value>
+									<value>69</value>
+									<value>24</value>
+									<value>95</value>
+
+									<value>50</value>
+									<value>25</value>
+									<value>90</value>
+									<value>46</value>
+									<value>52</value>
+									<value>79</value>
+
+									<value>58</value>
+							</data>
+			
+		<data label="Kpi 9" type="cumulatedbar" stroke_color="#66CCFF" fill_color="#66CCFF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>94</value>
+									<value>99</value>
+									<value>2</value>
+									<value>26</value>
+
+									<value>54</value>
+									<value>19</value>
+									<value>92</value>
+									<value>88</value>
+									<value>79</value>
+									<value>56</value>
+
+									<value>62</value>
+							</data>
+			
+		<data label="Kpi 10" type="cumulatedbar" stroke_color="#33CCFF" fill_color="#33CCFF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>41</value>
+									<value>37</value>
+									<value>71</value>
+									<value>7</value>
+
+									<value>14</value>
+									<value>31</value>
+									<value>28</value>
+									<value>36</value>
+									<value>58</value>
+									<value>66</value>
+
+									<value>4</value>
+							</data>
+			
+		<data label="Kpi 11" type="cumulatedbar" stroke_color="#00CCFF" fill_color="#00CCFF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>82</value>
+									<value>60</value>
+									<value>55</value>
+									<value>7</value>
+
+									<value>50</value>
+									<value>0</value>
+									<value>60</value>
+									<value>28</value>
+									<value>59</value>
+									<value>53</value>
+
+									<value>27</value>
+							</data>
+			
+		<data label="Kpi 12" type="cumulatedbar" stroke_color="#FF99FF" fill_color="#FF99FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>61</value>
+									<value>80</value>
+									<value>81</value>
+									<value>81</value>
+
+									<value>72</value>
+									<value>68</value>
+									<value>59</value>
+									<value>28</value>
+									<value>30</value>
+									<value>100</value>
+
+									<value>65</value>
+							</data>
+			
+		<data label="Kpi 13" type="cumulatedbar" stroke_color="#CC99FF" fill_color="#CC99FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>1</value>
+									<value>7</value>
+									<value>80</value>
+									<value>32</value>
+
+									<value>35</value>
+									<value>15</value>
+									<value>91</value>
+									<value>1</value>
+									<value>20</value>
+									<value>72</value>
+
+									<value>62</value>
+							</data>
+			
+		<data label="Kpi 14" type="cumulatedbar" stroke_color="#9999FF" fill_color="#9999FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>76</value>
+									<value>80</value>
+									<value>11</value>
+									<value>76</value>
+
+									<value>39</value>
+									<value>40</value>
+									<value>35</value>
+									<value>93</value>
+									<value>67</value>
+									<value>97</value>
+
+									<value>73</value>
+							</data>
+			
+		<data label="Kpi 15" type="cumulatedbar" stroke_color="#6699FF" fill_color="#6699FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>48</value>
+									<value>77</value>
+									<value>45</value>
+									<value>16</value>
+
+									<value>35</value>
+									<value>73</value>
+									<value>46</value>
+									<value>35</value>
+									<value>38</value>
+									<value>47</value>
+
+									<value>42</value>
+							</data>
+			
+		<data label="Kpi 16" type="cumulatedbar" stroke_color="#3399FF" fill_color="#3399FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>17</value>
+									<value>80</value>
+									<value>78</value>
+									<value>33</value>
+
+									<value>70</value>
+									<value>80</value>
+									<value>54</value>
+									<value>42</value>
+									<value>42</value>
+									<value>29</value>
+
+									<value>22</value>
+							</data>
+			
+		<data label="Kpi 17" type="cumulatedbar" stroke_color="#0099FF" fill_color="#0099FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>54</value>
+									<value>5</value>
+									<value>61</value>
+									<value>94</value>
+
+									<value>40</value>
+									<value>54</value>
+									<value>61</value>
+									<value>36</value>
+									<value>26</value>
+									<value>9</value>
+
+									<value>12</value>
+							</data>
+			
+		<data label="Kpi 18" type="cumulatedbar" stroke_color="#FF66FF" fill_color="#FF66FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>71</value>
+									<value>25</value>
+									<value>48</value>
+									<value>44</value>
+
+									<value>72</value>
+									<value>83</value>
+									<value>82</value>
+									<value>18</value>
+									<value>25</value>
+									<value>100</value>
+
+									<value>99</value>
+							</data>
+			
+		<data label="Kpi 19" type="cumulatedbar" stroke_color="#CC66FF" fill_color="#CC66FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>2</value>
+									<value>32</value>
+									<value>69</value>
+									<value>82</value>
+
+									<value>86</value>
+									<value>10</value>
+									<value>24</value>
+									<value>14</value>
+									<value>32</value>
+									<value>78</value>
+
+									<value>19</value>
+							</data>
+			
+		<data label="Kpi 20" type="cumulatedbar" stroke_color="#9966FF" fill_color="#9966FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>94</value>
+									<value>71</value>
+									<value>60</value>
+									<value>47</value>
+
+									<value>32</value>
+									<value>96</value>
+									<value>74</value>
+									<value>41</value>
+									<value>8</value>
+									<value>45</value>
+
+									<value>67</value>
+							</data>
+			
+		<data label="Kpi 21" type="cumulatedbar" stroke_color="#6666FF" fill_color="#6666FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>57</value>
+									<value>89</value>
+									<value>38</value>
+									<value>39</value>
+
+									<value>70</value>
+									<value>57</value>
+									<value>64</value>
+									<value>70</value>
+									<value>55</value>
+									<value>67</value>
+
+									<value>1</value>
+							</data>
+			
+		<data label="Kpi 22" type="cumulatedbar" stroke_color="#3366FF" fill_color="#3366FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>23</value>
+									<value>48</value>
+									<value>88</value>
+									<value>34</value>
+
+									<value>73</value>
+									<value>1</value>
+									<value>67</value>
+									<value>50</value>
+									<value>21</value>
+									<value>60</value>
+
+									<value>20</value>
+							</data>
+			
+		<data label="Kpi 23" type="cumulatedbar" stroke_color="#0066FF" fill_color="#0066FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>81</value>
+									<value>7</value>
+									<value>53</value>
+									<value>77</value>
+
+									<value>81</value>
+									<value>95</value>
+									<value>86</value>
+									<value>25</value>
+									<value>61</value>
+									<value>42</value>
+
+									<value>14</value>
+							</data>
+			
+		<data label="Kpi 24" type="cumulatedbar" stroke_color="#FF33FF" fill_color="#FF33FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>100</value>
+									<value>82</value>
+									<value>85</value>
+									<value>56</value>
+
+									<value>45</value>
+									<value>54</value>
+									<value>10</value>
+									<value>11</value>
+									<value>55</value>
+									<value>34</value>
+
+									<value>60</value>
+							</data>
+			
+		<data label="Kpi 25" type="cumulatedbar" stroke_color="#CC33FF" fill_color="#CC33FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>42</value>
+									<value>68</value>
+									<value>32</value>
+									<value>44</value>
+
+									<value>34</value>
+									<value>82</value>
+									<value>65</value>
+									<value>95</value>
+									<value>2</value>
+									<value>46</value>
+
+									<value>2</value>
+							</data>
+			
+		<data label="Kpi 26" type="cumulatedbar" stroke_color="#9933FF" fill_color="#9933FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>56</value>
+									<value>22</value>
+									<value>84</value>
+									<value>51</value>
+
+									<value>8</value>
+									<value>9</value>
+									<value>12</value>
+									<value>50</value>
+									<value>23</value>
+									<value>11</value>
+
+									<value>31</value>
+							</data>
+			
+		<data label="Kpi 27" type="cumulatedbar" stroke_color="#6633FF" fill_color="#6633FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>7</value>
+									<value>67</value>
+									<value>77</value>
+									<value>61</value>
+
+									<value>78</value>
+									<value>89</value>
+									<value>16</value>
+									<value>12</value>
+									<value>49</value>
+									<value>59</value>
+
+									<value>80</value>
+							</data>
+			
+		<data label="Kpi 28" type="cumulatedbar" stroke_color="#3333FF" fill_color="#3333FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>81</value>
+									<value>3</value>
+									<value>14</value>
+									<value>63</value>
+
+									<value>68</value>
+									<value>9</value>
+									<value>66</value>
+									<value>14</value>
+									<value>11</value>
+									<value>22</value>
+
+									<value>37</value>
+							</data>
+			
+		<data label="Kpi 29" type="cumulatedbar" stroke_color="#0033FF" fill_color="#0033FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>96</value>
+									<value>73</value>
+									<value>45</value>
+									<value>4</value>
+
+									<value>85</value>
+									<value>95</value>
+									<value>27</value>
+									<value>97</value>
+									<value>26</value>
+									<value>34</value>
+
+									<value>64</value>
+							</data>
+			
+		<data label="Kpi 30" type="cumulatedbar" stroke_color="#FF00FF" fill_color="#FF00FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>2</value>
+									<value>96</value>
+									<value>42</value>
+									<value>91</value>
+
+									<value>12</value>
+									<value>54</value>
+									<value>39</value>
+									<value>71</value>
+									<value>34</value>
+									<value>20</value>
+
+									<value>74</value>
+							</data>
+			
+		<data label="Kpi 31" type="cumulatedbar" stroke_color="#CC00FF" fill_color="#CC00FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>48</value>
+									<value>84</value>
+									<value>42</value>
+									<value>58</value>
+
+									<value>50</value>
+									<value>56</value>
+									<value>70</value>
+									<value>72</value>
+									<value>94</value>
+									<value>65</value>
+
+									<value>45</value>
+							</data>
+			
+		<data label="Kpi 32" type="cumulatedbar" stroke_color="#9900FF" fill_color="#9900FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>38</value>
+									<value>69</value>
+									<value>30</value>
+									<value>32</value>
+
+									<value>96</value>
+									<value>26</value>
+									<value>58</value>
+									<value>30</value>
+									<value>90</value>
+									<value>61</value>
+
+									<value>26</value>
+							</data>
+			
+		<data label="Kpi 33" type="cumulatedbar" stroke_color="#6600FF" fill_color="#6600FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>32</value>
+									<value>51</value>
+									<value>38</value>
+									<value>86</value>
+
+									<value>91</value>
+									<value>9</value>
+									<value>19</value>
+									<value>11</value>
+									<value>84</value>
+									<value>68</value>
+
+									<value>95</value>
+							</data>
+			
+		<data label="Kpi 34" type="cumulatedbar" stroke_color="#3300FF" fill_color="#3300FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>26</value>
+									<value>25</value>
+									<value>45</value>
+									<value>83</value>
+
+									<value>95</value>
+									<value>17</value>
+									<value>76</value>
+									<value>59</value>
+									<value>62</value>
+									<value>13</value>
+
+									<value>27</value>
+							</data>
+			
+		<data label="Kpi 35" type="cumulatedbar" stroke_color="#0000FF" fill_color="#0000FF" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>92</value>
+									<value>46</value>
+									<value>23</value>
+									<value>18</value>
+
+									<value>3</value>
+									<value>53</value>
+									<value>8</value>
+									<value>65</value>
+									<value>80</value>
+									<value>40</value>
+
+									<value>15</value>
+							</data>
+			
+		<data label="Kpi 36" type="cumulatedbar" stroke_color="#FFFFCC" fill_color="#FFFFCC" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>17</value>
+									<value>25</value>
+									<value>6</value>
+									<value>27</value>
+
+									<value>45</value>
+									<value>17</value>
+									<value>10</value>
+									<value>12</value>
+									<value>12</value>
+									<value>37</value>
+
+									<value>37</value>
+							</data>
+			
+		<data label="Kpi 37" type="cumulatedbar" stroke_color="#CCFFCC" fill_color="#CCFFCC" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>57</value>
+									<value>19</value>
+									<value>31</value>
+									<value>74</value>
+
+									<value>95</value>
+									<value>91</value>
+									<value>36</value>
+									<value>8</value>
+									<value>17</value>
+									<value>27</value>
+
+									<value>54</value>
+							</data>
+			
+		<data label="Kpi 38" type="cumulatedbar" stroke_color="#99FFCC" fill_color="#99FFCC" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>40</value>
+									<value>46</value>
+									<value>57</value>
+									<value>94</value>
+
+									<value>54</value>
+									<value>22</value>
+									<value>73</value>
+									<value>95</value>
+									<value>37</value>
+									<value>91</value>
+
+									<value>20</value>
+							</data>
+			
+		<data label="Kpi 39" type="cumulatedbar" stroke_color="#66FFCC" fill_color="#66FFCC" 		fill_transparency='0.3'	yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y');"
+			onmouseover="pop('$x','$label=$y');"	onmouseout="kill();"
+			>
+									<value>44</value>
+									<value>17</value>
+									<value>65</value>
+									<value>61</value>
+
+									<value>28</value>
+									<value>77</value>
+									<value>74</value>
+									<value>66</value>
+									<value>13</value>
+									<value>30</value>
+
+									<value>85</value>
+							</data>
+			
+			</datas>
+</chart>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- homepage.xml This file is used to memorize the Modular Homepage configuration 
+	for one user. Warning : its content must not be manually updated. @author 
+	AVZ, JGU2 @version 0.1 @package homepage_modular -->
+<homepage>
+	<style>classic</style>
+	<selectedmode>2</selectedmode>
+    <ratioforpenalization>0.50</ratioforpenalization>
+    <numberofdaysforpenalization>5</numberofdaysforpenalization>
+</homepage>

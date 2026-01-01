@@ -1,0 +1,374 @@
+/**
+* 07/04/2009 - modif SPS : positionnement ie8
+* 08/04/2009 - modif SPS : - ajout de la propriete min-width (pbl affichage ie8) 
+* 						   - suppression proprietes pour la classe .blue (car ne fonctionnant que sous ie8)
+* 14/04/2009 - modif SPS : positionnement ie6
+*/
+
+#page {
+	margin: 0 auto;
+	width:980px;
+}
+
+a img {border:0;}
+acronym {border-bottom: 1px dotted gray;}
+
+h2.blue {
+	margin:5px 30px;
+	padding:1px 10px;
+	color:#29D;
+	font-weight:bold;
+	font-size:14px;
+	text-align:left;
+	/* 08/04/2009 - modif SPS : suppression proprietes ci-dessous (ne fonctionne que sous ie8) */
+	/*filter: Glow(Color=#000000, Strength=3);
+	text-shadow: black 0px 0px 2px;*/
+}
+
+#builder {
+	width:680px;
+    float:left; /* 17/08/2010 OJT : Correction bz16864 pour DE Firefox, mise du float:left */
+	margin-left:10px;
+	border:1px dotted #787878;
+	padding:4px;
+	background:url(../images/fonds/fond_selecteur.gif);
+	text-align:center;
+}
+
+#builder fieldset {
+	margin-bottom:10px;
+	cursor:pointer;
+}
+#builder fieldset legend:hover {
+	color:#000;
+}
+
+
+#gtm_list {
+	margin:8px 40px;
+	background:white;
+	border: 1px solid #888;
+	padding:4px;
+}
+#gtm_list img {
+	position:relative; top:-2px;
+	margin:2px;
+}
+
+
+#filter {
+	font-size:10px;
+	width:215px;
+}
+
+#gtm_properties {
+	/*margin-top:4px;*/
+	text-align: left;
+	font-size: 10px;
+	/**/
+	position:relative;
+	margin:0;
+}
+#gtm_properties input, #gtm_properties select, #gtm_properties label {
+	font-size: 10px;
+}
+
+#list_na_levels {
+	margin:5px 40px;
+	padding:4px 4px 4px 4px;
+	text-align:left;
+	font-size:11px;
+	border:1px solid #999;
+	background:white;
+	min-height:50px;
+}
+
+#na_levels_in_common_master_div {
+    margin:5px 40px;
+    padding:4px 4px 1px 4px;
+    text-align:left;
+    font-size:11px;
+    border:1px solid #999;
+    background:white;
+    /* 14/09/2010 BBX : correction hauteur auto de la box. BZ 17858 */
+    min-height:25px;
+    height:auto !important;
+    height:25px;
+    overflow-y:auto !important;
+    overflow-y:visible;
+}
+
+/* na levels in common */
+#na_levels_in_common {
+	width:500px;
+        /*height:18px;*/ /* 17/08/2010 OJT : Correction bz16864 pour DE Firefox, modif height et padding */
+	margin: 4px 0 4px 0;
+	padding:0 0 4px 0;
+	/*padding-bottom:14px;*/
+	list-style: none;
+        /* 14/09/2010 BBX : correction hauteur auto de la box. BZ 17858 */
+        min-height:18px;
+        height:auto !important;
+        height:18px;
+}
+#na_levels_in_common ul {
+	margin:0;
+	padding:0;
+	clear:left;
+}
+#na_levels_in_common li {
+	float: left;
+	margin-right:4px;
+	margin-bottom:4px;
+	/*margin-bottom:10px;*/
+	padding: 2px;
+	background: #D1D7FF;
+	color:#2163FF;
+	font-size: 10px;
+	display:block;
+
+}
+#na_levels_in_common li.axe3 {
+	background: #F1D1FF;
+	color: purple;
+}
+
+#sdd_selecteur_default_na {
+	border: 2px solid #286CFF;
+	background: #A5C2FF;
+	color: black;
+	font-size: 10px;
+}
+
+div.help {
+	margin: 0 40px 4px 40px;
+	padding: 4px;
+	border: 2px dashed #00B24C;
+	color:#00B24C;
+	text-align: left;
+	font-size: 10px;
+}
+
+#nothing_inside {display:none;}
+
+#element_list {
+	width:250px;
+	margin-left:10px;
+	float:left;
+	font-family: verdana,arial,sans-serif;
+	font-size:10px;
+}
+
+#element_list h3 {
+	margin-top:0;
+	margin-bottom:2px;
+	padding:2px 4px;
+	background:#1B8DD7;
+	border: 1px solid #88CBE8;
+	border-top-color: #0069a9;
+	border-left-color: #0069a9;
+	color: white;
+	font-size:11px;
+	/* 14/04/2009 - modif SPS : suppression proprietes ci-dessous (ne fonctionne que sous ie8) */
+	/*filter: Glow(Color=#DD0000, Strength=5);
+	text-shadow: black 0px 0px 2px;*/
+}
+
+#list_filter {
+	margin-bottom:10px;
+	padding:5px;
+	border:1px dotted #787878;
+	font-size:10px;
+}
+#list_filter label {
+	font-size:10px;
+}
+
+#gtm_elements_list {
+	padding:5px;
+	border:1px dotted #787878;
+	/* 06/04/2009 - modif SPS : positionnement ie6*/
+	height:400px;
+	overflow:scroll;
+	width:238px;
+}
+#gtm_elements_list ul,
+#gtm_elements_list ul li a {
+	margin:0;
+	padding-left:0;
+	font-weight:bold;
+	font-size:11px;
+	color: black;
+}
+#gtm_elements_list ul li a {
+	cursor:pointer;
+}
+#gtm_elements_list ul ul li {
+	margin-left:0;
+	padding-left:10px;
+	cursor:pointer;
+	font-weight:normal;
+	font-size:10px;
+	display:block;
+}
+#gtm_elements_list ul ul li:hover {
+	text-decoration:underline;
+}
+
+
+#gtm_elements {
+	margin: 0 40px;
+    padding:0px; /* 17/08/2010 OJT : Correction bz16864 pour DE Firefox, initialisation du padding */
+	text-align:left;
+	font-size:10px;
+}
+#gtm_elements input, #gtm_elements select, #gtm_elements label {
+	font-size: 10px;
+}
+#gtm_elements li {
+	background:white;
+    /* 14/09/2010 BBX : augmentation de la hauteur de l'élément. BZ 17833 */
+	min-height:25px;
+}
+#gtm_elements li img {
+	/* 14/04/2009 - modif SPS : positionnement ie6*/
+	margin:2px;
+}
+#gtm_elements li div.icon {
+	float:left;
+}
+#gtm_elements li div.label {
+	float:left;
+	padding-top:3px;
+	padding-left:3px;
+}
+#gtm_elements li div.label a {
+	font-size: 10px;
+}
+#gtm_elements li div.product, div.product {
+	float:right;
+	margin-right: 10px;
+    margin-top:5px; /* 20/01/2011 OJT : Réajustement */
+	color:#999;
+	font-style: italic;
+}
+#gtm_elements li div.info, div.info {
+	float:right;
+	cursor:help;
+}
+#gtm_elements li div.del, div.del {
+	float:right;
+	cursor:pointer;
+}
+
+#gtm_elements li div.na_levels {
+	float:none;
+	clear:left;
+	color:#2163FF;
+	background:#D1D7FF url(images/transmit_blue.png) left center no-repeat;
+	background-position: 4px center;
+	padding:2px;
+	padding-left:24px;
+	cursor:auto;
+}
+#gtm_elements li div.na_levels span.axe3 {
+	color: purple;
+}
+#gtm_elements li div.properties, div.properties {
+	/* 07/04/2009 - modif SPS : positionnement ie8*/
+	background:#EEE;
+	padding:2px;
+	display:none;
+	cursor:auto;
+}
+
+/* 17/08/2010 OJT : Correction bz16864 pour DE Firefox */
+ul#gtm_elements li div.properties{
+    clear:left;
+}
+
+td.fieldname {
+	background:#CCC;
+	color:black;
+}
+
+
+.sortable {
+	list-style-type:none;
+}
+.sortable li {
+	border:1px solid #888888;
+	cursor:move;
+	margin:0 0 4px;
+	padding:5px;
+}
+
+
+
+/* pour le color picker */
+.colorPickerBtn {
+	height:20px;
+	width:20px;
+	border:1px #696969 solid;
+}
+table.colorPicker {
+	position: absolute;
+	background-color: #FFFFFF;
+	border: solid 1px #000000;
+}
+table.colorPicker td{
+	width: 15px;
+	height: 15px;
+	border: solid 1px #000000;
+	/* 08/04/2009 - modif SPS : ajout de la propriete min-width (pbl affichage ie8) */
+	min-width:15px;
+}
+
+
+#flash_container {
+	height: 30px;
+}
+
+#flash_msg {
+	margin:5px 40px;
+	border:2px solid #33762E;
+	padding:3px 3px 3px 30px;
+	background: #B1D6B7 url(images/accept.png) left center no-repeat;
+	background-position: 4px;
+	color: #33762E;
+	text-align: left;
+	font-weight: bold;
+}
+
+
+.error {
+	margin:10px;
+	background: #CC0000;
+	border: 2px solid #600;
+	color: white;
+	font-weight: bold;
+}
+
+
+#report_not_configured {
+	margin:5px 40px;
+	border:2px solid red;
+	padding:3px 3px 3px 30px;
+	background: #F8DED1 url(images/exclamation.png) left center no-repeat;
+	background-position: 10px;
+	color: red;
+	text-align: left;
+	font-weight: bold;
+}
+
+span.dash_not_configured {
+	color: red;
+	font-weight: bold;
+}
+
+li.disabled_element {
+        color: red;
+        font-style:italic;
+        text-decoration: none;
+        cursor: auto;
+}

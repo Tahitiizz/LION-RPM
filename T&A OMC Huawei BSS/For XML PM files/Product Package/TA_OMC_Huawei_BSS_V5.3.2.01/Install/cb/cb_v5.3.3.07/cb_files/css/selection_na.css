@@ -1,0 +1,87 @@
+.accordion_title{
+	color:#000;
+	font-weight:bold;
+	background-color:#dad8d8;
+	padding:3px;
+	cursor:pointer;
+	border-bottom:1px #fff solid;
+	border-top:1px #fff solid;
+	font : normal 8pt Verdana, Arial, sans-serif;
+}
+.accordion_element{
+	height:100px;
+	overflow:auto;
+	font : normal 8pt Verdana, Arial, sans-serif;
+	border:1px #dad8d8 solid;
+	border-top:none;
+}
+.accordion_content{
+	background-color:#FF0000;
+}
+.zoneSaisie{
+	font : normal 8pt Verdana, Arial, sans-serif;
+	border: 1px #929292 solid;
+}
+
+
+.window_select_na_class{
+	position:absolute;
+	display:none;
+	border: 1px solid #b5b4b3;
+	border-right: 1px #000 solid;
+	border-bottom: 1px #000 solid;
+	z-index:100000;
+	text-align:left;
+	background-color: #f0efee;
+}
+
+.contenu_na_selection_class{
+	background-color: #fff;
+	padding:2px;
+	width:400px;
+}
+
+.barre_titre{
+	background-color: #b5b4b3;
+	/*background-image : url('../images/fonds/points.gif');*/
+	background-repeat: repeat-x;
+	color : fff;
+	font : bold 9pt Verdana, Arial, sans-serif; 
+	/*cursor:move;*/
+	padding:5px;
+	width:400px;
+}
+.barre_titre_span{
+	background-color: #b5b4b3;
+	padding-left : 6px;
+	padding-right : 6px;
+}
+.bouton_favoris{
+	background: transparent url(../images/icones/star.png) no-repeat 0 0; 
+	border: none;
+	cursor:pointer;
+	width:16px;
+	height:16px;
+}
+.bouton_view_selection{
+	background: transparent url(../images/icones/page_white_text.png) no-repeat 0 0; 
+	border: none;
+	cursor:pointer;
+	width:16px;
+	height:16px;
+}
+.bouton_go{
+	/*background: transparent url(../images/icones/bullet_go.png) no-repeat 0 0; */
+	background-color: #fff;
+	border: none;
+	cursor:default;
+	width:2px;
+	height:2px;
+}
+
+
+
+
+
+
+

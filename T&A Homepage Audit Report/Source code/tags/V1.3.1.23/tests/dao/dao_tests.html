@@ -1,0 +1,449 @@
+<html>
+<head>
+
+<!--  Pre-requis :
+		Dans php/xenv.inc, "$repertoire_physique_niveau0" ne doit pas etre configure pour Xdebug.
+		On doit avoir une valeur "/home/..." et lieu de "D:/...". 
+	 -->
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+<link rel="stylesheet" type="text/css"
+	href="../../extjs/resources/css/ext-all.css">
+<link rel="stylesheet" type="text/css"
+	href="../../proxy/dao/querybuilderExtJS4/resources/css/QueryBuilder.css" />
+
+<!--  type="text/javascript" src="../../extjs/ext.js" -->
+<script type="text/javascript" src="../../extjs/ext-debug.js"></script>
+<script type="text/javascript">
+    	// Config for finding js files
+      Ext.Loader.setPath({'Ext': '../../extjs/src'});	
+      Ext.require('Ext.Ajax');
+      Ext.require('Ext.button.Button');
+      //Ext.require('Ext.MessageBox'); // extJS < 4.0.7
+      Ext.require('Ext.window.MessageBox'); // extJS >= 4.0.7
+      //Ext.require('Ext.data.IdGenerator');  // extJS >= 4.0.7
+       Ext.require('Ext.data.JsonP');
+      Ext.require('Ext.Window');
+      
+  </script>
+</head>
+<body>
+<script type="text/javascript">
+	
+
+  Ext.onReady( function() {
+
+    function getRawKpiList(type, text) {
+        var product = {};
+        product.id = "1";
+        var products = new Array(product);
+        var requestParam = {};	
+        filterOptions = {};
+        filterOptions.products = products;
+        filterOptions.text = text;
+        requestParam.filterOptions = Ext.encode(filterOptions);	
+        Ext.Ajax.request({
+          url: '../../proxy/'+type+'_listhtml.php',
+          method: 'POST',
+          params: requestParam,
+          success: function(xhr,params) {
+              try {                
+                  var myModalWindow = new Ext.Window({  
+                     id: 'modalWindow',  
+                     renderTo: Ext.getBody(),  
+                     title: 'list',  
+                     modal: true,  
+                     layout: 'anchor',  
+                     maximizable: true,  
+                     resizable: true,
+                     autoScroll: false,  
+                     closable: true, 
+                     plain: true,  
+                     width: 500,
+                     height: 200,
+                     html: xhr.responseText,
+                     listeners: {}
+                  }); 
+                  myModalWindow.show();
+              }
+          		catch (err) {
+          			 Ext.MessageBox.alert('ERROR', 'I have got a pb ...');
+          		}
+          },
+          failfure: function(xhr,params) {
+              alert('Failure!\n'+xhr.responseText);
+          }
+      });
+    }
+ 	
+    function getKpiList(kpiText) {      
+      getRawKpiList('kpi', kpiText);
+    }
+
+    function getRawList(rawText) {      
+      getRawKpiList('raw', rawText);
+    }
+    
+    // bouton "Get KPI list ..."
+    var kpiText = 'Packet_Data_Access';
+    Ext.create('Ext.button.Button', {
+         text: 'Get KPI list for "'+kpiText+'"',
+         renderTo: Ext.getBody(),
+         handler: function() {
+              getKpiList(kpiText);
+          }          
+    });
+
+    // bouton "Get counters list ..."
+    var rawText = 'capture_duration';
+    Ext.create('Ext.button.Button', {
+         text: 'Get counters list for "'+rawText+'"',
+         renderTo: Ext.getBody(),
+         handler: function() {
+              getRawList(rawText);
+          }          
+    });
+
+
+    function getGaugeData() {
+      
+        var timeData = {};
+        timeData.id = "hour";
+        timeData.type = "ta";
+        timeData.order = "Descending";
+        
+        var rawKpiData = {};
+        rawKpiData.type = "KPI"; // or "RAW"
+        rawKpiData.id = "kpis.0075.01.05034";        
+        rawKpiData.productId = "1";      
+
+        var neData = {}; 
+        neData.type = "na";
+        neData.id = "bsc";      
+         
+        var selectData = new Array(timeData, neData, rawKpiData);        
+
+        var requestData = {};
+        requestData.method = "getDataAndLabels";
+        requestData.parameters = {};
+        requestData.parameters.select = {};
+        requestData.parameters.select.data = selectData;
+
+        var neFilter = {}; 
+        neFilter.type = "na";
+        neFilter.id = "bsc";
+        neFilter.value = "EABBS01";      
+        
+		var limitFilter = {};
+		limitFilter.id = "maxfilter"; 
+		limitFilter.type = "sys";
+		limitFilter.value = "1";
+        
+        requestData.parameters.filters = {};
+        var filtersData = new Array(neFilter, limitFilter);
+        requestData.parameters.filters.data = filtersData;
+        var requestParam = {};
+        requestParam.data = Ext.encode(requestData);	
+
+        // Une fois le bug des quotes resolu dans le QueryDataModel officiel : 
+        //  	url: '../../../api/querydata/index.php?type=json',
+        Ext.Ajax.request({
+          url: '../../proxy/dao/api/querydata/index.php?type=json',
+          method: 'POST',
+          params: requestParam,
+          success: function(xhr,params) {
+              try {       
+                  //var result = Ext.decode(xhr.responseText);      
+                  var myModalWindow = new Ext.Window({  
+                     id: 'modalWindow',  
+                     renderTo: Ext.getBody(),  
+                     title: 'Get data from edw table',  
+                     modal: true,  
+                     layout: 'anchor',  
+                     maximizable: true,  
+                     resizable: true,
+                     autoScroll: false,  
+                     closable: true, 
+                     plain: true,  
+                     width: 300,
+                     height: 20,
+                     //html: "Value="+result.data[0][2]+" for label="+result.data[0][1]+" and hour="+result.data[0][0],
+                     html: xhr.responseText,
+                     listeners: {}
+                  }); 
+                  myModalWindow.show();
+              }
+          		catch (err) {
+          			 Ext.MessageBox.alert('ERROR', 'I have got a pb ...');
+          		}
+          },
+          failfure: function(xhr,params) {
+              alert('Failure!\n'+xhr.responseText);
+          }
+      });
+    }
+
+
+    // bouton "Get data ..."
+    Ext.create('Ext.button.Button', {
+         text: 'Get data for gauge',
+         renderTo: Ext.getBody(),
+         handler: getGaugeData
+    });
+    
+    
+    function getRawKpiLabel() {	
+        
+        var requestParam = {
+        			id: "kpis.0075.01.02001",			// Element id (ex: raws.0004.08.27.01.00001)
+        			type: "KPI",			            // Element type (RAW/KPI ...)
+        			product: "1"		             // Product (sdp_id)
+        };
+                
+        Ext.Ajax.request({
+          url: '../../proxy/querybuilder.php?method=getElementById',
+          method: 'POST',
+          params: requestParam,
+          success: function(xhr,params) {
+              try {       
+                  var result = Ext.decode(xhr.responseText);         
+                  var myModalWindow = new Ext.Window({  
+                     id: 'modalWindow',  
+                     renderTo: Ext.getBody(),  
+                     title: 'KPI',  
+                     modal: true,  
+                     layout: 'anchor',  
+                     maximizable: true,  
+                     resizable: true,
+                     autoScroll: false,  
+                     closable: true, 
+                     plain: true,  
+                     width: 800,
+                     height: 20,
+                     html: "Label=\""+result.label+"\" for name=\""+result.name+"\"",
+                     listeners: {}
+                  }); 
+                  myModalWindow.show();
+              }
+          		catch (err) {
+          			 Ext.MessageBox.alert('ERROR', 'I have got a pb ...');
+          		}
+          },
+          failfure: function(xhr,params) {
+              alert('Failure!\n'+xhr.responseText);
+          }
+      });
+    }
+        
+    // bouton "Get KPI label"
+    Ext.create('Ext.button.Button', {
+         text: 'Get KPI label',
+         renderTo: Ext.getBody(),
+         handler: getRawKpiLabel
+    });
+    
+    
+    function getNeLabel() {	
+        
+        var requestParam = {
+        			ne_id: "Ericsson",		
+              ne_network_level: "vendor",	           
+        			product_id: "1"		            
+        };
+
+        Ext.Ajax.request({
+          url: '../../proxy/homepage.php?method=getNeLabel',
+          method: 'GET',
+          params: requestParam,
+          success: function(xhr,params) {
+              try {       
+                  var result = Ext.decode(xhr.responseText);         
+                  var myModalWindow = new Ext.Window({  
+                     id: 'modalWindow',  
+                     renderTo: Ext.getBody(),  
+                     title: 'Ne label',  
+                     modal: true,  
+                     layout: 'anchor',  
+                     maximizable: true,  
+                     resizable: true,
+                     autoScroll: false,  
+                     closable: true, 
+                     plain: true,  
+                     width: 600,
+                     height: 20,
+                     html: "Label=\""+result.label+"\" for ID=\""+requestParam.ne_id+"\"",
+                     listeners: {}
+                  }); 
+                  myModalWindow.show();
+              }
+          		catch (err) {
+          			 Ext.MessageBox.alert('ERROR', 'I have got a pb ...');
+          		}
+          },
+          failfure: function(xhr,params) {
+              alert('Failure!\n'+xhr.responseText);
+          }
+      });
+    }    
+    
+    // bouton "Get NE label"
+    Ext.create('Ext.button.Button', {
+         text: 'Get NE label',
+         renderTo: Ext.getBody(),
+         handler: getNeLabel
+    });
+    
+
+    // bouton "Get products and families"
+    Ext.create('Ext.button.Button', {
+         text: 'Get products and families',
+         renderTo: Ext.getBody(),
+         handler: getProductsFamilies
+    });
+    
+    
+    function getProductsFamilies() {	
+        Ext.Ajax.request({
+          url: '../../proxy/querybuilder.php?method=getProductsFamilies',
+          method: 'POST',
+          params: {},
+          success: function(xhr,params) {
+              try {       
+                  var result = Ext.decode(xhr.responseText);         
+                  var myModalWindow = new Ext.Window({  
+                     id: 'modalWindow',  
+                     renderTo: Ext.getBody(),  
+                     title: 'KPI',  
+                     modal: true,  
+                     layout: 'anchor',  
+                     maximizable: true,  
+                     resizable: true,
+                     autoScroll: false,  
+                     closable: true, 
+                     plain: true,  
+                     width: 800,
+                     height: 20,
+                     html: xhr.responseText,
+                     listeners: {}
+                  }); 
+                  myModalWindow.show();
+              }
+          		catch (err) {
+          			 Ext.MessageBox.alert('ERROR', 'I have got a pb ...');
+          		}
+          },
+          failfure: function(xhr,params) {
+              alert('Failure!\n'+xhr.responseText);
+          }
+      });
+    }
+
+
+    // bouton "Get products, families and NA levels"
+    Ext.create('Ext.button.Button', {
+         text: 'Get products, families and NA levels',
+         renderTo: Ext.getBody(),
+         handler: getProductsFamiliesNaLevels
+    });
+    
+    
+    function getProductsFamiliesNaLevels() {	
+        Ext.Ajax.request({
+          url: '../../proxy/querybuilder.php?method=getProductsFamiliesNaLevels',
+          method: 'POST',
+          params: {},
+          success: function(xhr,params) {
+              try {       
+                  var result = Ext.decode(xhr.responseText);         
+                  var myModalWindow = new Ext.Window({  
+                     id: 'modalWindow',  
+                     renderTo: Ext.getBody(),  
+                     title: 'KPI',  
+                     modal: true,  
+                     layout: 'anchor',  
+                     maximizable: true,  
+                     resizable: true,
+                     autoScroll: false,  
+                     closable: true, 
+                     plain: true,  
+                     width: 800,
+                     height: 20,
+                     html: xhr.responseText,
+                     listeners: {}
+                  }); 
+                  myModalWindow.show();
+              }
+          		catch (err) {
+          			 Ext.MessageBox.alert('ERROR', 'I have got a pb ...');
+          		}
+          },
+          failfure: function(xhr,params) {
+              alert('Failure!\n'+xhr.responseText);
+          }
+      });
+    }
+
+    function getNetworkElements(filterOptions) {
+        var requestParam = {};
+        requestParam.filterOptions = Ext.encode(filterOptions);	
+        Ext.Ajax.request({
+          url: '../../proxy/ne_listhtml.php',
+          method: 'POST',
+          params: requestParam,
+          success: function(xhr,params) {
+              try {                
+                  var myModalWindow = new Ext.Window({  
+                     id: 'modalWindow',  
+                     renderTo: Ext.getBody(),  
+                     title: 'list',  
+                     modal: true,  
+                     layout: 'anchor',  
+                     maximizable: true,  
+                     resizable: true,
+                     autoScroll: false,  
+                     closable: true, 
+                     plain: true,  
+                     width: 500,
+                     height: 200,
+                     html: xhr.responseText,
+                     listeners: {}
+                  }); 
+                  myModalWindow.show();
+              }
+          		catch (err) {
+          			 Ext.MessageBox.alert('ERROR', 'I have got a pb ...');
+          		}
+          },
+          failfure: function(xhr,params) {
+              alert('Failure!\n'+xhr.responseText);
+          }
+      });
+    }
+    
+
+    // bouton "Get network elements"
+    var product_1 = {};
+    product_1.id = "1";
+    product_1.na = new Array('bsc');
+    var products = new Array(product_1);	    
+    filterOptions = {};
+    filterOptions.products = products;
+    filterOptions.limit = '5';
+    filterOptions.text = 'AB';        
+    Ext.create('Ext.button.Button', {
+         text: 'Get Network elements',
+         renderTo: Ext.getBody(),
+         handler: function() {
+    			getNetworkElements(filterOptions);
+		    } 
+    });
+    
+    
+  });
+</script>
+</body>
+</html>

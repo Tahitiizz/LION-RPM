@@ -1,0 +1,95 @@
+id_ligne	id_group_table	network_agregation	network_agregation_label	rank	data_type	on_off	comment	deploy_status	id_source
+101	1	cell	Cell	-1	raw	1		0	101
+102	1	usercluster1	UserCellCluster1	101	raw	1		0	101
+103	1	usercluster2	UserCellCluster2	101	raw	1		0	101
+104	1	usercluster3	UserCellCluster3	101	raw	1		0	101
+105	1	enodeb	eNodeB	101	raw	1		0	101
+106	1	ta	Tracking Area	101	raw	1		0	101
+107	1	sgw	SGW	101	raw	1		0	101
+108	1	vendor	Vendor	105	raw	1		0	105
+109	1	mme	MME	106	raw	1		0	106
+110	1	network	Network	109	raw	1		0	109
+151	1	cell	Cell	-1	kpi	1		0	151
+152	1	usercluster1	UserCellCluster1	151	kpi	1		0	151
+153	1	usercluster2	UserCellCluster2	151	kpi	1		0	151
+154	1	usercluster3	UserCellCluster3	151	kpi	1		0	151
+155	1	enodeb	eNodeB	151	kpi	1		0	151
+156	1	ta	Tracking Area	151	kpi	1		0	151
+157	1	sgw	SGW	151	kpi	1		0	151
+158	1	vendor	Vendor	155	kpi	1		0	155
+159	1	mme	MME	156	kpi	1		0	156
+160	1	network	Network	159	kpi	1		0	159
+201	2	cell	Cell	-1	raw	1		0	201
+202	2	usercluster1	UserCellCluster1	201	raw	1		0	201
+203	2	usercluster2	UserCellCluster2	201	raw	1		0	201
+204	2	usercluster3	UserCellCluster3	201	raw	1		0	201
+205	2	enodeb	eNodeB	201	raw	1		0	201
+206	2	ta	Tracking Area	201	raw	1		0	201
+207	2	sgw	SGW	201	raw	1		0	201
+208	2	vendor	Vendor	205	raw	1		0	205
+209	2	mme	MME	206	raw	1		0	206
+210	2	network	Network	209	raw	1		0	209
+251	2	cell	Cell	-1	kpi	1		0	251
+252	2	usercluster1	UserCellCluster1	251	kpi	1		0	251
+253	2	usercluster2	UserCellCluster2	251	kpi	1		0	251
+254	2	usercluster3	UserCellCluster3	251	kpi	1		0	251
+255	2	enodeb	eNodeB	251	kpi	1		0	251
+256	2	ta	Tracking Area	251	kpi	1		0	251
+257	2	sgw	SGW	251	kpi	1		0	251
+258	2	vendor	Vendor	255	kpi	1		0	255
+259	2	mme	MME	256	kpi	1		0	256
+260	2	network	Network	259	kpi	1		0	259
+301	3	cell	Cell	-1	raw	1		0	301
+302	3	usercluster1	UserCellCluster1	301	raw	1		0	301
+303	3	usercluster2	UserCellCluster2	301	raw	1		0	301
+304	3	usercluster3	UserCellCluster3	301	raw	1		0	301
+305	3	enodeb	eNodeB	301	raw	1		0	301
+306	3	ta	Tracking Area	301	raw	1		0	301
+307	3	sgw	SGW	301	raw	1		0	301
+308	3	vendor	Vendor	305	raw	1		0	305
+309	3	mme	MME	306	raw	1		0	306
+310	3	network	Network	309	raw	1		0	309
+351	3	cell	Cell	-1	kpi	1		0	351
+352	3	usercluster1	UserCellCluster1	351	kpi	1		0	351
+353	3	usercluster2	UserCellCluster2	351	kpi	1		0	351
+354	3	usercluster3	UserCellCluster3	351	kpi	1		0	351
+355	3	enodeb	eNodeB	351	kpi	1		0	351
+356	3	ta	Tracking Area	351	kpi	1		0	351
+357	3	sgw	SGW	351	kpi	1		0	351
+358	3	vendor	Vendor	355	kpi	1		0	355
+359	3	mme	MME	356	kpi	1		0	356
+360	3	network	Network	359	kpi	1		0	359
+401	4	cell	Cell	-1	raw	1		0	401
+402	4	usercluster1	UserCellCluster1	401	raw	1		0	401
+403	4	usercluster2	UserCellCluster2	401	raw	1		0	401
+404	4	usercluster3	UserCellCluster3	401	raw	1		0	401
+405	4	enodeb	eNodeB	401	raw	1		0	401
+406	4	ta	Tracking Area	401	raw	1		0	401
+407	4	sgw	SGW	401	raw	1		0	401
+408	4	vendor	Vendor	405	raw	1		0	405
+409	4	mme	MME	406	raw	1		0	406
+410	4	network	Network	409	raw	1		0	409
+451	4	cell	Cell	-1	kpi	1		0	451
+452	4	usercluster1	UserCellCluster1	451	kpi	1		0	451
+453	4	usercluster2	UserCellCluster2	451	kpi	1		0	451
+454	4	usercluster3	UserCellCluster3	451	kpi	1		0	451
+455	4	enodeb	eNodeB	451	kpi	1		0	451
+456	4	ta	Tracking Area	451	kpi	1		0	451
+457	4	sgw	SGW	451	kpi	1		0	451
+458	4	vendor	Vendor	455	kpi	1		0	455
+459	4	mme	MME	456	kpi	1		0	456
+460	4	network	Network	459	kpi	1		0	459
+601	6	stc	SourceTargetCell	-1	raw	1		0	601
+602	6	sourcecell	SourceCell	601	raw	1		0	601
+603	6	network	Network	602	raw	1		0	602
+651	6	stc	SourceTargetCell	-1	kpi	1		0	651
+652	6	sourcecell	SourceCell	651	kpi	1		0	651
+653	6	network	Network	652	kpi	1		0	652
+501	5	enodeb	eNodeB	-1	raw	1		0	501
+502	5	vendor	Vendor	501	raw	1		0	501
+503	5	ta	Tracking Area	501	raw	1		0	501
+504	5	network	Network	503	raw	1		0	503
+551	5	enodeb	eNodeB	-1	kpi	1		0	551
+552	5	vendor	Vendor	551	kpi	1		0	551
+553	5	ta	Tracking Area	551	kpi	1		0	551
+554	5	network	Network	553	kpi	1		0	553

@@ -1,0 +1,2 @@
+edw_group_table	data_source	raw_on_off	kpi_on_off	adv_kpi_on_off	mixed_on_off	family	raw_deploy_status	kpi_deploy_status	adv_kpi_deploy_status	mixed_kpi_deploy_status	id_parser	visible	id_ligne
+edw_huaran_cellb_axe1	0	1	1		0	cellb	1	1	1	1		1	1

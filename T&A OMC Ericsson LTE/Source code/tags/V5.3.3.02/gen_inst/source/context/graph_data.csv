@@ -1,0 +1,15 @@
+id_data	data_legend	position_ordonnee	display_type	line_design	color	filled_color
+seri.gtms.0077.01.initial_e-rab_setup.kpis.0077.01.initial_erab_establishment_attempts	Initial E-RAB establishment attempts	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0077.01.initial_e-rab_setup.kpis.0077.01.initial_erab_setup_sucess_rate	Initial E-RAB setup sucess rate	left	line	circle	#ff0000	#ffffff@1
+seri.gtms.0077.01.e-rab_drop.kpis.0077.01.erab_successfully_established	E-RAB successfully established	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0077.01.e-rab_drop.kpis.0077.01.erab_drop_rate	E-RAB drop rate	left	line	circle	#ff0000	#ffffff@1
+seri.gtms.0077.01.e-rab_retainability.kpis.0077.01.erab_drops_per_second	E-RAB drops per second	left	line	circle	#ff0000	#ffffff@1
+seri.gtms.0077.01.throughput.kpis.0077.01.downlink_data_volume	Downlink data volume	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0077.01.throughput.kpis.0077.01.uplink_data_volume	Uplink data volume	right	bar	none	#333333	#FFAA00@0.5
+seri.gtms.0077.01.throughput.kpis.0077.01.downlink_throughput	Downlink throughput	left	line	circle	#9900FF	#ffffff@1
+seri.gtms.0077.01.throughput.kpis.0077.01.uplink_throughput	Uplink throughput	left	line	circle	#006600	#ffffff@1
+seri.gtms.0077.01.mobility.kpis.0077.01.ho_preparation_attempts	Ho preparation attempts	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0077.01.mobility.kpis.0077.01.ho_execution_attempts	Ho execution attempts	right	bar	none	#333333	#FFAA00@0.5
+seri.gtms.0077.01.mobility.kpis.0077.01.mobility_success_rate	Mobility success rate	left	line	circle	#ff0000	#ffffff@1
+seri.gtms.0077.01.cell_availability.kpis.0077.01.cell_available_time	Cell available time	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0077.01.cell_availability.kpis.0077.01.cell_availability	Cell availability	left	line	circle	#ff0000	#ffffff@1

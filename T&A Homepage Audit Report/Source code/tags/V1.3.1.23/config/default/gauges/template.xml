@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Gauge2 coordWidth="1000" coordHeight="500" left="0" top="0" bottom="0" right="0">
+
+	<!-- Range -->
+    <Gauge2RadialRange centerX="500" centerY="410" width="1000" height="1000" startAngle="-90" endAngle="90">
+        <Gauge2RadialScale startValue="84" endValue="100">
+            <Gauge2RadialScaleSection sectionWidth="60" color="#FF0000" radius="240" startValue="84" endValue="90"/>
+            <Gauge2RadialScaleSection sectionWidth="60" color="#FF8C00" radius="240" startValue="90" endValue="95"/>
+            <Gauge2RadialScaleSection sectionWidth="60" color="#94AE0A" radius="240" startValue="95" endValue="100"/>
+        </Gauge2RadialScale>
+
+        <Gauge2RadialScale font="40 Verdana" foreColor="#8888AA" radius="370" startValue="84" endValue="100" labelCount="6" valueFunction="if (v &gt; 1000000000) {return Math.floor(v/1000000000) + ' B';} else if (v &gt; 1000000) {return Math.floor(v/1000000) + ' M';} else if(v &gt; 1000) {return Math.floor(v/1000) + ' K';} else {return v;}">
+            <Gauge2RadialScaleSection sectionWidth="31" color="#FFFFFF" stroke="#8888AA" strokeWidth="3" radius="300" startValue="84" endValue="100"/>
+
+            <!-- Needle -->
+            <Gauge2RadialNeedle id="needle" value="94.8114" stroke="#000000" strokeWidth="0" innerRadius="0" innerWidth="30" outerRadius="310" outerWidth="5">
+                <Gauge2RadialNeedle.Filler>
+                    <Gauge2RadialGradientFiller color1="#BBBBBB" color2="#000000"/>
+                </Gauge2RadialNeedle.Filler>
+            </Gauge2RadialNeedle>
+        </Gauge2RadialScale>
+
+        <Gauge2RadialTicks tickWidth="1" tickLength="28" color="#AAAACC" tickCount="21" radius="300"/>
+        <Gauge2RadialTicks tickWidth="7" tickLength="28" color="#8888AA" tickCount="11" radius="300"/>
+
+        <!-- Cap -->
+        <Gauge2BasicCap width="80" height="80">
+            <Gauge2BasicCap.Filler>
+                   <Gauge2RingGradientFiller color1="#464646" color2="#A8A8A8" thickness="20" highlightCenter="0"/>
+            </Gauge2BasicCap.Filler>
+        </Gauge2BasicCap>
+
+        <Gauge2BasicCap width="50" height="50">
+            <Gauge2BasicCap.Filler>
+                   <Gauge2LinearGradientFiller color1="#666666" color2="#A8A8A8" angle="45"/>
+            </Gauge2BasicCap.Filler>
+        </Gauge2BasicCap>
+    </Gauge2RadialRange>
+
+</Gauge2>

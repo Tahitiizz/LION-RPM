@@ -1,0 +1,29 @@
+.am_clock_img {
+  background-image: url('../images/icones/grande_clock_am.gif');
+  background-repeat: no-repeat;
+  width: 132px;
+  height: 126px;
+  padding: 0;
+  margin:0;
+  position:relative;
+  z-index:1;
+}
+
+.pm_clock_img {
+  background: transparent url("../images/icones/grande_clock_pm.gif") no-repeat top left;
+  background-repeat: no-repeat;
+  width: 132px;
+  height: 126px;
+  padding: 0;
+  margin:0;
+  position:relative;
+  z-index:1;
+}
+
+.hour_clock_selector {
+  width:20px;
+  height:15px;
+  cursor:pointer;
+  position:absolute;
+  z-index:99;
+}

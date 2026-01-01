@@ -1,0 +1,28 @@
+===================================================================
+
+		Trending&Aggregation Huawei RAN 5.2
+		Version 5.2.0.00
+		Release xxxxx
+		Delivered on: Sep-24-2012
+
+===================================================================
+
+Content:
+
+        T&A Base Component    : V 5.2.0.25
+        T&A Parser            : V 5.2.0.00
+        T&A Context           : V 5.2.0.00
+        T&A Package Generator : V 3.07
+
+New functionnalities (version 5.2.0.00):
+        * include xxxxx
+        * include xxxxx
+
+Fixed Anomalies (version 5.2.0.00):
+        * xxxxx: 
+        * xxxxx:
+
+
+---------------------------------------------------------------------
+History 5.x.y.z:
+---------------------------------------------------------------------

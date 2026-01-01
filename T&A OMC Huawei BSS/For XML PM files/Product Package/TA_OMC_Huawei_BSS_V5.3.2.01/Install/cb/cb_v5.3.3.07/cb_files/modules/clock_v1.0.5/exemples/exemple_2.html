@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Calendrier + horloge</title>
+
+	<link rel="stylesheet" href="../css/calendar_style.css" type="text/css"/>
+	<script type="text/javascript" src="../js/prototype/prototype.js"></script>
+	<script type="text/javascript"src="../js/popcalendar.js"></script>
+	<script type="text/javascript" src="../js/date_functions.js"></script>
+	<link rel="stylesheet" href="../css/calendar_style.css" type="text/css"/>
+	<script type="text/javascript" src="../js/prototype/window.js"></script>
+	<script type="text/javascript" src="../js/clock.js"></script>		
+	<link rel="stylesheet" href="../css/prototype_window/default.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/prototype_window/alphacube.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/clock_style.css" type="text/css"/>
+
+	<style type="text/css">
+		body {margin:0;padding:0;}
+	</style>
+</head>
+
+<body>
+
+<br />
+<p><h3>Début</h3></p>
+
+<!-- Calendrier -->
+<img id="calendrier" name="calendrier" border="0" align="absmiddle" alt="Calendar" src="../images/icones/bouton_calendrier.gif" valign="top" onclick="loadCalendar(this.id,'ta_value_formatted', 'ta_selected_value', 'day', 'dd/mm/yyyy', true);" />
+<input type="text" id="ta_value_formatted" name="ta_value_formatted" class="zoneTexteStyleXP" contentEditable="false" maxLength="10" size="10" value="29/07/2008" />
+<input type="hidden" value="20080729" name="ta_selected_value" id="ta_selected_value" />
+
+<!-- Clock -->
+<input type="text" contenteditable="false" size="10" value="15:00" id="my_clock" name="my_clock" />
+<img id="clock" name="clock" src="../images/icones/mini_clock.gif" onMouseOver="style.cursor='pointer';" style="visibility:visible" onclick="new Clock('my_clock','ta_selected_value');">
+
+<br />
+
+<p><h3>Fin</h3></p>
+
+<!-- Calendrier -->
+<img id="calendrier2" name="calendrier2" border="0" align="absmiddle" alt="Calendar" src="../images/icones/bouton_calendrier.gif" valign="top" onclick="loadCalendar(this.id,'ta_value_formatted2', 'ta_selected_value2', 'day', 'dd/mm/yyyy', true);" />
+<input type="text" id="ta_value_formatted2" name="ta_value_formatted2" class="zoneTexteStyleXP" contentEditable="false" maxLength="10" size="10" value="30/07/2008" />
+<input type="hidden" value="20080730" name="ta_selected_value2" id="ta_selected_value2" />
+
+<!-- Clock -->
+<input type="text" contenteditable="false" size="10" value="18:00" id="my_clock2" name="my_clock2" />
+<img id="clock2" name="clock2" src="../images/icones/mini_clock.gif" onMouseOver="style.cursor='pointer';" style="visibility:visible" onclick="new Clock('my_clock2','ta_selected_value2');">
+
+</body>
+</html>
+

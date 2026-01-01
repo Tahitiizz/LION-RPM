@@ -1,0 +1,21 @@
+# Configuration File for gen_inst.sh and gen_patch.sh scripts
+# If this file is not present, default values will be taken from
+# gen_inst.sh and gen_patch.sh scripts
+
+# Full or Patch installation informations
+produit="hualte" # nom en minuscule
+produit_label="HUAWEI LTE" # nom du produit pour les titre des dialogues
+default_appname="astellia_huawei_lte" # nom par defaut de l'application
+produit_code="DHL51" # code du produit
+ver="5.1.0.01" # product version
+verp="5.1.0.01" # parser version
+install_order="cb_base;parser;context" # order d'installation du produit
+code_module="0097" # code du module (cf AA)
+min_previous_product_version="" # version minimale requise de l'application à patcher, optionnel
+
+# Information pour le fichier CSV
+prop_produit_nom_long="Trending&Aggregation Huawei LTE 6.0"
+prop_produit_nom_court="T&A HUALTE"
+prop_user_manual="Trending&AggregationOMC_UserManual.pdf"
+prop_admin_manual="Trending&AggregationOMC_AdminManual.pdf"
+

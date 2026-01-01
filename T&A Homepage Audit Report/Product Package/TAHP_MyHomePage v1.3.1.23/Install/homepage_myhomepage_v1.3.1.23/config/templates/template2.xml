@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<template id="template2" title="Signaling">
+		<row rowspan='1'>
+			<widget colspan='1' type='chart' id='chart1' target='chart4'/>
+			<widget colspan='3' type='period' id='chart4'/>
+		</row>
+		<row rowspan='1'>
+			<widget colspan='1' type='chart' id='chart2' target='chart5'/>
+			<widget colspan='3' type='period' id='chart5'/>
+		</row>
+		<row rowspan='1'>
+			<widget colspan='1' type='chart' id='chart3' target='chart6'/>
+			<widget colspan='3' type='period' id='chart6'/>
+		</row>
+</template>

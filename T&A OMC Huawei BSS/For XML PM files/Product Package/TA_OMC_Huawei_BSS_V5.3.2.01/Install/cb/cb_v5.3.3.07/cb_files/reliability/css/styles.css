@@ -1,0 +1,192 @@
+body{
+	margin: 0 auto;
+}
+
+#bloc{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+	margin: 5 15 10 5px;
+}
+
+div#title{
+	font-size: 14px;
+	margin-bottom: 4px;
+}
+
+div#table_connex{
+	width: 590px;
+	height: 220px;
+	overflow-y : scroll; 
+}
+
+table#SA_list{
+	width: 570px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+}
+
+table#SA_list td.firstCol{
+	/*width: 70px;*/
+}
+
+table#SA_list .hour_values{
+	padding-right: 15px;
+	background: url(../images/hourly.png) no-repeat right;
+}
+
+table#SA_list .not_activated{
+	color: #B6B6B6;
+}
+
+table#SA_list  td.SA_data{
+	width: 12px;
+	min-width: 12px;
+	max-width: 12px;
+}
+
+div#table_header{
+	width: 590px;
+}
+
+table#SAHeader{
+	width: 570px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+}
+
+table#SAHeader td {
+	
+}
+
+table#SAHeader td.firstCol{
+	/*width: 70px;*/
+}
+
+table#SAHeader td.date{
+	font-size: 5pt;
+	color: black;
+	width: 12px;
+	min-width: 12px;
+	max-width: 12px;
+}
+
+#legend table{
+	width: 530px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+	vertical-align: top;
+}
+
+#legend table td.color{
+	width: 15px;
+}
+
+#legend table td.title{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#legend table td.export{ text-align: right; }
+#legend table td.export img{ cursor: pointer; }
+
+form{
+	margin-bottom: 5px;
+}
+
+#select{
+	float: right;
+	margin-right: 150px;
+}
+
+#select select{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+	width: 100px;
+}
+
+#menu_day{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+	margin-bottom: 4px;
+}
+
+#menu_day img{
+	border: none;
+	width: 10px;
+	cursor: pointer;
+}
+
+#switch_ta{
+	float: right;
+	cursor: pointer;
+}
+
+#switch_ta img{
+	margin-left: 2px;
+	vertical-align: middle;
+}
+
+#nb_connec{
+	float: right;
+}
+
+#show_errors{
+	margin-bottom: 4px;
+}
+
+#show_errors label{
+	cursor: pointer;
+}
+
+#show_errors input{
+	margin-left: 20px;
+}
+
+/* 22/09/2010 BBX */
+/* Ajout du style pour les tooltips */
+/* BZ 17528 */
+.tooltip {
+z-index: 110000000;
+margin:0;
+padding:10px 0 0 0;
+position:absolute;
+}
+
+.tooltip .fleche {
+z-index: -10000000;
+background-image:url('../images/divers/tooltip.gif');
+background-repeat:no-repeat;
+border:0px solid #f00;
+height:20px;
+width:20px;
+position:absolute;
+}
+
+.tooltip .content {
+z-index: 11000000;
+border:2px solid #c0c09f;
+}
+.tooltip .content .title {
+z-index: 11000000;
+padding: 0 3px 1px 3px;
+font: 11px Arial;
+font-weight:bold;
+background-color : #c0c09f;
+}
+
+.tooltip .content .text {
+z-index: 11000000;
+font: 10px Arial;
+background-color : #ffffcc;
+padding:3px;
+}
+
+.tooltip .content .text:first-letter {
+text-transform: capitalize;
+}

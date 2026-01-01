@@ -1,0 +1,62 @@
+===================================================================
+
+		T&A OMC Huawei LTE
+		Version 5.3.0.02
+		Delivered on: 02/03/2016
+
+===================================================================
+
+Content:
+	T&A Base Component	: V 5.3.3.07
+	T&A Parser			: V 5.3.0.02
+	T&A Parser library	: V 4.09	
+	T&A Context			: V 5.3.0.01
+	T&A Package Generator : V 3.15
+
+Installation:
+	
+
+Expertise /R&D level specifications:
+	EXP Application / Vendor	:	RF
+	EXP Restitution / Techno	:	RD 
+	R&D All Products			:	T17
+	R&D Product Template		:	T19
+	R&D previous context		: 	V 5.3.0.00
+
+Tools:
+	T&A Expertise Specifications Converter	:	V 1.08
+	T&A Context Management					:	V 7.0.2.12
+	
+Fixed Anomalies (version 5.3.0.02):
+		* Bug 52658 - Counters for busy hour are only available for 1 of the 4 cellb families
+		* Bug 52405 - Network level sourcell for adjacencies familly is not filled in edw table
+		
+Fixed Anomalies (version 5.3.0.01):
+		* [EVO] New spec vendor
+		* Bug 52277 - Integrating data for a counter activated from automatic mapping fails
+		
+Fixed Anomalies (version 5.3.0.00):
+		* [EVO] upgrade to base component v5.3.3.07
+		* [EVO] upgrade to library parser v4.09
+		* [EVO] New parser XML
+
+Fixed Anomalies (version 5.2.0.01):
+		* [EVO] upgrade to base component v5.2.0.32
+		* [EVO] Automatic mapping activation for cell based family
+		* Bug 27998 - [T&A OMC Huawei LTE] [REC] The displayed menus for the client profile are not those described in the specifications
+	
+Fixed Anomalies (version 5.2.0.00):
+		* [EVO] upgrade to base component v5.2.0.32
+		* [EVO] parser_library upgrade to v3.08 (adds task parallelism)
+		* Bug 31006 - [QAL][T&A OMc Huawei LTE]:The KPI "CELL_AVAILABILITY" give the opposite value
+		* Bug 28683 - [QAL][T&A OMc Huawei LTE]: Multi time zone pm files are not managed
+	
+Fixed Anomalies (version 5.1.0.02):
+		* [EVO] upgrade to base component v5.1.6.27
+		* [EVO] parser_library upgrade to v2.7
+	
+Fixed Anomalies (version 5.1.0.01):
+		* Bug 27998 - [T&A OMC Huawei LTE] [REC] The displayed menus for the client profile are not those described in the specifications	
+	
+
+

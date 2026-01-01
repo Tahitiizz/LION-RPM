@@ -1,0 +1,81 @@
+/*------------------------------------------- */
+/* css de la partie page automatique */
+/*------------------------------------------- */
+
+body{
+	scrollbar-arrow-color : #424F7C;
+	scrollbar-face-color : #E2E2E2;
+	scrollbar-track-color : #F4F4F4;
+	scrollbar-highlight-color : #FFFFFF;
+	scrollbar-3dlight-color : #D0D0D0;
+	scrollbar-shadow-color : #FFFFFF;
+	scrollbar-darkshadow-color : #C0C0C0;
+}
+a{
+  font : normal 10pt Verdana, Arial, sans-serif;
+  color : #585858;
+  text-decoration : none;
+}
+
+a:hover{
+  font : normal 10pt Verdana, Arial, sans-serif;
+  color : #585858;
+  text-decoration : underline;
+}
+
+a:link{
+  font : normal 10pt Verdana, Arial, sans-serif;
+  color : #585858;
+  text-decoration : none;
+}
+.bouton{
+	border-right : 1px solid #585858;
+	border-bottom : 1px solid #585858;
+	border-top : 1px solid #C9C9C9;
+	border-left : 1px solid #C9C9C9;
+	font : normal 9pt Verdana, Arial, sans-serif;
+	background-image : url('../images/skin/astellia/bouton_style_relief.gif');
+	background-repeat: no-repeat; 
+	padding-left : 5px;
+}
+.fieldsetRelief{
+	border : 1px solid #000000;
+	border-bottom : 1px solid #CCCCCC;
+	border-right : 1px solid #CCCCCC;
+	background-color : #DEDDDD;
+}
+
+.zoneTexte{
+	border : 1px solid #565656;
+	background-color : #fff;
+}
+.texteGris{
+	font : normal 9pt Verdana, Arial, sans-serif;
+	color : #585858;
+}
+
+.texteGrisBold{
+	font : bold 9pt Verdana, Arial, sans-serif;
+	color : #585858;
+}
+.tableauDotted{
+	border : 1px dotted #545454;
+	background-color : #D4D4D4;	
+}
+.tableauDottedBlanc{
+	border : 1px dotted #545454;
+	background-color : #fff;	
+}
+.tabPrincipal{
+	border : 1px dotted #787878;
+	background-image : url('../images/skin/astellia/fond_selecteur.gif');
+}
+
+.tabPrincipalAffichagePauto{
+	border : 1px dotted #787878;
+}
+.texteRouge{
+	font : normal 9pt Verdana, Arial, sans-serif;
+	color : #FF0000;
+}
+

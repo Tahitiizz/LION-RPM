@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for AlarmList.class.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file AlarmList.class.php</h1>
+<p>Documentation is available at <a href="../Alarm/_AlarmList_class_php.html">AlarmList.class.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?php</span></li>
+<li><a name="a2"></a>&nbsp;</li>
+<li><a name="a3"></a><span class="src-inc">include_once </span><span class="src-str">'AlarmModel.class.php'</span><span class="src-sym">;</span></li>
+<li><a name="a4"></a>&nbsp;</li>
+<li><a name="a5"></a><span class="src-doc">/**</span></li>
+<li><a name="a6"></a><span class="src-doc"> * Classe AlarmList</span></li>
+<li><a name="a7"></a><span class="src-doc"> * </span></li>
+<li><a name="a8"></a><span class="src-doc"> * Permet de lister les alarmes de l'application</span></li>
+<li><a name="a9"></a><span class="src-doc"> * </span></li>
+<li><a name="a10"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@package</span><span class="src-doc"> Alarm</span></li>
+<li><a name="a11"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@author</span><span class="src-doc"> BAC b.audic@astellia.com</span></li>
+<li><a name="a12"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@version</span><span class="src-doc"> 1.0.0</span></li>
+<li><a name="a13"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@copyright</span><span class="src-doc"> 2008 Astellia</span></li>
+<li><a name="a14"></a><span class="src-doc"> *</span></li>
+<li><a name="a15"></a><span class="src-doc"> */</span></li>
+<li><a name="a16"></a>&nbsp;</li>
+<li><a name="a17"></a><span class="src-key">class </span><a href="../Alarm/AlarmList.html">AlarmList</a></li>
+<li><a name="a18"></a><span class="src-sym">{</span></li>
+<li><a name="a19"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a20"></a><span class="src-doc">     * Type des alarmes listées</span></li>
+<li><a name="a21"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">string </span></li>
+<li><a name="a22"></a><span class="src-doc">     */</span></li>
+<li><a name="a23"></a>    </li>
+<li><a name="a24"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmList.html#var$alarmType">$alarmType</a><span class="src-sym">;</span></li>
+<li><a name="a25"></a>    </li>
+<li><a name="a26"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a27"></a><span class="src-doc">     * Famille des alarmes listées</span></li>
+<li><a name="a28"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">string </span></li>
+<li><a name="a29"></a><span class="src-doc">     */</span></li>
+<li><a name="a30"></a>    </li>
+<li><a name="a31"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmList.html#var$family">$family</a><span class="src-sym">;</span></li>
+<li><a name="a32"></a>    </li>
+<li><a name="a33"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a34"></a><span class="src-doc">     * Tableau contenant les alarmes listées</span></li>
+<li><a name="a35"></a><span class="src-doc">     *</span></li>
+<li><a name="a36"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">array </span></li>
+<li><a name="a37"></a><span class="src-doc">     */</span></li>
+<li><a name="a38"></a>    </li>
+<li><a name="a39"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmList.html#var$alarmList">$alarmList</a><span class="src-sym">;</span></li>
+<li><a name="a40"></a>&nbsp;</li>
+<li><a name="a41"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a42"></a><span class="src-doc">     * Instance du modèle de données des alarmes</span></li>
+<li><a name="a43"></a><span class="src-doc">     *</span></li>
+<li><a name="a44"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">object </span></li>
+<li><a name="a45"></a><span class="src-doc">     */</span></li>
+<li><a name="a46"></a>    </li>
+<li><a name="a47"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmList.html#var$alarmModel">$alarmModel</a><span class="src-sym">;</span></li>
+<li><a name="a48"></a>&nbsp;</li>
+<li><a name="a49"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a50"></a><span class="src-doc">     * Url du script</span></li>
+<li><a name="a51"></a><span class="src-doc">     *</span></li>
+<li><a name="a52"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">string </span></li>
+<li><a name="a53"></a><span class="src-doc">     */</span></li>
+<li><a name="a54"></a>    </li>
+<li><a name="a55"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmList.html#var$localURL">$localURL</a><span class="src-sym">;</span></li>
+<li><a name="a56"></a>&nbsp;</li>
+<li><a name="a57"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a58"></a><span class="src-doc">     * Constructeur de la classe</span></li>
+<li><a name="a59"></a><span class="src-doc">     *</span></li>
+<li><a name="a60"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$family </span><span class="src-doc">famille auquelle appartiennent les alarmes listées</span></li>
+<li><a name="a61"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$type </span><span class="src-doc">type des alarmes listées</span></li>
+<li><a name="a62"></a><span class="src-doc">     */</span></li>
+<li><a name="a63"></a>    </li>
+<li><a name="a64"></a>    <span class="src-key">function </span><a href="../Alarm/AlarmList.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-var">$family </span>= <span class="src-str">''</span><span class="src-sym">, </span><span class="src-var">$type </span>= <span class="src-str">'static'</span><span class="src-sym">)</span></li>
+<li><a name="a65"></a>    <span class="src-sym">{</span></li>
+<li><a name="a66"></a>        <span class="src-comm">// Initialisation des variables de classe</span></li>
+<li><a name="a67"></a>        </li>
+<li><a name="a68"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$family">family</a>        = <span class="src-var">$family</span><span class="src-sym">;</span></li>
+<li><a name="a69"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmType">alarmType</a>    = <span class="src-var">$type</span><span class="src-sym">;</span></li>
+<li><a name="a70"></a>&nbsp;</li>
+<li><a name="a71"></a>        <span class="src-comm">// Définition d'une instance de la classe 'AlarmModel' afin de disposer des données des alarmes</span></li>
+<li><a name="a72"></a>&nbsp;</li>
+<li><a name="a73"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a> = <span class="src-key">new </span><span class="src-id"><a href="../Alarm/AlarmModel.html">AlarmModel</a></span><span class="src-sym">(</span><span class="src-str">''</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a74"></a>&nbsp;</li>
+<li><a name="a75"></a>        <span class="src-comm">// Définition de l'url locale</span></li>
+<li><a name="a76"></a>&nbsp;</li>
+<li><a name="a77"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#methodsetLocalURL">setLocalURL</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a78"></a>    <span class="src-sym">}</span></li>
+<li><a name="a79"></a>    </li>
+<li><a name="a80"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a81"></a><span class="src-doc">     * Permet de définir l'url depuis laquelle le script est appelé</span></li>
+<li><a name="a82"></a><span class="src-doc">     *</span></li>
+<li><a name="a83"></a><span class="src-doc">     */</span></li>
+<li><a name="a84"></a>&nbsp;</li>
+<li><a name="a85"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../Alarm/AlarmList.html#methodsetLocalURL">setLocalURL</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a86"></a>    <span class="src-sym">{</span></li>
+<li><a name="a87"></a>        <span class="src-var">$request_uri </span>= <a href="http://www.php.net/explode">explode</a><span class="src-sym">(</span><span class="src-str">'/'</span><span class="src-sym">, </span><span class="src-var">$_SERVER</span><span class="src-sym">[</span><span class="src-str">&quot;REQUEST_URI&quot;</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a88"></a>        <span class="src-var">$request_uri </span>= <a href="http://www.php.net/implode">implode</a><span class="src-sym">(</span><span class="src-str">'/'</span><span class="src-sym">, </span><a href="http://www.php.net/array_slice">array_slice</a><span class="src-sym">(</span><span class="src-var">$request_uri</span><span class="src-sym">, </span><span class="src-num">0</span><span class="src-sym">, </span><a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$request_uri</span><span class="src-sym">)</span>-<span class="src-num">1</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a89"></a>&nbsp;</li>
+<li><a name="a90"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$localURL">localURL</a> = <span class="src-str">&quot;http://&quot;</span>.<span class="src-var">$_SERVER</span><span class="src-sym">[</span><span class="src-str">&quot;SERVER_NAME&quot;</span><span class="src-sym">]</span>.<span class="src-var">$request_uri</span>.<span class="src-str">&quot;/&quot;</span><span class="src-sym">;        </span></li>
+<li><a name="a91"></a>    <span class="src-sym">}</span></li>
+<li><a name="a92"></a>    </li>
+<li><a name="a93"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a94"></a><span class="src-doc">     * Retourne la liste des alarmes</span></li>
+<li><a name="a95"></a><span class="src-doc">     *</span></li>
+<li><a name="a96"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">array </span><span class="src-doc">la liste des alarmes</span></li>
+<li><a name="a97"></a><span class="src-doc">     */</span></li>
+<li><a name="a98"></a>&nbsp;</li>
+<li><a name="a99"></a>    <span class="src-key">function </span><a href="../Alarm/AlarmList.html#methodgetAlarms">getAlarms</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a100"></a>    <span class="src-sym">{</span></li>
+<li><a name="a101"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmList">alarmList</a> = <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getAlarmList</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$family">family</a><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmType">alarmType</a><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a102"></a>        </li>
+<li><a name="a103"></a>        <span class="src-key">return </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmList">alarmList</a><span class="src-sym">;</span></li>
+<li><a name="a104"></a>    <span class="src-sym">}</span></li>
+<li><a name="a105"></a>    </li>
+<li><a name="a106"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a107"></a><span class="src-doc">     * Génère le code HTML de la liste des alarmes</span></li>
+<li><a name="a108"></a><span class="src-doc">     *</span></li>
+<li><a name="a109"></a><span class="src-doc">     */</span></li>
+<li><a name="a110"></a>&nbsp;</li>
+<li><a name="a111"></a>    <span class="src-key">function </span><a href="../Alarm/AlarmList.html#methodgenerateIHM">generateIHM</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a112"></a>    <span class="src-sym">{</span></li>
+<li><a name="a113"></a>        <span class="src-var">$html </span>= <span class="src-str">'&lt;div align=&quot;center&quot; style=&quot;margin:5px&quot;&gt;&lt;input id=&quot;new_alarm&quot; name=&quot;new_alarm&quot; type=&quot;button&quot; class=&quot;bouton&quot; onclick=&quot;self.location.href=\''</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$localURL">localURL</a>.<span class="src-str">'php/alarm_setup.php?family='</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$family">family</a>.<span class="src-str">'&amp;alarm_type='</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmType">alarmType</a>.<span class="src-str">'\'&quot;  value=&quot;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_BTN_NEW_ALARM'</span><span class="src-sym">, </span><span class="src-str">''</span><span class="src-comm">/*$this-&gt;alarmType*/</span><span class="src-sym">)</span>.<span class="src-str">'&quot;/&gt;&lt;/div&gt;'</span><span class="src-sym">; </span></li>
+<li><a name="a114"></a>        </li>
+<li><a name="a115"></a>        <span class="src-var">$html </span>.= <span class="src-str">'&lt;fieldset&gt;</span></li>
+<li><a name="a116"></a><span class="src-str">                    &lt;legend class=&quot;texteGrisBold&quot;&gt;&amp;nbsp;&lt;input type=&quot;button&quot; class=&quot;small_puce_fieldset&quot; style=&quot;width:10px&quot;/&gt;&amp;nbsp;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_ALARM_LIST'</span><span class="src-sym">)</span>.<span class="src-str">'&amp;nbsp;&lt;/legend&gt;</span></li>
+<li><a name="a117"></a><span class="src-str">                    &lt;table id=&quot;alarm_table_list&quot; width=&quot;100%&quot; border=&quot;0&quot; align=&quot;center&quot; cellspacing=&quot;3&quot; cellpadding=&quot;3&quot; class=&quot;tabPrincipal&quot;&gt;</span></li>
+<li><a name="a118"></a><span class="src-str">                '</span><span class="src-sym">;</span></li>
+<li><a name="a119"></a>&nbsp;</li>
+<li><a name="a120"></a>        <span class="src-var">$alarm_list </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#methodgetAlarms">getAlarms</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a121"></a>&nbsp;</li>
+<li><a name="a122"></a>        <span class="src-var">$display_info_on_off </span>= <span class="src-id">false</span><span class="src-sym">;</span></li>
+<li><a name="a123"></a>&nbsp;</li>
+<li><a name="a124"></a>        <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$alarm_list</span><span class="src-sym">) </span>== <span class="src-num">0</span><span class="src-sym">) </span><span class="src-sym">{    </span><span class="src-comm">// Pas d'alarme définie</span></li>
+<li><a name="a125"></a>            </li>
+<li><a name="a126"></a>            <span class="src-comm">// Note : définir &quot;No alarm registered.&quot; en tant que message</span></li>
+<li><a name="a127"></a>&nbsp;</li>
+<li><a name="a128"></a>            <span class="src-var">$html </span>.= <span class="src-str">'&lt;tr&gt;&lt;td class=&quot;texteGrisBold&quot; align=&quot;center&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_NO_ALARM_REGISTRED'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/td&gt;&lt;/tr&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a129"></a>        <span class="src-sym">}</span></li>
+<li><a name="a130"></a>        <span class="src-key">else </span><span class="src-comm">// Des alarmes existent pour la famille et le type concerné</span></li>
+<li><a name="a131"></a>        <span class="src-sym">{</span></li>
+<li><a name="a132"></a>            <span class="src-comm">// Definition de l'entete du tableau</span></li>
+<li><a name="a133"></a>&nbsp;</li>
+<li><a name="a134"></a>            <span class="src-comm">// Note : définir les titres en tant que variables</span></li>
+<li><a name="a135"></a>&nbsp;</li>
+<li><a name="a136"></a>            <span class="src-var">$html </span>.= <span class="src-str">'</span></li>
+<li><a name="a137"></a><span class="src-str">                        &lt;tr&gt;</span></li>
+<li><a name="a138"></a><span class="src-str">                            &lt;td align=&quot;center&quot;&gt;&lt;font class=&quot;texteGrisBold&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_FORM_LABEL_ALARM_NAME'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/font&gt;&lt;/td&gt;</span></li>
+<li><a name="a139"></a><span class="src-str">                            &lt;td align=&quot;center&quot;&gt;&lt;font class=&quot;texteGrisBold&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_FORM_LABEL_NETWORK_LEVEL'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/font&gt;&lt;/td&gt;</span></li>
+<li><a name="a140"></a><span class="src-str">                            &lt;td align=&quot;center&quot;&gt;&lt;font class=&quot;texteGrisBold&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_FORM_LABEL_TIME_RESOLUTION'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/font&gt;&lt;/td&gt;</span></li>
+<li><a name="a141"></a><span class="src-str">                            &lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;</span></li>
+<li><a name="a142"></a><span class="src-str">                        &lt;/tr&gt;</span></li>
+<li><a name="a143"></a><span class="src-str">                    '</span><span class="src-sym">;</span></li>
+<li><a name="a144"></a>&nbsp;</li>
+<li><a name="a145"></a>            <span class="src-comm">// Definition du contenu</span></li>
+<li><a name="a146"></a>            </li>
+<li><a name="a147"></a>            <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i </span>&lt; <a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$alarm_list</span><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a148"></a>&nbsp;</li>
+<li><a name="a149"></a>                <span class="src-var">$alarm </span>= <span class="src-var">$alarm_list</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a150"></a>                </li>
+<li><a name="a151"></a>                <span class="src-comm">// Definition de la nouvelle ligne. Le style de celle-ci est alternativement blanc (zoneTexteBlanche)et gris (zoneTexteStyleXPFondGris)</span></li>
+<li><a name="a152"></a>&nbsp;</li>
+<li><a name="a153"></a>                <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$alarm</span><span class="src-sym">[</span><span class="src-str">'on_off'</span><span class="src-sym">] </span>!= <span class="src-num">1</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a154"></a>                    <span class="src-var">$alarm_line_style </span>= <span class="src-str">'style=&quot;color:orange;&quot;'</span><span class="src-sym">;</span></li>
+<li><a name="a155"></a>                    <span class="src-var">$display_info_on_off </span>= <span class="src-id">true</span><span class="src-sym">;</span></li>
+<li><a name="a156"></a>                <span class="src-sym">}</span></li>
+<li><a name="a157"></a>                <span class="src-key">else </span></li>
+<li><a name="a158"></a>                <span class="src-sym">{</span></li>
+<li><a name="a159"></a>                    <span class="src-var">$alarm_line_style </span>= <span class="src-str">''</span><span class="src-sym">;</span></li>
+<li><a name="a160"></a>                <span class="src-sym">}</span></li>
+<li><a name="a161"></a>&nbsp;</li>
+<li><a name="a162"></a>                <span class="src-var">$html </span>.= <span class="src-str">'&lt;tr id=&quot;alarm_line_'</span>.<span class="src-var">$alarm</span><span class="src-sym">[</span><span class="src-str">'alarm_id'</span><span class="src-sym">]</span>.<span class="src-str">'&quot; class=&quot;'</span>.<span class="src-sym">((</span><span class="src-var">$i</span>%<span class="src-num">2 </span>== <span class="src-num">0</span><span class="src-sym">) </span>? <span class="src-str">&quot;zoneTexteBlanche&quot; </span>: <span class="src-str">&quot;zoneTexteStyleXPFondGris&quot;</span><span class="src-sym">)</span>.<span class="src-str">'&quot; '</span>.<span class="src-var">$alarm_line_style</span>.<span class="src-str">'&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a163"></a>&nbsp;</li>
+<li><a name="a164"></a>                <span class="src-comm">// Definition des colonnes nom de l'alarme, na, ta</span></li>
+<li><a name="a165"></a>&nbsp;</li>
+<li><a name="a166"></a>                <span class="src-comm">// Note : définir le label de la na et de la ta via des fonctions 'getXXX' dans le modele</span></li>
+<li><a name="a167"></a>&nbsp;</li>
+<li><a name="a168"></a>                <span class="src-var">$na_label </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getNALabel</span><span class="src-sym">(</span><span class="src-var">$alarm</span><span class="src-sym">[</span><span class="src-str">'network'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$family">family</a><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a169"></a>                <span class="src-var">$ta_label </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getTALabel</span><span class="src-sym">(</span><span class="src-var">$alarm</span><span class="src-sym">[</span><span class="src-str">'time'</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a170"></a>&nbsp;</li>
+<li><a name="a171"></a>                <span class="src-var">$html </span>.= <span class="src-str">'&lt;td&gt;'</span>.<span class="src-var">$alarm</span><span class="src-sym">[</span><span class="src-str">'alarm_name'</span><span class="src-sym">]</span>.<span class="src-str">'&lt;/td&gt;&lt;td align=&quot;center&quot;&gt;'</span>.<span class="src-var">$na_label</span><span class="src-sym">[</span><span class="src-str">'agregation_label'</span><span class="src-sym">]</span>.<span class="src-str">'&lt;/td&gt;&lt;td align=&quot;center&quot;&gt;'</span>.<span class="src-var">$ta_label</span><span class="src-sym">[</span><span class="src-str">'agregation_label'</span><span class="src-sym">]</span>.<span class="src-str">'&lt;/td&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a172"></a>&nbsp;</li>
+<li><a name="a173"></a>                <span class="src-comm">// Definition des boutons de suppression, d'envoi d'emails, d'edition et d'envoi des trappes SNMP (facultatif)</span></li>
+<li><a name="a174"></a>&nbsp;</li>
+<li><a name="a175"></a>                <span class="src-var">$delete_btn    </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#methodsetDeleteButton">setDeleteButton</a><span class="src-sym">(</span><span class="src-var">$alarm</span><span class="src-sym">[</span><span class="src-str">'alarm_id'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-var">$alarm</span><span class="src-sym">[</span><span class="src-str">'time'</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a176"></a>                <span class="src-var">$edit_btn    </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#methodsetEditionButton">setEditionButton</a><span class="src-sym">(</span><span class="src-var">$alarm</span><span class="src-sym">[</span><span class="src-str">'alarm_id'</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a177"></a>                <span class="src-var">$email_btn    </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#methodsetEmailButton">setEmailButton</a><span class="src-sym">(</span><span class="src-var">$alarm</span><span class="src-sym">[</span><span class="src-str">'alarm_id'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-var">$alarm</span><span class="src-sym">[</span><span class="src-str">'time'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-var">$alarm</span><span class="src-sym">[</span><span class="src-str">'send_mail'</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a178"></a>                <span class="src-var">$snmp_btn    </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#methodsetSNMPButton">setSNMPButton</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a179"></a>&nbsp;</li>
+<li><a name="a180"></a>                <span class="src-var">$html </span>.= <span class="src-str">'&lt;td colspan=&quot;2&quot; nowrap&gt;'</span>.<span class="src-var">$delete_btn</span>.<span class="src-var">$edit_btn</span>.<span class="src-var">$email_btn</span>.<span class="src-var">$snmp_btn</span>.<span class="src-str">'&lt;/td&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a181"></a>                </li>
+<li><a name="a182"></a>                <span class="src-comm">// Fin de la ligne</span></li>
+<li><a name="a183"></a>                </li>
+<li><a name="a184"></a>                <span class="src-var">$html </span>.= <span class="src-str">'&lt;/tr&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a185"></a>            <span class="src-sym">}</span></li>
+<li><a name="a186"></a>        <span class="src-sym">}</span></li>
+<li><a name="a187"></a>&nbsp;</li>
+<li><a name="a188"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$display_info_on_off</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a189"></a>            <span class="src-var">$html </span>.= <span class="src-str">'&lt;tr&gt;&lt;td colspan=&quot;4&quot; style=&quot;padding-top:10px&quot;&gt;&lt;input type=&quot;button&quot; class=&quot;information&quot; style=&quot;width:16px&quot;/&gt;&lt;span style=&quot;font: 8pt verdana, arial, helvetica;color: #585858;&quot;&gt;&amp;nbsp;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_DESACTIVATED_INFORMATION'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;'</span><span class="src-sym">;            </span></li>
+<li><a name="a190"></a>        <span class="src-sym">}</span></li>
+<li><a name="a191"></a>&nbsp;</li>
+<li><a name="a192"></a>        <span class="src-var">$html </span>.= <span class="src-str">'&lt;/table&gt;&lt;/fieldset&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a193"></a>&nbsp;</li>
+<li><a name="a194"></a>        <span class="src-var">$html </span>.= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#methodsetGroupSelectorDiv">setGroupSelectorDiv</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a195"></a>&nbsp;</li>
+<li><a name="a196"></a>        echo <span class="src-var">$html</span><span class="src-sym">;</span></li>
+<li><a name="a197"></a>    <span class="src-sym">}</span></li>
+<li><a name="a198"></a>    </li>
+<li><a name="a199"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a200"></a><span class="src-doc">     * Définit le code HTML du bouton de suppression d'une alarme de la liste</span></li>
+<li><a name="a201"></a><span class="src-doc">     *</span></li>
+<li><a name="a202"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">integer </span><span class="src-doc-var">$alarm_id </span><span class="src-doc">identifiant de l'alarme à supprimer</span></li>
+<li><a name="a203"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$alarm_ta </span><span class="src-doc">l'agregation temporelle de l'alarme à supprimer</span></li>
+<li><a name="a204"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">le code HTML du bouton de suppression</span></li>
+<li><a name="a205"></a><span class="src-doc">     */</span></li>
+<li><a name="a206"></a>&nbsp;</li>
+<li><a name="a207"></a>    <span class="src-key">function </span><a href="../Alarm/AlarmList.html#methodsetDeleteButton">setDeleteButton</a><span class="src-sym">(</span><span class="src-var">$alarm_id</span><span class="src-sym">, </span><span class="src-var">$alarm_ta</span><span class="src-sym">)</span></li>
+<li><a name="a208"></a>    <span class="src-sym">{</span></li>
+<li><a name="a209"></a>        <span class="src-comm">// Note : définir le message de suppression dans le modele</span></li>
+<li><a name="a210"></a>&nbsp;</li>
+<li><a name="a211"></a>        <span class="src-comm">//$delete_msg = &quot;Do you want to delete this &quot;.$this-&gt;alarmType.&quot; alarm ?&quot;;</span></li>
+<li><a name="a212"></a>&nbsp;</li>
+<li><a name="a213"></a>        <span class="src-var">$delete_msg </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_PAUTO_CONFIRM_OBJECT_DELETE'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a214"></a>        </li>
+<li><a name="a215"></a>        <span class="src-key">return </span><span class="src-str">'&lt;input type=&quot;button&quot; class=&quot;drop_alarm&quot; style=&quot;width:16px&quot; onclick=&quot;openAlarmDropDialog(\''</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_DELETE_CONFIRMATION_TITLE'</span><span class="src-sym">)</span>.<span class="src-str">'\', \''</span>.<span class="src-var">$delete_msg</span>.<span class="src-str">'\', '</span>.<span class="src-var">$alarm_id</span>.<span class="src-str">', \''</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmType">alarmType</a>.<span class="src-str">'\', \''</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$family">family</a>.<span class="src-str">'\', \''</span>.<span class="src-var">$alarm_ta</span>.<span class="src-str">'\')&quot;/&gt;'</span><span class="src-sym">;        </span></li>
+<li><a name="a216"></a>    <span class="src-sym">}</span></li>
+<li><a name="a217"></a>    </li>
+<li><a name="a218"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a219"></a><span class="src-doc">     * Définit le code HTML du bouton d'edition des propriétés d'une alarme de la liste</span></li>
+<li><a name="a220"></a><span class="src-doc">     *</span></li>
+<li><a name="a221"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">integer </span><span class="src-doc-var">$alarm_id </span><span class="src-doc">identifiant de l'alarme à éditer</span></li>
+<li><a name="a222"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">le code HTML du bouton d'edition</span></li>
+<li><a name="a223"></a><span class="src-doc">     */</span></li>
+<li><a name="a224"></a>&nbsp;</li>
+<li><a name="a225"></a>    <span class="src-key">function </span><a href="../Alarm/AlarmList.html#methodsetEditionButton">setEditionButton</a><span class="src-sym">(</span><span class="src-var">$alarm_id</span><span class="src-sym">)</span></li>
+<li><a name="a226"></a>    <span class="src-sym">{</span></li>
+<li><a name="a227"></a>        <span class="src-key">return </span><span class="src-str">'&lt;input type=&quot;button&quot; class=&quot;alarm_info&quot; onclick=&quot;self.location.href=\''</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$localURL">localURL</a>.<span class="src-str">'php/alarm_setup.php?family='</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$family">family</a>.<span class="src-str">'&amp;alarm_type='</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmType">alarmType</a>.<span class="src-str">'&amp;alarm_id='</span>.<span class="src-var">$alarm_id</span>.<span class="src-str">'\'&quot; style=&quot;margin-left:5px;margin-right:5px;width:16px&quot;/&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a228"></a>    <span class="src-sym">}</span></li>
+<li><a name="a229"></a>    </li>
+<li><a name="a230"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a231"></a><span class="src-doc">     * Définit le code HTML du bouton d'ajout de destinataires à l'alarme</span></li>
+<li><a name="a232"></a><span class="src-doc">     *</span></li>
+<li><a name="a233"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">integer </span><span class="src-doc-var">$alarm_id </span><span class="src-doc">identifiant de l'alarme à éditer</span></li>
+<li><a name="a234"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$alarm_ta </span><span class="src-doc">l'agregation temporelle de l'alarme à supprimer</span></li>
+<li><a name="a235"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">boolean </span><span class="src-doc-var">$send_mail </span><span class="src-doc">l'alarme est elle déja attachée à des destinataires (true) ou non (false)</span></li>
+<li><a name="a236"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">le code HTML du bouton d'ajout de destinataire</span></li>
+<li><a name="a237"></a><span class="src-doc">     */</span></li>
+<li><a name="a238"></a>&nbsp;</li>
+<li><a name="a239"></a>    <span class="src-key">function </span><a href="../Alarm/AlarmList.html#methodsetEmailButton">setEmailButton</a><span class="src-sym">(</span><span class="src-var">$alarm_id</span><span class="src-sym">, </span><span class="src-var">$alarm_ta</span><span class="src-sym">, </span><span class="src-var">$send_mail</span><span class="src-sym">)</span></li>
+<li><a name="a240"></a>    <span class="src-sym">{</span></li>
+<li><a name="a241"></a>        <span class="src-comm">// Note : définir les labels via des fonctions 'getXXXX' dans le modele</span></li>
+<li><a name="a242"></a>&nbsp;</li>
+<li><a name="a243"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-var">$send_mail</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a244"></a>            <span class="src-var">$email_class </span>= <span class="src-str">'email_disabled'</span><span class="src-sym">;</span></li>
+<li><a name="a245"></a>            <span class="src-var">$email_alt </span>= <span class="src-str">'Activate email sending'</span><span class="src-sym">;</span></li>
+<li><a name="a246"></a>        <span class="src-sym">}</span></li>
+<li><a name="a247"></a>        <span class="src-key">else </span></li>
+<li><a name="a248"></a>        <span class="src-sym">{</span></li>
+<li><a name="a249"></a>            <span class="src-var">$email_class </span>= <span class="src-str">'email_enabled'</span><span class="src-sym">;</span></li>
+<li><a name="a250"></a>            <span class="src-var">$email_alt </span>= <span class="src-str">'Desactivate email sending'</span><span class="src-sym">;                    </span></li>
+<li><a name="a251"></a>        <span class="src-sym">}</span></li>
+<li><a name="a252"></a>        </li>
+<li><a name="a253"></a>        <span class="src-comm">//return '&lt;div class=&quot;'.$email_class.'&quot; border=&quot;0&quot; alt=&quot;'.$email_msg.'&quot; onclick=&quot;ouvrir_fenetre(\'setup_alarm_send_to.php?alarm_id='.$alarm_id.'&amp;alarm_type=alarm_'.$this-&gt;alarmType.'\',\'Update_Alarm\',\'yes\',\'no\',870,600)&quot;&gt;&lt;/div&gt;';</span></li>
+<li><a name="a254"></a>        </li>
+<li><a name="a255"></a>        <span class="src-key">return </span><span class="src-str">'&lt;input type=&quot;button&quot; id=&quot;mail_alarm_'</span>.<span class="src-var">$alarm_id</span>.<span class="src-str">'&quot; class=&quot;'</span>.<span class="src-var">$email_class</span>.<span class="src-str">'&quot; style=&quot;width:16px&quot; alt=&quot;'</span>.<span class="src-var">$email_alt</span>.<span class="src-str">'&quot; onclick=&quot;showGroups(\''</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_EMAIL_SETUP_TITLE'</span><span class="src-sym">)</span>.<span class="src-str">'\', \'div_group_select\', '</span>.<span class="src-var">$alarm_id</span>.<span class="src-str">', \''</span>.<span class="src-var">$alarm_ta</span>.<span class="src-str">'\', \''</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmType">alarmType</a>.<span class="src-str">'\')&quot;/&gt;'</span><span class="src-sym">;    </span></li>
+<li><a name="a256"></a>    <span class="src-sym">}</span></li>
+<li><a name="a257"></a>    </li>
+<li><a name="a258"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a259"></a><span class="src-doc">     * Définit le code HTML du bouton d'ajout de trappes SNMP à une alarme</span></li>
+<li><a name="a260"></a><span class="src-doc">     *</span></li>
+<li><a name="a261"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">le code HTML du bouton d'ajout de trappes SNMP</span></li>
+<li><a name="a262"></a><span class="src-doc">     */</span></li>
+<li><a name="a263"></a>&nbsp;</li>
+<li><a name="a264"></a>    <span class="src-key">function </span><a href="../Alarm/AlarmList.html#methodsetSNMPButton">setSNMPButton</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a265"></a>    <span class="src-sym">{</span></li>
+<li><a name="a266"></a>        <span class="src-key">return </span><span class="src-str">''</span><span class="src-sym">;</span></li>
+<li><a name="a267"></a>    <span class="src-sym">}</span></li>
+<li><a name="a268"></a>    </li>
+<li><a name="a269"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a270"></a><span class="src-doc">     * Définit le calque de sélection des groupes de destinataires d'une alarme</span></li>
+<li><a name="a271"></a><span class="src-doc">     *</span></li>
+<li><a name="a272"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">le code HTML du calque d'ajout de groupes de destinataires</span></li>
+<li><a name="a273"></a><span class="src-doc">     */</span></li>
+<li><a name="a274"></a>&nbsp;</li>
+<li><a name="a275"></a>    <span class="src-key">function </span><a href="../Alarm/AlarmList.html#methodsetGroupSelectorDiv">setGroupSelectorDiv</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a276"></a>    <span class="src-sym">{</span></li>
+<li><a name="a277"></a>        <span class="src-var">$group_div </span>= <span class="src-str">'&lt;div id=&quot;div_group_select&quot; class=&quot;tabPrincipal&quot; style=&quot;display:none&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a278"></a>&nbsp;</li>
+<li><a name="a279"></a>        <span class="src-var">$group_div </span>.= <span class="src-str">'&lt;fieldset&gt;&lt;legend class=&quot;texteGrisBold&quot;&gt;&amp;nbsp;&lt;input type=&quot;button&quot; class=&quot;small_puce_fieldset&quot; style=&quot;width:10px;height:10px&quot;/&gt;&amp;nbsp;&lt;span class=&quot;texteGrisBold&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_GROUP_SELECTOR'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/span&gt;&lt;/legend&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a280"></a>        </li>
+<li><a name="a281"></a>        <span class="src-var">$group_div </span>.= <span class="src-str">'&lt;div style=&quot;margin-top:10px;margin-left:10px&quot; align=&quot;center&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a282"></a>        </li>
+<li><a name="a283"></a>        <span class="src-comm">// Creation du div de sélection des groupes disponibles</span></li>
+<li><a name="a284"></a>&nbsp;</li>
+<li><a name="a285"></a>        <span class="src-var">$group_div </span>.= <span class="src-str">'&lt;div style=&quot;float:left&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a286"></a>        <span class="src-var">$group_div </span>.= <span class="src-str">'&lt;p class=&quot;texteGrisBold&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_TASK_SCHEDULER_SCHEDULE_SETUP_LIST_TITLE_AVAILABLE_GROUP'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/p&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a287"></a>        <span class="src-var">$group_div </span>.= <span class="src-str">'&lt;select name=&quot;available_groups&quot; size=&quot;10&quot; multiple=&quot;multiple&quot; style=&quot;width:210px;&quot;&gt;&lt;/select&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a288"></a>        <span class="src-var">$group_div </span>.= <span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a289"></a>&nbsp;</li>
+<li><a name="a290"></a>        <span class="src-comm">// Creation du div de transfert entre les deux groupes</span></li>
+<li><a name="a291"></a>&nbsp;</li>
+<li><a name="a292"></a>        <span class="src-var">$group_div </span>.= <span class="src-str">'    &lt;div id=&quot;group_transfert&quot; style=&quot;float:left;margin-right:5px;margin-left:5px&quot;&gt;</span></li>
+<li><a name="a293"></a><span class="src-str">                            &lt;p class=&quot;texteGrisBold&quot;&gt;&amp;nbsp;&lt;/p&gt;</span></li>
+<li><a name="a294"></a><span class="src-str">                            &lt;table height=&quot;165px&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;bottom:0px&quot;&gt;</span></li>
+<li><a name="a295"></a><span class="src-str">                                &lt;tr vertical-align=&quot;center&quot;&gt;</span></li>
+<li><a name="a296"></a><span class="src-str">                                    &lt;td&gt;</span></li>
+<li><a name="a297"></a><span class="src-str">                                        &lt;div&gt;&lt;input type=&quot;button&quot; value=&quot; -&amp;gt; &quot; onclick=&quot;transfertSelectedElement(\'available_groups\', \'suscribed_groups\')&quot; class=&quot;stdFPButton&quot;&gt;&lt;/div&gt;</span></li>
+<li><a name="a298"></a>                                        </li>
+<li><a name="a299"></a><span class="src-str">                                        &lt;div&gt;&lt;input type=&quot;button&quot; value=&quot; &amp;lt;- &quot; onclick=&quot;transfertSelectedElement(\'suscribed_groups\', \'available_groups\')&quot; class=&quot;stdFPButton&quot;&gt;&lt;/div&gt;</span></li>
+<li><a name="a300"></a><span class="src-str">                                    &lt;/td&gt;</span></li>
+<li><a name="a301"></a><span class="src-str">                                &lt;/tr&gt;</span></li>
+<li><a name="a302"></a><span class="src-str">                            &lt;/table&gt;</span></li>
+<li><a name="a303"></a><span class="src-str">                        &lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a304"></a>&nbsp;</li>
+<li><a name="a305"></a>        <span class="src-comm">// Creation du div de sélection des groupes abonnés à l'alarme</span></li>
+<li><a name="a306"></a>&nbsp;</li>
+<li><a name="a307"></a>        <span class="src-var">$group_div </span>.= <span class="src-str">'&lt;div style=&quot;float:left&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a308"></a>        <span class="src-var">$group_div </span>.= <span class="src-str">'&lt;p class=&quot;texteGrisBold&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmList.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_TASK_SCHEDULER_SCHEDULE_SETUP_LIST_TITLE_SUSCRIBED_GROUP'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/p&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a309"></a>        <span class="src-var">$group_div </span>.= <span class="src-str">'&lt;select name=&quot;suscribed_groups&quot; size=&quot;10&quot; multiple=&quot;multiple&quot; style=&quot;width:210px;&quot;&gt;&lt;/select&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a310"></a>        <span class="src-var">$group_div </span>.= <span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a311"></a>&nbsp;</li>
+<li><a name="a312"></a>        <span class="src-var">$group_div </span>.= <span class="src-str">'&lt;/div&gt;&lt;/fieldset&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a313"></a>&nbsp;</li>
+<li><a name="a314"></a>        <span class="src-var">$group_div </span>.= <span class="src-str">'&lt;div align=&quot;center&quot; style=&quot;padding:5px&quot;&gt;&lt;input type=&quot;button&quot; value=&quot;Save&quot; onClick=&quot;saveSelectedGroup(\'suscribed_groups\')&quot;/&gt;&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a315"></a>&nbsp;</li>
+<li><a name="a316"></a>        <span class="src-var">$group_div </span>.= <span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a317"></a>        </li>
+<li><a name="a318"></a>        <span class="src-key">return </span><span class="src-var">$group_div</span><span class="src-sym">;</span></li>
+<li><a name="a319"></a>    <span class="src-sym">}</span></li>
+<li><a name="a320"></a><span class="src-sym">}</span></li>
+<li><a name="a321"></a>&nbsp;</li>
+<li><a name="a322"></a><span class="src-php">?&gt;</span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 03 Aug 2008 18:03:10 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

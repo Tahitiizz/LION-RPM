@@ -1,0 +1,16 @@
+sdd_id_page	sdd_sort_by_id	sdd_sort_by_order	sdd_mode	sdd_is_online	sdd_id_menu	sdd_selecteur_default_period	sdd_selecteur_default_top_overnetwork	sdd_selecteur_default_top_overtime	sdd_selecteur_default_na	sdd_selecteur_default_na_axe3
+dshd.0095.01.003	seri.gtms.0095.01.00010.02	asc	bimode	1	menu.dshd.0095.01.003	15	40	3	bsc	
+dshd.0095.01.001	seri.gtms.0095.01.00001.02	asc	bimode	1	menu.dshd.0095.01.001	15	40	3	bsc	
+dshd.0095.01.002	seri.gtms.0095.01.00004.02	asc	bimode	1	menu.dshd.0095.01.002	15	40	3	bsc	
+dshd.0095.01.004	seri.gtms.0095.01.handover.kpis.0095.01.10078	desc	bimode	1	menu.dshd.0095.01.004	15	40	3	bsc	
+dshd.0095.01.005	seri.gtms.0095.01.00007.03	asc	bimode	1	menu.dshd.0095.01.005	15	40	3	bsc	
+dshd.0095.01.007	seri.gtms.0095.01.00024.01	desc	bimode	1	menu.dshd.0095.01.007	15	40	3	bsc	
+dshd.0095.02.001	seri.gtms.0095.02.00001.kpis.0095.02.18025	desc	bimode	1	menu.dshd.0095.02.001	15	40	3	pcu	
+dshd.0095.02.002	seri.gtms.0095.02.00003.kpis.0095.02.18128	asc	bimode	1	menu.dshd.0095.02.002	15	40	3	pcu	
+dshd.0095.02.003	seri.gtms.0095.02.00005.01	desc	bimode	1	menu.dshd.0095.02.003	15	40	3	pcu	
+dshd.0095.02.004	seri.gtms.0095.02.00007.03	desc	bimode	1	menu.dshd.0095.02.004	15	40	3	pcu	
+dshd.0095.02.005	seri.gtms.0095.02.00009.11	desc	bimode	1	menu.dshd.0095.02.005	15	40	3	pcu	
+dshd.0095.02.006	seri.gtms.0095.02.00010.05	desc	bimode	1	menu.dshd.0095.02.006	15	40	3	pcu	
+dshd.0095.03.003	seri.gtms.0095.03.00003.09	desc	bimode	1	menu.dshd.0095.03.003	15	40	3	cell	
+dshd.0095.03.004	seri.gtms.0095.03.00002.09	desc	bimode	1	menu.dshd.0095.03.004	15	40	3	cell	
+dshd.0095.03.002	seri.gtms.0095.03.00006.01	asc	bimode	1	menu.dshd.0095.03.002	15	40	3	cell	

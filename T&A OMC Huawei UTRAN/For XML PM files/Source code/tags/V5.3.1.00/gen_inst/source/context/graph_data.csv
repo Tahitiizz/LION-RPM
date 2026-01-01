@@ -1,0 +1,135 @@
+id_data	data_legend	position_ordonnee	display_type	line_design	color	filled_color
+seri.gtms.0091.01.call_setup_success_rate.kpis.0091.01.cssr	Call Setup Succes Rate (CSSR)	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0091.01.call_setup_success_rate.kpis.0091.01.nb_rab_establishment_attempt	NB RAB ESTABLISHMENT ATTEMPT	right	bar	none	#333333	#33FF00@0.5
+seri.gtms.0091.01.call_setup_success_rate_cs.kpis.0091.01.cssr_cs	Call Setup Succes Rate (CSSR) CS	left	line	circle	#9933FF	#ffffff@1
+seri.gtms.0091.01.call_setup_success_rate_cs.kpis.0091.01.nb_rab_establishment_attempt_cs	NB RAB ESTABLISHMENT ATTEMPT CS	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.call_setup_success_rate_ps.kpis.0091.01.cssr_ps	Call Setup Succes Rate (CSSR) PS	left	line	circle	#FF0000	#ffffff@1
+seri.gtms.0091.01.call_setup_success_rate_ps.kpis.0091.01.nb_rab_establishment_attempt_ps	NB RAB ESTABLISHMENT ATTEMPT PS	right	bar	none	#333333	#9900FF@0.5
+seri.gtms.0091.01.call_drop_rate.kpis.0091.01.call_drop_rate	CALL DROP RATE	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.call_drop_rate.kpis.0091.01.nb_rab_release	NB RAB RELEASE	right	bar	none	#333333	#FFAA00@0.5
+seri.gtms.0091.01.call_drop_rate_cs.kpis.0091.01.call_drop_rate_cs	CALL DROP RATE CS	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.call_drop_rate_cs.kpis.0091.01.nb_rab_release_cs	NB RAB RELEASE CS	right	bar	none	#333333	#006600@0.5
+seri.gtms.0091.01.call_drop_rate_ps.kpis.0091.01.call_drop_rate_ps	CALL DROP RATE PS	left	line	circle	#0000FF	#ffffff@1
+seri.gtms.0091.01.call_drop_rate_ps.kpis.0091.01.nb_rab_release_ps	NB RAB RELEASE PS	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.rrc_connection_setup_success_rate.kpis.0091.01.rrc_connection_setup_sr	RRC CONNECTION SETUP SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.rrc_connection_setup_success_rate.kpis.0091.01.nb_rrc_connection_req	NB RRC CONNECTION REQ	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.rrc_connection_setup_success_rate_per_establishment_cause.kpis.0091.01.rrc_connection_setup_sr_cs_serv	RRC CONNECTION SETUP SR CS SERV	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.rrc_connection_setup_success_rate_per_establishment_cause.kpis.0091.01.rrc_connection_setup_sr_ps_serv	RRC CONNECTION SETUP SR PS SERV	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.rrc_connection_setup_success_rate_per_establishment_cause.kpis.0091.01.nb_rrc_connection_req_ps_serv	NB RRC CONNECTION REQ PS SERV	right	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0091.01.rrc_connection_setup_success_rate_per_establishment_cause.kpis.0091.01.nb_rrc_connection_req_sms	NB RRC CONNECTION REQ SMS	right	cumulatedbar	none	#333333	#FF0099@0.5
+seri.gtms.0091.01.rrc_connection_setup_success_rate_per_establishment_cause.kpis.0091.01.nb_rrc_connection_req_cs_serv	NB RRC CONNECTION REQ CS SERV	right	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.rab_establishment_success_rate.kpis.0091.01.rab_establishment_sr	RAB ESTABLISHMENT SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.rab_establishment_success_rate.kpis.0091.01.nb_rab_establishment_attempt	NB RAB ESTABLISHMENT ATTEMPT	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.cs_rab_establishment_success_rate_per_service.kpis.0091.01.rab_establishment_sr_speech	RAB ESTABLISHMENT SR SPEECH	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.cs_rab_establishment_success_rate_per_service.kpis.0091.01.nb_rab_establishment_attempt_speech	NB RAB ESTABLISHMENT ATTEMPT SPEECH	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.cs_rab_establishment_success_rate_per_service.kpis.0091.01.rab_establishment_sr_rt_cs_data	RAB ESTABLISHMENT SR Real Time CS DATA	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.cs_rab_establishment_success_rate_per_service.kpis.0091.01.nb_rab_establishment_attempt_rt_cs_data	NB RAB ESTABLISHMENT ATTEMPT Real Time CS DATA	right	bar	none	#333333	#006600@0.5
+seri.gtms.0091.01.ps_rab_establishment_success_rate_per_service.kpis.0091.01.rab_establishment_sr_rt_ps_data	RAB ESTABLISHMENT SR Real Time PS DATA	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0091.01.ps_rab_establishment_success_rate_per_service.kpis.0091.01.nb_rab_establishment_attempt_rt_ps_data	NB RAB ESTABLISHMENT ATTEMPT Real Time PS DATA	right	bar	none	#333333	#0000FF@0.5
+seri.gtms.0091.01.ps_rab_establishment_success_rate_per_service.kpis.0091.01.rab_establishment_sr_nrt_ps_data	RAB ESTABLISHMENT SR PS Non Real Time PS DATA	left	line	circle	#006600	#ffffff@1
+seri.gtms.0091.01.ps_rab_establishment_success_rate_per_service.kpis.0091.01.nb_rab_establishment_attempt_nrt_ps_data	NB RAB ESTABLISHMENT ATTEMPT Non Real Time PS DATA	right	bar	none	#333333	#FF0055@0.5
+seri.gtms.0091.01.hspa_rab_establishment_success_rate.kpis.0091.01.rab_establishment_sr_hsdpa	RAB ESTABLISHMENT SR HSDPA	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.hspa_rab_establishment_success_rate.kpis.0091.01.nb_rab_establishment_attempt_hsdpa	NB RAB ESTABLISHMENT ATTEMPT HSDPA	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.hspa_rab_establishment_success_rate.kpis.0091.01.rab_establishment_sr_eul	RAB ESTABLISHMENT SR EUL (HSUPA)	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.hspa_rab_establishment_success_rate.kpis.0091.01.nb_rab_establishment_attempt_eul	NB RAB ESTABLISHMENT ATTEMPT EUL (HSUPA)	right	bar	none	#333333	#006600@0.5
+seri.gtms.0091.01.cs_call_drop_rate_per_service.kpis.0091.01.call_drop_rate_speech	CALL DROP RATE SPEECH	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.cs_call_drop_rate_per_service.kpis.0091.01.nb_rab_release_speech	NB RAB RELEASE SPEECH	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.cs_call_drop_rate_per_service.kpis.0091.01.call_drop_rate_rt_cs_data	CALL DROP RATE Real Time CS DATA	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.cs_call_drop_rate_per_service.kpis.0091.01.nb_rab_release_rt_cs_data	NB RAB RELEASE Real Time CS DATA	right	bar	none	#333333	#006600@0.5
+seri.gtms.0091.01.cs_call_drop_failures_distribution.kpis.0091.01.nb_system_release_speech	NB SYSTEM RELEASE SPEECH	right	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.cs_call_drop_failures_distribution.kpis.0091.01.dropped_call_rate_speech_due_to_ho	DROPPED CALL RATE SPEECH DUE TO HANDOVER	left	cumulatedbar	none	#333333	#00CC00@0.5
+seri.gtms.0091.01.cs_call_drop_failures_distribution.kpis.0091.01.dropped_call_rate_speech_due_missing_neighbors	DROPPED CALL RATE SPEECH DUE TO MISSING NEIGHBORS	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0091.01.cs_call_drop_failures_distribution.kpis.0091.01.dropped_call_rate_speech_lost_ul_synch	DROPPED CALL RATE SPEECH LOST UL SYNCH	left	cumulatedbar	none	#333333	#ff0000@0.5
+seri.gtms.0091.01.cs_call_drop_failures_distribution.kpis.0091.01.dropped_call_rate_speech_other_causes	DROPPED CALL RATE SPEECH OTHER CAUSES	left	cumulatedbar	none	#333333	#AA0070@0.5
+seri.gtms.0091.01.cs_call_drop_failures_distribution.kpis.0091.01.dropped_call_rate_speech_rnc	DROPPED CALL RATE SPEECH RNC	left	cumulatedbar	none	#333333	#FF9900@0.5
+seri.gtms.0091.01.cs_call_drop_failures_distribution.kpis.0091.01.dropped_call_rate_speech_bts	DROPPED CALL RATE SPEECH BTS	left	cumulatedbar	none	#333333	#990000@0.5
+seri.gtms.0091.01.cs_call_drop_failures_distribution.kpis.0091.01.dropped_call_rate_speech_ue	DROPPED CALL RATE SPEECH UE	left	cumulatedbar	none	#333333	#0000FF@0.5
+seri.gtms.0091.01.cs_call_drop_failures_distribution.kpis.0091.01.dropped_call_rate_speech_iu	DROPPED CALL RATE SPEECH IU	left	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0091.01.cs_call_drop_failures_distribution.kpis.0091.01.dropped_call_rate_speech_iur	DROPPED CALL RATE SPEECH IUR	left	cumulatedbar	none	#333333	#c0c0c0@0.5
+seri.gtms.0091.01.cs_call_drop_failures_distribution.kpis.0091.01.dropped_call_rate_speech_radio	DROPPED CALL RATE SPEECH RADIO	left	cumulatedbar	none	#333333	#AA7000@0.5
+seri.gtms.0091.01.ps_call_drop_rate_per_service.kpis.0091.01.call_drop_rate_nrt_ps_data	CALL DROP RATE Non Real Time PS DATA	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0091.01.ps_call_drop_rate_per_service.kpis.0091.01.nb_rab_release_nrt_ps_data	NB RAB RELEASE Non Real Time PS DATA	right	bar	none	#333333	#FF0099@0.5
+seri.gtms.0091.01.ps_call_drop_rate_per_service.kpis.0091.01.call_drop_rate_rt_ps_data	CALL DROP RATE Real Time PS DATA	left	line	circle	#006600	#ffffff@1
+seri.gtms.0091.01.ps_call_drop_rate_per_service.kpis.0091.01.nb_rab_release_rt_ps_data	NB RAB RELEASE Real Time PS DATA	right	bar	none	#333333	#FF0055@0.5
+seri.gtms.0091.01.hspa_call_drop_rate.kpis.0091.01.call_drop_rate_hs	CALL DROP RATE HSDPA	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.hspa_call_drop_rate.kpis.0091.01.nb_rab_release_hs	NB RAB RELEASE HSDPA	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.hspa_call_drop_rate.kpis.0091.01.call_drop_rate_eul	CALL DROP RATE EUL (HSUPA)	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.hspa_call_drop_rate.kpis.0091.01.nb_rab_release_eul	NB RAB RELEASE EUL (HSUPA)	right	bar	none	#333333	#006600@0.5
+seri.gtms.0091.01.rab_establishment_failures_distribution.kpis.0091.01.nb_failed_rab_est_attempt	NB FAILED RAB EST ATTEMPT	right	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.rab_establishment_failures_distribution.kpis.0091.01.rate_failed_rab_est_attempt_exceed_conn_limit	RATE FAILED RAB EST ATTEMPT EXCEED CONN LIMIT	left	cumulatedbar	none	#333333	#00CC00@0.5
+seri.gtms.0091.01.rab_establishment_failures_distribution.kpis.0091.01.rate_failed_rab_est_attempt_lack_dl_ase	RATE FAILED RAB EST ATTEMPT LACK DL ASE	left	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.rab_establishment_failures_distribution.kpis.0091.01.rate_failed_rab_est_attempt_lack_dl_chnl_code	RATE FAILED RAB EST ATTEMPT LACK DL CHNL CODE	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0091.01.rab_establishment_failures_distribution.kpis.0091.01.rate_failed_rab_est_attempt_lack_dl_hw	RATE FAILED RAB EST ATTEMPT LACK DL HW	left	cumulatedbar	none	#333333	#ff0000@0.5
+seri.gtms.0091.01.rab_establishment_failures_distribution.kpis.0091.01.rate_failed_rab_est_attempt_lack_dl_pwr	RATE FAILED RAB EST ATTEMPT LACK DL PWR	left	cumulatedbar	none	#333333	#FF9900@0.5
+seri.gtms.0091.01.rab_establishment_failures_distribution.kpis.0091.01.rate_failed_rab_est_attempt_lack_ul_ase	RATE FAILED RAB EST ATTEMPT LACK UL ASE	left	cumulatedbar	none	#333333	#0000FF@0.5
+seri.gtms.0091.01.rab_establishment_failures_distribution.kpis.0091.01.rate_failed_rab_est_attempt_lack_ul_hw	RATE FAILED RAB EST ATTEMPT LACK UL HW	left	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0091.01.reconfiguration_success_rate.kpis.0091.01.channel_downswitch_sr	CHANNEL DOWNSWITCH SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.reconfiguration_success_rate.kpis.0091.01.nb_channel_downswitch_attempt	NB CHANNEL DOWNSWITCH ATTEMPT	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.reconfiguration_success_rate.kpis.0091.01.channel_upswitch_sr	CHANNEL UPSWITCH SR	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.reconfiguration_success_rate.kpis.0091.01.nb_channel_upswitch_attempt	NB CHANNEL UPSWITCH ATTEMPT	right	bar	none	#333333	#006600@0.5
+seri.gtms.0091.01.hspa_reconfiguration_success_rate.kpis.0091.01.hs_channel_upswitch_sr	HSDPA CHANNEL UPSWITCH SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.hspa_reconfiguration_success_rate.kpis.0091.01.nb_hs_channel_upswitch_attempt	NB HSDPA CHANNEL UPSWITCH ATTEMPT	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.hspa_reconfiguration_success_rate.kpis.0091.01.eul_channel_upswitch_sr	EUL CHANNEL UPSWITCH SR	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.hspa_reconfiguration_success_rate.kpis.0091.01.nb_eul_channel_upswitch_attempt	NB EUL CHANNEL UPSWITCH ATTEMPT	right	bar	none	#333333	#006600@0.5
+seri.gtms.0091.01.cell_availability.kpis.0091.01.cell_availability	CELL AVAILABILITY	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.cell_availability.kpis.0091.01.cell_downtime_manual	CELL DOWNTIME MANUAL	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.cell_availability.kpis.0091.01.cell_downtime_system	CELL DOWNTIME SYSTEM	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0091.01.hsdpa_service_availability.kpis.0091.01.hs_availability	HS_AVAILABILITY	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.hsdpa_service_availability.kpis.0091.01.cell_hs_downtime_manual	CELL HS DOWNTIME MANUAL	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.hsdpa_service_availability.kpis.0091.01.cell_hs_downtime_system	CELL HS DOWNTIME SYSTEM	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0091.01.hsupa_service_availability.kpis.0091.01.eul_availability	EUL_AVAILABILITY	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.hsupa_service_availability.kpis.0091.01.cell_eul_downtime_manual	CELL EUL DOWNTIME MANUAL	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0091.01.hsupa_service_availability.kpis.0091.01.cell_eul_downtime_system	CELL EUL DOWNTIME SYSTEM	left	line	circle	#006600	#ffffff@1
+seri.gtms.0091.01.cell_congestion.kpis.0091.01.congestion_dl	CONGESTION DL	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.cell_congestion.kpis.0091.01.congestion_ul	CONGESTION UL	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.ul_rssi_average.kpis.0091.01.rssi_ul_avg	RSSI UL AVG	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.sho_success_rate.kpis.0091.01.radio_link_addition_success_rate	RADIO LINK ADDITION SUCCESS RATE	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.sho_success_rate.kpis.0091.01.nb_times_rl_add_to_active_set	NB TIMES RL ADD TO ACTIVE SET	right	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.sho_success_rate.kpis.0091.01.nb_times_rl_del_from_active_set	NB TIMES RL DEL FROM ACTIVE SET	right	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0091.01.sho_success_rate.kpis.0091.01.nb_times_rl_rep_in_active_set	NB TIMES RL REP IN ACTIVE SET	right	cumulatedbar	none	#333333	#FF0099@0.5
+seri.gtms.0091.01.intra_system_intra_frequency_hho_success_rate.kpis.0091.01.isif_hho_sr	INTRA SYSTEM INTRA FREQUENCY HHO SR	left	line	none	#FF0000	#ffffff@1
+seri.gtms.0091.01.intra_system_intra_frequency_hho_success_rate.kpis.0091.01.nb_isif_hho_att	NB INTRA SYSTEM INTRA FREQUENCY HHO ATTEMPT	right	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0091.01.intra_system_intra_frequency_hho_success_rate.kpis.0091.01.isif_hho_rt_sr	INTRA SYSTEM INTRA FREQUENCY HHO SR FOR REAL TIME	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0091.01.intra_system_intra_frequency_hho_success_rate.kpis.0091.01.nb_isif_hho_rt_att	NB INTRA SYST INTRA FREQ HHO ATTEMPT FOR REAL TIME	right	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0091.01.intra_system_intra_frequency_hho_success_rate.kpis.0091.01.isif_hho_nrt_sr	INTRA SYST INTRA FREQ HHO SR FOR NON REAL TIME	left	line	circle	#006600	#ffffff@1
+seri.gtms.0091.01.intra_system_intra_frequency_hho_success_rate.kpis.0091.01.nb_isif_hho_nrt_att	NB INTRA SYST INTRA FREQ HHO NON REAL TIME ATTEMPT	right	cumulatedbar	none	#333333	#FF0099@0.5
+seri.gtms.0091.01.intra_system_inter_frequency_hho_success_rate.kpis.0091.01.is_inter_freq_hho_sr	INTRA SYSTEM INTER FREQ HHO SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.intra_system_inter_frequency_hho_success_rate.kpis.0091.01.nb_is_interfreq_hho_att	NB INTRA SYSTEM INTER FREQ HHO ATTEMPT	right	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0091.01.intra_system_inter_frequency_hho_success_rate.kpis.0091.01.is_inter_freq_hho_rt_sr	INTRA SYSTEM INTER FREQ HHO SR FOR REAL TIME	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0091.01.intra_system_inter_frequency_hho_success_rate.kpis.0091.01.nb_is_interfreq_hho_rt_att	NB INTRA SYST INTER FREQ HHO ATTEMPT FOR REAL TIME	right	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.intra_system_inter_frequency_hho_success_rate.kpis.0091.01.is_interfreq_hho_nrt_sr	INTRA SYSTEM INTER FREQ HHO SR FOR NON REAL TIME	left	line	circle	#006600	#ffffff@1
+seri.gtms.0091.01.intra_system_inter_frequency_hho_success_rate.kpis.0091.01.nb_is_interfreq_hho_nrt_att	NB INTRA SYST INTER FREQ HHO NON REAL TIME ATTEMPT	right	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0091.01.inter_system_hho_success_rate.kpis.0091.01.is_hho_sr	INTER SYSTEM HHO SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.inter_system_hho_success_rate.kpis.0091.01.nb_is_hho_att	NB INTER SYSTEM HHO ATTEMPT	right	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0091.01.inter_system_hho_success_rate.kpis.0091.01.is_hho_rt_sr	INTER SYSTEM HHO SR FOR REAL TIME	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0091.01.inter_system_hho_success_rate.kpis.0091.01.nb_is_hho_rt_att	NB INTER SYSTEM HHO ATTEMPT FOR REAL TIME	right	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.inter_system_hho_success_rate.kpis.0091.01.is_hho_nrt_sr	INTER SYSTEM HHO SR FOR NON REAL TIME	left	line	circle	#006600	#ffffff@1
+seri.gtms.0091.01.inter_system_hho_success_rate.kpis.0091.01.nb_is_hho_nrt_att	NB INTER SYSTEM HHO ATTEMPT FOR NON REAL TIME	right	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0091.01.hsdpa_cell_change_success_rate.kpis.0091.01.hs_cell_change_sr	HSDPA CELL CHANGE SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.hsdpa_cell_change_success_rate.kpis.0091.01.nb_hs_cell_change_attempts	NB HSDPA CELL CHANGE ATTEMPTS	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.hsupa_cell_change_success_rate.kpis.0091.01.eul_cell_change_sr	EUL (HSUPA) CELL CHANGE SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.hsupa_cell_change_success_rate.kpis.0091.01.nb_eul_cell_change_attempts	NB EUL (HSUPA) CELL CHANGE ATTEMPTS	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.compressed_mode_success_rate.kpis.0091.01.ul_cmode_sr	UL CMODE SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.compressed_mode_success_rate.kpis.0091.01.nb_ul_cmode_attempt	NB UL CMODE ATTEMPT	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.compressed_mode_success_rate.kpis.0091.01.dl_cmode_sr	DL CMODE SR	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.compressed_mode_success_rate.kpis.0091.01.nb_dl_cmode_attempt	NB DL CMODE ATTEMPT	right	bar	none	#333333	#006600@0.5
+seri.gtms.0091.01.compressed_mode_activation_for_inter-freq.kpis.0091.01.interfreq_meas_rate_with_cmode	INTERFREQ MEAS RATE WITH CMODE	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.compressed_mode_activation_for_inter-freq.kpis.0091.01.nb_interfreq_meas_cm_start	NB INTERFREQ MEAS CM START	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.compressed_mode_activation_for_inter-rat.kpis.0091.01.interrat_meas_rate_with_cmode	INTERRAT MEAS RATE WITH CMODE	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.compressed_mode_activation_for_inter-rat.kpis.0091.01.nb_interrat_meas_cm_start	NB INTERRAT MEAS CM START	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0091.01.cs_traffic.kpis.0091.01.traffic_erl_speech	TRAFFIC ERL SPEECH	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.cs_traffic.kpis.0091.01.traffic_erl_rt_cs_data	TRAFFIC ERL Real Time CS Data	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.ps_traffic.kpis.0091.01.traffic_dl_rt_ps_data	TRAFFIC DL Real Time PS Data	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.ps_traffic.kpis.0091.01.traffic_ul_rt_ps_data	TRAFFIC UL Real Time PS Data	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.ps_traffic.kpis.0091.01.traffic_dl_r99_nrt_ps_data	TRAFFIC DL R99 Non Real Time PS Data	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0091.01.ps_traffic.kpis.0091.01.traffic_ul_r99_nrt_ps_data	TRAFFIC UL R99 Non Real Time PS Data	left	line	circle	#006600	#ffffff@1
+seri.gtms.0091.01.hspa_traffic.kpis.0091.01.traffic_dl_hs_nrt_ps_data	TRAFFIC DL HSDPA Non Real Time PS Data	left	line	square	#FF9900	#ffffff@1
+seri.gtms.0091.01.hspa_traffic.kpis.0091.01.traffic_ul_eul_nrt_ps_data	TRAFFIC UL EUL (HSUPA) Non Real Time PS Data	left	line	circle	#9900FF	#ffffff@1
+seri.gtms.0091.01.average_r99_non_real_time_ps_data_throughput.kpis.0091.01.dl_dch_tot_nrt_ps_data_throughput	DL TOT Non Real Time PS Data THROUGHPUT	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.average_r99_non_real_time_ps_data_throughput.kpis.0091.01.ul_dch_tot_nrt_ps_data_throughput	UL TOT Non Real Time PS Data THROUGHPUT	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.average_r99_non_real_time_ps_data_throughput.kpis.0091.01.dl_dch_user_nrt_ps_data_throughput	DL USER Non Real Time PS Data THROUGHPUT	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0091.01.average_r99_non_real_time_ps_data_throughput.kpis.0091.01.ul_dch_user_nrt_ps_data_throughput	UL USER Non Real Time PS Data THROUGHPUT	left	line	circle	#006600	#ffffff@1
+seri.gtms.0091.01.average_hspa_non_real_time_ps_data_throughput.kpis.0091.01.dl_hs_tot_nrt_ps_data_throughput	DL HSDPA TOT Non Real Time PS Data THROUGHPUT	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0091.01.average_hspa_non_real_time_ps_data_throughput.kpis.0091.01.ul_eul_tot_nrt_ps_data_throughput	UL HSUPA TOT Non Real Time PS Data THROUGHPUT	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0091.01.average_hspa_non_real_time_ps_data_throughput.kpis.0091.01.dl_hs_user_nrt_ps_data_throughput	DL HSDPA USER Non Real Time PS Data THROUGHPUT	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0091.01.average_hspa_non_real_time_ps_data_throughput.kpis.0091.01.ul_eul_user_nrt_ps_data_throughput	UL HSUPA USER Non Real Time PS Data THROUGHPUT	left	line	circle	#006600	#ffffff@1

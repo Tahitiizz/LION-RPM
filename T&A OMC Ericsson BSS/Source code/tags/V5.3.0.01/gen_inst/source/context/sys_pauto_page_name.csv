@@ -1,0 +1,52 @@
+id_page	page_name	page_type	droit
+dshd.0075.01.003	CALL SETUP AND DROP	page	customisateur
+gtms.0075.01.00008	Call Setup	gtm	customisateur
+gtms.0075.01.sdcch_and_tch_assignment	SDCCH And TCH Assignment	gtm	customisateur
+gtms.0075.01.sdcch_blocking_and_drop	SDCCH Blocking And Drop	gtm	customisateur
+gtms.0075.01.call_blocking_and_drop	Call Blocking And Drop	gtm	customisateur
+gtms.0075.01.00010	Call Success	gtm	customisateur
+dshd.0075.01.001	SDCCH	page	customisateur
+gtms.0075.01.00001	Immediate Assignment	gtm	customisateur
+gtms.0075.01.sdcch_drop_causes	SDCCH Drop Causes	gtm	customisateur
+gtms.0075.01.00003	SDCCH Load	gtm	customisateur
+dshd.0075.01.002	TCH	page	customisateur
+gtms.0075.01.00004	Assignment	gtm	customisateur
+gtms.0075.01.tch_drop_causes	TCH Drop Causes	gtm	customisateur
+gtms.0075.01.00006	TCH Traffic	gtm	customisateur
+gtms.0075.01.00007	TCH Interference Band	gtm	customisateur
+dshd.0075.01.004	HANDOVERS	page	customisateur
+gtms.0075.01.00011	Handover Causes	gtm	customisateur
+gtms.0075.01.handover	Handover	gtm	customisateur
+gtms.0075.01.00012	Intra Cell Handovers	gtm	customisateur
+gtms.0075.01.00013	Inter Cell Intra BSC Handovers	gtm	customisateur
+gtms.0075.01.00014	Inter Cell Inter BSC Handovers	gtm	customisateur
+dshd.0075.01.005	RESOURCE AVAILABILITY	page	customisateur
+gtms.0075.01.cell_availability	Cell Availability	gtm	customisateur
+gtms.0075.01.00015	TRX Availability	gtm	customisateur
+gtms.0075.01.00017	TCH Availability	gtm	customisateur
+gtms.0075.01.00018	SDCCH Availability	gtm	customisateur
+dshd.0075.01.006	TRAFFIC AT 2% GOS	page	customisateur
+gtms.0075.01.00019	TCH Traffic at 2GOS	gtm	customisateur
+gtms.0075.01.00021	TCH ressource needed at 2GOS	gtm	customisateur
+dshd.0075.03.001	ADJACENCIES HANDOVERS	page	customisateur
+gtms.0075.03.00001	Adjacencies HO Causes	gtm	customisateur
+dshd.0075.02.001	TRAFFIC	page	customisateur
+gtms.0075.02.00001	Traffic Volumes	gtm	customisateur
+gtms.0075.02.llc_volumes	LLC Volumes	gtm	customisateur
+gtms.0075.02.00002	Paging	gtm	customisateur
+dshd.0075.02.002	TBF ALLOCATION	page	customisateur
+gtms.0075.02.00003	TBF Allocation Efficiency	gtm	customisateur
+gtms.0075.02.00004	TBF Rejection Congestion	gtm	customisateur
+dshd.0075.02.003	THROUGHPUT	page	customisateur
+gtms.0075.02.gprs_throughput	GPRS Throughput	gtm	customisateur
+gtms.0075.02.edge_throughput	EDGE Throughput	gtm	customisateur
+gtms.0075.02.00005	Throughput per TBF	gtm	customisateur
+gtms.0075.02.00006	Throughput per PDCH	gtm	customisateur
+dshd.0075.02.004	RLC RETRANSMISSIONS	page	customisateur
+gtms.0075.02.00007	RLC Retransmission Rate GPRS	gtm	customisateur
+gtms.0075.02.00008	RLC Retransmission Rate EGPRS	gtm	customisateur
+dshd.0075.02.005	TBF DROP CAUSES	page	customisateur
+gtms.0075.02.00009	TBF Drop Causes	gtm	customisateur
+dshd.0075.02.006	DATA UTILIZATION	page	customisateur
+gtms.0075.02.00010	Data Utilization	gtm	customisateur
+gtms.0075.02.pdch_availability	PDCH Availability	gtm	customisateur

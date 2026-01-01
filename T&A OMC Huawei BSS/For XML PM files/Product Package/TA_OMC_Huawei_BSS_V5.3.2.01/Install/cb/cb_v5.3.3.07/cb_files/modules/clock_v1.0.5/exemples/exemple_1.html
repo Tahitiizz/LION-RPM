@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Appel du clock</TITLE>
+	<link rel="stylesheet" href="../css/calendar_style.css" type="text/css"/>
+	<script type="text/javascript" src="../js/prototype/prototype.js"></script>
+	<script type="text/javascript" src="../js/prototype/window.js"></script>
+	<script type="text/javascript" src="../js/clock.js"></script>		
+	<link rel="stylesheet" href="../css/prototype_window/default.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/prototype_window/alphacube.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/clock_style.css" type="text/css"/>
+</head>
+<body>
+
+<!-- Clock 12/24 -->
+<input type="text" size="10" value="15:00" id="my_clock" name="my_clock" />
+
+<img id="clock" name="clock" src="../images/icones/mini_clock.gif" onMouseOver="style.cursor='pointer';" style="visibility:visible" onclick="new Clock('my_clock');">
+
+<br />
+<br />
+<br />
+
+<!-- Clock AM/PM -->
+<p>
+<u>Mode AMP/PM</u> : 
+Si le 3ème paramètre de la fonction Clock est à true, l'horloge est affichée en mode AM/PM.
+</p>
+<input type="text" size="10" value="03:00 PM" id="my_clock2" name="my_clock2" />
+
+<img id="clock2" name="clock2" src="../images/icones/mini_clock.gif" onMouseOver="style.cursor='pointer';" style="visibility:visible" onclick="new Clock('my_clock2','',true);">
+
+<!-- ********** -->
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+id_flat_file	flat_file_name	flat_file_naming_template	on_off	alarm_missing_file_temporization	period_type	exclusion	prefix_counter	reference	ordre	data_collection_frequency	data_chunks	granularity	custom_field_1	custom_field_2	custom_field_3
+194	BSS - 536870915 A-interface Equipment Maintenance Statistic - AIEMS_BSC	pmresult_536870915_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		AIEMS_BSC		1	1	24	hour			
+193	BSS - 536870914 A-interface Operation and Management Statistic - AIOMS_BSC	pmresult_536870914_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		AIOMS_BSC		1	1	24	hour			
+195	BSS - 536870916 A-interface Trunk Board Message Statistic - AITBMS_BSC	pmresult_536870916_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		AITBMS_BSC		1	1	24	hour			
+187	BSS - 536870912 BSC Measurement Function / Access Measurement Function - AMF_BSC	pmresult_536870912_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		AMF_BSC		1	1	24	hour			
+189	BSS - 536870974 BSC Measurement Function / Access Measurement Function(2) - AMF2_BSC	pmresult_536870974_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		AMF2_BSC		1	1	24	hour			
+23	BSSGPRS - 1275072917 BSSGP Measurement / BSSGP Capability Measurement - BM_BCM	pmresult_1275072917_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BM_BCM		1	1	24	hour			
+202	BSS - 1275072018 BSC Measurement/Access Measurement per BSC - BSC_AM_BSC	pmresult_1275072018_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_AM_BSC		1	1	24	hour			
+205	BSS - 1275072023 BSC Measurement/Assignment Measurement per BSC - BSC_ASM_BSC	pmresult_1275072023_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_ASM_BSC		1	1	24	hour			
+204	BSS - 1275072021 BSC Measurement/Call Measurement per BSC - BSC_CAM_BSC	pmresult_1275072021_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_CAM_BSC		1	1	24	hour			
+206	BSS - 1275072025 BSC Measurement/Call Drop Measurement per BSC - BSC_CDM_BSC	pmresult_1275072025_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_CDM_BSC		1	1	24	hour			
+201	BSS - 1275072017 BSC Measurement/Channel Measurement per BSC - BSC_CM_BSC	pmresult_1275072017_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_CM_BSC		1	1	24	hour			
+208	BSS - 1275072048 BSC Measurement/Handover Attempt Measurement per BSC - BSC_HAM_BSC	pmresult_1275072048_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_HAM_BSC		1	1	24	hour			
+207	BSS - 1275072047 BSC Measurement/Handover Failure Measurement per BSC - BSC_HFM_BSC	pmresult_1275072047_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_HFM_BSC		1	1	24	hour			
+211	BSS - 1275072051 BSC Measurement/Handover KPI Measurement per BSC - BSC_HKPIM_BSC	pmresult_1275072051_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_HKPIM_BSC		1	1	24	hour			
+209	BSS - 1275072049 BSC Measurement/Handover Success Measurement per BSC - BSC_HSM_BSC	pmresult_1275072049_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_HSM_BSC		1	1	24	hour			
+210	BSS - 1275072050 BSC Measurement/Inter-Frequency-Band Measurement per BSC - BSC_IFBM_BSC	pmresult_1275072050_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_IFBM_BSC		1	1	24	hour			
+213	BSS - 1275072057 BSC Measurement/Packet Access Capability Measurement per BSC - BSC_PACM_BSC	pmresult_1275072057_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_PACM_BSC		1	1	24	hour			
+214	BSS - 1275072058 BSC Measurement/Packet Assignment Capability Measurement per BSC - BSC_PASCM_BSC	pmresult_1275072058_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_PASCM_BSC		1	1	24	hour			
+215	BSS - 1275072060 BSC Measurement/Packet Transfer Capability Measurement per BSC - BSC_PTCM_BSC	pmresult_1275072060_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_PTCM_BSC		1	1	24	hour			
+212	BSS - 1275072054 BSC Measurement/Ratio of Receive Quality Measurement per BSC - BSC_RRQM_BSC	pmresult_1275072054_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_RRQM_BSC		1	1	24	hour			
+203	BSS - 1275072019 BSC Measurement/TRX Measurement per BSC - BSC_TRX_BSC	pmresult_1275072019_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSC_TRX_BSC		1	1	24	hour			
+50	BSS - 1275069419 BTSM Management / Cell State Measurement per Cell(BTSM.State.Cell) - bsc6000_bts_state_confcell	pmresult_1275069419_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		bsc6000_bts_state_confcell		1	1	24	hour			
+52	BSS - 1275069422 BTSM Management(BTSM) / TRX Configuration Measurement per BM Subrack - bsc6000_bts_trx_conf	pmresult_1275069422_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		bsc6000_bts_trx_conf		1	1	24	hour			
+54	BSS - 1275071424 Call Measurement / Assignment Requests per Cell - bsc6000_call_assign_meas	pmresult_1275071424_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		bsc6000_call_assign_meas		1	1	24	hour			
+56	BSS - 1275071421 Call Measurement / Channel Activation Measurement per Cell - bsc6000_call_chan_active_meas	pmresult_1275071421_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		bsc6000_call_chan_active_meas		1	1	24	hour			
+57	BSSTRX - 1275071422 Call Measurement / Channel Seizure Measurement per TRX - bsc6000_call_chan_seizure	pmresult_1275071422_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		bsc6000_call_chan_seizure		1	1	24	hour			
+13	BSS - 1275071420 Call Measurement / CALL DROP MEASUREMENT PER CELL - bsc6000_call_drop1_meas	pmresult_1275071420_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		bsc6000_call_drop1_meas		1	1	24	hour			
+68	BSS - 1275071418 Call Measurement / Flow Control Measurement per Cell - bsc6000_call_flow_control	pmresult_1275071418_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		bsc6000_call_flow_control		1	1	24	hour			
+14	BSS - 1275071425 Call Measurement / Intra-Cell Handover Measurement per Cell - bsc6000_call_ho_meas	pmresult_1275071425_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		bsc6000_call_ho_meas		1	1	24	hour			
+15	BSS - 1275071423 Call Measurement / Immediate Assignment Measurement per Cell - bsc6000_call_imm_assig_meas	pmresult_1275071423_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		bsc6000_call_imm_assig_meas		1	1	24	hour			
+34	BSS - 1275071428 Call Measurement / Incoming External Inter-Cell Handover Requests per Cell - bsc6000_call_incom_ext_int	pmresult_1275071428_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		EXT		1	1	24	hour			
+16	BSS - 1275071426 Call Measurement / Incoming Internal Inter-Cell Handover Analyzed Measurement per Cell - bsc6000_call_incom_inter_ho	pmresult_1275071426_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		INT		1	1	24	hour			
+17	BSS - 1275071435 Call Measurement / KPI Measurement per Cell - bsc6000_call_kpi_meas	pmresult_1275071435_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		bsc6000_call_kpi_meas		1	1	24	hour			
+72	BSS - 1275071434 Call Measurement / Measurement of MRs upon Handover Initiation - bsc6000_call_mrs_ho	pmresult_1275071434_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		bsc6000_call_mrs_ho		1	1	24	hour			
+18	BSS - 1275071429 Call Measurement / Outgoing External Inter-Cell Handover Requests per Cell - bsc6000_call_out_ex_ho	pmresult_1275071429_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		bsc6000_call_out_ex_ho		1	1	24	hour			
+19	BSS - 1275071427 Call Measurement / Outgoing Internal Inter-Cell Handover Measurement per Cell - bsc6000_call_out_in_ho	pmresult_1275071427_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		bsc6000_call_out_in_ho		1	1	24	hour			
+26	BSS - 1275071419 Call Measurement / Short Message Measurement per Cell - bsc6000_call_trx_sms_meas	pmresult_1275071419_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		bsc6000_call_trx_sms_meas		1	1	24	hour			
+77	BSS - 1275071822 Channel Measurement / Channel Assignment Request Measurement per Cell - bsc6000_chan_assign_request	pmresult_1275071822_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		bsc6000_chan_assign_request		1	1	24	hour			
+175	BSS & BSSTRX - 1275071823 Channel Measurement / Channel Assignment Success Measurement per TRX - bsc6000_chan_assign_succ	pmresult_1275071823_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		bsc6000_chan_assign_succ		1	1	24	hour			
+20	BSS - 1275071819 Channel Measurement / Channel Conversion Measurement per Cell / Channel Busy Duration Measurement per Cell - bsc6000_chan_busy_conv_max	pmresult_1275071819_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		bsc6000_chan_busy_conv_max		1	1	24	hour			
+78	BSS - 1275071817 Channel Measurement / Analyzed Measurement of Dynamically Configured Channels - bsc6000_chan_conf_meas	pmresult_1275071817_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		bsc6000_chan_conf_meas		1	1	24	hour			
+79	BSS - 1275071826 Channel Measurement / Channel Assignment Queue Measurement - bsc6000_chan_gprs_queue	pmresult_1275071826_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		bsc6000_chan_gprs_queue		1	1	24	hour			
+22	BSS - 1275071821 Channel Measurement / Mean Number of Busy Signaling Channels - bsc6000_chan_state_meas	pmresult_1275071821_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		bsc6000_chan_state_meas		1	1	24	hour			
+168	BSS & BSSTRX - 1275071618 MR Measurement / Interference Band Measurement per TRX - bsc6000_mr_cv_interference	pmresult_1275071618_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		bsc6000_mr_cv_interference		1	1	24	hour			
+85	BSS - 1275071617 MR Measurement / Number of MRs per Cell - bsc6000_mr_number_cell	pmresult_1275071617_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		bsc6000_mr_number_cell		1	1	24	hour			
+87	BSSTRX - 1275071626 MR Measurement / Radio Link Failure Measurement per TRX - bsc6000_mr_radio_link	pmresult_1275071626_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		bsc6000_mr_radio_link		1	1	24	hour			
+89	BSSTRX - 1275071623 MR Measurement / Receive Quality Measurement per TRX - bsc6000_mr_rx_qual	pmresult_1275071623_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		bsc6000_mr_rx_qual		1	1	24	hour			
+97	BSS - 1275071431 Call Measurement / Outgoing Inter-RAT Inter-Cell Handover Analyzed Measurement per Cell - bsc6000_out_rat_ho	pmresult_1275071431_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		bsc6000_out_rat_ho		1	1	24	hour			
+25	BSS - 1275071218 Paging Measurement / Abis Interface Paging Measurement(PAGE.AbisInterfOrig.CELL) - bsc6000_paging_abis	pmresult_1275071218_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		bsc6000_paging_abis		1	1	24	hour			
+191	BSSGPRS - 587203160 BSC overall performance measurement - BSCOPM_PCU	pmresult_587203160_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		BSCOPM_PCU		1	1	24	hour			
+220	BSS - Call Measurement Function / Call Measurement Function - callmeas1_drop	*callmeas1_drop*.csv	0	6	hour				1	1	24	hour			
+221	BSS - Call Allocation by TA Measurement Function / Call Allocation by TA Measurement Function (1)(2) - callmeas1_ta	*callmeas1_ta*.csv	0	6	hour				1	1	24	hour			
+197	BSS - 1275070617 CBC Measurement - CBC_BSC	pmresult_1275070617_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		CBC_BSC		1	1	24	hour			
+196	BSS - 536870919 BSC Cell Broadcast Measurement Function/Period - CBMFP_BSC	pmresult_536870919_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		CBMFP_BSC		1	1	24	hour			
+1	BSS - 536870947 Cell Flow Control Measurement Function - cellflowcontrol	pmresult_536870947_[0-9]{2}_*[0-9]{12}.csv|*.CellStats*	1	6	hour		cfcl		1	1	24	hour			
+2	BSS - 536870925 Cell Measurement Function / Inter-cell Handover Measurement Function - cellmeas1_intercell	pmresult_536870925_[0-9]{2}_*[0-9]{12}.csv|*.CellStats*	1	6	hour		cm1i		1	1	24	hour			
+3	BSS - 536870926 Cell Measurement Function / Intra-cell Handover Measurement Function - cellmeas1_intracell	pmresult_536870926_[0-9]{2}_*[0-9]{12}.csv|*.CellStats*	1	6	hour		cmia		1	1	24	hour			
+4	BSS - 536870927 Cell Measurement Function / Other Measurement Function - cellmeas1_other	pmresult_536870927_[0-9]{2}_*[0-9]{12}.csv|*.CellStats*	1	6	hour		cm1o		1	1	24	hour			
+5	BSS - 536870924 Cell Measurement Function / Random Access Measurement Function - cellmeas1_ram	pmresult_536870924_[0-9]{2}_*[0-9]{12}.csv|*.CellStats*	1	6	hour		cm1r		1	1	24	hour			
+6	BSS - 536870922 Cell Measurement Function / SDCCH Measurement Function - cellmeas1_sdcch	pmresult_536870922_[0-9]{2}_*[0-9]{12}.csv|*.CellStats*	1	6	hour		cm1s		1	1	24	hour			
+7	BSS - 536870923 Cell Measurement Function / TCH Measurement Function - cellmeas1_tch	pmresult_536870923_[0-9]{2}_*[0-9]{12}.csv|*.CellStats*	1	6	hour		cm1t		1	1	24	hour			
+222	BSS - 536870950 Cell Measurement Function (2) / TCHF/H Measurement Function(1) - cellmeas2_tch1	pmresult_536870950_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		cmt1		1	1	24	hour			
+8	BSS - 536870966 Cell Measurement Function (2) / TCHF/H Measurement Function(2) - cellmeas2_tch2	pmresult_536870966_[0-9]{2}_*[0-9]{12}.csv|*.CellStats*	1	6	hour		cmt2		1	1	24	hour			
+9	BSS - 536870967 Cell Measurement Function (2) / TCHF/H Measurement Function(3) - cellmeas2_tch3	pmresult_536870967_[0-9]{2}_*[0-9]{12}.csv|*.CellStats*	1	6	hour		cmt3		1	1	24	hour			
+223	BSS - 536870971 Cell Measurement Function (2) / TCHF/H Measurement Function(4) - cellmeas2_tch4	pmresult_536870971_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		cmt4		1	1	24	hour			
+224	BSS - 536870951 Cell Measurement Function (3) / Handover Measurement Function - cellmeas3_ho	pmresult_536870951_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		cm3h		1	1	24	hour			
+225	BSS - 536870972 Cell Measurement Function (3) / Inter-System Handover Measurement Function - cellmeas3_intersystemho	pmresult_536870972_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		cm3i		1	1	24	hour			
+226	BSS - 536870968 Cell Measurement Function (3) / Other Handover Measurement Function - cellmeas3_otherho	pmresult_536870968_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		cm3o		1	1	24	hour			
+227	BSS - Channel Allocation Measurement Function / SDCCH Allocation Measurement Function - channelallocation_sdcch	*channelallocation_sdcch*.csv	0	6	hour				1	1	24	hour			
+10	BSS - 536870945 Channel Allocation Measurement Function / TCH Allocation Measurement Function - channelallocation_tch	pmresult_536870945_[0-9]{2}_*[0-9]{12}.csv|*.CellStats*	1	6	hour		catc		1	1	24	hour			
+228	BSS - 536870946 Channel Allocation Measurement Function / TRX Level Measurement Function - channelallocation_trx	pmresult_536870946_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		catr		1	1	24	hour			
+111	BSS - 1275071443 Call Measurement / AMR Measurement per CELL - CM_AMC	pmresult_1275071443_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		CM_AMC		1	1	24	hour			
+112	BSS - 1275071827 Channel Measurement / Channel Assignment GPRS Measurement per Cell - CM_CAGMC	pmresult_1275071827_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		CM_CAGMC		1	1	24	hour			
+113	BSS - 1275071818 Channel Measurement / Channel Conversion Measurement per Cell - CM_CCMC	pmresult_1275071818_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		CM_CCMC		1	1	24	hour			
+200	BSS - 1275071417 Call Measurement/Call Duration Measurement per BSC - CM_CDM_BSC	pmresult_1275071417_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		CM_CDM_BSC		1	1	24	hour			
+114	BSS - 1275071432 Call Measurement / GSM Cell to GSM Cell Incoming Handover Measurement - CM_GCGCIHM	pmresult_1275071432_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		CM_GCGCIHM		1	1	24	hour			
+115	BSS - 1275071433 Call Measurement / GSM Cell to GSM Cell Outgoing Handover Measurement - CM_GCGCOHM	pmresult_1275071433_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		CM_GCGCOHM		1	1	24	hour			
+116	BSS - 1275071820 Channel Measurement / Measurement of Maximum Busy Channels per Cell - CM_MMBCC	pmresult_1275071820_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		CM_MMBCC		1	1	24	hour			
+137	BSS - 1275071441 Call Measurement / TRX Measurement per Cell - CM_TMC	pmresult_1275071441_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		CM_TMC		1	1	24	hour			
+117	BSSTRX - 1275071629 Customized MRs per TRX - CMR_TRX	pmresult_1275071629_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		CMR_TRX		1	1	24	hour			
+119	BSSGPRS - 587202890 Cell Performance Measurement / Cell Radio Channel Performance Measurement - crchpm	pmresult_587202890_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		crchpm		1	1	24	hour			
+38	BSSGPRS - 587204580 Cell Performance Measurement / Downlink GMSK EGPRS RLC Data Retransmission Rate Measurement - dl8psk_egprs_rlc_drrm	pmresult_587204580_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		derd		1	1	24	hour			
+39	BSSGPRS - 587204590 Cell Performance Measurement / Downlink 8PSK EGPRS RLC data retransmission rate measurement - dl8psk_egprs_rlc_drrm2	pmresult_587204590_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		derd2		1	1	24	hour			
+40	BSSGPRS - 587203040 Cell Performance Measurement / Downlink EGPRS RLC data transmission measurement - dl8psk_egprs_rlc_drrm3	pmresult_587203040_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		derd3		1	1	24	hour			
+36	BSSGPRS - 587202860 Cell Performance Measurement / Downlink RLC Data Transmission Measurement - downlink_rlc_db	pmresult_587202860_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		dlrd		1	1	24	hour			
+37	BSSGPRS - 587202990 Cell Performance Measurement / Downlink EGPRS TBF Establishment/Release Measurement - downlink_tbf_egprs	pmresult_587202990_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		dlte		1	1	24	hour			
+41	BSSGPRS - 587202800 Cell Performance Measurement / Downlink LLC Data Transmission Measurement - downlinkllc_dtm	pmresult_587202800_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		dldt		1	1	24	hour			
+120	BSSTRX - 1275071637 Downlink VQI Measurement per TRX - DVQIM_TRX	pmresult_1275071637_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		DVQIM_TRX		1	1	24	hour			
+229	BSS - 82833951 Transport Network Related Measurement/Measuement of E1T1 port error code Performance(E1T1_ES) - E1T1_ES	pmresult_82833951_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		E1T1_ES		1	1	24	hour			
+121	BSSGPRS - Cell Performance Measurement / EGPRS 8PSK_MEAN_BEP Different Value Measurement - egprs_8psk_m_bep_dvm	*egprs_8psk_m_bep_dvm.csv	0	6	hour				1	1	24	hour			
+122	BSSGPRS - egprs_gsk_m_bep_dvm	*egprs_gsk_m_bep_dvm.csv	0	6	hour				1	1	24	hour			
+123	BSSTRX - 1275073018 G-Abis Measurement / PTRAU Measurement - GAM_PTM	pmresult_1275073018_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		GAM_PTM		1	1	24	hour			
+124	BSSGPRS - 1275073017 G-Abis Measurement / TRAU Link Measurement - GAM_TLM	pmresult_1275073017_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		GAM_TLM		1	1	24	hour			
+188	BSS - 536870964 BSC Measurement Function / Handover Measurement Function(1) - HMF_BSC	pmresult_536870964_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		HMF_BSC		1	1	24	hour			
+186	BSS - 536870965 BSC Measurement Function / Handover Measurement Function(2) - HMF2_BSC	pmresult_536870965_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		HMF2_BSC		1	1	24	hour			
+230	BSS - Incoming Inter Cell Handover Measurement Function / Incoming Inter Cell Handover Measurement Function - incommeas1_ho	*incommeas1_ho*.csv	0	6	hour				1	1	24	hour			
+231	BSS - Incoming Inter Cell Handover Measurement Function / Up-Donw Link Balance Measurement Function - linkbalancemeas1_updown	*linkbalancemeas1_updown*.csv	0	6	hour				1	1	24	hour			
+125	BSSGPRS - linkmeas1_trau	*linkmeas1_trau.csv	0	6	hour				1	1	24	hour			
+126	BSSTRX - 1275071630 MEAN_BEP in EMR Measurement per TRX - MBEPEMRM_TRX	pmresult_1275071630_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MBEPEMRM_TRX		1	1	24	hour			
+127	BSS - 1275071824 Measurement of GSM Cell Performance(GCELL)/Channel Assignment Failure Measurement per Cell(CHAN.AllocFail.CELL) - MGCP_CAFMC	pmresult_1275071824_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MGCP_CAFMC		1	1	24	hour			
+128	BSS - 1275070618 Measurement of GSM Cell Performance(GCELL)/CBC Measurement per Cell(CBC.MEASURE.CELL) - MGCP_CBCM	pmresult_1275070618_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MGCP_CBCM		1	1	24	hour			
+129	BSS - 1275071638 Measurement of GSM Cell Performance(GCELL)/FER Measurement per TRX(MR.FERorig.TRX) - MGCP_FERMT	pmresult_1275071638_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MGCP_FERMT		1	1	24	hour			
+130	BSS - 1275071430 Measurement of GSM Cell Performance(GCELL)/Incoming Inter-RAT Inter-Cell Handover Measurement per Cell - MGCP_IIRCHM	pmresult_1275071430_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MGCP_IIRCHM		1	1	24	hour			
+131	BSS - 1275071439 Measurement of GSM Cell Performance(GCELL)/Incoming Inter-RAT Inter-Cell Handover Requests (TDD) - MGCP_IIRICHR	pmresult_1275071439_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MGCP_IIRICHR		1	1	24	hour			
+132	BSS - 1275071526 Measurement of GSM Cell Performance(GCELL)/Inter-cell Handovers(CALL.VGCSInterCellHO.CELL) - MGCP_INTERCH	pmresult_1275071526_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MGCP_INTERCH		1	1	24	hour			
+133	BSS - 1275071527 Measurement of GSM Cell Performance(GCELL)/Intra-cell Handover(CALL.VGCSIntraCellHO.CELL) - MGCP_INTRACH	pmresult_1275071527_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MGCP_INTRACH		1	1	24	hour			
+134	BSS - 1275071437 Measurement of GSM Cell Performance(GCELL)/Local Switch Measurement per Cell - MGCP_LSMC	pmresult_1275071437_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MGCP_LSMC		1	1	24	hour			
+135	BSS - 1275071619 Measurement of GSM Cell Performance(GCELL)/Measurement of Power Control Messages in MR per Cell(MR.PowerCtrl.CELL) - MGCP_MPCMPC	pmresult_1275071619_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MGCP_MPCMPC		1	1	24	hour			
+136	BSS - 1275071440 Measurement of GSM Cell Performance(GCELL)/Outgoing Inter-RAT Inter-Cell Handover Measurement per Cell (TDD) - MGCP_OIRICHR	pmresult_1275071440_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MGCP_OIRICHR		1	1	24	hour			
+138	BSS - 1275071438 Measurement of GSM Cell Performance(GCELL)/SDCCH Call Drop Measurement per Cell - MGCP_SDCDM	pmresult_1275071438_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MGCP_SDCDM		1	1	24	hour			
+139	BSSTRX - 1275071631 MR Measurement / CV_BEP in EMR Measurement per TRX - MM_CBEMT	pmresult_1275071631_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MM_CBEMT		1	1	24	hour			
+140	BSS - 1275071634 MR Measurement / Frame Rate in EXT Measurement per Cell - MM_FREMC	pmresult_1275071634_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MM_FREMC		1	1	24	hour			
+141	BSS - 1275071633 MR Measurement / Mean measurement in EMR Measurement per CELL - MM_MMEMC	pmresult_1275071633_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MM_MMEMC		1	1	24	hour			
+142	BSSTRX - 1275071627 MR Measurement / Radio Link Failure Measurement per TRX - MM_RLFMT	pmresult_1275071627_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MM_RLFMT		1	1	24	hour			
+143	BSSTRX - 1275071636 MR Measurement / Receive Quality Measurement Distribution per TRX - MM_RQMDT	pmresult_1275071636_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		MM_RQMDT		1	1	24	hour			
+145	BSSTRX - 1275071625 Number of MRs based on TA per TRX - NMBTA_TRX	pmresult_1275071625_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		NMBTA_TRX		1	1	24	hour			
+147	BSSTRX - 1275071632 NbrRcvBlocks in EMR Measurement per TRX - NRBEMRM_TRX	pmresult_1275071632_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		NRBEMRM_TRX		1	1	24	hour			
+232	BSS - Overlaid/Underlaid Subcell Measurement Function / Overlaid/Underlaid Subcell Measurement Function - overundermeas1_overunder	*overundermeas1_overunder*.csv	0	6	hour				1	1	24	hour			
+156	BSSGPRS - 587202600 Cell Performance Measurement / Packet Access Performance Measurement on CCCH - papm_ccch	pmresult_587202600_[0-9]{2}_*[0-9]{12}.csv	0	6	hour				1	1	24	hour			
+157	BSSGPRS - Cell Performance Measurement / Packet Access Performance Measurement on PACCH - papm_pach	*papm_pach.csv	0	6	hour				1	1	24	hour			
+160	BSSGPRS - Cell Performance Measurement / Packet Access Performance Measurement on PCCCH - papm_pcch	*papm_pcch.csv	0	6	hour				1	1	24	hour			
+161	BSSGPRS - PCU Cell 00	*PCU Cell 00.csv	0	6	hour				1	1	24	hour			
+162	BSSGPRS - PCU Downlink LLC_PDUs	*PCU Downlink LLC_PDUs.csv	0	6	hour				1	1	24	hour			
+166	BSSGPRS - PCU Uplink LLC_PDUs	*PCU Uplink LLC_PDUs.csv	0	6	hour				1	1	24	hour			
+198	BSS - 1275070817 PCU Measurement per BSC - PCU_BSC	pmresult_1275070817_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		PCU_BSC		1	1	24	hour			
+219	BSSGPRS - 1275071017 PCU Measurement/PCU Measurement per PCU - PCU_PCUM_PCU	pmresult_1275071017_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		PCU_PCUM_PCU		1	1	24	hour			
+167	BSSGPRS - PDCH Resource	*PDCH Resource.csv	0	6	hour				1	1	24	hour			
+170	BSSGPRS - 587202960 Cell Performance Measurement / PDCH Extremum Value Measurement - pdch_evm	pmresult_587202960_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		pdchevm		1	1	24	hour			
+53	BSSGPRS - 587202940 Cell Performance Measurement / PDCH Resource Performance Measurement - pdch_rpm	pmresult_587202940_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		pdrc		1	1	24	hour			
+171	BSSGPRS - perfmeas1_bssgp	*perfmeas1_bssgp.csv	0	6	hour				1	1	24	hour			
+199	BSS - 1275071217 Paging Measurement/A Interface Paging Measurement - PM_AIPM_BSC	pmresult_1275071217_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		PM_AIPM_BSC		1	1	24	hour			
+55	BSSGPRS - 587202690 Cell Performance Measurement / Paging Request Measurement - prm	pmresult_587202690_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		prm		1	1	24	hour			
+216	BSS - 1275073217 PS Measurement/PS Capability Measurement - PS_CM_BSC	pmresult_1275073217_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		PS_CM_BSC		1	1	24	hour			
+217	BSS - 1275073218 PS Measurement/BSC PS User Capability Measurement - PS_UCM_BSC	pmresult_1275073218_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		PS_UCM_BSC		1	1	24	hour			
+172	BSSGPRS - 1275072617 Packet Switch Channel Measurement / Cell Radio Channel Capabilty Measurement - PSCHM_CRCCM	pmresult_1275072617_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		PSCHM_CRCCM		1	1	24	hour			
+163	BSSGPRS - 1275072618 Packet Switch Channel Measurement / PDCH Resource Capabilty Measurement - PSCHM_PRCM	pmresult_1275072618_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		PSCHM_PRCM		1	1	24	hour			
+173	BSSGPRS - 1275072534 Packet Switch Call Measurement / ABIS Resource Capabilty Measurement - PSCM_ARCM	pmresult_1275072534_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		PSCM_ARCM		1	1	24	hour			
+146	BSSGPRS - 1275072519 Packet Switch Call Measurement / Cell Paging Capabilty Measurement - PSCM_CPCM	pmresult_1275072519_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		PSCM_CPCM		1	1	24	hour			
+155	BSSGPRS - 1275072528 Packet Switch Call Measurement / Downlink EGPRS RLC Data Transfer Capabilty Measurement - PSCM_DERDTCM	pmresult_1275072528_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		PSCM_DERDTCM		1	1	24	hour			
+151	BSSGPRS - 1275072524 Packet Switch Call Measurement / Downlink EGPRS TBF Establish and Release Capabilty Measurement - PSCM_DETERCM	pmresult_1275072524_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		PSCM_DETERCM		1	1	24	hour			
+153	BSSGPRS - 1275072526 Packet Switch Call Measurement / Downlink GPRS RLC Data Transfer Capabilty Measurement - PSCM_DGRDTCM	pmresult_1275072526_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		PSCM_DGRDTCM		1	1	24	hour			
+149	BSSGPRS - 1275072522 Packet Switch Call Measurement / Downlink GPRS TBF Establish and Release Capabilty Measurement - PSCM_DGTERCM	pmresult_1275072522_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		PSCM_DGTERCM		1	1	24	hour			
+159	BSSGPRS - 1275072532 Packet Switch Call Measurement / Downlink LLC Data Transfer Capabilty Measurement - PSCM_DLDTCM	pmresult_1275072532_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		PSCM_DLDTCM		1	1	24	hour			
+174	BSSGPRS - 1275072520 Packet Switch Call Measurement / Intra-CELL Handover Measurement - PSCM_ICHM	pmresult_1275072520_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		PSCM_ICHM		1	1	24	hour			
+177	BSSGPRS - 1275072530 Packet Switch Call Measurement / Number of 8PSK_MEAN_BEP Different Value Measurement - PSCM_N8MBDVM	pmresult_1275072530_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		PSCM_N8MBDVM		1	1	24	hour			
+178	BSSGPRS - 1275072529 Packet Switch Call Measurement / Number of GMSK_MEAN_BEP Different Value Measurement - PSCM_NGMBDVM	pmresult_1275072529_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		PSCM_NGMBDVM		1	1	24	hour			
+179	BSSGPRS - 1275072517 Packet Switch Call Measurement / Packet Access Capability Measurement - PSCM_PACM	pmresult_1275072517_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		PSCM_PACM		1	1	24	hour			
+180	BSSGPRS - 1275072518 Packet Switch Call Measurement / Packet Assignment Capability Measurement - PSCM_PASCM	pmresult_1275072518_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		PSCM_PASCM		1	1	24	hour			
+181	BSSGPRS - 1275072533 Packet Switch Call Measurement / Resource Maintenance Capabilty Measurement - PSCM_RMCM	pmresult_1275072533_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		PSCM_RMCM		1	1	24	hour			
+154	BSSGPRS - 1275072527 Packet Switch Call Measurement / Uplink EGPRS RLC Data Transfer Capabilty Measurement - PSCM_UERDTCM	pmresult_1275072527_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		PSCM_UERDTCM		1	1	24	hour			
+152	BSSGPRS - 1275072525 Packet Switch Call Measurement / Uplink GPRS RLC Data Transfer Capabilty Measurement - PSCM_UGRDTCM	pmresult_1275072525_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		PSCM_UGRDTCM		1	1	24	hour			
+148	BSSGPRS - 1275072521 Packet Switch Call Measurement / Uplink GPRS TBF Establish and Release Capabilty Measurement - PSCM_UGTERCM	pmresult_1275072521_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		PSCM_UGTERCM		1	1	24	hour			
+158	BSSGPRS - 1275072531 Packet Switch Call Measurement / Uplink LLC Data Transfer Capabilty Measurement - PSCM_ULDTCM	pmresult_1275072531_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		PSCM_ULDTCM		1	1	24	hour			
+150	BSSGPRS - 1275072523 Packet Switch Call Measurement / Uplink EGPRS TBF Establish and Release Capabilty Measurement - PSCM_UTERCM	pmresult_1275072523_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		PSCM_UTERCM		1	1	24	hour			
+233	BSS - Radio link on TRX Measurement Function /  - radiomeas1_link	*radiomeas1_link*.csv	0	6	hour				1	1	24	hour			
+234	BSS - 536870938 Receiving Quality Measurement / Full Rate Receiving Quality Measurement - receivingquality_fhrate	pmresult_536870938_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		rcvq		1	1	24	hour			
+190	BSS - 536870939 Receiving Quality Measurement Function / Half Rate Receiving Quality Measurement Function - receivingquality_hrate	pmresult_536870939_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		rcvq2		1	1	24	hour			
+218	BSSGPRS - 1275070017 Resource Measurement/Pb Interface Circuit Measurement per PCU - RM_PICM_PCU	pmresult_1275070017_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		RM_PICM_PCU		1	1	24	hour			
+182	BSSGPRS - Cell Performance Measurement / Resource Maintenance Performance Measurement  - rmpm	*rmpm.csv	0	6	hour				1	1	24	hour			
+183	BSSTRX - 1275071635 RQI Measurement per TRX - RQIM_TRX	pmresult_1275071635_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		RQIM_TRX		1	1	24	hour			
+184	BSSGPRS - Cell Performance Measurement / Rate of Successful Packet Assignment - rspa	*rspa.csv	0	6	hour				1	1	24	hour			
+192	BSS - 536870913 SCCP Measurement Function - SCCP_BSC	pmresult_536870913_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		SCCP_BSC		1	1	24	hour			
+58	BSSGPRS - 587202740 Cell Performance Measurement / Downlink TBF Establishment/Release Measurement - tbf_ermdownlink	pmresult_587202740_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		tedl		1	1	24	hour			
+59	BSSGPRS - 587202710 Cell Performance Measurement / Uplink TBF Establishment/Release Measurement - tbf_ermuplink	pmresult_587202710_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		teul		1	1	24	hour			
+164	BSSTRX - 1275071621 TCHF Receive Level Measurement per TRX - TCHFRLM_TRX	pmresult_1275071621_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		TCHFRLM_TRX		1	1	24	hour			
+165	BSSTRX - 1275071622 TCHH Receive Level Measurement per TRX - TCHHRLM_TRX	pmresult_1275071622_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		TCHHRLM_TRX		1	1	24	hour			
+185	BSSTRX - 1275071624 Uplink-and-Downlink Balance Measurement per TRX - UDBM_TRX	pmresult_1275071624_[0-9]{2}_*[0-9]{12}.csv	0	6	hour		UDBM_TRX		1	1	24	hour			
+60	BSSGPRS - 587202830 Cell Performance Measurement / Uplink RLC Data Transmission Measurement - uplink_rlc_db	pmresult_587202830_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		ulrd		1	1	24	hour			
+61	BSSGPRS - 587202970 Cell Performance Measurement / Uplink EGPRS TBF Establishment/Release Measuremen - uplink_tbf_egprs	pmresult_587202970_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		ulte		1	1	24	hour			
+62	BSSGPRS - 587204560 Cell Performance Measurement / Uplink GMSK EGPRS RLC Data Retransmission Rate Measurement - uplink8psk_egprs_rlc_drrm	pmresult_587204560_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		uerd		1	1	24	hour			
+63	BSSGPRS - 587204570 Cell Performance Measurement / Uplink 8PSK EGPRS RLC data retransmission rate measurement - uplink8psk_egprs_rlc_drrm2	pmresult_587204570_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		uerd2		1	1	24	hour			
+64	BSSGPRS - 587203010 Cell Performance Measurement / Uplink EGPRS RLC data transmission measurement - uplink8psk_egprs_rlc_drrm3	pmresult_587203010_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		uerd3		1	1	24	hour			
+65	BSSGPRS - 587202770 Cell Performance Measurement / Uplink LLC Data Transmission Measurement - uplinkllc_dtm	pmresult_587202770_[0-9]{2}_*[0-9]{12}.csv	1	6	hour		uldt		1	1	24	hour			
+12	BSS - 37. MGW CPU Load	*37. MGW CPU Load*.csv	0	6	hour				1	1	24	hour			
+21	BSS - abismeas1_abis	*abismeas1_abis*.csv	0	6	hour				1	1	24	hour			
+24	BSS - bsc6000_bsc_acc_meas	*bsc6000_bsc_acc_meas*.csv	0	6	hour				1	1	24	hour			
+27	BSS - bsc6000_bsc_ass_meas	*bsc6000_bsc_ass_meas*.csv	0	6	hour				1	1	24	hour			
+28	BSS - bsc6000_bsc_call_drop	*bsc6000_bsc_call_drop*.csv	0	6	hour				1	1	24	hour			
+29	BSS - bsc6000_bsc_call_meas	*bsc6000_bsc_call_meas*.csv	0	6	hour				1	1	24	hour			
+30	BSS - bsc6000_bsc_ho_attem	*bsc6000_bsc_ho_attem*.csv	0	6	hour				1	1	24	hour			
+31	BSS - bsc6000_bsc_ho_failure	*bsc6000_bsc_ho_failure*.csv	0	6	hour				1	1	24	hour			
+32	BSS - bsc6000_bsc_ho_kpi	*bsc6000_bsc_ho_kpi*.csv	0	6	hour				1	1	24	hour			
+33	BSS - bsc6000_bsc_ho_succ	*bsc6000_bsc_ho_succ*.csv	0	6	hour				1	1	24	hour			
+35	BSS - bsc6000_bsc_inter_rfband	*bsc6000_bsc_inter_rfband*.csv	0	6	hour				1	1	24	hour			
+42	BSS - bsc6000_bsc_ratio_rxq	*bsc6000_bsc_ratio_rxq*.csv	0	6	hour				1	1	24	hour			
+43	BSS - bsc6000_bsc_trx_meas	*bsc6000_bsc_trx_meas*.csv	0	6	hour				1	1	24	hour			
+44	BSS - bsc6000_bts_cell_conf	*bsc6000_bts_cell_conf*.csv	0	6	hour				1	1	24	hour			
+45	BSS - bsc6000_bts_conf_meas	*bsc6000_bts_conf_meas*.csv	0	6	hour				1	1	24	hour			
+46	BSS - bsc6000_bts_crc_error	*bsc6000_bts_crc_error*.csv	0	6	hour				1	1	24	hour			
+47	BSS - bsc6000_bts_flex_meas	*bsc6000_bts_flex_meas*.csv	0	6	hour				1	1	24	hour			
+48	BSS - bsc6000_bts_lapd_meas	*bsc6000_bts_lapd_meas*.csv	0	6	hour				1	1	24	hour			
+49	BSS - bsc6000_bts_serious	*bsc6000_bts_serious*.csv	0	6	hour				1	1	24	hour			
+51	BSS - bsc6000_bts_state_meas	*bsc6000_bts_state_meas*.csv	0	6	hour				1	1	24	hour			
+66	BSS - bsc6000_call_discarded	*bsc6000_call_discarded*.csv	0	6	hour				1	1	24	hour			
+67	BSS - bsc6000_call_duration	*bsc6000_call_duration*.csv	0	6	hour				1	1	24	hour			
+69	BSS - bsc6000_call_gsm_cell_gsm	*bsc6000_call_gsm_cell_gsm*.csv	0	6	hour				1	1	24	hour			
+70	BSS - bsc6000_call_incom_rat	*bsc6000_call_incom_rat*.csv	0	6	hour				1	1	24	hour			
+71	BSS - bsc6000_call_local_switch	*bsc6000_call_local_switch*.csv	0	6	hour				1	1	24	hour			
+73	BSS - bsc6000_call_sdcch_drop_meas	*bsc6000_call_sdcch_drop_meas*.csv	0	6	hour				1	1	24	hour			
+74	BSS - bsc6000_cbc_cell	*bsc6000_cbc_cell*.csv	0	6	hour				1	1	24	hour			
+75	BSS - bsc6000_cbc_meas	*bsc6000_cbc_meas*.csv	0	6	hour				1	1	24	hour			
+76	BSS - bsc6000_chan_assign_concen_failure	*bsc6000_chan_assign_concen_failure*.csv	0	6	hour				1	1	24	hour			
+80	BSS - bsc6000_lapd_meas	*bsc6000_lapd_meas*.csv	0	6	hour				1	1	24	hour			
+81	BSS - bsc6000_mean_bep	*bsc6000_mean_bep*.csv	0	6	hour				1	1	24	hour			
+82	BSS - bsc6000_mr_mean_emr	*bsc6000_mr_mean_emr*.csv	0	6	hour				1	1	24	hour			
+83	BSS - bsc6000_mr_nbrrcvblocks	*bsc6000_mr_nbrrcvblocks*.csv	0	6	hour				1	1	24	hour			
+84	BSS - bsc6000_mr_neighbor_meas	*bsc6000_mr_neighbor_meas*.csv	0	6	hour				1	1	24	hour			
+86	BSS - bsc6000_mr_power_control	*bsc6000_mr_power_control*.csv	0	6	hour				1	1	24	hour			
+88	BSS - bsc6000_mr_rqi_meas	*bsc6000_mr_rqi_meas*.csv	0	6	hour				1	1	24	hour			
+90	BSS - bsc6000_mr_ta	*bsc6000_mr_ta*.csv	0	6	hour				1	1	24	hour			
+91	BSS - bsc6000_mr_tchf_rx_meas	*bsc6000_mr_tchf_rx_meas*.csv	0	6	hour				1	1	24	hour			
+92	BSS - bsc6000_mr_tchh_rx_meas	*bsc6000_mr_tchh_rx_meas*.csv	0	6	hour				1	1	24	hour			
+93	BSS - bsc6000_mr_up_down	*bsc6000_mr_up_down*.csv	0	6	hour				1	1	24	hour			
+94	BSS - bsc6000_mr_user_defined	*bsc6000_mr_user_defined*.csv	0	6	hour				1	1	24	hour			
+95	BSS - bsc6000_msc_meas	*bsc6000_msc_meas*.csv	0	6	hour				1	1	24	hour			
+96	BSS - bsc6000_mtp3_meas	*bsc6000_mtp3_meas*.csv	0	6	hour				1	1	24	hour			
+98	BSS - bsc6000_paging_a	*bsc6000_paging_a*.csv	0	6	hour				1	1	24	hour			
+99	BSS - bsc6000_paging_overload_lapd	*bsc6000_paging_overload_lapd*.csv	0	6	hour				1	1	24	hour			
+100	BSS - bsc6000_pcu_bsc	*bsc6000_pcu_bsc*.csv	0	6	hour				1	1	24	hour			
+101	BSS - bsc6000_pcu_pcu	*bsc6000_pcu_pcu*.csv	0	6	hour				1	1	24	hour			
+102	BSS - bsc6000_res_a_meas	*bsc6000_res_a_meas*.csv	0	6	hour				1	1	24	hour			
+103	BSS - bsc6000_res_ater_meas	*bsc6000_res_ater_meas*.csv	0	6	hour				1	1	24	hour			
+104	BSS - bsc6000_res_pb_meas	*bsc6000_res_pb_meas*.csv	0	6	hour				1	1	24	hour			
+105	BSS - bsc6000_res_tc_meas	*bsc6000_res_tc_meas*.csv	0	6	hour				1	1	24	hour			
+106	BSS - bsc6000_sccp_meas	*bsc6000_sccp_meas*.csv	0	6	hour				1	1	24	hour			
+107	BSS - bsc6000_system_load	*bsc6000_system_load*.csv	0	6	hour				1	1	24	hour			
+108	BSS - bsc6000_trx_state_meas	*bsc6000_trx_state_meas*.csv	0	6	hour				1	1	24	hour			
+109	BSS - bscmeas1_ams	*bscmeas1_ams*.csv	0	6	hour				1	1	24	hour			
+110	BSS - bscmeas1_ho	*bscmeas1_ho*.csv	0	6	hour				1	1	24	hour			
+118	BSS - cpumeas1_cpu	*cpumeas1_cpu*.csv	0	6	hour				1	1	24	hour			
+144	BSS - mtpmeas1_mtp	*mtpmeas1_mtp*.csv	0	6	hour				1	1	24	hour			

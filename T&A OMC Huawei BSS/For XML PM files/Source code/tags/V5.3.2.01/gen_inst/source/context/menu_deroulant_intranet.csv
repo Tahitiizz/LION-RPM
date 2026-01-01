@@ -1,0 +1,109 @@
+id_menu	id_menu_parent	libelle_menu	niveau	position	largeur	hauteur	lien_menu	droit_affichage	droit_visible	is_profile_ref_admin	is_profile_ref_user	is_menu_defaut	deploiement	liste_action	id_page	menu_client_default
+menu.01.0001	0	USER	1	1	90	20		astellia		1						
+menu.01.0001.01	menu.01.0001	User Management	2	1	130	20	/myadmin_user/intranet/php/affichage/user_index.php?no_loading=yes	astellia		1						
+menu.01.0001.02	menu.01.0001	Group management	2	2	130	20	/myadmin_setup/intranet/php/affichage/setup_group_index.php?no_loading=yes	astellia		1						
+menu.01.0001.03	menu.01.0001	Profile Management	2	3	130	20	/myadmin_user/intranet/php/affichage/profile_management.php	astellia		1						
+menu.01.0001.04	menu.01.0001	Menu management	2	4	150	20	/myadmin_user/intranet/php/affichage/menu_management.php	astellia		1						
+menu.01.0002	0	SETUP	1	2	90	20		astellia		1						
+menu.01.0002.01	menu.01.0002	Setup Connections	2	1	110	20	/myadmin_setup/intranet/php/affichage/setup_connection_index.php?no_loading=yes	astellia		1						
+menu.01.0002.08	menu.01.0002	Setup Data Files	2	2	150	20	/myadmin_setup/intranet/php/affichage/setup_system_alerts.php	astellia	0	1			0			0
+menu.01.0002.11	menu.01.0002	Setup Partitioning	2	3	110	20	/partitioning/index.php	astellia		1						
+menu.01.0002.02	menu.01.0002	Setup Products	2	4	110	20	/myadmin_setup/intranet/php/affichage/setup_products.php	astellia		1						
+menu.01.0002.09	menu.01.0002	Setup Corporate	2	5	110	20	/corporate/index.php	astellia		1						
+menu.01.0002.03	menu.01.0002	Setup Network Aggregation	2	6	150	20	/myadmin_setup/intranet/php/affichage/setup_tana_index.php?tana_type=na&no_loading=yes	astellia		1						
+menu.01.0002.04	menu.01.0002	Setup Global parameters	2	7	130	20	/myadmin_tools/intranet/php/affichage/sys_global_parameters.php	astellia		1						
+menu.01.0002.06	menu.01.0002	Setup Busy Hour	2	8	110	20	/myadmin_setup/intranet/php/affichage/setup_bh_index.php	astellia		1						
+menu.01.0002.07	menu.01.0002	Setup Data History	2	9	110	20	/myadmin_setup/intranet/php/affichage/setup_data_history.php	astellia		1						
+menu.01.0002.10	menu.01.0002	Setup Mixed KPI	2	10	110	20	/mixed_kpi/index.php	astellia		1						
+menu.01.0003	0	MAPPING	1	3	90	20		astellia		1						
+menu.01.0003.01	menu.01.0003	Automatic Mapping	2	1	110	20	/myadmin_raw_kpi/intranet/php/affichage/mapping_raw_counters_automatic_index.php	astellia		1						
+menu.01.0003.02	menu.01.0003	Counters Activation	2	2	110	20	/myadmin_raw_kpi/intranet/php/affichage/mapping_raw_counters_selection_index.php?no_loading=yes	astellia		1						
+menu.01.0003.03	menu.01.0003	KPI Builder	2	3	100	20	/myadmin_raw_kpi/intranet/php/affichage/kpi_builder_index.php	astellia		1						
+menu.01.0004	0	TASK SCHEDULER	1	4	120	20		astellia		1						
+menu.01.0004.01	menu.01.0004	Process	2	1	90	20	/myadmin_setup/intranet/php/affichage/setup_process_index.php?no_loading=yes	astellia		1						
+menu.01.0004.02	menu.01.0004	Reporting	2	2	90	20	/myadmin_setup/intranet/php/affichage/setup_schedule_index.php?no_loading=yes	astellia		1						
+menu.01.0004.03	menu.01.0004	Data Export	2	3	90	20	/data_export/index.php	astellia		1						
+menu.01.0005	0	ADMIN TOOL	1	5	90	20		astellia		1						
+menu.01.0005.01	menu.01.0005	Context Management	2	1	100	20	/context/index.php	astellia		1						
+menu.01.0006	0	OBJECT BUILDER	1	6	120	20		astellia		1						
+menu.01.0006.01	menu.01.0006	DASHBOARD & VIEW Builder	2	1	150	20	/builder/dashboard.php	astellia		1						
+menu.01.0006.02	menu.01.0006	REPORT Builder	2	2	150	20	/builder/report.php	astellia		1						
+menu.01.0006.03	menu.01.0006	GRAPH Builder	2	3	150	20	/builder/graph.php	astellia		1						
+menu.01.0006.04	menu.01.0006	DATA RANGE Builder	2	4	150	20	/pauto/intranet/php/affichage/pauto_index_range.php	astellia		1						
+menu.01.0007	0	PROCESS	1	7	90	20		astellia		1						
+menu.01.0007.01	menu.01.0007	Process Tracelog	2	1	120	20	/myadmin_tools/intranet/php/affichage/tracelog_index.php	astellia		1						
+menu.01.0008	0	TOPOLOGY	1	8	100	20		astellia		1						
+menu.01.0008.01	menu.01.0008	Download Topology	2	1	130	20	/myadmin_tools/intranet/php/affichage/admintool_download_topology.php	astellia		1						
+menu.01.0008.02	menu.01.0008	Upload Topology	2	2	130	20	/myadmin_tools/intranet/php/affichage/admintool_update_topology.php	astellia		1						
+menu.01.0008.03	menu.01.0008	Download Topology 3rd axis	2	3	130	20	/myadmin_tools/intranet/php/affichage/admintool_download_topology.php?axe3=true	astellia		1						
+menu.01.0008.04	menu.01.0008	Mapping	2	4	130	20	/myadmin_tools/intranet/php/affichage/mapping.php	astellia		1						
+menu.01.0008.05	menu.01.0008	Setup NE Color	2	5	130	20	/myadmin_tools/intranet/php/affichage/admintool_setup_color.php	astellia		1						
+menu.01.0009	0	ALARM	1	9	90	20		astellia		1						
+menu.01.0009.01	menu.01.0009	Setup Static Alarm	2	1	130	20	/myadmin_setup/intranet/php/affichage/setup_static_alarm_index.php?no_loading=yes	astellia		1						
+menu.01.0009.02	menu.01.0009	Setup Dynamic Alarm	2	2	130	20	/myadmin_setup/intranet/php/affichage/setup_dyn_alarm_index.php?no_loading=yes	astellia		1						
+menu.01.0009.03	menu.01.0009	Setup Top/Worst List	2	3	130	20	/myadmin_setup/intranet/php/affichage/setup_list_index.php?no_loading=yes	astellia		1						
+menu.01.0009.04	menu.01.0009	Black List	2	4	110	20	/myadmin_setup/intranet/php/affichage/setup_alarm_blacklisted_element_index.php	astellia		1						
+menu.01.0010	0	NAVIGATION	1	10	100	20		astellia		1	1					
+menu.01.0010.01	menu.01.0010	Home	2	1	90	20	/acces_intranet.php?home=1	astellia		1	1					
+menu.01.0010.02	menu.01.0010	My Profile	2	2	100	20	/myadmin_user/intranet/php/affichage/user_edit_me.php?no_loading=yes	astellia		1	1					
+menu.01.0010.04	menu.01.0010	Switch to another profile	2	3	100	20	/myadmin_user/intranet/php/affichage/profile_switch.php?int=1	astellia		1	1					
+menu.01.0010.03	menu.01.0010	Log Out	2	4	100	20	/index.php?logout=ok	astellia		1	1					
+menu.02.0001	0	CLIENT DASHBOARD	1	5	90	20		astellia	1		1					1
+menu.02.0002	0	ALARM	1	6	90	20		astellia			1					
+menu.02.0002.01	menu.02.0002	Alarm Management	2	1	110	20	/reporting/intranet/php/affichage/alarm_index.php?mode_alarme=management&sous_mode=elem_reseau&id_menu_encours=181	astellia			1			0-100-101-0-102-103-104		
+menu.02.0002.02	menu.02.0002	Alarm History	2	2	110	20	/reporting/intranet/php/affichage/alarm_index.php?id_selecteur=100&page=9&creator=alarm&selecteur_scenario=normal&mode=overtime&mode_alarme=history&sous_mode=condense&id_menu_encours=777	astellia			1			0-102-103-104		
+menu.02.0002.03	menu.02.0002	Top/Worst Lists	2	3	110	20	/reporting/intranet/php/affichage/alarm_index.php?page=9&creator=alarm&selecteur_scenario=normal&mode=overtime&mode_alarme=twcl&id_menu_encours=196	astellia			1			0-102-103-104		
+menu.02.0003	0	INVESTIGATION	1	7	90	20		astellia			1					
+menu.02.0003.05	menu.02.0003	Query Builder	2	1	110	20	/querybuilder/index.php	astellia			1					
+menu.02.0003.01	menu.02.0003	Query Builder (old)	2	2	110	20	/builder_report/intranet/php/affichage/builder_report_index.php	astellia			1					
+menu.02.0003.02	menu.02.0003	Investigation Dashboard	2	3	130	20	/dashboard_investigation/index.php	astellia			1					
+menu.02.0003.03	menu.02.0003	Dashboard Builder	2	4	130	20	/builder/dashboard.php	astellia			1					
+menu.02.0003.04	menu.02.0003	Graph Builder	2	5	130	20	/builder/graph.php	astellia			1					
+menu.0095.bss_gsm	0	BSS GSM	1	1	250	20		customisateur	0		1					0
+menu.dshd.0095.01.call_setup_and_drop	menu.0095.bss_gsm	CALL SETUP AND DROP	2	1	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.call_setup_and_drop	0
+menu.dshd.0095.01.call_setup_and_drop.01	menu.dshd.0095.01.call_setup_and_drop	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.01.call_setup_and_drop&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.call_setup_and_drop	0
+menu.dshd.0095.01.call_setup_and_drop.02	menu.dshd.0095.01.call_setup_and_drop	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.01.call_setup_and_drop&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.call_setup_and_drop	0
+menu.dshd.0095.01.sdcch	menu.0095.bss_gsm	SDCCH	2	2	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.sdcch	0
+menu.dshd.0095.01.sdcch.01	menu.dshd.0095.01.sdcch	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.01.sdcch&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.sdcch	0
+menu.dshd.0095.01.sdcch.02	menu.dshd.0095.01.sdcch	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.01.sdcch&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.sdcch	0
+menu.dshd.0095.01.tch	menu.0095.bss_gsm	TCH	2	3	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.tch	0
+menu.dshd.0095.01.tch.01	menu.dshd.0095.01.tch	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.01.tch&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.tch	0
+menu.dshd.0095.01.tch.02	menu.dshd.0095.01.tch	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.01.tch&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.tch	0
+menu.dshd.0095.01.handovers	menu.0095.bss_gsm	HANDOVERS	2	4	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.handovers	0
+menu.dshd.0095.01.handovers.01	menu.dshd.0095.01.handovers	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.01.handovers&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.handovers	0
+menu.dshd.0095.01.handovers.02	menu.dshd.0095.01.handovers	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.01.handovers&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.handovers	0
+menu.dshd.0095.01.resource_availability	menu.0095.bss_gsm	RESOURCE AVAILABILITY	2	5	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.resource_availability	0
+menu.dshd.0095.01.resource_availability.01	menu.dshd.0095.01.resource_availability	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.01.resource_availability&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.resource_availability	0
+menu.dshd.0095.01.resource_availability.02	menu.dshd.0095.01.resource_availability	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.01.resource_availability&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.resource_availability	0
+menu.dshd.0095.01.traffic_at_2_gos	menu.0095.bss_gsm	TRAFFIC AT 2% GOS	2	6	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.traffic_at_2_gos	0
+menu.dshd.0095.01.traffic_at_2_gos.01	menu.dshd.0095.01.traffic_at_2_gos	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.01.traffic_at_2_gos&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.traffic_at_2_gos	0
+menu.dshd.0095.01.traffic_at_2_gos.02	menu.dshd.0095.01.traffic_at_2_gos	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.01.traffic_at_2_gos&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.01.traffic_at_2_gos	0
+menu.0095.bss_gprs	0	BSS GPRS	1	2	250	20		customisateur	0		1					0
+menu.dshd.0095.02.traffic	menu.0095.bss_gprs	TRAFFIC	2	1	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.traffic	0
+menu.dshd.0095.02.traffic.01	menu.dshd.0095.02.traffic	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.02.traffic&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.traffic	0
+menu.dshd.0095.02.traffic.02	menu.dshd.0095.02.traffic	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.02.traffic&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.traffic	0
+menu.dshd.0095.02.tbf_allocation	menu.0095.bss_gprs	TBF ALLOCATION	2	2	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.tbf_allocation	0
+menu.dshd.0095.02.tbf_allocation.01	menu.dshd.0095.02.tbf_allocation	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.02.tbf_allocation&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.tbf_allocation	0
+menu.dshd.0095.02.tbf_allocation.02	menu.dshd.0095.02.tbf_allocation	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.02.tbf_allocation&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.tbf_allocation	0
+menu.dshd.0095.02.throughput	menu.0095.bss_gprs	THROUGHPUT	2	3	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.throughput	0
+menu.dshd.0095.02.throughput.01	menu.dshd.0095.02.throughput	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.02.throughput&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.throughput	0
+menu.dshd.0095.02.throughput.02	menu.dshd.0095.02.throughput	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.02.throughput&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.throughput	0
+menu.dshd.0095.02.rlc_retransmissions	menu.0095.bss_gprs	RLC RETRANSMISSIONS	2	4	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.rlc_retransmissions	0
+menu.dshd.0095.02.rlc_retransmissions.01	menu.dshd.0095.02.rlc_retransmissions	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.02.rlc_retransmissions&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.rlc_retransmissions	0
+menu.dshd.0095.02.rlc_retransmissions.02	menu.dshd.0095.02.rlc_retransmissions	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.02.rlc_retransmissions&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.rlc_retransmissions	0
+menu.dshd.0095.02.tbf_drop_causes	menu.0095.bss_gprs	TBF DROP CAUSES	2	5	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.tbf_drop_causes	0
+menu.dshd.0095.02.tbf_drop_causes.01	menu.dshd.0095.02.tbf_drop_causes	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.02.tbf_drop_causes&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.tbf_drop_causes	0
+menu.dshd.0095.02.tbf_drop_causes.02	menu.dshd.0095.02.tbf_drop_causes	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.02.tbf_drop_causes&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.tbf_drop_causes	0
+menu.dshd.0095.02.data_utilization	menu.0095.bss_gprs	DATA UTILIZATION	2	6	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.data_utilization	0
+menu.dshd.0095.02.data_utilization.01	menu.dshd.0095.02.data_utilization	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.02.data_utilization&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.data_utilization	0
+menu.dshd.0095.02.data_utilization.02	menu.dshd.0095.02.data_utilization	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.02.data_utilization&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.02.data_utilization	0
+menu.0095.bss_trx	0	BSS TRX	1	4	250	20		customisateur	0		1					0
+menu.dshd.0095.03.downlink_performance	menu.0095.bss_trx	DOWNLINK PERFORMANCE	2	1	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.03.downlink_performance	0
+menu.dshd.0095.03.downlink_performance.01	menu.dshd.0095.03.downlink_performance	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.03.downlink_performance&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.03.downlink_performance	0
+menu.dshd.0095.03.downlink_performance.02	menu.dshd.0095.03.downlink_performance	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.03.downlink_performance&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.03.downlink_performance	0
+menu.dshd.0095.03.uplink_performance	menu.0095.bss_trx	UPLINK PERFORMANCE	2	2	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.03.uplink_performance	0
+menu.dshd.0095.03.uplink_performance.01	menu.dshd.0095.03.uplink_performance	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.03.uplink_performance&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.03.uplink_performance	0
+menu.dshd.0095.03.uplink_performance.02	menu.dshd.0095.03.uplink_performance	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.03.uplink_performance&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.03.uplink_performance	0
+menu.dshd.0095.03.tranceiver_availability	menu.0095.bss_trx	TRANCEIVER AVAILABILITY	2	3	150	20		customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.03.tranceiver_availability	0
+menu.dshd.0095.03.tranceiver_availability.01	menu.dshd.0095.03.tranceiver_availability	Over Time	3	1	150	20	/dashboard_display/index.php?id_dash=dshd.0095.03.tranceiver_availability&mode=overtime	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.03.tranceiver_availability	0
+menu.dshd.0095.03.tranceiver_availability.02	menu.dshd.0095.03.tranceiver_availability	Over Network Elements	3	2	150	20	/dashboard_display/index.php?id_dash=dshd.0095.03.tranceiver_availability&mode=overnetwork	customisateur	1		1			0-5135-5136-5137-0-5132-5133-0-5134	dshd.0095.03.tranceiver_availability	0

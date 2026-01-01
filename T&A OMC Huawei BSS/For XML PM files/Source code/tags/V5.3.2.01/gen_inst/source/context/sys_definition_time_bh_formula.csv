@@ -1,0 +1,3 @@
+family	bh_indicator_name	bh_indicator_type	bh_parameter	bh_network_aggregation	comment
+bss	TCH_Traffic_Carried	KPI	1	standard	
+bssgprs	Total_TBF_establishment_attempts	KPI	1	standard	

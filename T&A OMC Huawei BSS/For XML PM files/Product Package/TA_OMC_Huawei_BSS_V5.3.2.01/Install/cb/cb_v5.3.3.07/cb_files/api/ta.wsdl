@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="ta.xsl"?>
+<wsdl:definitions
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://astellia/ta/api"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    name="TAWsdl"
+	targetNamespace="http://astellia/ta/api">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://astellia/ta/api">
+			<xsd:complexType name="StringArray">
+				<xsd:sequence>
+					<xsd:element name="list" type="xsd:string" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="connectionRequest">
+		<wsdl:part name="login" type="xsd:string"/>
+		<wsdl:part name="password" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="connectionResponse">
+		<wsdl:part name="connectionResponse" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="getDataRequest">
+		<wsdl:part name="queryJsonString" type="xsd:string"/>		
+	</wsdl:message>		
+	<wsdl:message name="getDataResponse">
+		<wsdl:part name="getDataResponse" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="getKpiListRequest">
+		<wsdl:part name="getKpiListJsonString" type="xsd:string"/>		
+	</wsdl:message>		
+	<wsdl:message name="getKpiListResponse">
+		<wsdl:part name="getKpiListResponse" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="getRawListRequest">
+		<wsdl:part name="getRawListJsonString" type="xsd:string"/>		
+	</wsdl:message>		
+	<wsdl:message name="getRawListResponse">
+		<wsdl:part name="getRawListResponse" type="xsd:string"/>
+	</wsdl:message>						
+	<wsdl:message name="getNeListRequest">
+		<wsdl:part name="getNeListJsonString" type="xsd:string"/>		
+	</wsdl:message>		
+	<wsdl:message name="getNeListResponse">
+		<wsdl:part name="getNeListResponse" type="xsd:string"/>
+	</wsdl:message>						
+	<wsdl:message name="getAggInCommonRequest">
+		<wsdl:part name="getAggInCommonJsonString" type="xsd:string"/>		
+	</wsdl:message>		
+	<wsdl:message name="getAggInCommonResponse">
+		<wsdl:part name="getAggInCommonResponse" type="xsd:string"/>
+	</wsdl:message>						
+	<wsdl:message name="getProductsFamiliesRequest">
+		<wsdl:part name="getProductsFamiliesJsonString" type="xsd:string"/>		
+	</wsdl:message>		
+	<wsdl:message name="getProductsFamiliesResponse">
+		<wsdl:part name="getProductsFamiliesResponse" type="xsd:string"/>
+	</wsdl:message>						
+	<wsdl:message name="disconnectionRequest">
+		<wsdl:part name="disconnectionRequest" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="disconnectionResponse">
+		<wsdl:part name="disconnectionResponse" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="LoginRequest">
+		<wsdl:part name="asmLogin" type="xsd:string"/>
+		<wsdl:part name="asmPassword" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="LoginResponse">
+		<wsdl:part name="LoginResponse" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="LogoutRequest">
+		<wsdl:part name="LogoutRequest" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="LogoutResponse">
+		<wsdl:part name="LogoutResponse" type="xsd:string"/>
+	</wsdl:message>
+    <wsdl:message name="getHealthIndicatorRequest">
+		<wsdl:part name="indicatorName" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="getHealthIndicatorResponse">
+		<wsdl:part name="getHealthIndicatorResponse" type="tns:StringArray"/>
+	</wsdl:message>
+    <wsdl:message name="getSAValuesRequest">
+        <wsdl:part name="dateTimestamp" type="xsd:string"/>
+        <wsdl:part name="timeagg" type="xsd:string"/>
+        <wsdl:part name="global" type="xsd:integer"/>
+	</wsdl:message>
+	<wsdl:message name="getSAValuesResponse">
+		<wsdl:part name="getSAValuesResponse" type="tns:StringArray"/>
+	</wsdl:message>
+    <wsdl:message name="RetrieveLogRequest">
+		<wsdl:part name="startTimestamp" type="xsd:integer"/>
+        <wsdl:part name="endTimestamp" type="xsd:integer"/>
+        <wsdl:part name="maxNbBytes" type="xsd:integer"/>
+	</wsdl:message>
+	<wsdl:message name="RetrieveLogResponse">
+		<wsdl:part name="RetrieveLogResponse" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="GetVersionRequest">
+		<wsdl:part name="GetVersionRequest" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="GetVersionResponse">
+		<wsdl:part name="GetVersionResponse" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="UploadFileRequestRequest">
+		<wsdl:part name="UploadFileNetbios" type="xsd:string"/>
+		<wsdl:part name="UploadFileUserSamba" type="xsd:string"/>
+		<wsdl:part name="UploadFilePdwSamba" type="xsd:string"/>
+		<wsdl:part name="UploadFileRepository" type="xsd:string"/>
+		<wsdl:part name="UploadFileFile" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="UploadFileRequestResponse">
+		<wsdl:part name="UploadFileResponse" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="UploadFileStateRequest">
+		<wsdl:part name="UploadFileStateRequest" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="UploadFileStateResponse">
+		<wsdl:part name="UploadFileStateResponse" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="UploadFileCancelRequest">
+		<wsdl:part name="UploadFileCancelRequest" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="UploadFileCancelResponse">
+		<wsdl:part name="UploadFileCancelResponse" type="xsd:string"/>
+	</wsdl:message>
+        <wsdl:message name="UploadFileListRequest">
+		<wsdl:part name="UploadFileListRequest" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="UploadFileListResponse">
+		<wsdl:part name="UploadFileListResponse" type="tns:StringArray"/>
+	</wsdl:message>
+	<wsdl:message name="GetOSInfosRequest">
+		<wsdl:part name="GetOSInfosRequest" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="GetOSInfosResponse">
+		<wsdl:part name="GetOSInfosResponse" type="tns:StringArray"/>
+	</wsdl:message>
+	<wsdl:message name="GetDiskUseRequest">
+		<wsdl:part name="GetDiskUseRequest" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:message name="GetDiskUseResponse">
+		<wsdl:part name="GetDiskUseResponse" type="tns:StringArray"/>
+	</wsdl:message>
+	<wsdl:portType name="taPortType">
+		<wsdl:operation name="connection">
+            <wsdl:documentation>Connection to the T&amp;A API</wsdl:documentation>
+			<wsdl:input message="tns:connectionRequest" />
+			<wsdl:output message="tns:connectionResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="getData">
+            <wsdl:documentation>Get data from TA database</wsdl:documentation>
+			<wsdl:input message="tns:getDataRequest" />
+			<wsdl:output message="tns:getDataResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="getKpiList">
+            <wsdl:documentation>Get KPI list</wsdl:documentation>
+			<wsdl:input message="tns:getKpiListRequest" />
+			<wsdl:output message="tns:getKpiListResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="getRawList">
+            <wsdl:documentation>Get RAW list</wsdl:documentation>
+			<wsdl:input message="tns:getRawListRequest" />
+			<wsdl:output message="tns:getRawListResponse" />
+		</wsdl:operation>		
+		<wsdl:operation name="getNeList">
+            <wsdl:documentation>Get NE list</wsdl:documentation>
+			<wsdl:input message="tns:getNeListRequest" />
+			<wsdl:output message="tns:getNeListResponse" />
+		</wsdl:operation>		
+		<wsdl:operation name="getAggInCommon">
+            <wsdl:documentation>Get NA and TA aggregation in common</wsdl:documentation>
+			<wsdl:input message="tns:getAggInCommonRequest" />
+			<wsdl:output message="tns:getAggInCommonResponse" />
+		</wsdl:operation>		
+		<wsdl:operation name="getProductsFamilies">
+            <wsdl:documentation>Get products and families</wsdl:documentation>
+			<wsdl:input message="tns:getProductsFamiliesRequest" />
+			<wsdl:output message="tns:getProductsFamiliesResponse" />
+		</wsdl:operation>										
+		<wsdl:operation name="disconnection">
+            <wsdl:documentation>Disconnection to the T&amp;A API</wsdl:documentation>
+            <wsdl:input message="tns:disconnectionRequest" />
+            <wsdl:output message="tns:disconnectionResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="Login">
+            <wsdl:documentation>Alias of connection function</wsdl:documentation>
+            <wsdl:input message="tns:LoginRequest" />
+			<wsdl:output message="tns:LoginResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="Logout">
+            <wsdl:documentation>Alias of disconnection function</wsdl:documentation>
+            <wsdl:input message="tns:LogoutRequest" />
+            <wsdl:output message="tns:LogoutResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="getHealthIndicator">
+            <wsdl:documentation>
+                Return a specific Health Indicator (for administrator connection only)
+            </wsdl:documentation>
+			<wsdl:input message="tns:getHealthIndicatorRequest" />
+			<wsdl:output message="tns:getHealthIndicatorResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="getSAValues">
+            <wsdl:documentation>
+                Return the Source Availability values.
+                Specific Date can be specify with timestamp.
+                Specific granularity ('hour' or 'day') can be specify.
+                Global value (all connections average) can by asked.
+            </wsdl:documentation>
+			<wsdl:input message="tns:getSAValuesRequest" />
+			<wsdl:output message="tns:getSAValuesResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="RetrieveLog">
+            <wsdl:documentation>
+                Return the application log informations.
+                Specific period can be specify with timestamp start and timestamp end parameter.
+                Maximum log size in bytes can be specify (optional)
+            </wsdl:documentation>
+			<wsdl:input message="tns:RetrieveLogRequest" />
+			<wsdl:output message="tns:RetrieveLogResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="GetVersion">
+            <wsdl:documentation>Return the current product version</wsdl:documentation>
+            <wsdl:input message="tns:GetVersionRequest" />
+			<wsdl:output message="tns:GetVersionResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="UploadFileRequest">
+            <wsdl:documentation>Request to upload file in topology</wsdl:documentation>
+            <wsdl:input message="tns:UploadFileRequestRequest" />
+			<wsdl:output message="tns:UploadFileRequestResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="UploadFileState">
+            <wsdl:documentation>Returns the file's state</wsdl:documentation>
+            <wsdl:input message="tns:UploadFileStateRequest" />
+			<wsdl:output message="tns:UploadFileStateResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="UploadFileCancel">
+            <wsdl:documentation>Request to cancel to upload file in topology</wsdl:documentation>
+            <wsdl:input message="tns:UploadFileCancelRequest" />
+			<wsdl:output message="tns:UploadFileCancelResponse" />
+		</wsdl:operation>
+                <wsdl:operation name="UploadFileList">
+            <wsdl:documentation>Request a list of files not yet acquitted</wsdl:documentation>
+            <wsdl:input message="tns:UploadFileListRequest" />
+			<wsdl:output message="tns:UploadFileListResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="GetOSInfos">
+            <wsdl:documentation>Return operating system information (Linux version, host name)</wsdl:documentation>
+            <wsdl:input message="tns:GetOSInfosRequest" />
+			<wsdl:output message="tns:GetOSInfosResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="GetDiskUse">
+            <wsdl:documentation>Return the current disk use for each partition (nbBytes|freeBytes;partitionName)</wsdl:documentation>
+            <wsdl:input message="tns:GetDiskUseRequest" />
+			<wsdl:output message="tns:GetDiskUseResponse" />
+		</wsdl:operation>
+    </wsdl:portType>
+	<wsdl:binding name="taBinding" type="tns:taPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="connection">
+            <soap:operation soapAction="http://astellia/ta/api/connection" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getData">
+            <soap:operation soapAction="http://astellia/ta/api/getData" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getKpiList">
+            <soap:operation soapAction="http://astellia/ta/api/getKpiList" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getRawList">
+            <soap:operation soapAction="http://astellia/ta/api/getRawList" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>		
+		<wsdl:operation name="getNeList">
+            <soap:operation soapAction="http://astellia/ta/api/getNeList" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>		
+		<wsdl:operation name="getAggInCommon">
+            <soap:operation soapAction="http://astellia/ta/api/getAggInCommon" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>		
+		<wsdl:operation name="getProductsFamilies">
+            <soap:operation soapAction="http://astellia/ta/api/getProductsFamilies" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>												
+		<wsdl:operation name="disconnection">
+			<soap:operation soapAction="http://astellia/ta/api/disconnection" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="Login">
+            <soap:operation soapAction="http://astellia/ta/api/Login" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="Logout">
+			<soap:operation soapAction="http://astellia/ta/api/Logout" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getHealthIndicator">
+            <soap:operation soapAction="http://astellia/ta/api/getHealthIndicator" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+        <wsdl:operation name="getSAValues">
+            <soap:operation soapAction="http://astellia/ta/api/getSAValues" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RetrieveLog">
+            <soap:operation soapAction="http://astellia/ta/api/RetrieveLog" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetVersion">
+            <soap:operation soapAction="http://astellia/ta/api/GetVersion" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="UploadFileRequest">
+            <soap:operation soapAction="http://astellia/ta/api/UploadFileRequest" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>	
+		<wsdl:operation name="UploadFileState">
+            <soap:operation soapAction="http://astellia/ta/api/UploadFileState" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="UploadFileCancel">
+            <soap:operation soapAction="http://astellia/ta/api/UploadFileCancel" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+                <wsdl:operation name="UploadFileList">
+            <soap:operation soapAction="http://astellia/ta/api/UploadFileList" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetOSInfos">
+            <soap:operation soapAction="http://astellia/ta/api/GetOSInfos" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetDiskUse">
+            <soap:operation soapAction="http://astellia/ta/api/GetDiskUse" />
+            <wsdl:input><soap:body use="literal" /></wsdl:input>
+            <wsdl:output><soap:body use="literal" /></wsdl:output>
+		</wsdl:operation>
+    </wsdl:binding>
+	<wsdl:service name="taService">
+		<wsdl:documentation>TA programming interface documentation</wsdl:documentation>
+		<wsdl:port binding="tns:taBinding" name="taPort">
+			<soap:address location="http://[[IP]]/[[APPLI]]/api/index.php" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

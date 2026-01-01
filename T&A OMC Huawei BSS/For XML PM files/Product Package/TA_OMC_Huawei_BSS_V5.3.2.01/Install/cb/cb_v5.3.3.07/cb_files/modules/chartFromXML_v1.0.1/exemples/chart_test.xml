@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<chart>
+	<properties>
+		<tabtitle>
+			<text>Milicom Homepage</text>
+		</tabtitle>
+		<legend_position>bottom</legend_position>
+		<width>900</width>
+		<height>200</height>
+		<left_axis_label>%</left_axis_label>
+	</properties>
+	<xaxis_labels title="years">
+		<label toto="2010" color="#0000FF">2000</label>
+		<label toto="2011" color="#0000FF">2001</label>
+		<label toto="2012" color="#0000FF">2002</label>
+		<label toto="2013" color="#0000FF">2003</label>
+		<label toto="2014" color="#3333FF">2004</label>
+		<label toto="2015" color="#6666FF">2005</label>
+		<label toto="2016" color="#9999FF">2006</label>
+		<label toto="2017" color="#CCCCFF">2007</label>
+		<label toto="2018" color="#CCCCCC">2008</label>
+		<label toto="2019" color="#0000FF">2009</label>
+		<label toto="2020" color="#3333FF">2010</label>
+		<label toto="2021" color="#6666FF">2011</label>
+		<label toto="2022" color="#9999FF">2012</label>
+		<label toto="2023" color="#CCCCFF">2013</label>
+		<label toto="2024" color="#CCCCCC">2014</label>
+		<label toto="2025" color="#0000FF">2015</label>
+		<label toto="2026" color="#3333FF">2016</label>
+		<label toto="2027" color="#6666FF">2017</label>
+		<label toto="2028" color="#9999FF">2018</label>
+		<label toto="2029" color="#CCCCFF">2019</label>
+		<label toto="2030" color="#CCCCCC">2020</label>
+		<label toto="2010" color="#0000FF">2000</label>
+		<label toto="2011" color="#0000FF">2001</label>
+		<label toto="2012" color="#0000FF">2002</label>
+		<label toto="2013" color="#0000FF">2003</label>
+		<label toto="2014" color="#3333FF">2004</label>
+		<label toto="2015" color="#6666FF">2005</label>
+		<label toto="2016" color="#9999FF">2006</label>
+		<label toto="2017" color="#CCCCFF">2007</label>
+		<label toto="2018" color="#CCCCCC">2008</label>
+		<label toto="2019" color="#0000FF">2009</label>
+		<label toto="2020" color="#3333FF">2010</label>
+		<label toto="2021" color="#6666FF">2011</label>
+		<label toto="2022" color="#9999FF">2012</label>
+		<label toto="2023" color="#CCCCFF">2013</label>
+		<label toto="2024" color="#CCCCCC">2014</label>
+		<label toto="2025" color="#0000FF">2015</label>
+		<label toto="2026" color="#3333FF">2016</label>
+		<label toto="2027" color="#6666FF">2017</label>
+		<label toto="2028" color="#9999FF">2018</label>
+		<label toto="2029" color="#CCCCFF">2019</label>
+		<label toto="2030" color="#CCCCCC">2020</label>
+		<label toto="2010" color="#0000FF">2000</label>
+		<label toto="2011" color="#0000FF">2001</label>
+		<label toto="2012" color="#0000FF">2002</label>
+		<label toto="2013" color="#0000FF">2003</label>
+		<label toto="2014" color="#3333FF">2004</label>
+		<label toto="2015" color="#6666FF">2005</label>
+		<label toto="2016" color="#9999FF">2006</label>
+		<label toto="2017" color="#CCCCFF">2007</label>
+		<label toto="2018" color="#CCCCCC">2008</label>
+		<label toto="2019" color="#0000FF">2009</label>
+		<label toto="2020" color="#3333FF">2010</label>
+		<label toto="2021" color="#6666FF">2011</label>
+		<label toto="2022" color="#9999FF">2012</label>
+		<label toto="2023" color="#CCCCFF">2013</label>
+		<label toto="2024" color="#CCCCCC">2014</label>
+		<label toto="2025" color="#0000FF">2015</label>
+		<label toto="2026" color="#3333FF">2016</label>
+		<label toto="2027" color="#6666FF">2017</label>
+		<label toto="2028" color="#9999FF">2018</label>
+		<label toto="2029" color="#CCCCFF">2019</label>
+		<label toto="2030" color="#CCCCCC">2020</label>
+		<label toto="2010" color="#0000FF">2000</label>
+		<label toto="2011" color="#0000FF">2001</label>
+		<label toto="2012" color="#0000FF">2002</label>
+		<label toto="2013" color="#0000FF">2003</label>
+		<label toto="2014" color="#3333FF">2004</label>
+		<label toto="2015" color="#6666FF">2005</label>
+		<label toto="2016" color="#9999FF">2006</label>
+		<label toto="2017" color="#CCCCFF">2007</label>
+		<label toto="2018" color="#CCCCCC">2008</label>
+		<label toto="2019" color="#0000FF">2009</label>
+		<label toto="2020" color="#3333FF">2010</label>
+		<label toto="2021" color="#6666FF">2011</label>
+		<label toto="2022" color="#9999FF">2012</label>
+		<label toto="2023" color="#CCCCFF">2013</label>
+		<label toto="2024" color="#CCCCCC">2014</label>
+		<label toto="2025" color="#0000FF">2015</label>
+		<label toto="2026" color="#3333FF">2016</label>
+		<label toto="2027" color="#6666FF">2017</label>
+		<label toto="2028" color="#9999FF">2018</label>
+		<label toto="2029" color="#CCCCFF">2019</label>
+		<label toto="2030" color="#CCCCCC">2020</label>
+		<label toto="2010" color="#0000FF">2000</label>
+		<label toto="2011" color="#0000FF">2001</label>
+		<label toto="2012" color="#0000FF">2002</label>
+		<label toto="2013" color="#0000FF">2003</label>
+		<label toto="2014" color="#3333FF">2004</label>
+		<label toto="2015" color="#6666FF">2005</label>
+		<label toto="2016" color="#9999FF">2006</label>
+		<label toto="2017" color="#CCCCFF">2007</label>
+		<label toto="2018" color="#CCCCCC">2008</label>
+		<label toto="2019" color="#0000FF">2009</label>
+		<label toto="2020" color="#3333FF">2010</label>
+		<label toto="2021" color="#6666FF">2011</label>
+		<label toto="2022" color="#9999FF">2012</label>
+		<label toto="2023" color="#CCCCFF">2013</label>
+		<label toto="2024" color="#CCCCCC">2014</label>
+		<label toto="2025" color="#0000FF">2015</label>
+		<label toto="2026" color="#3333FF">2016</label>
+		<label toto="2027" color="#6666FF">2017</label>
+		<label toto="2028" color="#9999FF">2018</label>
+		<label toto="2029" color="#CCCCFF">2019</label>
+		<label toto="2030" color="#CCCCCC">2020</label>
+		<label toto="2010" color="#0000FF">2000</label>
+		<label toto="2011" color="#0000FF">2001</label>
+		<label toto="2012" color="#0000FF">2002</label>
+		<label toto="2013" color="#0000FF">2003</label>
+		<label toto="2014" color="#3333FF">2004</label>
+		<label toto="2015" color="#6666FF">2005</label>
+		<label toto="2016" color="#9999FF">2006</label>
+		<label toto="2017" color="#CCCCFF">2007</label>
+		<label toto="2018" color="#CCCCCC">2008</label>
+		<label toto="2019" color="#0000FF">2009</label>
+		<label toto="2020" color="#3333FF">2010</label>
+		<label toto="2021" color="#6666FF">2011</label>
+		<label toto="2022" color="#9999FF">2012</label>
+		<label toto="2023" color="#CCCCFF">2013</label>
+		<label toto="2024" color="#CCCCCC">2014</label>
+		<label toto="2025" color="#0000FF">2015</label>
+		<label toto="2026" color="#3333FF">2016</label>
+		<label toto="2027" color="#6666FF">2017</label>
+		<label toto="2028" color="#9999FF">2018</label>
+		<label toto="2029" color="#CCCCFF">2019</label>
+		<label toto="2030" color="#CCCCCC">2020</label>
+	</xaxis_labels>
+	<datas>
+		<data label="Traffic " type="bar" stroke_color="#898989" fill_color='#898989@0.6'  yaxis="left">
+			<value tutu="truc">31</value>
+			<value tutu="truc2">21</value>
+			<value tutu="truc3">99</value>
+			<value tutu="truc4">1</value>
+			<value tutu="truc5">82</value>
+			<value tutu="truc6">80</value>
+			<value tutu="truc7">3</value>
+			<value tutu="truc8">78</value>
+			<value tutu="truc9">75</value>
+			<value tutu="truc9">75</value>
+			<value tutu="truc9">3</value>
+			<value tutu="truc9">10</value>
+			<value tutu="truc9">70</value>
+			<value tutu="truc9">70</value>
+			<value tutu="truc9">80</value>
+			<value tutu="truc9">44</value>
+			<value tutu="truc9">66</value>
+			<value tutu="truc9">9</value>
+			<value tutu="truc9">61</value>
+			<value tutu="truc9">89</value>
+			<value tutu="truc9">50</value>
+			<value tutu="truc9">3</value>
+			<value tutu="truc9">60</value>
+			<value tutu="truc9">61</value>
+			<value tutu="truc9">60</value>
+			<value tutu="truc9">5</value>
+			<value tutu="truc9">18</value>
+			<value tutu="truc9">55</value>
+			<value tutu="truc9">53</value>
+			<value tutu="truc9">50</value>
+			<value tutu="truc9">49</value>
+			<value tutu="truc9">88</value>
+			<value tutu="truc9">45</value>
+			<value tutu="truc9">43</value>
+			<value tutu="truc9">32</value>
+			<value tutu="truc9">51</value>
+			<value tutu="truc9">4</value>
+			<value tutu="truc9">21</value>
+			<value tutu="truc9">34</value>
+			<value tutu="truc9">29</value>
+			<value tutu="truc9">28</value>
+			<value tutu="truc9">25</value>
+			<value tutu="truc9">23</value>
+			<value tutu="truc9">21</value>
+			<value tutu="truc9">90</value>
+		</data>
+	</datas>
+</chart>

@@ -1,0 +1,229 @@
+id_data	data_legend	position_ordonnee	display_type	line_design	color	filled_color
+seri.gtms.0095.01.00001.01	SDCCH Assignment Requests Number (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00001.02	SDCCH Assignment Success Rate (%)	left	line	circle	#ff0000	#ffffff@1
+seri.gtms.0095.01.sdcch_blocking_and_drop.kpis.0095.01.00001	SDCCH Assignment Requests Number (Nb)	right	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.01.sdcch_blocking_and_drop.kpis.0095.01.06002	SDCCH Success Ended Number (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.sdcch_blocking_and_drop.kpis.0095.01.08003	SDCCH Blocking Rate (%)	left	line	circle	#FF0000	#FFFFFF@1
+seri.gtms.0095.01.sdcch_blocking_and_drop.kpis.0095.01.06003	SDCCH Drop Rate  (%)	left	line	circle	#0099FF	#FFFFFF@1
+seri.gtms.0095.01.sdcch_drop_causes.kpis.0095.01.06002	SDCCH Success Ended Number (Nb)	right	line	circle	#ff0000	#FFFFFF@1
+seri.gtms.0095.01.sdcch_drop_causes.kpis.0095.01.06003	SDCCH Drop Rate  (%)	left	line	circle	#333333	#ffffff@1
+seri.gtms.0095.01.sdcch_drop_causes.kpis.0095.01.sdcch_drop_radio_rate	SDCCH Drop Radio Rate (%)	left	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0095.01.sdcch_drop_causes.kpis.0095.01.sdcch_drop_ho_rate	SDCCH Drop Handover Rate (%)	left	cumulatedbar	none	#333333	#FF0099@0.5
+seri.gtms.0095.01.sdcch_drop_causes.kpis.0095.01.sdcch_drop_bss_rate	SDCCH Drop BSS Rate (%)	left	cumulatedbar	none	#333333	#000099@0.5
+seri.gtms.0095.01.sdcch_drop_causes.kpis.0095.01.sdcch_drop_others_rate	SDCCH Drop Others Rate (%)	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0095.01.00003.01	SDCCH Traffic Carried (erlang)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00003.02	SDCCH Mean Holding Time (s)	left	line	circle	#ff0000	#ffffff@1
+seri.gtms.0095.01.00004.01	TCH Attempts Number (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00004.02	TCH Assignment Success Rate (%)	left	line	circle	#ff0000	#ffffff@1
+seri.gtms.0095.01.tch_drop_causes.kpis.0095.01.03002	TCH Assignment Success  Number (Nb)	right	line	circle	#006600	#FFFFFF@1
+seri.gtms.0095.01.tch_drop_causes.kpis.0095.01.05016	TCH Drop Rate (%)	left	line	circle	#ff0000	#FFFFFF@1
+seri.gtms.0095.01.tch_drop_causes.kpis.0095.01.05004	TCH Drop Radio Rate (%)	left	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0095.01.tch_drop_causes.kpis.0095.01.05006	TCH Drop Handover Rate (%)	left	cumulatedbar	none	#333333	#FF0099@0.5
+seri.gtms.0095.01.tch_drop_causes.kpis.0095.01.05008	TCH Drop BSS Rate (%)	left	cumulatedbar	none	#333333	#000099@0.5
+seri.gtms.0095.01.tch_drop_causes.kpis.0095.01.05037	TCH Drop Others Rate (%)	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0095.01.00006.03	TCH Traffic Carried Total (erlang)	right	line	square	#333333	#FFFFFF@1
+seri.gtms.0095.01.00006.01	TCH Traffic Full Rate Erlang (erlang)	right	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0095.01.00006.02	TCH Traffic Half Rate Erlang (erlang)	right	cumulatedbar	none	#333333	#FF0099@0.5
+seri.gtms.0095.01.00006.10	TCH Traffic Full Rate AMR Erlang (erlang)	right	cumulatedbar	none	#333333	#000099@0.5
+seri.gtms.0095.01.00006.11	TCH Traffic Half Rate AMR Erlang (erlang)	right	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0095.01.00006.07	TCH Mean Holding Time (s)	left	line	circle	#FF0055	#FFFFFF@1
+seri.gtms.0095.01.00009.01	Idle TCH Ratio On Interference Band 1 (%)	left	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0095.01.00009.02	Idle TCH Ratio On Interference Band 2 (%)	left	cumulatedbar	none	#333333	#FF0099@0.5
+seri.gtms.0095.01.00009.03	Idle TCH Ratio On Interference Band 3 (%)	left	cumulatedbar	none	#333333	#FFAA00@0.5
+seri.gtms.0095.01.00009.04	Idle TCH Ratio On Interference Band 4 (%)	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0095.01.00009.05	Idle TCH Ratio On Interference Band 5 (%)	left	cumulatedbar	none	#333333	#00CC00@0.5
+seri.gtms.0095.01.00010.01	TCH Attempts Number (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00010.02	Call Setup Success Rate (%)	left	line	circle	#ff0000	#ffffff@1
+seri.gtms.0095.01.sdcch_and_tch_assignment.kpis.0095.01.00001	SDCCH Assignment Requests Number (Nb)	right	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.01.sdcch_and_tch_assignment.kpis.0095.01.03001	TCH Attempts Number (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.sdcch_and_tch_assignment.kpis.0095.01.00010	SDCCH Assignment Success Rate (%)	left	line	circle	#FF0000	#ffffff@1
+seri.gtms.0095.01.sdcch_and_tch_assignment.kpis.0095.01.03003	TCH Assignment Success Rate (%)	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0095.01.call_blocking_and_drop.kpis.0095.01.03001	TCH Attempts Number (Nb)	right	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.01.call_blocking_and_drop.kpis.0095.01.03002	TCH Assignment Success  Number (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.call_blocking_and_drop.kpis.0095.01.07013	TCH Blocking Rate (%)	left	line	circle	#FF0000	#ffffff@1
+seri.gtms.0095.01.call_blocking_and_drop.kpis.0095.01.04010	Call Drops Rate (%)	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0095.01.00012.03	TCH Attempts Number (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00012.kpis.0095.01.03002	TCH Assignment Success  Number (Nb)	right	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.01.00012.02	Call Success Rate   (%)	left	line	circle	#ff0000	#ffffff@1
+seri.gtms.0095.01.00013.01	Handover Attempts (Nb)	right	line	circle	#333333	#ffffff@1
+seri.gtms.0095.01.00013.02	Handover Attempts Ratio For TooLowQualUp  (%)	left	cumulatedbar	none	#333333	#808080@0.5
+seri.gtms.0095.01.00013.03	Handover Attempts Ratio For TooLowLevUp  (%)	left	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0095.01.00013.04	Handover Attempts Ratio For TooLowQualDown  (%)	left	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00013.05	Handover Attempts Ratio For TooLowLevDown  (%)	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0095.01.00013.06	Handover Attempts Ratio For TooLongDistance  (%)	left	cumulatedbar	none	#333333	#AAAA00@0.5
+seri.gtms.0095.01.00013.07	Handover Attempts Ratio For MSC TRIG  (%)	left	cumulatedbar	none	#333333	#FFAA00@0.5
+seri.gtms.0095.01.00013.08	Handover Attempts Ratio For TooHighLevInterfUp (%)	left	cumulatedbar	none	#333333	#0026b4@0.5
+seri.gtms.0095.01.00013.09	Handover Attempts Ratio For TooHighLevInterfDown  (%)	left	cumulatedbar	none	#333333	#AA0000@0.5
+seri.gtms.0095.01.00013.10	Handover Attempts Ratio For TooLowPowBudg  (%)	left	cumulatedbar	none	#333333	#FF0055@0.5
+seri.gtms.0095.01.00013.11	Handover Attempts Ratio For HighLevNeigCellPrefBand (%)	left	cumulatedbar	none	#333333	#FF0099@0.5
+seri.gtms.0095.01.00013.12	Handover Attempts Ratio For ConsBadSACCHmicroCell (%)	left	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0095.01.00013.13	Handover Attempts Ratio For TooLowLevUpMicroCell (%)	left	cumulatedbar	none	#333333	#FF5500@0.5
+seri.gtms.0095.01.00013.14	Handover Attempts Ratio For TooLowLevDownMicroCell (%)	left	cumulatedbar	none	#333333	#AA7000@0.5
+seri.gtms.0095.01.00013.15	Handover Attempts Ratio For HighLevNeigLowCellSlowMS (%)	left	cumulatedbar	none	#333333	#AA3200@0.5
+seri.gtms.0095.01.00013.16	Handover Attempts Ratio For TooLowLevUpInZone  (%)	left	cumulatedbar	none	#333333	#009999@0.5
+seri.gtms.0095.01.00013.17	Handover Attempts Ratio For TooLowLevDownInZone  (%)	left	cumulatedbar	none	#333333	#AA0032@0.5
+seri.gtms.0095.01.00013.18	Handover Attempts Ratio For TooHighLevUpDownOutZone (%)	left	cumulatedbar	none	#333333	#AA0070@0.5
+seri.gtms.0095.01.00013.19	Handover Attempts Ratio For TrafHandover (%)	left	cumulatedbar	none	#333333	#0000FF@0.5
+seri.gtms.0095.01.00013.20	Handover Attempts Ratio For gencapture (%)	left	cumulatedbar	none	#333333	#009900@0.5
+seri.gtms.0095.01.00013.21	Handover Attempts Ratio For TooShortDistance (%)	left	cumulatedbar	none	#333333	#AA00AA@0.5
+seri.gtms.0095.01.00013.22	Handover Attempts Ratio For BadQualHR  (%)	left	cumulatedbar	none	#333333	#33FF00@0.5
+seri.gtms.0095.01.00013.23	Handover Attempts Ratio For GoodQualFR  (%)	left	cumulatedbar	none	#333333	#FF9900@0.5
+seri.gtms.0095.01.00013.24	Handover Attempts Ratio For TFO  (%)	left	cumulatedbar	none	#333333	#FFFF99@0.5
+seri.gtms.0095.01.00013.25	Handover Attempts Ratio For Fast Traffic HO  (%)	left	cumulatedbar	none	#333333	#9933FF@0.5
+seri.gtms.0095.01.00013.26	Handover Attempts Ratio For Return CS Zone  (%)	left	cumulatedbar	none	#333333	#FF00FF@0.5
+seri.gtms.0095.01.00013.27	Handover Attempts Ratio For Low signal strenght  (%)	left	cumulatedbar	none	#333333	#a0a0a0@0.5
+seri.gtms.0095.01.00013.28	Handover Attempts Ratio For High signal strenght  (%)	left	cumulatedbar	none	#333333	#c0c0c0@0.5
+seri.gtms.0095.01.00013.29	Handover Attempts Ratio For O&M (%)	left	cumulatedbar	none	#333333	#808080@0.5
+seri.gtms.0095.01.00013.30	Handover Attempts Ratio For Directed Retry  (%)	left	cumulatedbar	none	#333333	#0000FF@0.5
+seri.gtms.0095.01.00013.31	Handover Attempts Ratio For Rapid level drop (%)	left	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00013.32	Handover Attempts Ratio For Other Causes (%)	left	cumulatedbar	none	#333333	#009999@0.5
+seri.gtms.0095.01.handover.kpis.0095.01.10076	Handover Total Attempts Number (Nb)	right	line	circle	#333333	#ffffff@1
+seri.gtms.0095.01.handover.kpis.0095.01.10071	Handover Outgoing Attempts Number (Nb)	right	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.handover.kpis.0095.01.10074	Handover Incoming Attempts Number (Nb)	right	cumulatedbar	none	#333333	#33FF00@0.5
+seri.gtms.0095.01.handover.kpis.0095.01.10078	Handover Success Rate (%)	left	line	circle	#FF0000	#ffffff@1
+seri.gtms.0095.01.handover.kpis.0095.01.10072	Handover Outgoing Success Rate (%)	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0095.01.handover.kpis.0095.01.10075	Handover Incoming Success Rate (%)	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0095.01.00014.01	Intra-Cell Handover Attempts Number (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00014.kpis.0095.01.intra_cell_handover_success_rate	Intra-Cell Handover Success Rate (%)	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0095.01.00015.kpis.0095.01.inter_cell_intra_bsc_handovers_attempts_number	Inter-Cell Intra-BSC Handover Attempts Number (Nb)	right	line	circle	#333333	#ffffff@1
+seri.gtms.0095.01.00015.01	Inter-Cell Intra-BSC Outgoing Handover Attempts Number (Nb)	right	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00015.kpis.0095.01.12015	Inter-Cell Intra-BSC Incoming Handover Attempts Number (Nb)	right	cumulatedbar	none	#333333	#33FF00@0.5
+seri.gtms.0095.01.00015.kpis.0095.01.inter_cell_intra_bsc_handovers_success_rate	Inter-Cell Intra-BSC Handover Success Rate (%)	left	line	circle	#FF0000	#ffffff@1
+seri.gtms.0095.01.00015.kpis.0095.01.inter_cell_intra_bsc_outgoing_handover_success_rate	Inter-Cell Intra-BSC Outgoing Handover Success Rate (%)	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0095.01.00015.kpis.0095.01.inter_cell_intra_bsc_incoming_handover_success_rate	Inter-Cell Intra-BSC Incoming Handover Success Rate (%)	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0095.01.00016.kpis.0095.01.inter_cell_inter_bsc_handovers_attempts_number	Inter-Cell Inter-BSC Handover Attempts Number (Nb)	right	line	circle	#333333	#ffffff@1
+seri.gtms.0095.01.00016.01	Inter-Cell Inter-BSC Outgoing Handover Attempts Number (Nb)	right	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00016.kpis.0095.01.13012	Inter-Cell Inter-BSC Incoming Handover Attempts Number (Nb)	right	cumulatedbar	none	#333333	#33FF00@0.5
+seri.gtms.0095.01.00016.kpis.0095.01.inter_cell_inter_bsc_handovers_success_rate	Inter-Cell Inter-BSC Handover Success Rate (%)	left	line	circle	#FF0000	#ffffff@1
+seri.gtms.0095.01.00016.kpis.0095.01.inter_cell_inter_bsc_outgoing_handover_success_rate	Inter-Cell Inter-BSC Outgoing Handover Success Rate (%)	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0095.01.00016.kpis.0095.01.inter_cell_inter_bsc_incoming_handover_success_rate	Inter-Cell Inter-BSC Incoming Handover Success Rate (%)	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0095.01.cell_availability.kpis.0095.01.cell_unavailable_time	Cell Unavailable Time (s)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.cell_availability.kpis.0095.01.cell_availability	Cell Availability (%)	left	line	square	#ff0000	#FFFFFF@1
+seri.gtms.0095.01.00007.01	TRX Defined Number (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00007.02	TRX Available Number (Nb)	right	bar	none	#333333	#FFAA00@0.5
+seri.gtms.0095.01.00007.03	TRX Availability (%)	left	line	square	#ff0000	#FFFFFF@1
+seri.gtms.0095.01.00020.01	TCH Defined Number (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00020.02	TCH Available Number (Nb)	right	bar	none	#333333	#FFAA00@0.5
+seri.gtms.0095.01.00020.03	TCH Availability (%)	left	line	square	#ff0000	#FFFFFF@1
+seri.gtms.0095.01.00021.01	SDCCH Defined Number (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00021.02	SDCCH Available Number (Nb)	right	bar	none	#333333	#FFAA00@0.5
+seri.gtms.0095.01.00021.03	SDCCH Availability (%)	left	line	square	#ff0000	#FFFFFF@1
+seri.gtms.0095.01.00024.01	TCH Traffic Utilization At 2% GOS (%)	left	line	square	#9933FF	#FFFFFF@1
+seri.gtms.0095.01.00024.02	TCH Traffic Carried Total (erlang)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00024.03	TCH Traffic Offered 2% GOS (erlang)	right	bar	none	#333333	#FFFF00@0.5
+seri.gtms.0095.01.00024.04	TCH Traffic Capacity at 2% GOS (erlang)	right	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.01.00022.01	TCH Required Channels at 2% GOS (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.01.00022.02	TCH Grade Of Service (%)	left	line	circle	#FF0000	#FFFFFF@1
+seri.gtms.0095.02.00001.kpis.0095.02.18025	Data Volume Downlink of GPRS EDGE RLC (kbytes)	left	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.02.00001.kpis.0095.02.18024	Data Volume Uplink of GPRS EDGE RLC (kbytes)	left	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.02.00001.05	TBF Simultaneous DL Number (Nb)	right	line	square	#0099FF	#FFFFFF@1
+seri.gtms.0095.02.00001.06	TBF Simultaneous UL Number (Nb)	right	line	square	#FF0000	#FFFFFF@1
+seri.gtms.0095.02.llc_volumes.kpis.0095.02.18026	Data Volume Downlink LLC (kbytes)	left	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.02.llc_volumes.kpis.0095.02.18027	Data Volume Uplink LLC (kbytes)	left	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.02.00002.01	Paging Number for PS and CS (Nb)	left	line	circle	#333333	#FFFFFF@1
+seri.gtms.0095.02.00002.kpis.0095.02.nb_packet_pagings_cs	Paging Number for CS (Nb)	left	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0095.02.00002.kpis.0095.02.nb_packet_pagings_ps	Paging Number for PS (Nb)	left	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0095.02.00003.kpis.0095.02.18128	TBF Establishment Success Downlink Rate (%)	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0095.02.00003.kpis.0095.02.18129	TBF Establishment Success Uplink Rate (%)	left	line	circle	#FF0000	#ffffff@1
+seri.gtms.0095.02.00003.kpis.0095.02.18054	TBF Establishment Attempts Downlink Number (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.02.00003.kpis.0095.02.18055	TBF Establishment Attempts Uplink Number (Nb)	right	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.02.00004.01	TBF Rejected Due to Congestion DL Rate (%)	left	line	square	#0099FF	#FFFFFF@1
+seri.gtms.0095.02.00004.02	TBF Rejected Due to Congestion UL Rate (%)	left	line	square	#FF0000	#FFFFFF@1
+seri.gtms.0095.02.00004.kpis.0095.02.18054	TBF Establishment Attempts Downlink Number (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.02.00004.kpis.0095.02.18055	TBF Establishment Attempts Uplink Number (Nb)	right	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.02.gprs_throughput.kpis.0095.02.18075	Throughput Downlink GPRS (Kbits/s)	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0095.02.gprs_throughput.kpis.0095.02.18076	Throughput Uplink GPRS (Kbits/s)	left	line	circle	#FF0000	#ffffff@1
+seri.gtms.0095.02.gprs_throughput.kpis.0095.02.18032	Data Volume Downlink of GPRS RLC (CS-x) (kbytes)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.02.gprs_throughput.kpis.0095.02.18035	Data Volume Uplink of GPRS RLC (CS-x) (kbytes)	right	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.02.edge_throughput.kpis.0095.02.18077	Throughput Downlink EDGE (Kbits/s)	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0095.02.edge_throughput.kpis.0095.02.18078	Throughput Uplink EDGE (Kbits/s)	left	line	circle	#FF0000	#ffffff@1
+seri.gtms.0095.02.edge_throughput.kpis.0095.02.18038	Data Volume Downlink of EDGE RLC (MSC-x) (kbytes)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.02.edge_throughput.kpis.0095.02.18041	Data Volume Uplink of EDGE RLC (MSC-x) (kbytes)	right	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.02.00005.01	Throughput Average Per TBF Downlink (Kbits/s)	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0095.02.00005.02	Throughput Average Per TBF Uplink (Kbits/s)	left	line	circle	#FF0000	#ffffff@1
+seri.gtms.0095.02.00005.03	PDCH Average Number Per TBF DL (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.02.00005.04	PDCH Average Number Per TBF UL (Nb)	right	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.02.00006.01	Throughput Average Per PDCH Downlink (kbps)	left	line	square	#0099FF	#FFFFFF@1
+seri.gtms.0095.02.00006.02	Throughput Average Per PDCH Uplink (kbps)	left	line	square	#FF0000	#FFFFFF@1
+seri.gtms.0095.02.00006.kpis.0095.02.18102	PDCH Available Number (GPRS/EDGE) (UP and DL) (Nb)	right	bar	none	#333333	#00FF00@0.5
+seri.gtms.0095.02.00007.01	Data Volume Downlink of GPRS RLC (CS-x) (kbytes)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.02.00007.02	Data Volume Uplink of GPRS RLC (CS-x) (kbytes)	right	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.02.00007.03	Data Volume Downlink Retransmitted Rate for GPRS RLC (CS-x) (%)	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0095.02.00007.04	Data Volume Uplink Retransmitted Rate for GPRS RLC (CS-x) (%)	left	line	circle	#FF0000	#ffffff@1
+seri.gtms.0095.02.00008.01	Data Volume Downlink of EDGE RLC (MSC-x) (kbytes)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.02.00008.02	Data Volume Uplink of EDGE RLC (MSC-x) (kbytes)	right	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.02.00008.03	Data Volume Downlink Retransmitted Rate for EDGE RLC (MSC-x) (%)	left	line	square	#0099FF	#FFFFFF@1
+seri.gtms.0095.02.00008.04	Data Volume Uplink Retransmitted Rate for EDGE RLC (MSC-x) (%)	left	line	square	#FF0000	#FFFFFF@1
+seri.gtms.0095.02.00009.01	TBF Establishment Attempts Downlink Number (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.02.00009.02	TBF Establishment Attempts Uplink Number (Nb)	right	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.02.00009.09	TBF Drop Downlink Rate (%)	left	line	circle	#0099FF	#FFFFFF@1
+seri.gtms.0095.02.00009.10	TBF Drop Uplink Rate (%)	left	line	circle	#FF0000	#FFFFFF@1
+seri.gtms.0095.02.00009.11	TBF Drop Rate (%)	left	line	circle	#006600	#FFFFFF@1
+seri.gtms.0095.02.00010.01	EDGE utilisation rate (%)	left	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0095.02.00010.02	GPRS utilisation rate (%)	left	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0095.02.00010.05	PDCH Utilization (GPRS/EDGE) (%)	left	line	circle	#9900FF	#FFFFFF@1
+seri.gtms.0095.02.pdch_availability.kpis.0095.02.18100	PDCH Defined Number (GPRS/EDGE) (Nb)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.02.pdch_availability.kpis.0095.02.18102	PDCH Available Number (GPRS/EDGE) (Nb)	right	bar	none	#333333	#FF0000@0.5
+seri.gtms.0095.02.pdch_availability.kpis.0095.02.18101	PDCH Availability (GPRS/EDGE) (%)	left	line	circle	#333333	#FFFFFF@1
+seri.gtms.0095.03.00001.01	FER Distribution For Uplink In Band 0 (%)	left	cumulatedbar	none	#333333	#009900@0.5
+seri.gtms.0095.03.00001.02	FER Distribution For Uplink In Band 1 (%)	left	cumulatedbar	none	#333333	#00CC00@0.5
+seri.gtms.0095.03.00001.03	FER Distribution For Uplink In Band 2 (%)	left	cumulatedbar	none	#333333	#00FF00@0.5
+seri.gtms.0095.03.00001.04	FER Distribution For Uplink In Band 3 (%)	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0095.03.00001.05	FER Distribution For Uplink In Band 4 (%)	left	cumulatedbar	none	#333333	#FF9900@0.5
+seri.gtms.0095.03.00001.06	FER Distribution For Uplink In Band 5 (%)	left	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0095.03.00001.07	FER Distribution For Uplink In Band 6 (%)	left	cumulatedbar	none	#333333	#CC0000@0.5
+seri.gtms.0095.03.00001.08	FER Distribution For Uplink In Band 7 (%)	left	cumulatedbar	none	#333333	#990000@0.5
+seri.gtms.0095.03.00001.09	FER Mean Uplink (%)	right	line	square	#000099	#FFFFFF@1
+seri.gtms.0095.03.00002.01	RX Quality Uplink Distribution within class 0 (%)	left	cumulatedbar	none	#333333	#009900@0.5
+seri.gtms.0095.03.00002.02	RX Quality Uplink Distribution within class 1 (%)	left	cumulatedbar	none	#333333	#00CC00@0.5
+seri.gtms.0095.03.00002.03	RX Quality Uplink Distribution within class 2 (%)	left	cumulatedbar	none	#333333	#00FF00@0.5
+seri.gtms.0095.03.00002.04	RX Quality Uplink Distribution within class 3 (%)	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0095.03.00002.05	RX Quality Uplink Distribution within class 4 (%)	left	cumulatedbar	none	#333333	#FF9900@0.5
+seri.gtms.0095.03.00002.06	RX Quality Uplink Distribution within class 5 (%)	left	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0095.03.00002.07	RX Quality Uplink Distribution within class 6 (%)	left	cumulatedbar	none	#333333	#CC0000@0.5
+seri.gtms.0095.03.00002.08	RX Quality Uplink Distribution within class 7 (%)	left	cumulatedbar	none	#333333	#990000@0.5
+seri.gtms.0095.03.00002.09	RXQUAL Mean Uplink (Nb)	right	line	square	#000099	#FFFFFF@1
+seri.gtms.0095.03.00003.01	RX Quality Downlink Distribution within class 0 (%)	left	cumulatedbar	none	#333333	#009900@0.5
+seri.gtms.0095.03.00003.02	RX Quality Downlink Distribution within class 1 (%)	left	cumulatedbar	none	#333333	#00CC00@0.5
+seri.gtms.0095.03.00003.03	RX Quality Downlink Distribution within class 2 (%)	left	cumulatedbar	none	#333333	#00FF00@0.5
+seri.gtms.0095.03.00003.04	RX Quality Downlink Distribution within class 3 (%)	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0095.03.00003.05	RX Quality Downlink Distribution within class 4 (%)	left	cumulatedbar	none	#333333	#FF9900@0.5
+seri.gtms.0095.03.00003.06	RX Quality Downlink Distribution within class 5 (%)	left	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0095.03.00003.07	RX Quality Downlink Distribution within class 6 (%)	left	cumulatedbar	none	#333333	#CC0000@0.5
+seri.gtms.0095.03.00003.08	RX Quality Downlink Distribution within class 7 (%)	left	cumulatedbar	none	#333333	#990000@0.5
+seri.gtms.0095.03.00003.09	RXQUAL Mean Downlink (Nb)	right	line	square	#000099	#FFFFFF@1
+seri.gtms.0095.03.00004.01	RX Level Uplink Distribution within class 0 (%)	left	cumulatedbar	none	#333333	#990000@0.5
+seri.gtms.0095.03.00004.02	RX Level Uplink Distribution within class 1 (%)	left	cumulatedbar	none	#333333	#CC0000@0.5
+seri.gtms.0095.03.00004.03	RX Level Uplink Distribution within class 2 (%)	left	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0095.03.00004.04	RX Level Uplink Distribution within class 3 (%)	left	cumulatedbar	none	#333333	#FF9900@0.5
+seri.gtms.0095.03.00004.05	RX Level Uplink Distribution within class 4 (%)	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0095.03.00004.06	RX Level Uplink Distribution within class 5 (%)	left	cumulatedbar	none	#333333	#00FF00@0.5
+seri.gtms.0095.03.00004.07	RX Level Uplink Distribution within class 6 (%)	left	cumulatedbar	none	#333333	#00CC00@0.5
+seri.gtms.0095.03.00004.08	RX Level Uplink Distribution within class 7 (%)	left	cumulatedbar	none	#333333	#009900@0.5
+seri.gtms.0095.03.00004.09	RXLEVEL Mean Uplink (dBm)	right	line	square	#000099	#FFFFFF@1
+seri.gtms.0095.03.00005.01	RX Level Downlink Distribution within class 0 (%)	left	cumulatedbar	none	#333333	#990000@0.5
+seri.gtms.0095.03.00005.02	RX Level Downlink Distribution within class 1 (%)	left	cumulatedbar	none	#333333	#CC0000@0.5
+seri.gtms.0095.03.00005.03	RX Level Downlink Distribution within class 2 (%)	left	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0095.03.00005.04	RX Level Downlink Distribution within class 3 (%)	left	cumulatedbar	none	#333333	#FF9900@0.5
+seri.gtms.0095.03.00005.05	RX Level Downlink Distribution within class 4 (%)	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0095.03.00005.06	RX Level Downlink Distribution within class 5 (%)	left	cumulatedbar	none	#333333	#00FF00@0.5
+seri.gtms.0095.03.00005.07	RX Level Downlink Distribution within class 6 (%)	left	cumulatedbar	none	#333333	#00CC00@0.5
+seri.gtms.0095.03.00005.08	RX Level Downlink Distribution within class 7 (%)	left	cumulatedbar	none	#333333	#009900@0.5
+seri.gtms.0095.03.00005.09	RXLEVEL Mean Downlink (dBm)	right	line	square	#000099	#FFFFFF@1
+seri.gtms.0095.03.00006.01	TRX Duration Availability (%)	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0095.03.00006.02	TRX Duration In-Service state (s)	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0095.03.00007.01	Interference Band 1 Ratio On Idle TCH (%)	left	cumulatedbar	none	#333333	#00CC00@0.5
+seri.gtms.0095.03.00007.02	Interference Band 2 Ratio On Idle TCH (%)	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0095.03.00007.03	Interference Band 3 Ratio On Idle TCH (%)	left	cumulatedbar	none	#333333	#FFAA00@0.5
+seri.gtms.0095.03.00007.04	Interference Band 4 Ratio On Idle TCH (%)	left	cumulatedbar	none	#333333	#FF0099@0.5
+seri.gtms.0095.03.00007.05	Interference Band 5 Ratio On Idle TCH (%)	left	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0095.03.00007.06	Interference Band Mean (Nb)	right	line	circle	#000099	#ffffff@1
+seri.gtms.0095.03.00008.01	Time Advance Distribuation rank 0 (%)	left	cumulatedbar	none	#333333	#009900@0.5
+seri.gtms.0095.03.00008.02	Time Advance Distribuation rank 1 (%)	left	cumulatedbar	none	#333333	#00CC00@0.5
+seri.gtms.0095.03.00008.03	Time Advance Distribuation rank 2 (%)	left	cumulatedbar	none	#333333	#00FF00@0.5
+seri.gtms.0095.03.00008.04	Time Advance Distribuation rank 3 (%)	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0095.03.00008.05	Time Advance Distribuation rank 4 (%)	left	cumulatedbar	none	#333333	#FF9900@0.5
+seri.gtms.0095.03.00008.06	Time Advance Distribuation rank 5 (%)	left	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0095.03.00008.07	Time Advance Distribuation rank 6 (%)	left	cumulatedbar	none	#333333	#CC0000@0.5
+seri.gtms.0095.03.00008.08	Time Advance Distribuation rank 7 (%)	left	cumulatedbar	none	#333333	#990000@0.5
+seri.gtms.0095.03.00008.09	Time Advance Mean (Nb)	right	line	circle	#000099	#ffffff@1

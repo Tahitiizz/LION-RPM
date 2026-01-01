@@ -1,0 +1,16 @@
+sdd_id_page	sdd_sort_by_id	sdd_sort_by_order	sdd_mode	sdd_is_online	sdd_id_menu	sdd_selecteur_default_period	sdd_selecteur_default_top_overnetwork	sdd_selecteur_default_top_overtime	sdd_selecteur_default_na	sdd_selecteur_default_na_axe3
+dshd.0095.01.call_setup_and_drop	seri.gtms.0095.01.call_setup.kpis.0095.01.call_setup_success_rate	asc	bimode	1	menu.dshd.0095.01.call_setup_and_drop	15	40	3	bsc	
+dshd.0095.01.sdcch	seri.gtms.0095.01.immediate_assignment.kpis.0095.01.immediate_assignment_success_rate	asc	bimode	1	menu.dshd.0095.01.sdcch	15	40	3	bsc	
+dshd.0095.01.tch	seri.gtms.0095.01.assignment.kpis.0095.01.assignment_success_rate	asc	bimode	1	menu.dshd.0095.01.tch	15	40	3	bsc	
+dshd.0095.01.handovers	seri.gtms.0095.01.handover.kpis.0095.01.ho_success_rate	desc	bimode	1	menu.dshd.0095.01.handovers	15	40	3	bsc	
+dshd.0095.01.resource_availability	seri.gtms.0095.01.trx_availability.kpis.0095.01.trx_availability	asc	bimode	1	menu.dshd.0095.01.resource_availability	15	40	3	bsc	
+dshd.0095.01.traffic_at_2_gos	seri.gtms.0095.01.tch_traffic_at_2gos.kpis.0095.01.traffic_utilization	desc	bimode	1	menu.dshd.0095.01.traffic_at_2_gos	15	40	3	bsc	
+dshd.0095.02.traffic	seri.gtms.0095.02.traffic_volumes.kpis.0095.02.userpacket_transmitted_radiointerface_dl	desc	bimode	1	menu.dshd.0095.02.traffic	15	40	3	pcu	
+dshd.0095.02.tbf_allocation	seri.gtms.0095.02.tbf_allocation_efficiency.kpis.0095.02.tbf_establishment_success_rate_dl	asc	bimode	1	menu.dshd.0095.02.tbf_allocation	15	40	3	pcu	
+dshd.0095.02.throughput	seri.gtms.0095.02.throughput_per_tbf.kpis.0095.02.mean_user_data_dl_throughput_on_air_interface	desc	bimode	1	menu.dshd.0095.02.throughput	15	40	3	pcu	
+dshd.0095.02.rlc_retransmissions	seri.gtms.0095.02.rlc_retransmission_rate_gprs.kpis.0095.02.dl_retransmission_rate_in_cs1234	desc	bimode	1	menu.dshd.0095.02.rlc_retransmissions	15	40	3	pcu	
+dshd.0095.02.tbf_drop_causes	seri.gtms.0095.02.tbf_drop_causes.kpis.0095.02.tbf_drop_rate	desc	bimode	1	menu.dshd.0095.02.tbf_drop_causes	15	40	3	pcu	
+dshd.0095.02.data_utilization	seri.gtms.0095.02.data_utilization.kpis.0095.02.pdch_utilization_gprs_edge	desc	bimode	1	menu.dshd.0095.02.data_utilization	15	40	3	pcu	
+dshd.0095.03.downlink_performance	seri.gtms.0095.03.rxqualdistdown.kpis.0095.03.mean_rxqual_downlink	desc	bimode	1	menu.dshd.0095.03.downlink_performance	15	40	3	cell	
+dshd.0095.03.uplink_performance	seri.gtms.0095.03.rxqualdistup.kpis.0095.03.mean_rxqual_uplink	desc	bimode	1	menu.dshd.0095.03.uplink_performance	15	40	3	cell	
+dshd.0095.03.tranceiver_availability	seri.gtms.0095.03.tranceiver_availability.kpis.0095.03.trx_duration_availability	asc	bimode	1	menu.dshd.0095.03.tranceiver_availability	15	40	3	cell	

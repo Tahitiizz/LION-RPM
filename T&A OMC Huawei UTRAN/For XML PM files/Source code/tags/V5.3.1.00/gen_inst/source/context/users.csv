@@ -1,0 +1,7 @@
+id_user	username	login	password	user_prenom	user_mail	user_profil	on_off	date_valid	date_creation	visible
+usrs.astellia_admin	astellia_admin	astellia_admin	YXN0ZWxsaWFfYWRtaW4=	astellia_admin	astellia_admin@astellia.com	prfl.0091.01	1	20380214	20180214	0
+usrs.astellia_user	astellia_user	astellia_user	YXN0ZWxsaWFfdXNlcg==	astellia_user	astellia_user@astellia.com	prfl.0091.03	1	20380214	20180214	0
+usrs.client_admin	client_admin	client_admin	Y2xpZW50X2FkbWlu	client_admin	client_admin@astellia.com	prfl.0091.02	1	20380214	20180214	1
+usrs.client_user	client_user	client_user	Y2xpZW50X3VzZXI=	client_user	client_user@astellia.com	prfl.0091.03	1	20380214	20180214	1
+usrs.support_admin	support_admin	support_admin	U3VwcDBydF9BZG1pbg==	support_admin	support_admin@astellia.com	prfl.0091.02	1	20380214	20180214	0
+usrs.ast_supervision	ast_supervision	ast_supervision	M29JVlZucEk1VWUyRlNs	ast_supervision	ast_supervision@astellia.com	prfl.0091.02	0	20380214	20180214	0

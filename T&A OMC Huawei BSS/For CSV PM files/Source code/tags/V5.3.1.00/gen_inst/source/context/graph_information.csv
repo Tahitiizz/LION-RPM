@@ -1,0 +1,46 @@
+id_page	object_type	pie_split_type	pie_split_by	ordonnee_left_name	ordonnee_right_name	graph_width	graph_height	position_legende	default_orderby	default_asc_desc	gis	gis_based_on	definition	troubleshooting	is_configure	scale
+gtms.0095.01.00001	graph			%	Nb	900	450	top	seri.gtms.0095.01.00001.02	1	1	seri.gtms.0095.01.00001.02	SDCCH immediate assignment efficiency		1	textlin
+gtms.0095.01.sdcch_blocking_and_drop	graph			%	Nb	900	450	top	seri.gtms.0095.01.sdcch_blocking_and_drop.kpis.0095.01.08003	1	1	seri.gtms.0095.01.sdcch_blocking_and_drop.kpis.0095.01.08003	SDCCH Blocking and Drop Rate		1	textlin
+gtms.0095.01.sdcch_drop_causes	graph			%	Nb	900	450	top	seri.gtms.0095.01.sdcch_drop_causes.kpis.0095.01.06003	0	1	seri.gtms.0095.01.sdcch_drop_causes.kpis.0095.01.06003	SDCCH drop rates		1	textlin
+gtms.0095.01.00003	graph			s	Erlang	900	450	top	seri.gtms.0095.01.00003.01	0	0		SDCCH  load statistics		1	textlin
+gtms.0095.01.00004	graph			%	Nb	900	450	top	seri.gtms.0095.01.00004.02	1	1	seri.gtms.0095.01.00004.02	TCH Assignment efficiency		1	textlin
+gtms.0095.01.tch_drop_causes	graph			%	Nb	900	450	top	seri.gtms.0095.01.tch_drop_causes.kpis.0095.01.05016	0	1	seri.gtms.0095.01.tch_drop_causes.kpis.0095.01.05016	TCH drop causes		1	textlin
+gtms.0095.01.00006	graph			s	Erlang	900	450	top	seri.gtms.0095.01.00006.03	0	0		TCH load statistics		1	textlin
+gtms.0095.01.00009	graph			%		900	450	top	seri.gtms.0095.01.00009.05	0	1	seri.gtms.0095.01.00009.01	Interference band rate on idle TCH		1	textlin
+gtms.0095.01.00010	graph			%	Nb	900	450	top	seri.gtms.0095.01.00010.02	1	1	seri.gtms.0095.01.00010.02	call setup efficiency		1	textlin
+gtms.0095.01.sdcch_and_tch_assignment	graph			%	Nb	900	450	top	seri.gtms.0095.01.sdcch_and_tch_assignment.kpis.0095.01.00010	1	1	seri.gtms.0095.01.sdcch_and_tch_assignment.kpis.0095.01.00010	SDCCH and TCH efficiency in call setup		1	textlin
+gtms.0095.01.call_blocking_and_drop	graph			%	Nb	900	450	top	seri.gtms.0095.01.call_blocking_and_drop.kpis.0095.01.04010	0	1	seri.gtms.0095.01.call_blocking_and_drop.kpis.0095.01.04010	Call Blocking and Drops rates		1	textlin
+gtms.0095.01.00012	graph			%	Nb	900	450	top	seri.gtms.0095.01.00012.02	1	1	seri.gtms.0095.01.00012.02	call success rates		1	textlin
+gtms.0095.01.00013	graph			%	Nb	900	450	right	seri.gtms.0095.01.00013.01	0	0		Handover causes		1	textlin
+gtms.0095.01.handover	graph			%	Nb	900	450	top	seri.gtms.0095.01.handover.kpis.0095.01.10078	1	1	seri.gtms.0095.01.handover.kpis.0095.01.10078	General Handovers statistics		1	textlin
+gtms.0095.01.00014	graph			%	Nb	900	450	top	seri.gtms.0095.01.00014.kpis.0095.01.intra_cell_handover_success_rate	1	1	seri.gtms.0095.01.00014.kpis.0095.01.intra_cell_handover_success_rate	Intra Cell Handovers		1	textlin
+gtms.0095.01.00015	graph			%	Nb	900	450	top	seri.gtms.0095.01.00015.kpis.0095.01.inter_cell_intra_bsc_handovers_success_rate	1	1	seri.gtms.0095.01.00015.kpis.0095.01.inter_cell_intra_bsc_handovers_success_rate	Inter Cell intra BSC Handovers		1	textlin
+gtms.0095.01.00016	graph			%	Nb	900	450	top	seri.gtms.0095.01.00016.kpis.0095.01.inter_cell_inter_bsc_handovers_success_rate	1	1	seri.gtms.0095.01.00016.kpis.0095.01.inter_cell_inter_bsc_handovers_success_rate	Inter Cell inter BSC Handovers		1	textlin
+gtms.0095.01.cell_availability	graph			%	s	900	450	top	seri.gtms.0095.01.cell_availability.kpis.0095.01.cell_availability	1	1	seri.gtms.0095.01.cell_availability.kpis.0095.01.cell_availability	Cell resource availibility		1	textlin
+gtms.0095.01.00007	graph			%	Nb	900	450	top	seri.gtms.0095.01.00007.03	1	1	seri.gtms.0095.01.00007.03	TRX configuration		1	textlin
+gtms.0095.01.00020	graph			%	Nb	900	450	top	seri.gtms.0095.01.00020.03	1	1	seri.gtms.0095.01.00020.03	TCH configuration		1	textlin
+gtms.0095.01.00021	graph			%	Nb	900	450	top	seri.gtms.0095.01.00021.03	1	1	seri.gtms.0095.01.00021.03	SDCCH configuration		1	textlin
+gtms.0095.01.00024	graph			%	Erlang	900	450	top	seri.gtms.0095.01.00024.01	0	1	seri.gtms.0095.01.00024.01	TRAFFIC UTILIZATION AT 2 GOS		1	textlin
+gtms.0095.01.00022	graph			%	Nb	900	450	top	seri.gtms.0095.01.00022.01	0	1	seri.gtms.0095.01.00022.02	TCH NEEDED AT 2% GOS		1	textlin
+gtms.0095.02.00001	graph			kbytes	Nb	900	450	top	seri.gtms.0095.02.00001.kpis.0095.02.18025	0	0		Traffic Volumes		1	textlin
+gtms.0095.02.llc_volumes	graph			kbytes		900	450	top	seri.gtms.0095.02.llc_volumes.kpis.0095.02.18026	0	0		LLC Volumes		1	textlin
+gtms.0095.02.00002	graph			Nb		900	450	top	seri.gtms.0095.02.00002.01	1	0		Number of CS and PS pagings		1	textlin
+gtms.0095.02.00003	graph			%	Nb	900	450	top	seri.gtms.0095.02.00003.kpis.0095.02.18128	1	1	seri.gtms.0095.02.00003.kpis.0095.02.18128	This graph shows the TBF allocations efficiency		1	textlin
+gtms.0095.02.00004	graph			%	Nb	900	450	top	seri.gtms.0095.02.00004.02	0	1	seri.gtms.0095.02.00004.01	This graph shows the TBF allocations rejections due to cell congestions		1	textlin
+gtms.0095.02.gprs_throughput	graph			kbps	kbytes	900	450	top	seri.gtms.0095.02.gprs_throughput.kpis.0095.02.18075	0	0		This graph allows to evaluate the average GPRS throughput offered to users		1	textlin
+gtms.0095.02.edge_throughput	graph			kbps	kbytes	900	450	top	seri.gtms.0095.02.edge_throughput.kpis.0095.02.18077	0	0		This graph allows to evaluate the average EDGE throughput offered to users		1	textlin
+gtms.0095.02.00005	graph			kbps	Nb	900	450	top	seri.gtms.0095.02.00005.01	0	0		This graph allows to evaluate the average throughput offered to users as well as the average number of PDCH allocated in each TBF		1	textlin
+gtms.0095.02.00006	graph			kbps	Nb	900	450	top	seri.gtms.0095.02.00006.01	1	0		This graph provides statistics on the average throughput used per allocated PDCH		1	textlin
+gtms.0095.02.00007	graph			%	kbytes	900	450	top	seri.gtms.0095.02.00007.03	0	1	seri.gtms.0095.02.00007.03	This graph provides statistics on RLC volumes and retransmission rates in GPRS (CS 1 to 4)		1	textlin
+gtms.0095.02.00008	graph			%	kbytes	900	450	top	seri.gtms.0095.02.00008.03	0	1	seri.gtms.0095.02.00008.03	This graph provides statistics on RLC volumes and retransmission rates in EGPRS (MCS 1 to 9)		1	textlin
+gtms.0095.02.00009	graph			%	Nb	900	450	top	seri.gtms.0095.02.00009.11	0	1	seri.gtms.0095.02.00009.11	This graph provides statistics about TBF drops per causes		1	textlin
+gtms.0095.02.00010	graph			%	Nb	900	450	top	seri.gtms.0095.02.00010.05	0	0		This graph provides statistics about data utilization		1	textlin
+gtms.0095.02.pdch_availability	graph			%	Nb	900	450	top	seri.gtms.0095.02.pdch_availability.kpis.0095.02.18101	1	1	seri.gtms.0095.02.pdch_availability.kpis.0095.02.18101	This graph provides statistics about PDCH availability		1	textlin
+gtms.0095.03.00001	graph			%	%	900	450	top	seri.gtms.0095.03.00001.09	0	0		This graph provides statistics about FER distribution Uplink		1	textlin
+gtms.0095.03.00002	graph			%	Nb	900	450	top	seri.gtms.0095.03.00002.09	0	0		This graph provides statistics about RXQUAL distribution Uplink		1	textlin
+gtms.0095.03.00003	graph			%	Nb	900	450	top	seri.gtms.0095.03.00003.09	0	0		This graph provides statistics about RXQUAL distribution Downlink		1	textlin
+gtms.0095.03.00004	graph			%	dBm	900	450	top	seri.gtms.0095.03.00004.09	1	0		This graph provides statistics about RXLEVEL distribution Uplink		1	textlin
+gtms.0095.03.00005	graph			%	dBm	900	450	top	seri.gtms.0095.03.00005.09	1	0		This graph provides statistics about RXLEVEL distribution Downlink		1	textlin
+gtms.0095.03.00006	graph			%	s	900	450	top	seri.gtms.0095.03.00006.01	1	0		This graph provides statistics about Tranceiver Availability		1	textlin
+gtms.0095.03.00007	graph			%	Nb	900	450	top	seri.gtms.0095.03.00007.06	0	0		This graph provides statistics about INTERFERENCE BAND distribution		1	textlin
+gtms.0095.03.00008	graph			%	Nb	900	450	top	seri.gtms.0095.03.00008.09	0	0		This graph provides statistics about TIME ADVANCE distribution		1	textlin

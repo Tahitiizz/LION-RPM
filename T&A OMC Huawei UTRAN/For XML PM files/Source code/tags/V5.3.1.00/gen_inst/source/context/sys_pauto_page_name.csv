@@ -1,0 +1,53 @@
+id_page	page_name	page_type	droit
+dshd.0091.01.call_setup_success_rate	Call setup success rate	page	customisateur
+gtms.0091.01.call_setup_success_rate	Call Setup Success Rate	gtm	customisateur
+gtms.0091.01.call_setup_success_rate_cs	Call Setup Success Rate CS	gtm	customisateur
+gtms.0091.01.call_setup_success_rate_ps	Call Setup Success Rate PS	gtm	customisateur
+dshd.0091.01.call_drop_rate	Call drop rate	page	customisateur
+gtms.0091.01.call_drop_rate	Call Drop Rate	gtm	customisateur
+gtms.0091.01.call_drop_rate_cs	Call Drop Rate CS	gtm	customisateur
+gtms.0091.01.call_drop_rate_ps	Call Drop Rate PS	gtm	customisateur
+dshd.0091.01.rrc_connection	RRC connection	page	customisateur
+gtms.0091.01.rrc_connection_setup_success_rate	RRC CONNECTION SETUP Success Rate	gtm	customisateur
+gtms.0091.01.rrc_connection_setup_success_rate_per_establishment_cause	RRC CONNECTION SETUP Success Rate per Establishment Cause	gtm	customisateur
+dshd.0091.01.rab_setup_and_drop	RAB setup and drop	page	customisateur
+gtms.0091.01.rab_establishment_success_rate	RAB Establishment Success Rate	gtm	customisateur
+gtms.0091.01.cs_rab_establishment_success_rate_per_service	CS RAB Establishment Success Rate per Service	gtm	customisateur
+gtms.0091.01.ps_rab_establishment_success_rate_per_service	PS RAB Establishment Success Rate per Service	gtm	customisateur
+gtms.0091.01.rab_establishment_failures_distribution	RAB Establishment failures distribution	gtm	customisateur
+gtms.0091.01.cs_call_drop_rate_per_service	CS Call drop rate per Service	gtm	customisateur
+gtms.0091.01.cs_call_drop_failures_distribution	CS Call drop failures distribution	gtm	customisateur
+gtms.0091.01.ps_call_drop_rate_per_service	PS Call drop rate per Service	gtm	customisateur
+dshd.0091.01.hspa_rab_setup_and_drop	HSPA RAB setup and drop	page	customisateur
+gtms.0091.01.hspa_rab_establishment_success_rate	HSPA RAB Establishment Success Rate	gtm	customisateur
+gtms.0091.01.hspa_call_drop_rate	HSPA Call drop rate	gtm	customisateur
+dshd.0091.01.reconfiguration	Reconfiguration	page	customisateur
+gtms.0091.01.reconfiguration_success_rate	Reconfiguration Success Rate	gtm	customisateur
+gtms.0091.01.hspa_reconfiguration_success_rate	HSPA Reconfiguration Success Rate	gtm	customisateur
+dshd.0091.01.cell_availability	Cell availability	page	customisateur
+gtms.0091.01.cell_availability	Cell availability	gtm	customisateur
+gtms.0091.01.hsdpa_service_availability	HSDPA service availability	gtm	customisateur
+gtms.0091.01.hsupa_service_availability	HSUPA service availability	gtm	customisateur
+dshd.0091.01.cell_load	Cell load	page	customisateur
+gtms.0091.01.cell_congestion	Cell Congestion	gtm	customisateur
+dshd.0091.01.cell_measurements	Cell measurements	page	customisateur
+gtms.0091.01.ul_rssi_average	UL RSSI Average	gtm	customisateur
+dshd.0091.01.traffic	Traffic	page	customisateur
+gtms.0091.01.cs_traffic	CS Traffic	gtm	customisateur
+gtms.0091.01.ps_traffic	PS Traffic	gtm	customisateur
+gtms.0091.01.hspa_traffic	HSPA Traffic	gtm	customisateur
+gtms.0091.01.average_r99_non_real_time_ps_data_throughput	Average R99 Non Real Time PS data throughput	gtm	customisateur
+gtms.0091.01.average_hspa_non_real_time_ps_data_throughput	Average HSPA Non Real Time PS data throughput	gtm	customisateur
+dshd.0091.01.soft_handover	Soft handover	page	customisateur
+gtms.0091.01.sho_success_rate	SHO success rate	gtm	customisateur
+dshd.0091.01.hspa_mobility	HSPA mobility	page	customisateur
+gtms.0091.01.hsdpa_cell_change_success_rate	HSDPA Cell change success rate	gtm	customisateur
+gtms.0091.01.hsupa_cell_change_success_rate	HSUPA Cell change success rate	gtm	customisateur
+dshd.0091.01.hard_handover	Hard handover	page	customisateur
+gtms.0091.01.intra_system_intra_frequency_hho_success_rate	Intra System Intra Frequency HHO success rate	gtm	customisateur
+gtms.0091.01.intra_system_inter_frequency_hho_success_rate	Intra System Inter Frequency HHO success rate	gtm	customisateur
+gtms.0091.01.inter_system_hho_success_rate	Inter System HHO success rate	gtm	customisateur
+dshd.0091.01.compressed_mode	Compressed Mode	page	customisateur
+gtms.0091.01.compressed_mode_success_rate	Compressed mode success rate	gtm	customisateur
+gtms.0091.01.compressed_mode_activation_for_inter-freq	Compressed mode activation for inter-freq	gtm	customisateur
+gtms.0091.01.compressed_mode_activation_for_inter-rat	Compressed mode activation for inter-RAT	gtm	customisateur

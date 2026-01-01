@@ -1,0 +1,15 @@
+id_ligne	id_group_table	time_agregation	time_agregation_label	id_source	data_type	on_off	comment	deploy_status
+1	1	hour	hour	-1	raw	1		0
+3	1	day	day	1	raw	1		0
+5	1	week	week	3	raw	1		0
+7	1	month	month	3	raw	1		0
+9	1	day_bh	day_bh	1	raw	1		0
+11	1	week_bh	week_bh	9	raw	1		0
+13	1	month_bh	month_bh	9	raw	1		0
+2	1	hour	hour	-1	kpi	1		0
+4	1	day	day	2	kpi	1		0
+6	1	week	week	4	kpi	1		0
+8	1	month	month	4	kpi	1		0
+10	1	day_bh	day_bh	2	kpi	1		0
+12	1	week_bh	week_bh	10	kpi	1		0
+14	1	month_bh	month_bh	10	kpi	1		0

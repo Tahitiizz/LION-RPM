@@ -1,0 +1,92 @@
+===================================================================
+
+		Trending&Aggregation Ericsson BSS 5.3
+		Version 5.3.0.01
+		Delivered on: Dec-09-2014
+
+===================================================================
+
+Content:
+        T&A Base Component    : V 5.3.2.07
+        T&A Parser            : V 5.3.0.01
+		T&A Parser library	  : 4.09
+        T&A Context           : V 5.3.0.01
+	    T&A Package Generator : V 3.10
+
+Installation:
+	Minimum product version required for upgrade	:	V 5.1.1.01
+
+Expertise /R&D level specifications:
+	EXP Application / Vendor	:	RH
+	EXP Restitution / Techno	:	RI
+	R&D All Products			:	T17
+	R&D Product Template		:	T19
+	R&D previous context		: 	V 5.3.0.00 
+
+Tools:
+	T&A Expertise Specifications Converter	:	V 1.06
+	T&A Context Management					:	V 7.0.2.04
+Fixed anomalies / Evolutions of version 5.3.0.01:	
+	-Bug 34816 - [REC][T&A OMC Ericsson BSS] Warnings regarding erlangb fonctions after integration
+
+Fixed anomalies / Evolutions of version 5.3.0.00:
+	-[Evolution]: Update of the base component to version 5.3.0.13 (refer to readme_cb_5.3.0.13.txt for more details about CB bug fixes)
+	-[Evolution]: Migration to parser library V4.04
+	-Bug 22763 - [REC][T&A OMC Ericsson BSS][V5.0.7.03] List of object types in the source code
+	-Bug 26379 - [QAL][T&A OMC Ericsson BSS][CB] minor errors present in the CB installation log
+	-Bug 28786 - [SUP][T&A OMC Ericsson BSS][CB][AVP NA][Aircel India RoTN][Backup] Process starts during weekly database backup
+	-Bug 30510 - [REC][T&A OMC Ericsson BSS][CB] Warning messages displayed on user profile
+	-Bug 31383 - [SUP][T&A OMC Ericsson BSS][Zain Irak][AVP NA] Collect is too long -> "Maximum execution time of Data Compute"
+	-Bug 31438 - [SUP][T&A OMC Ericsson BSS][Zain Iraq][AVP#32904] Source Availability information display with client_admin
+	-Bug 32490 - [REC][T&A OMC Ericsson BSS] [Context] The global parameter specif_enable_preOSS is out of date
+
+Fixed anomalies / Evolutions of version 5.2.0.00:
+	-[Evolution]: Update of the base component to version 5.2.0.29 (refer to readme_cb_5.2.0.29.txt for more details about CB bug fixes)
+	- Bug 29600 : [REC][T&A OMC Ericsson BSS][V5.1.2.00] Some hours are not inserted in db during retrieve when application is not parallelized
+	- Bug 29602 : [REC][T&A OMC Ericsson BSS][V5.1.2.00] Clever topology update not working
+	
+Fixed anomalies / Evolutions of version 5.1.2.00:
+	-[Evolution]: Migration to parser library V3.00 with the multi-processes mode
+	
+Fixed anomalies / Evolutions of version 5.1.1.01:
+	- Bug 28445 : [QAL][T&A OMC Ericsson BSS][Retrieve][Robustness] Retrieve crash when integrating more than 10 hours
+	- Bug 28446 : [QAL][T&A OMC Ericsson BSS][KPI][Handovers] Sum of HO causes not equal to 100 %
+	- Bug 28478 : [REC][T&A OMC Ericsson BSS][5.1.1.00] Query failed during retrieve when initializing bsc list with less and more than 6 hours
+	- Bug 28481 : [REC][T&A OMC Ericsson BSS][5.1.1.00] w_astellia tables are not purged after first retrieve when initializing bsc list
+	
+Fixed anomalies / Evolutions of version 5.1.1.00:
+	-[Evolution]: Update of the base component to version 5.1.6.27 (refer to readme_cb_5.1.6.27.txt for more details about CB bug fixes)
+	-[Evolution]: Migration to parser library V2.5
+	- Bug 28447 : [SUP][T&A OMC Ericsson BSS][Parsing][HO incoming counters] HO Incoming counters values in T&A doesn't match with E/// PM Tools
+	- Bug 28209 : [SUP][T&A OMC Ericsson BSS][AVP 25721] Compute booster error at midnight on partitioning T&A
+	- Bug 24716 : [QAL][T&A OMC Ericsson BSS][Parser] Stats of NE with on_off=0 are integrated in Data Tables
+	- Bug 23447 : [SUP][T&A OMC Ericsson BSS][Mixed KPI] Mixed KPI topology partially erased during update topo
+	- Bug 20563 : [QAL][T&A OMC Ericsson BSS][V5.0.5.00][CB]the menu "mixed KPI" incorrectly displayed in multiproduct environment
+	- Bug 20571 : [QAL][T&A OMC Ericsson BSS][V5.0.5.00][CB]inappropiate error message for Automatic mapping in the Mixed KPi application
+	
+Fixed anomalies / Evolutions of version 5.1.0.02:
+	-[Evolution]: Update of the base component to version 5.1.6.26 (refer to readme_cb_5.1.6.26.txt for more details about CB bug fixes)
+	
+Fixed anomalies / Evolutions of version 5.1.0.01:
+	-[Evolution]: Update of the base component to version 5.1.6.23 (refer to readme_cb_5.1.6.23.txt for more details about CB bug fixes)
+	- BZ# 21503	: [QAL][T&A OMC Ericsson BSS][5.0][KPI] Unexpected results for some KPIs
+	- BZ# 27399 : [EVO][T&A OMC Ericsson BSS][PreOSS] Systematic statistics recalculation when adding a node to the list to collect
+
+Fixed anomalies / Evolutions of version 5.1.0.00:
+	-[Evolution]: Update of the base component to version 5.1.6.16 (refer to readme_cb_5.1.6.16.txt for more details about CB bug fixes)
+	- BZ# 20492:[SUP][AVP 16907] Compute day too long (maximum execution time) because of the vacuum
+	- BZ# 26151:[QAL][pre-OSS]After patch installation flat_file_template of ASN1 files, depending on the value of a "list of xxx" global parameter, is reseted
+	- BZ# 22645:[SUP] Menu order and content is changed after patching the master
+	- BZ# 23432:[SUP] Backup is not done on sunday
+	- BZ# 26147:[QAL] When changing a flat_file_template, the sys_flat_file_uploaded_list table is not updated accordingly
+	- BZ# 20606:[SUP] In multiproduct, the GTM and dasboard name should not be concatened with the product name
+	- BZ# 19852:[REC][Alarm] Error message display at alarm creation
+	- BZ# 21930:[REC][V5.0.7.00] Interface Setup Products, character # not accepted in SSH password
+	- BZ# 23575:[SUP][Mixed KPI] Capture duration counters are duplicated on Mixed KPI
+	- BZ# 21981:[SUP] User main menu order is changed after patch
+	- BZ# 23618:[QAL][5.0.6.04][QAL CB 5.1.4Ed5][Installation] Bad value on sys_definition_step_step_id_seq
+	- BZ# 15080:[SUP][Global parameters] La fenêtre d'information du paramètre Report Files History contient une erreur
+	- BZ# 24922:[QAL][PreOSS] Unexpected update of 'List of BSC to collect' parameter after patch application
+	- BZ# 16039:[QAL][Global parameters] Autorefresh delay information panel
+	- BZ# 18719:[REC][54828] Busy Hour is displayed in Excel export in Source Availability
+	- BZ# 21620:[QAL][V5.0.5.01][Contexte] Incorrect kpi name for a few KPIs

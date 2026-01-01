@@ -1,0 +1,80 @@
+===================================================================
+
+		Trending&Aggregation Ericsson LTE 5.3
+		Version 5.3.3.02
+		Delivered on: Nov-12-2018
+
+===================================================================
+
+Content:
+        T&A Base Component    : V 5.3.7.01
+        T&A Parser            : V 5.3.1.00
+		T&A Parser library	  : V 4.10
+        T&A Context           : V 5.3.3.01
+        T&A Package Generator : V 3.17
+		
+Installation:
+
+Expertise /R&D level specifications:
+	EXP Application / Vendor	:	RN
+	EXP Restitution / Techno	:	RD
+	R&D All Products			:	T17
+	R&D Product Template		:	T19
+	R&D previous context		: 	5.3.3.00
+
+Tools:
+	T&A Expertise Specifications Converter	:	V 1.08
+	T&A Context Management					:	V 7.0.2.12
+
+Fixed anomalies / Evolutions of version 5.3.3.02:
+	- Fix gen_inst upgrade
+	- New spec vendor RN
+	
+Fixed anomalies / Evolutions of version 5.3.3.01:
+	- Fix automatic mapping bug
+	
+Fixed anomalies / Evolutions of version 5.3.3.00:
+    - New CB 5.3.7.01
+	- New spec vendor RM
+	- New spec techno RD
+	- Add a second PM file format, dedicated to small & macro cells
+
+Fixed anomalies / Evolutions of version 5.3.2.01:	
+	- New CB 5.3.5.02 to fix bug #48376
+	- New spec vendor correcting all compressed counters:
+		-> Bad first sub counters
+		-> Flat file position not starting at 0
+		-> Counter delclared as compressed unstead of explicit
+	
+Fixed anomalies / Evolutions of version 5.3.2.00:	
+	- New spec vendor
+	
+Fixed anomalies / Evolutions of version 5.3.1.00:	
+	- Bug 49353 - Inconsistent informations on counter activation
+	- Evo new global parameter allowing to parse deprecated MO.
+	
+Fixed anomalies / Evolutions of version 5.3.0.07:
+	- New spec Vendor
+	- New CB
+Fixed anomalies / Evolutions of version 5.3.0.06:
+	-Bug 45689 - [INT][T&A OMC Ericsson LTE] Multivalued counters have wrong values when global counters is not activated
+	-Bug CB 42236 - [SUP][5.3.1.14][NA][EastLink]Hourly Discontinuous Dynamic alarms are applied on H-1 values not on H values
+
+Fixed anomalies / Evolutions of version 5.3.0.05:
+	- New spec Vendor
+	
+Fixed anomalies / Evolutions of version 5.3.0.04:
+	- New spec Vendor
+
+Fixed anomalies / Evolutions of version 5.3.0.03:
+	- New spec Vendor
+	- Specific parser updated to manage collapsed multivalued counters
+	
+Fixed anomalies / Evolutions of version 5.3.0.02:
+	- New spec Vendor
+	- Bug 38278 - [QAL][T&A OMC Ericsson LTE] Parser and Context Number does not match in Delivery Note and Application
+	- Bug 37531 - [REC][ERICSSON][LTE] There is no message displayed when using optional_statistic script with option -l 
+	
+Fixed anomalies / Evolutions of version 5.3.0.01:
+	- New spec Vendor
+	- SourceFiles[flat_file_naming_template] udpated to make the collect works on Postgres 8

@@ -1,0 +1,152 @@
+.texte_commun { 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+}
+
+.input_commun {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	border: #000000;
+	border-style: solid; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px;
+}
+
+.input_transparent {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #585858;
+	font-size: 8pt;
+	border: 0px none;
+	background-color: #FFFFFF;
+	border-color: #000000 solid;
+}
+
+.input_chargement {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	border: 0px none;
+	background-color: #b5b4b3;
+	border-color: #000000;
+	color: #FFFFFF;
+	padding-left:5px;
+	vertical-align:top;
+}
+
+.image_sel {
+	border: #585858;
+	border-style: solid;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	cursor: pointer;
+}
+
+.image_nosel {
+	cursor: pointer;
+}
+
+.map_style {
+	border-color:#b5b4b3;
+	border-style:solid;
+	border-top-width:1px;
+	border-bottom-width:1px;
+	border-left-width:1px;
+	border-right-width:1px;
+        /* DE Firefox bz 17384 : fond blanc */
+        background-color: #fff;
+}
+
+.first_column_style {
+	text-align:center;
+	width:8px;
+}
+
+.layer_column_style {
+	border-color:#b5b4b3;
+	border-style:solid;
+	border-top-width:0;
+	border-bottom-width:0;
+	border-left-width:1;
+	border-right-width:0;
+}
+
+.layer_list_style {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #585858;
+	border-color:#b5b4b3;
+	border-style:solid;
+	border-top-width:1;
+	border-bottom-width:1;
+	border-left-width:1;
+	border-right-width:1;
+}
+
+.bouton{
+	border-right : 1px solid #585858;
+	border-bottom : 1px solid #585858;
+	border-top : 1px solid #C9C9C9;
+	border-left : 1px solid #C9C9C9;
+	font : normal 9pt Verdana, Arial, sans-serif;
+	background-image : url('../gis_icons/bouton_style_relief.gif');
+	background-repeat: no-repeat;
+	padding-left : 5px;
+	cursor:pointer;
+}
+
+#loader{
+	font-family:Tahoma, Helvetica, sans;
+	font-size:11px;
+	color:#000000;
+	background-color:#FFFFFF;
+	padding:10px 0 16px 0;
+	margin:0 auto;
+	display:block;
+	width:130px;
+	border:1px solid #6A6A6A;
+	text-align:left;
+	z-index:2;
+}
+
+#progress{
+	height:5px;
+	font-size:1px;
+	width:1px;
+	position:relative;
+	top:1px;
+	left:0px;
+	background-color:#9D9D94
+}
+
+#loader_bg{
+	background-color:#EBEBE4;
+	position:relative;
+	top:8px;
+	left:8px;
+	height:7px;
+	width:113px;
+	font-size:1px
+}
+
+/* 31/10/2007 - Modif. benoit : ajout des styles relatifs aux calques de la vue du GIS */
+
+.div_controller {
+	position: relative;
+	cursor: crosshair;
+}
+
+.div_selection {
+	background-color: #000;
+	opacity: 0.1;
+	filter:alpha(opacity=10);
+	position: absolute;
+}
+
+.div_view {
+	width: 100%;
+	height: 100%;
+}

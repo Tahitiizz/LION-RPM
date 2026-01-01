@@ -1,0 +1,9 @@
+edw_group_table	data_source	raw_on_off	kpi_on_off	adv_kpi_on_off	mixed_on_off	family	raw_deploy_status	kpi_deploy_status	adv_kpi_deploy_status	mixed_kpi_deploy_status	id_parser	visible	id_ligne
+edw_eriran_cellb_axe1	0	1	1	1	0	cellb	1	1	1	1	1	1	1
+edw_eriran_iubl_axe1	0	1	1	1	0	iubl	1	1	1	1	1	1	2
+edw_eriran_iurl_axe1	0	1	1	1	0	iurl	1	1	1	1	1	1	3
+edw_eriran_adj_axe1	0	1	1	1	0	adj	1	1	1	1	1	1	4
+edw_eriran_lac_axe1	0	1	1	1	0	lac	1	1	1	1	1	1	5
+edw_eriran_rac_axe1	0	1	1	1	0	rac	1	1	1	1	1	1	6
+edw_eriran_nodeb_axe1	0	1	1		0	nodeb	1	1	1	1		1	7
+edw_eriran_rnc_axe1	0	1	1		0	rnc	1	1	1	1		1	8

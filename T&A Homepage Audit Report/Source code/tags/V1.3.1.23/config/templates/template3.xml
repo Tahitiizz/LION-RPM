@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<template id="template3" title="template3">
+		<row rowspan='1'>
+			<widget colspan='1' type='chart' id='chart1'/>
+			<widget colspan='1' type='chart' id='chart2'/>
+			<widget colspan='1' type='chart' id='chart3'/>
+			<widget colspan='1' type='chart' id='chart4'/>
+			<widget colspan='1' type='chart' id='chart5'/>
+		</row>
+		<row rowspan='1'>
+			<widget colspan='1' type='chart' id='chart6'/>
+			<widget colspan='1' type='chart' id='chart7'/>
+			<widget colspan='1' type='chart' id='chart8'/>
+			<widget colspan='1' type='chart' id='chart9'/>
+			<widget colspan='1' type='chart' id='chart10'/>
+		</row>
+		<row rowspan='1'>
+			<widget colspan='1' type='chart' id='chart11'/>
+			<widget colspan='1' type='chart' id='chart12'/>
+			<widget colspan='1' type='chart' id='chart13'/>
+			<widget colspan='1' type='chart' id='chart14'/>
+			<widget colspan='1' type='chart' id='chart15'/>
+		</row>
+		<row rowspan='1'>
+			<widget colspan='1' type='chart' id='chart16'/>
+			<widget colspan='1' type='chart' id='chart17'/>
+			<widget colspan='1' type='chart' id='chart18'/>
+			<widget colspan='1' type='chart' id='chart19'/>
+			<widget colspan='1' type='chart' id='chart20'/>
+		</row>
+</template>

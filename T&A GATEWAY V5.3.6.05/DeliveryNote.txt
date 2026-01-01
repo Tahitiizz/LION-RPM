@@ -1,0 +1,50 @@
+===================================================================
+
+  T&A Gateway
+
+    Version 5.3.6.05
+    Delivered on: 02/11/2017
+
+===================================================================
+
+Content:
+  T&A Gateway             : V 5.3.6.05
+  Base Component          : V 5.3.6.05
+  Parser                  : Blank product V 5.3.6.05
+  Context                 : TA Gateway V 5.3.6.05
+
+Compatible environments:
+  Red Hat 5.5 / Postgres 8.2, 9.1
+  Red Hat 6.2 / Postgres 9.1
+  Red Hat 6.5 / Postgres 9.1
+  Red Hat 6.7 / Postgres 9.1
+
+Please refer to specific product instruction for setup.
+At least 2.4.0.14 Portal is needed to use this CB version.
+
+New functionalities included in this version:
+        
+Incident
+  IN3629: Collect don't work for IU
+  
+-------------------------------------
+HISTORY
+-------------------------------------  
+v5.3.6.04:
+ - IN3281: T&A OMC Ericsson LTE RI Y axis unit  issue
+ - IN3305: Can't create a KPI with valid formula trough KPI builder
+ - IN3407: global parameter flatFileArchiveDaysToLive not working properly
+v5.3.6.03:
+ - IN3133:  SIG GSM et GPRS no hadling data since T&A upgrade
+v5.3.6.02:
+ - RQ 6486: Add T&A indicator on number of files to be collected by T&A
+ - RQ 8103: Add a check in Setup that T&A Gateway parent have upper version of CB in case of upgrade of a T&A slave
+v5.3.6.01:
+ - RQ 5968 :[AO-TA] PHP 5.3 update
+ - RQ 5199  [AO-TA] remove write access to other on files and directories
+v 5.3.5.01
+ - RQ4888 : Modification of dynamic alarm generation calculation
+ - RQ4889 : Capability to remove all alarms acknowledged
+
+P1
+ - 50342 - Graphs comments are truncated when exported 

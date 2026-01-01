@@ -1,0 +1,28 @@
+===================================================================
+
+		Trending&Aggregation Huawei BSS 5.3
+		Version 5.3.1.00
+		Release xxxxx
+		Delivered on: Jan-10-2014
+
+===================================================================
+
+Content:
+
+        T&A Base Component    : V 5.3.1.11
+        T&A Parser            : V 5.3.1.00
+        T&A Context           : V 5.3.1.00
+        T&A Package Generator : V 3.11
+
+New functionnalities (version 5.3.1.00):
+        * include xxxxx
+        * include xxxxx
+
+Fixed Anomalies (version 5.3.1.00):
+        * xxxxx: 
+        * xxxxx:
+
+
+---------------------------------------------------------------------
+History 5.x.y.z:
+---------------------------------------------------------------------

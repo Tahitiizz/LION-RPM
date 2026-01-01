@@ -1,0 +1,206 @@
+<?
+/*
+*	@cb21201@
+*
+*	14/03/2007 - Copyright Acurio
+*
+*	Composant de base version cb_2.1.2.01
+*/
+?>
+<?php
+
+
+include_once(dirname(__FILE__)."/../php/environnement_liens.php");
+include_once($repertoire_physique_niveau0."php/postgres_functions.php");
+include_once($repertoire_physique_niveau0."php/edw_function.php");
+include_once($repertoire_physique_niveau0."php/edw_function_family.php");
+include_once($repertoire_physique_niveau0."php/deploy_and_compute_functions.php");
+include_once($repertoire_physique_niveau0."class/deploy.class.php");
+
+$DBHost = "localhost";
+$DBport = "5432";
+$DBUser = "postgres";
+$DBPass = "";
+$DBName = "base_ref";
+$database_connection = pg_connect("port=$DBport dbname=$DBName user=$DBUser password=$DBPass");
+
+//nettoie les menus deroulant
+
+        $type_page = 'page';
+
+        $query_list_dash =" select * from sys_pauto_page_name where page_type='page' ";
+        echo "$query_list_dash";
+        $result_list_dash =pg_query($database_connection,$query_list_dash);
+        $result_nb_list_dash =pg_num_rows($result_list_dash);
+
+        for ($q = 0;$q < $result_nb_list_dash;$q++){
+
+                $row= pg_fetch_array($result_list_dash, $q);
+
+                $id_page =        $row["id_page"];
+                $family =         $row["family"];
+                echo "id_page=$id_page<br>";
+                $query= " select id_menu from menu_deroulant_intranet where id_page='$id_page' ";
+                $result=pg_query($database_connection,$query);
+                $result_nb = pg_num_rows($result);
+                for ($k = 0;$k < $result_nb;$k++){ // liste des id_menu à supprimer.
+                        $result_array = pg_fetch_array($result, $k);
+                        $tab_id_menu[] = $result_array["id_menu"];
+                }
+                // On supprime l'identfiant du menu dans le profil.
+                $query=" select * from profile ";
+                $result_profile=pg_query($database_connection,$query);
+                $nb_result= pg_num_rows($result_profile);
+
+                if(isset($tab_id_menu)){
+                        for ($j = 0;$j < $nb_result;$j++) { // On supprime le menu dans tous les profils.
+                                $result_array_profile = pg_fetch_array($result_profile, $j);
+                                $profil = $result_array_profile["profile_to_menu"];
+                                $id_profile = $result_array_profile["id_profile"];
+                                $profil = explode("-",$profil);
+                                $new_profil = "";
+                                for($i=0;$i<count($profil);$i++){
+                                        if(!in_array($profil[$i], $tab_id_menu)){
+                                                $new_profil.=$profil[$i]."-";
+                                        }
+                                }
+                                $new_profil = substr($new_profil,0,-1);
+                                $query=" update profile set profile_to_menu='$new_profil' where id_profile='$id_profile' ";
+                                pg_query($database_connection,$query);
+                                // fin mise-à--jour du profil.
+                        }
+                }
+                // On supprime les id_menu dans la table profile_menu_position.
+                $query= " select id_menu from menu_deroulant_intranet where id_page='$id_page' ";
+                $result=pg_query($database_connection,$query);
+                $result_nb = pg_num_rows($result);
+                for ($k = 0;$k < $result_nb;$k++){ // liste des id_menu à supprimer.
+                        $result_array = pg_fetch_array($result, $k);
+                        $query_delete = " delete from profile_menu_position where id_menu = ". $result_array["id_menu"];
+                        pg_query($database_connection,$query_delete);
+                }
+
+                // On supprime la page du menu.
+                $query="delete  FROM menu_deroulant_intranet where id_page=".$id_page;
+                pg_query($database_connection,$query);
+                echo $query."<br>";
+                // On supprime les enregistrements la table pauto_config et
+                // pauto_page_name.
+                // on supprime les graph contenu dans la page
+                $query="delete  FROM sys_pauto_config where id_page=".$id_page;
+                pg_query($database_connection,$query);
+
+                // on supprime la page
+                $query="delete  FROM sys_pauto_page_name where id_page=".$id_page;
+                pg_query($database_connection,$query);
+        }
+
+//je mets à 2 les champs raw et kpi, destruction des tables raw et kpi
+
+$query = "update sys_definition_group_table set raw_deploy_status=2,kpi_deploy_status=2";
+pg_query($database_connection, $query);
+
+$query = "select distinct id_ligne from sys_definition_group_table";
+        // //////echo $query."<br>";
+        $result = pg_query($database_connection, $query);
+        $nombre_resultat = pg_num_rows($result);
+        unset($ta_list);
+        if ($nombre_resultat > 0)
+           {
+            for ($i = 0;$i < $nombre_resultat;$i++)
+                {
+                 $row = pg_fetch_array($result, $i);
+                 $id_gt[]= $row["id_ligne"];
+                }
+           }
+for ($k=0;$k<count($id_gt);$k++)
+{
+ $deploy=new deploy($database_connection,$id_gt[$k]);
+ if(count($deploy->types)>0)$deploy->operate();$deploy->display(1);
+}
+
+
+unset($table);
+
+//nettoyage des tables
+
+$query="select * from sys_extraction_cb where on_off=1";
+echo"$query\n";
+
+ $result =pg_query($database_connection, $query);
+ $nombre_resultat =pg_num_rows($result);
+
+ if ($nombre_resultat>0)
+    {
+     for ($i = 0;$i < $nombre_resultat;$i++)
+         {
+          $row = pg_fetch_array($result, $i);
+          $table= $row["nom_table"];
+          $query="truncate $table";
+          pg_query($database_connection, $query);
+         }
+    }
+
+
+
+$query = "delete from profile_menu_position where id_profile not in (select id_profile from profile where client_type like 'pro%')";
+pg_query($database_connection, $query);
+
+$query = "delete from  geometry_columns where f_table_name not like 'edw_object_1_ref'";
+pg_query($database_connection, $query);
+
+
+$query = "delete from users where id_user<>1";
+pg_query($database_connection, $query);
+
+
+$query = "delete from profile where client_type is null";
+pg_query($database_connection, $query);
+//nettoyage des tables w_
+
+unset($table);
+$query = "select tablename from pg_tables where tablename like 'w_edw%'";
+$result = pg_query($database_connection, $query);
+        $nombre_resultat = pg_num_rows($result);
+        unset($ta_list);
+        if ($nombre_resultat > 0)
+           {
+            for ($i = 0;$i < $nombre_resultat;$i++)
+                {
+                 $row = pg_fetch_array($result, $i);
+                 $table[]= $row["tablename"];
+                }
+           }
+
+for ($k=0;$k<count($table);$k++)
+{
+ $query = "drop table $table[$k]";
+  echo "->drop table $table[$k]\n";
+pg_query($database_connection, $query);
+}
+
+//nettoyage des tables  gthem4
+unset($table);
+$query = "select tablename from pg_tables where tablename like 'gthem%'";
+$result = pg_query($database_connection, $query);
+        $nombre_resultat = pg_num_rows($result);
+        unset($ta_list);
+        if ($nombre_resultat > 0)
+           {
+            for ($i = 0;$i < $nombre_resultat;$i++)
+                {
+                 $row = pg_fetch_array($result, $i);
+                 $table[]= $row["tablename"];
+                }
+           }
+
+for ($k=0;$k<count($table);$k++)
+{
+ $query = "drop table $table[$k]";
+ echo "->drop table $table[$k]\n";
+pg_query($database_connection, $query);
+
+}
+//*/
+
+?>

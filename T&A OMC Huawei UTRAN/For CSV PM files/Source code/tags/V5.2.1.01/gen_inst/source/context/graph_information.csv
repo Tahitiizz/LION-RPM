@@ -1,0 +1,39 @@
+id_page	object_type	pie_split_type	pie_split_by	ordonnee_left_name	ordonnee_right_name	graph_width	graph_height	position_legende	default_orderby	default_asc_desc	gis	gis_based_on	definition	troubleshooting	is_configure	scale
+gtms.0091.01.00001	graph			%	NB	900	450	top	seri.gtms.0091.01.00001.01	0	1	seri.gtms.0091.01.00001.01	Global Call Setup Succes Rate (CSSR)		1	textlin
+gtms.0091.01.00002	graph			%	NB	900	450	top	seri.gtms.0091.01.00002.01	0	0		Call Setup Succes Rate (CSSR) for CS domain		1	textlin
+gtms.0091.01.00003	graph			%	NB	900	450	top	seri.gtms.0091.01.00003.01	0	0		Call Setup Succes Rate (CSSR) for PS domain		1	textlin
+gtms.0091.01.00004	graph			%	NB	900	450	top	seri.gtms.0091.01.00004.01	0	1	seri.gtms.0091.01.00004.01	Global Call Drop Rate		1	textlin
+gtms.0091.01.00005	graph			%	NB	900	450	top	seri.gtms.0091.01.00005.01	0	0		Call Drop Rate for CS domain		1	textlin
+gtms.0091.01.00006	graph			%	NB	900	450	top	seri.gtms.0091.01.00006.01	0	0		Call Drop Rate for PS domain		1	textlin
+gtms.0091.01.00007	graph			%	NB	900	450	top	seri.gtms.0091.01.00007.01	0	1	seri.gtms.0091.01.00007.01	RRC connection success rate		1	textlin
+gtms.0091.01.00008	graph			%	NB	900	450	top	seri.gtms.0091.01.00008.01	0	0		RRC CONNECTION SETUP Success Rate per Establishment Cause for CS and PS CN domains		1	textlin
+gtms.0091.01.00009	graph			%	NB	900	450	top	seri.gtms.0091.01.00009.01	0	1	seri.gtms.0091.01.00009.01	RAB establishment success rate		1	textlin
+gtms.0091.01.00010	graph			%	NB	900	450	top	seri.gtms.0091.01.00010.01	0	0		CS RAB Establishment Success Rate per Services		1	textlin
+gtms.0091.01.00011	graph			%	NB	900	450	top	seri.gtms.0091.01.00011.03	0	0		PS RAB Establishment Success Rate per Services		1	textlin
+gtms.0091.01.00012	graph			%	NB	900	450	top	seri.gtms.0091.01.00012.01	0	1	seri.gtms.0091.01.00012.01	RAB Establishment Success Rate for HSPA (HSDPA and HSUPA)		1	textlin
+gtms.0091.01.00013	graph			%	NB	900	450	top	seri.gtms.0091.01.00013.01	0	0		Call drop rate for CS services (speech and Real Time Data)		1	textlin
+gtms.0091.01.00014	graph			%	NB	900	450	top	seri.gtms.0091.01.00014.01	0	0		Call drop failures distribution for speech service		1	textlin
+gtms.0091.01.00015	graph			%	NB	900	450	top	seri.gtms.0091.01.00015.01	0	0		Call drop rate for PS services (Real Time and Non Real Time data)		1	textlin
+gtms.0091.01.00016	graph			%	NB	900	450	top	seri.gtms.0091.01.00016.01	0	1	seri.gtms.0091.01.00016.01	Call drop rate for HSPA (HSDPA and HSUPA)		1	textlin
+gtms.0091.01.00017	graph			%	NB	900	450	top	seri.gtms.0091.01.00017.01	0	0		RAB Establishment failures distribution		1	textlin
+gtms.0091.01.00018	graph			%	NB	900	450	top	seri.gtms.0091.01.00018.03	0	0		Reconfiguration Success Rate (UL and DL channels upswitches and downswitches)		1	textlin
+gtms.0091.01.00019	graph			%	NB	900	450	top	seri.gtms.0091.01.00019.01	0	0		HSPA Reconfiguration Success Rate (DL upswitches to HSDPA and UL upswitches to HSUPA)		1	textlin
+gtms.0091.01.00020	graph			%		900	450	top	seri.gtms.0091.01.00020.01	0	1	seri.gtms.0091.01.00020.01	Cell availability and manual/system downtime		1	textlin
+gtms.0091.01.00021	graph			%		900	450	top	seri.gtms.0091.01.00021.01	0	0		Cell availability and manual/system downtime for HSDPA services		1	textlin
+gtms.0091.01.00022	graph			%		900	450	top	seri.gtms.0091.01.00022.01	0	0		Cell availability and manual/system downtime for HSUPA services		1	textlin
+gtms.0091.01.00023	graph			%		900	450	top	seri.gtms.0091.01.00023.01	0	0		UL and DL cell congestion		1	textlin
+gtms.0091.01.00024	graph			dBm		900	450	top	seri.gtms.0091.01.00024.01	0	0		UL RSSI average		1	textlin
+gtms.0091.01.00025	graph			%	NB	900	450	top	seri.gtms.0091.01.00025.01	0	1	seri.gtms.0091.01.00025.01	Soft Handover success rate (intra-frequency mobility)		1	textlin
+gtms.0091.01.00026	graph			%	NB	900	450	top	seri.gtms.0091.01.00026.03	0	1	seri.gtms.0091.01.00026.01	Intra System Intra Frequency HHO success rate		1	textlin
+gtms.0091.01.00027	graph			%	NB	900	450	top	seri.gtms.0091.01.00027.01	0	1	seri.gtms.0091.01.00027.01	Intra System Inter Frequency HHO success rate (%)		1	textlin
+gtms.0091.01.00028	graph			%	NB	900	450	top	seri.gtms.0091.01.00028.01	0	1	seri.gtms.0091.01.00028.01	Inter System HHO 3G-2G success rate (%)		1	textlin
+gtms.0091.01.00029	graph			%	NB	900	450	top	seri.gtms.0091.01.00029.01	0	1	seri.gtms.0091.01.00029.01	HSDPA Cell change success rate		1	textlin
+gtms.0091.01.00030	graph			%	NB	900	450	top	seri.gtms.0091.01.00030.01	0	0		HSUPA Cell change success rate		1	textlin
+gtms.0091.01.00031	graph			%	NB	900	450	top	seri.gtms.0091.01.00031.03	0	0		UL and DL Compressed mode success rate (for HLS and SF2 methods)		1	textlin
+gtms.0091.01.00032	graph			%	NB	900	450	top	seri.gtms.0091.01.00032.01	0	0		Rate of inter-frequency measurements performed with Compressed mode		1	textlin
+gtms.0091.01.00033	graph			%	NB	900	450	top	seri.gtms.0091.01.00033.01	0	0		Rate of inter-RAT measurements performed with Compressed mode		1	textlin
+gtms.0091.01.00034	graph			erlang		900	450	top	seri.gtms.0091.01.00034.01	0	0		Traffic for CS services (speech and Real Time data)		1	textlin
+gtms.0091.01.00035	graph			MBytes		900	450	top	seri.gtms.0091.01.00035.03	0	0		Traffic for PS services (Real Time and Non Real Time data)		1	textlin
+gtms.0091.01.00036	graph			MBytes		900	450	top	seri.gtms.0091.01.00036.01	0	0		Traffic for HSPA PS services (Non Real Time data)		1	textlin
+gtms.0091.01.00037	graph			Kbits/s		900	450	top	seri.gtms.0091.01.00037.01	0	0		Average Non Real Time PS data user throughput on R99 channels		1	textlin
+gtms.0091.01.00038	graph			Kbits/s		900	450	top	seri.gtms.0091.01.00038.01	0	0		Average Non Real Time PS data user throughput on HSDPA and HSUPA channels		1	textlin

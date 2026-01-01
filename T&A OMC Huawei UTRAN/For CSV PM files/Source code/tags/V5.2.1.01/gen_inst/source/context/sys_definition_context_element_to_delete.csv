@@ -1,0 +1,7 @@
+sdcetd_id	sdcetd_table
+corporate	sys_global_parameters
+id_country	sys_global_parameters
+alarm_missing_files_temporization	sys_global_parameters
+dshd.0091.01.007.gtm.04	sys_pauto_config
+dshd.0091.01.007.gtm.05	sys_pauto_config
+seri.gtms.0091.01.00014.03	sys_pauto_config

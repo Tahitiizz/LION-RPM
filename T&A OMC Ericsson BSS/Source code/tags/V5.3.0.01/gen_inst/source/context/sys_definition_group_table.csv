@@ -1,0 +1,4 @@
+edw_group_table	data_source	raw_on_off	kpi_on_off	adv_kpi_on_off	mixed_on_off	family	raw_deploy_status	kpi_deploy_status	adv_kpi_deploy_status	mixed_kpi_deploy_status	id_parser	visible	id_ligne
+edw_eribss_bss_axe1	0	1	1	1	0	bss	1	1	1	1	1	1	1
+edw_eribss_bssgprs_axe1	0	1	1	1	0	bssgprs	1	1	1	1	1	1	2
+edw_eribss_bssadj_axe1	0	1	1	1	0	bssadj	1	1	1	1	1	1	3

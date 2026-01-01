@@ -1,0 +1,9 @@
+family	family_label	object_ref_table	rank	on_off	visible	network_aggregation_min	main_family	automatic_mapping	link_to_aa_3d_axis	separator	network_axe_ri	ta_bypass
+cellb	Cell Based	edw_object_ref	1	1	1	cell	1	1	FALSE	_	1	
+iubl	IUB_LINK	edw_object_ref	2	1	1	iubl	0	1	FALSE	_	1	
+iurl	IUR_LINK	edw_object_ref	3	1	1	iurl	0	1	FALSE	_	1	
+adj	ADJACENCIES	edw_object_ref	4	1	1	stc	0	1	FALSE	_	1	
+lac	LAC	edw_object_ref	5	1	1	lac	0	1	FALSE	_	1	
+rac	RAC	edw_object_ref	6	1	1	rac	0	1	FALSE	_	1	
+nodeb	Node-B	edw_object_ref	7	1	1	sse	0	1	FALSE	_	1	
+rnc	RNC	edw_object_ref	8	1	1	rncsse	0	1	FALSE	_	1	

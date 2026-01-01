@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<chart>
+	<properties>
+		<tabtitle>
+			<text> L:3 lines </text>
+			<text> R: sdqf qsf qsf s</text>
+			<text color="red"> no mark </text>
+			<text>aaaaaa</text>
+			<text>bb  bbvvvba</text>
+			<text>aaaaaa</text>
+			<text> cccccc </text>
+			<text color="orange" font_size="8" font_family="FF_VERDANA"> no fill</text>
+		</tabtitle>
+		<left_axis_label>Nb</left_axis_label>
+		<right_axis_label>Number</right_axis_label>
+		<horizontal_line legend="66 000" color="firebrick3" yaxis="left">66000</horizontal_line>
+		<horizontal_line legend="64 000" color="firebrick2" yaxis="left">64000</horizontal_line>
+		<horizontal_line legend="62 000" color="firebrick1" yaxis="left">62000</horizontal_line>
+		<margin_left>10</margin_left>
+		<margin_right>40</margin_right>
+		<margin_top>20</margin_top>
+		<margin_bottom>40</margin_bottom>
+		<width>800</width>
+		<height>240</height>
+	</properties>
+	<xaxis_labels title="years">
+		<label toto="2010" >2000</label>
+		<label toto="2011" >2001</label>
+		<label toto="2012" >2002</label>
+		<label toto="2013" color="#0000FF">2003</label>
+		<label toto="2014" color="#3333FF">2004</label>
+		<label toto="2015" color="#6666FF">2005</label>
+		<label toto="2016" color="#9999FF">2006</label>
+		<label toto="2017" color="#CCCCFF">2007</label>
+		<label toto="2018" color="#CCCCCC">2008</label>
+		<label toto="2019" color="#0000FF">2009</label>
+		<label toto="2020" color="#3333FF">2010</label>
+		<label toto="2021" color="#6666FF">2011</label>
+		<label toto="2022" color="#9999FF">2012</label>
+		<label toto="2023" color="#CCCCFF">2013</label>
+		<label toto="2024" color="#CCCCCC">2014</label>
+		<label toto="2025" color="#0000FF">2015</label>
+		<label toto="2026">2016</label>
+		<label toto="2027">2017</label>
+		<label toto="2028">2018</label>
+		<label toto="2029">2019</label>
+		<label toto="2030">2020</label>
+		<label toto="2010">2000</label>
+		<label toto="2011">2001</label>
+		<label toto="2012">2002</label>
+		<label toto="2013">2003</label>
+		<label toto="2014">2004</label>
+		<label toto="2015">2005</label>
+		<label toto="2016">2006</label>
+		<label toto="2017">2007</label>
+		<label toto="2018">2008</label>
+		<label toto="2019">2009</label>
+		<label toto="2020">2010</label>
+		<label toto="2021">2011</label>
+		<label toto="2022">2012</label>
+		<label toto="2023">2013</label>
+		<label toto="2024">2014</label>
+		<label toto="2025">2015</label>
+		<label toto="2026">2016</label>
+		<label toto="2027">2017</label>
+		<label toto="2028">2018</label>
+		<label toto="2029">2019</label>
+		<label toto="2030">2020</label>
+	</xaxis_labels>
+	<datas>
+		<data label="Kpi 1" type="bar" stroke_color="#FF6600" yaxis="right" line_design="square" fill_color="orange"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y&amp;arg3=$toto&amp;arg4=$tutu');"
+			onmouseover="pop('$x','$label=$y','/cb40005_iu40012_dev/scripts/launchAA.php?arg0=$label&amp;arg1=$x&amp;arg2=$y&amp;arg3=$toto&amp;arg4=$tutu');"
+			onmouseout="kill();"
+			>
+			<value tutu="truc">26000</value>
+			<value tutu="truc2">36000</value>
+			<value tutu="truc3">8000</value>
+			<value tutu="truc4">35600</value>
+			<value tutu="truc5">5100</value>
+			<value tutu="truc6">97200</value>
+			<value tutu="truc7">24560</value>
+			<value tutu="truc8">4560</value>
+			<value tutu="truc9">14560</value>
+			<value tutu="truc">26000</value>
+			<value tutu="truc2">36000</value>
+			<value tutu="truc3">8000</value>
+			<value tutu="truc4">35600</value>
+			<value tutu="truc5">5100</value>
+			<value tutu="truc6">97200</value>
+			<value tutu="truc7">24560</value>
+			<value tutu="truc8">4560</value>
+			<value tutu="truc9">14560</value>
+			<value tutu="truc">26000</value>
+			<value tutu="truc2">36000</value>
+			<value tutu="truc3">8000</value>
+			<value tutu="truc4">35600</value>
+			<value tutu="truc5">5100</value>
+			<value tutu="truc6">97200</value>
+			<value tutu="truc7">24560</value>
+			<value tutu="truc8">4560</value>
+			<value tutu="truc9">14560</value>
+			<value tutu="truc">26000</value>
+			<value tutu="truc2">36000</value>
+			<value tutu="truc3">8000</value>
+			<value tutu="truc4">35600</value>
+			<value tutu="truc5">5100</value>
+			<value tutu="truc6">97200</value>
+			<value tutu="truc7">24560</value>
+			<value tutu="truc8">4560</value>
+			<value tutu="truc9">14560</value>
+		</data>
+		<data label="Seconde courbe" type="bar" stroke_color="darkcyan" line_design="circle" fill_color="darkcyan" yaxis="right"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y&amp;arg3=$toto&amp;arg4=$tutu');"
+			onmouseover="pop('$x','$label=$y','AA.php?arg0=$label&amp;arg1=$x&amp;arg2=$y&amp;arg3=$toto&amp;arg4=$tutu');"
+			onmouseout="kill();"
+			>
+			<value tutu="truc">54000</value>
+			<value tutu="truc2">43000</value>
+			<value tutu="truc3">78000</value>
+			<value tutu="truc4">4600</value>
+			<value tutu="truc5">56000</value>
+			<value tutu="truc6">76800</value>
+			<value tutu="truc7">2560</value>
+			<value tutu="truc8">34560</value>
+			<value tutu="truc9">44560</value>
+			<value tutu="truc">54000</value>
+			<value tutu="truc2">43000</value>
+			<value tutu="truc3">78000</value>
+			<value tutu="truc4">4600</value>
+			<value tutu="truc5">56000</value>
+			<value tutu="truc6">76800</value>
+			<value tutu="truc7">2560</value>
+			<value tutu="truc8">34560</value>
+			<value tutu="truc9">44560</value>
+			<value tutu="truc">54000</value>
+			<value tutu="truc2">43000</value>
+			<value tutu="truc3">78000</value>
+			<value tutu="truc4">4600</value>
+			<value tutu="truc5">56000</value>
+			<value tutu="truc6">76800</value>
+			<value tutu="truc7">2560</value>
+			<value tutu="truc8">34560</value>
+			<value tutu="truc9">44560</value>
+			<value tutu="truc">54000</value>
+			<value tutu="truc2">43000</value>
+			<value tutu="truc3">78000</value>
+			<value tutu="truc4">4600</value>
+			<value tutu="truc5">56000</value>
+			<value tutu="truc6">76800</value>
+			<value tutu="truc7">2560</value>
+			<value tutu="truc8">34560</value>
+			<value tutu="truc9">44560</value>
+		</data>
+		<data label="Troisième courbe" type="line" stroke_color="royalblue3" line_design="square" yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y&amp;arg3=$toto&amp;arg4=$tutu');"
+			onmouseover="pop('$x','$label=$y','AA.php?arg0=$label&amp;arg1=$x&amp;arg2=$y&amp;arg3=$toto&amp;arg4=$tutu');"
+			onmouseout="kill();"
+			>
+			<value tutu="truc">845</value>
+			<value tutu="truc2">6540</value>
+			<value tutu="truc3">5468</value>
+			<value tutu="truc4">564</value>
+			<value tutu="truc5">3214</value>
+			<value tutu="truc6">9821</value>
+			<value tutu="truc7">4654</value>
+			<value tutu="truc8">544</value>
+			<value tutu="truc9">9852</value>
+			<value tutu="truc">8450</value>
+			<value tutu="truc2">6540</value>
+			<value tutu="truc3">5468</value>
+			<value tutu="truc4">564</value>
+			<value tutu="truc5">3214</value>
+			<value tutu="truc6">9821</value>
+			<value tutu="truc7">4654</value>
+			<value tutu="truc8">544</value>
+			<value tutu="truc9">9852</value>
+			<value tutu="truc">845</value>
+			<value tutu="truc2">6540</value>
+			<value tutu="truc3">5468</value>
+			<value tutu="truc4">564</value>
+			<value tutu="truc5">3214</value>
+			<value tutu="truc6">9821</value>
+			<value tutu="truc7">4654</value>
+			<value tutu="truc8">544</value>
+			<value tutu="truc9">9852</value>
+			<value tutu="truc">845</value>
+			<value tutu="truc2">6540</value>
+			<value tutu="truc3">5468</value>
+			<value tutu="truc4">564</value>
+			<value tutu="truc5">3214</value>
+			<value tutu="truc6">9821</value>
+			<value tutu="truc7">4654</value>
+			<value tutu="truc8">544</value>
+			<value tutu="truc9">9852</value>
+		</data>
+		<data label="4eme courbe" type="line" stroke_color="purple4" line_design="square" yaxis="right"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y&amp;arg3=$toto&amp;arg4=$tutu');"
+			onmouseover="pop('$x','$label=$y','AA.php?arg0=$label&amp;arg1=$x&amp;arg2=$y&amp;arg3=$toto&amp;arg4=$tutu');"
+			onmouseout="kill();"
+			>
+			<value tutu="truc">1845</value>
+			<value tutu="truc2">26540</value>
+			<value tutu="truc3">15468</value>
+			<value tutu="truc4">2564</value>
+			<value tutu="truc5">23214</value>
+			<value tutu="truc6">39821</value>
+			<value tutu="truc7">44654</value>
+			<value tutu="truc8">1544</value>
+			<value tutu="truc9">29852</value>
+			<value tutu="truc">4845</value>
+			<value tutu="truc2">36540</value>
+			<value tutu="truc3">25468</value>
+			<value tutu="truc4">1564</value>
+			<value tutu="truc5">23214</value>
+			<value tutu="truc6">49821</value>
+			<value tutu="truc7">54654</value>
+			<value tutu="truc8">6544</value>
+			<value tutu="truc9">79852</value>
+			<value tutu="truc">8845</value>
+			<value tutu="truc2">46540</value>
+			<value tutu="truc3">55468</value>
+			<value tutu="truc4">2564</value>
+			<value tutu="truc5">93214</value>
+			<value tutu="truc6">59821</value>
+			<value tutu="truc7">34654</value>
+			<value tutu="truc8">5544</value>
+			<value tutu="truc9">49852</value>
+			<value tutu="truc">6845</value>
+			<value tutu="truc2">76540</value>
+			<value tutu="truc3">55468</value>
+			<value tutu="truc4">1564</value>
+			<value tutu="truc5">13214</value>
+			<value tutu="truc6">19821</value>
+			<value tutu="truc7">54654</value>
+			<value tutu="truc8">1544</value>
+			<value tutu="truc9">29852</value>
+		</data>
+	</datas>
+</chart>

@@ -1,0 +1,28 @@
+===================================================================
+
+		Trending&Aggregation Huawei LTE 5.3
+		Version 5.3.0.00
+		Release xxxxx
+		Delivered on: Dec-23-2015
+
+===================================================================
+
+Content:
+
+        T&A Base Component    : V 5.3.3.07
+        T&A Parser            : V 5.3.0.00
+        T&A Context           : V 5.3.0.00
+        T&A Package Generator : V 3.15
+
+New functionnalities (version 5.3.0.00):
+        * include xxxxx
+        * include xxxxx
+
+Fixed Anomalies (version 5.3.0.00):
+        * xxxxx: 
+        * xxxxx:
+
+
+---------------------------------------------------------------------
+History 5.x.y.z:
+---------------------------------------------------------------------

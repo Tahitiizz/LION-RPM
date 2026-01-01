@@ -1,0 +1,8 @@
+id_page	page_name	page_type	droit
+dshd.0077.01.overview	Overview	page	customisateur
+gtms.0077.01.initial_e-rab_setup	Initial E-RAB Setup	gtm	customisateur
+gtms.0077.01.e-rab_drop	E-RAB Drop	gtm	customisateur
+gtms.0077.01.e-rab_retainability	E-RAB Retainability	gtm	customisateur
+gtms.0077.01.throughput	Throughput	gtm	customisateur
+gtms.0077.01.mobility	Mobility	gtm	customisateur
+gtms.0077.01.cell_availability	Cell availability	gtm	customisateur

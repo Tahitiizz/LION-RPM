@@ -1,0 +1,2 @@
+old_template;new_template
+A*.[*+-=,]+_statsfile.xml;A*.[*++-]{0,}=[*++-]{0,},[*++-]{0,}=([*++-]{0,}),[*++-]{0,}=\\1_statsfile.xml

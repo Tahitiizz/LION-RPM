@@ -1,0 +1,20 @@
+# Configuration File for gen_inst.sh and gen_patch.sh scripts
+# If this file is not present, default values will be taken from
+# gen_inst.sh and gen_patch.sh scripts
+
+# Full or Patch installation informations
+produit="iu" # nom en minuscule
+produit_label="IU" # nom du produit pour les titre des dialogues
+default_appname="astellia_iu" # nom par defaut de l'application
+produit_code="TAU50" # code du produit
+ver="5.0.5.03_test" # product version
+verp="5.0.5.03" # parser version
+install_order="cb_base;parser;context" # order d'installation du produit
+code_module="0016" # code du module (cf AA)
+
+# Information pour le fichier CSV
+prop_produit_nom_long="Trending&Aggregation Iu 5.0"
+prop_produit_nom_court="T&A Iu"
+prop_user_manual="Trending&AggregationIU50_UserManual.pdf"
+prop_admin_manual="Trending&AggregationIU50_AdminManual.pdf"
+

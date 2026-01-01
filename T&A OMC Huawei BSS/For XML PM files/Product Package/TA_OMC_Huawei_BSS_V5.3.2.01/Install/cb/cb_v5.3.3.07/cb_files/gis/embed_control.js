@@ -1,0 +1,1 @@
+document.write('<embed name="controlSVG" type="image/svg+xml" width="400" height="400" src="./gis_scripts/svg-control.svg" wmode="transparent"></embed>');

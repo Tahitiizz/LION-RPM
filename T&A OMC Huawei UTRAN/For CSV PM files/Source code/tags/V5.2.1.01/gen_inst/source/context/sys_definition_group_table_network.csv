@@ -1,0 +1,15 @@
+id_ligne	id_group_table	network_agregation	network_agregation_label	rank	data_type	on_off	comment	deploy_status	id_source
+101	1	cell	Cell	-1	raw	1		0	101
+102	1	usercluster1	UserCellCluster1	101	raw	1		0	101
+103	1	usercluster2	UserCellCluster2	101	raw	1		0	101
+104	1	usercluster3	UserCellCluster3	101	raw	1		0	101
+105	1	rnc	RNC	101	raw	1		0	101
+106	1	network	Network	105	raw	1		0	105
+107	1	vendor	Vendor	105	raw	1		0	105
+151	1	cell	Cell	-1	kpi	1		0	151
+152	1	usercluster1	UserCellCluster1	151	kpi	1		0	151
+153	1	usercluster2	UserCellCluster2	151	kpi	1		0	151
+154	1	usercluster3	UserCellCluster3	151	kpi	1		0	151
+155	1	rnc	RNC	151	kpi	1		0	151
+156	1	network	Network	155	kpi	1		0	155
+157	1	vendor	Vendor	155	kpi	1		0	155

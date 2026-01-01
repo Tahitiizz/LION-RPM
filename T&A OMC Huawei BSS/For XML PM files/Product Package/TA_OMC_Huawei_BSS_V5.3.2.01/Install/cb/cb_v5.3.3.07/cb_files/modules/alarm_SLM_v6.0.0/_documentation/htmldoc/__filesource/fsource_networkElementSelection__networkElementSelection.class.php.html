@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for networkElementSelection.class.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file networkElementSelection.class.php</h1>
+<p>Documentation is available at <a href="../networkElementSelection/_networkElementSelection_class_php.html">networkElementSelection.class.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?php</span></li>
+<li><a name="a2"></a>&nbsp;</li>
+<li><a name="a3"></a><span class="src-doc">/**</span></li>
+<li><a name="a4"></a><span class="src-doc">* Classe networkElementSelection</span></li>
+<li><a name="a5"></a><span class="src-doc">*</span></li>
+<li><a name="a6"></a><span class="src-doc">* Permet d'afficher une IHM listant des éléments réseaux</span></li>
+<li><a name="a7"></a><span class="src-doc">*</span></li>
+<li><a name="a8"></a><span class="src-doc">* </span><span class="src-doc-coretag">@package</span><span class="src-doc"> networkElementSelection</span></li>
+<li><a name="a9"></a><span class="src-doc">* </span><span class="src-doc-coretag">@author</span><span class="src-doc"> christophe chaput c.chaput@astellia.com</span></li>
+<li><a name="a10"></a><span class="src-doc">* </span><span class="src-doc-coretag">@version</span><span class="src-doc"> 1.0.0</span></li>
+<li><a name="a11"></a><span class="src-doc">* </span><span class="src-doc-coretag">@copyright</span><span class="src-doc"> ©2008 Astellia</span></li>
+<li><a name="a12"></a><span class="src-doc">*/</span></li>
+<li><a name="a13"></a><span class="src-key">class </span><a href="../networkElementSelection/networkElementSelection.html">networkElementSelection</a></li>
+<li><a name="a14"></a><span class="src-sym">{</span></li>
+<li><a name="a15"></a>    <span class="src-comm">// Liste des propriétés.</span></li>
+<li><a name="a16"></a>    </li>
+<li><a name="a15"></a>    </li>
+<li><a name="a16"></a>    </li>
+<li><a name="a17"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a18"></a><span class="src-doc">    * Titre de la fenêtre javascript.</span></li>
+<li><a name="a19"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">string </span></li>
+<li><a name="a20"></a><span class="src-doc">    */</span></li>
+<li><a name="a21"></a>    <span class="src-key">protected </span><a href="../networkElementSelection/networkElementSelection.html#var$windowTitle">$windowTitle</a><span class="src-sym">;</span></li>
+<li><a name="a22"></a>        </li>
+<li><a name="a23"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a24"></a><span class="src-doc">    * Style CSS à appliquer au bouton qui ouvre l'interface lorsque aucun élément n'est sélectionné.</span></li>
+<li><a name="a25"></a><span class="src-doc">    *    $this-&gt;openButtonProperties['id']  : id de l'élément html qui permet d'afficher l'IHM</span></li>
+<li><a name="a26"></a><span class="src-doc">    *    $this-&gt;openButtonProperties['css_class_on']  : classe css à appliquer quand un élément est sélectionné</span></li>
+<li><a name="a27"></a><span class="src-doc">    *    $this-&gt;openButtonProperties['css_class_off'] : classe css à appliquer quand aucun élément n'est sélectionné</span></li>
+<li><a name="a28"></a><span class="src-doc">    *</span></li>
+<li><a name="a29"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">array </span></li>
+<li><a name="a30"></a><span class="src-doc">    */</span></li>
+<li><a name="a31"></a>    <span class="src-key">protected </span><a href="../networkElementSelection/networkElementSelection.html#var$openButtonProperties">$openButtonProperties</a><span class="src-sym">;</span></li>
+<li><a name="a32"></a>    </li>
+<li><a name="a33"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a34"></a><span class="src-doc">    * Tableau contenant la liste des onglets à afficher. Pour chaque onglet on définit la label et les url (avec paramètre GET) vers</span></li>
+<li><a name="a35"></a><span class="src-doc">    * le fichier qui permet de liste le contenu et celui qui permet de faire la recherche.</span></li>
+<li><a name="a36"></a><span class="src-doc">    * $tabList[$i]['label']</span></li>
+<li><a name="a37"></a><span class="src-doc">    *          ['url_get']</span></li>
+<li><a name="a38"></a><span class="src-doc">    *          ['url_search']</span></li>
+<li><a name="a39"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">array </span></li>
+<li><a name="a40"></a><span class="src-doc">    */</span></li>
+<li><a name="a41"></a>    <span class="src-key">protected </span><a href="../networkElementSelection/networkElementSelection.html#var$tabList">$tabList</a><span class="src-sym">;</span></li>
+<li><a name="a42"></a>    </li>
+<li><a name="a43"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a44"></a><span class="src-doc">    * Contient le nom de la propriété name et id du champ input hidden dans lequel la sélection courante est sauvegardée.</span></li>
+<li><a name="a45"></a><span class="src-doc">    *     $saveFieldProperties['id']</span></li>
+<li><a name="a46"></a><span class="src-doc">    *     $saveFieldProperties['separator']</span></li>
+<li><a name="a47"></a><span class="src-doc">    *     $saveFieldProperties['display']</span></li>
+<li><a name="a48"></a><span class="src-doc">    *     $saveFieldProperties['value']</span></li>
+<li><a name="a49"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">array </span></li>
+<li><a name="a50"></a><span class="src-doc">    */</span></li>
+<li><a name="a51"></a>    <span class="src-key">protected </span><a href="../networkElementSelection/networkElementSelection.html#var$saveFieldProperties">$saveFieldProperties</a><span class="src-sym">;</span></li>
+<li><a name="a52"></a>&nbsp;</li>
+<li><a name="a53"></a>    </li>
+<li><a name="a54"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a55"></a><span class="src-doc">    * Préfixe à ajouter à tous les identifiants 'id' html</span></li>
+<li><a name="a56"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">string </span></li>
+<li><a name="a57"></a><span class="src-doc">    */</span></li>
+<li><a name="a58"></a>    <span class="src-key">protected </span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">$htmlIdPrefix</a><span class="src-sym">;</span></li>
+<li><a name="a59"></a>    </li>
+<li><a name="a60"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a61"></a><span class="src-doc">    * fichier qui sera intérrogé via une requête ajax lorsque l'utilisateur clique sur le bouton 'View current selection content'</span></li>
+<li><a name="a62"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">string </span></li>
+<li><a name="a63"></a><span class="src-doc">    */</span></li>
+<li><a name="a64"></a>    <span class="src-key">protected </span><a href="../networkElementSelection/networkElementSelection.html#var$viewCurrentSelectionContentUrl">$viewCurrentSelectionContentUrl</a><span class="src-sym">;</span></li>
+<li><a name="a65"></a>    </li>
+<li><a name="a66"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a67"></a><span class="src-doc">    * définit si le bouton 'View current selection content' est visible.</span></li>
+<li><a name="a68"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">bool </span></li>
+<li><a name="a69"></a><span class="src-doc">    */</span></li>
+<li><a name="a70"></a>    <span class="src-key">protected </span><a href="../networkElementSelection/networkElementSelection.html#var$viewCurrentSelectionContent">$viewCurrentSelectionContent</a><span class="src-sym">;</span></li>
+<li><a name="a71"></a>    </li>
+<li><a name="a72"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a73"></a><span class="src-doc">    * booléen qui définit si on doit afficher le champ de saisie libre.</span></li>
+<li><a name="a74"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">bool </span></li>
+<li><a name="a75"></a><span class="src-doc">    */</span></li>
+<li><a name="a76"></a>    <span class="src-key">protected </span><a href="../networkElementSelection/networkElementSelection.html#var$freeInputField">$freeInputField</a><span class="src-sym">;</span></li>
+<li><a name="a77"></a>    </li>
+<li><a name="a78"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a79"></a><span class="src-doc">    * booléen qui définit si on doit afficher le champ de saisie libre.</span></li>
+<li><a name="a80"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">bool </span></li>
+<li><a name="a81"></a><span class="src-doc">    */</span></li>
+<li><a name="a82"></a>    <span class="src-key">protected </span><a href="../networkElementSelection/networkElementSelection.html#var$setOpenButtonPropertiesCalled">$setOpenButtonPropertiesCalled</a><span class="src-sym">;</span></li>
+<li><a name="a83"></a>    </li>
+<li><a name="a84"></a>&nbsp;</li>
+<li><a name="a85"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a86"></a><span class="src-doc">    * Constructeur de la classe networkElementSelection</span></li>
+<li><a name="a87"></a><span class="src-doc">    *</span></li>
+<li><a name="a88"></a><span class="src-doc">    */</span></li>
+<li><a name="a89"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a90"></a>    <span class="src-sym">{</span></li>
+<li><a name="a91"></a>        <span class="src-comm">// On initialise les valeurs par défaut.</span></li>
+<li><a name="a92"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#methodsetWindowTitle">setWindowTitle</a><span class="src-sym">(</span><span class="src-str">'Default title'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a93"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#methodsetHtmlIdPrefix">setHtmlIdPrefix</a><span class="src-sym">(</span><span class="src-str">'nEs'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a94"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#methodsetSaveFieldProperties">setSaveFieldProperties</a><span class="src-sym">(</span><span class="src-str">'save_field'</span><span class="src-sym">, </span><span class="src-str">''</span><span class="src-sym">, </span><span class="src-str">'|s|'</span><span class="src-sym">, </span><span class="src-num">0</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a95"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$viewCurrentSelectionContent">viewCurrentSelectionContent</a> = <span class="src-id">false</span><span class="src-sym">;</span></li>
+<li><a name="a96"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#methodsetFreeInputField">setFreeInputField</a><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a97"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$setOpenButtonPropertiesCalled">setOpenButtonPropertiesCalled</a> = <span class="src-id">false</span><span class="src-sym">;</span></li>
+<li><a name="a98"></a>    <span class="src-sym">}</span></li>
+<li><a name="a99"></a>    </li>
+<li><a name="a100"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a101"></a><span class="src-doc">    * setWindowTitle : permet de définir le titre de la fenêtre</span></li>
+<li><a name="a102"></a><span class="src-doc">    *</span></li>
+<li><a name="a103"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$title </span><span class="src-doc">titre de la fenêtre</span></li>
+<li><a name="a104"></a><span class="src-doc">    */</span></li>
+<li><a name="a105"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodsetWindowTitle">setWindowTitle</a><span class="src-sym">(</span><span class="src-var">$title</span><span class="src-sym">)</span></li>
+<li><a name="a106"></a>    <span class="src-sym">{</span></li>
+<li><a name="a107"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$windowTitle">windowTitle</a> = <span class="src-var">$title</span><span class="src-sym">;</span></li>
+<li><a name="a108"></a>    <span class="src-sym">}</span></li>
+<li><a name="a109"></a>    </li>
+<li><a name="a110"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a111"></a><span class="src-doc">    * setFreeInputField : permet de définir si le champ de saisie libre est visible.</span></li>
+<li><a name="a112"></a><span class="src-doc">    *</span></li>
+<li><a name="a113"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">bool </span><span class="src-doc-var">$display </span><span class="src-doc">: 0 ou 1</span></li>
+<li><a name="a114"></a><span class="src-doc">    */</span></li>
+<li><a name="a115"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodsetFreeInputField">setFreeInputField</a><span class="src-sym">(</span><span class="src-var">$display</span><span class="src-sym">)</span></li>
+<li><a name="a116"></a>    <span class="src-sym">{</span></li>
+<li><a name="a117"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$freeInputField">freeInputField</a> = <span class="src-var">$display</span><span class="src-sym">;</span></li>
+<li><a name="a118"></a>    <span class="src-sym">}</span></li>
+<li><a name="a119"></a>    </li>
+<li><a name="a120"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a121"></a><span class="src-doc">    * setHtmlIdPrefix : permet de définir un préfixe à ajouter à tous les identifiants 'id' html</span></li>
+<li><a name="a122"></a><span class="src-doc">    * cela permet d'éviter d'avoir des id identiques.</span></li>
+<li><a name="a123"></a><span class="src-doc">    * Attention, si cette méthode est utilisée, il faut l'appeler juste après le constructeur de la classe et</span></li>
+<li><a name="a124"></a><span class="src-doc">    * venant la méthode setOpenButtonProperties pour que le préfixe soit bien pris en compte..</span></li>
+<li><a name="a125"></a><span class="src-doc">    *</span></li>
+<li><a name="a126"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$prefix </span><span class="src-doc">préfixe</span></li>
+<li><a name="a127"></a><span class="src-doc">    */</span></li>
+<li><a name="a128"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodsetHtmlIdPrefix">setHtmlIdPrefix</a><span class="src-sym">(</span><span class="src-var">$prefix</span><span class="src-sym">)</span></li>
+<li><a name="a129"></a>    <span class="src-sym">{</span></li>
+<li><a name="a130"></a>        <span class="src-comm">// 22/07/2008 - Modif. benoit : on prend en compte le cas du prefixe vide. Dans ce cas, on n'ajoute pas l'underscore</span></li>
+<li><a name="a131"></a>        </li>
+<li><a name="a132"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a> = <span class="src-sym">((</span><span class="src-var">$prefix </span>== <span class="src-str">&quot;&quot;</span><span class="src-sym">) </span>? <span class="src-str">&quot;&quot; </span>: <span class="src-var">$prefix</span>.<span class="src-str">'_'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a133"></a>    <span class="src-sym">}</span></li>
+<li><a name="a134"></a>    </li>
+<li><a name="a135"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a136"></a><span class="src-doc">    * setOpenButtonProperties : permet de définir le style css du bouton qui permet d'ouvrir l'interface et son id.</span></li>
+<li><a name="a137"></a><span class="src-doc">    *</span></li>
+<li><a name="a138"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$css_class_on </span><span class="src-doc">classe css à appliquer au bouton quand un ou des éléments sont sélectionnés</span></li>
+<li><a name="a139"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$css_class_off </span><span class="src-doc">classe css à appliquer au bouton quand aucun élément n'est sélectionné</span></li>
+<li><a name="a140"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$id </span><span class="src-doc">id de l'élément html qui permet d'afficher l'IHM</span></li>
+<li><a name="a141"></a><span class="src-doc">    */</span></li>
+<li><a name="a142"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodsetOpenButtonProperties">setOpenButtonProperties</a><span class="src-sym">(</span><span class="src-var">$id</span><span class="src-sym">, </span><span class="src-var">$css_class_on</span>=<span class="src-str">''</span><span class="src-sym">, </span><span class="src-var">$css_class_off</span>=<span class="src-str">''</span><span class="src-sym">)</span></li>
+<li><a name="a143"></a>    <span class="src-sym">{</span></li>
+<li><a name="a144"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$openButtonProperties">openButtonProperties</a><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">] </span>= <span class="src-var">$id</span><span class="src-sym">;</span></li>
+<li><a name="a145"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$openButtonProperties">openButtonProperties</a><span class="src-sym">[</span><span class="src-str">'css_class_on'</span><span class="src-sym">] </span>=     <span class="src-var">$css_class_on</span><span class="src-sym">;</span></li>
+<li><a name="a146"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$openButtonProperties">openButtonProperties</a><span class="src-sym">[</span><span class="src-str">'css_class_off'</span><span class="src-sym">] </span>=     <span class="src-var">$css_class_off</span><span class="src-sym">;</span></li>
+<li><a name="a147"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$setOpenButtonPropertiesCalled">setOpenButtonPropertiesCalled</a> = <span class="src-id">true</span><span class="src-sym">;</span></li>
+<li><a name="a148"></a>    <span class="src-sym">}</span></li>
+<li><a name="a149"></a>    </li>
+<li><a name="a150"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a151"></a><span class="src-doc">    * setSaveFieldProperties : permet de choisir le nom du champ 'name' et 'id' du champ input hidden qui contient la liste des éléments sélectionnés.</span></li>
+<li><a name="a152"></a><span class="src-doc">    *</span></li>
+<li><a name="a153"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$id </span><span class="src-doc">nom de la propriété 'id' du champ</span></li>
+<li><a name="a154"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$value </span><span class="src-doc">valeur courrante</span></li>
+<li><a name="a155"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$separator </span><span class="src-doc">séparateur des valeurs stockées dans le champ input</span></li>
+<li><a name="a156"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">boll </span><span class="src-doc-var">$display </span><span class="src-doc">0 ou 1 si = 1, le champ caché qui permet de stocker les données est affiché.</span></li>
+<li><a name="a157"></a><span class="src-doc">    */</span></li>
+<li><a name="a158"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodsetSaveFieldProperties">setSaveFieldProperties</a><span class="src-sym">(</span><span class="src-var">$id</span><span class="src-sym">, </span><span class="src-var">$value</span><span class="src-sym">, </span><span class="src-var">$separator</span><span class="src-sym">, </span><span class="src-var">$display</span><span class="src-sym">)</span></li>
+<li><a name="a159"></a>    <span class="src-sym">{</span></li>
+<li><a name="a160"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$saveFieldProperties">saveFieldProperties</a><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">] </span>=             <span class="src-var">$id</span><span class="src-sym">;</span></li>
+<li><a name="a161"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$saveFieldProperties">saveFieldProperties</a><span class="src-sym">[</span><span class="src-str">'separator'</span><span class="src-sym">] </span>=     <span class="src-var">$separator</span><span class="src-sym">;</span></li>
+<li><a name="a162"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$saveFieldProperties">saveFieldProperties</a><span class="src-sym">[</span><span class="src-str">'display'</span><span class="src-sym">] </span>=     <span class="src-var">$display</span><span class="src-sym">;</span></li>
+<li><a name="a163"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$saveFieldProperties">saveFieldProperties</a><span class="src-sym">[</span><span class="src-str">'value'</span><span class="src-sym">] </span>=         <span class="src-var">$value</span><span class="src-sym">;</span></li>
+<li><a name="a164"></a>    <span class="src-sym">}</span></li>
+<li><a name="a165"></a>    </li>
+<li><a name="a166"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a167"></a><span class="src-doc">    * displayException :  affiche un message d'erreur.</span></li>
+<li><a name="a168"></a><span class="src-doc">    *</span></li>
+<li><a name="a169"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$text </span><span class="src-doc">texte à afficher.</span></li>
+<li><a name="a170"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">void </span></li>
+<li><a name="a171"></a><span class="src-doc">    */</span></li>
+<li><a name="a172"></a>    <span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methoddisplayException">displayException</a><span class="src-sym">(</span><span class="src-var">$text</span><span class="src-sym">)</span></li>
+<li><a name="a173"></a>    <span class="src-sym">{</span></li>
+<li><a name="a174"></a>        echo <span class="src-sym">(</span><span class="src-str">'&lt;div class=&quot;networkElementSelectionError&quot;&gt;&lt;b&gt;'</span>.__CLASS__.<span class="src-str">' class Error &lt;/b&gt;:'</span>.<span class="src-var">$text</span>.<span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a175"></a>    <span class="src-sym">}</span></li>
+<li><a name="a176"></a>    </li>
+<li><a name="a177"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a178"></a><span class="src-doc">    * addTabInIHM : permet d'ajouter un onglet à l'interface.</span></li>
+<li><a name="a179"></a><span class="src-doc">    *</span></li>
+<li><a name="a180"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">id </span><span class="src-doc">string $id identifiant id qui sera donné au div contenant la liste des éléments (note : le div qui affiche le nom de l'onglet a pour id : 'id'_title)</span></li>
+<li><a name="a181"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$label </span><span class="src-doc">label à afficher dans l'IHM</span></li>
+<li><a name="a182"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$url_to_get_list </span><span class="src-doc">url complète vers le fichier qui permet de récupérer la liste des éléments de l'onglet. Il faut que cette url contienne les paramètre GET si il y en a.</span></li>
+<li><a name="a183"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$url_for_search </span><span class="src-doc">url complète vers le fichier qui permet de recherche des éléments. Il faut que cette url contienne les paramètre GET si il y en a.</span></li>
+<li><a name="a184"></a><span class="src-doc">    */</span></li>
+<li><a name="a185"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodaddTabInIHM">addTabInIHM</a><span class="src-sym">(</span><span class="src-var">$id</span><span class="src-sym">, </span><span class="src-var">$label</span><span class="src-sym">, </span><span class="src-var">$url_to_get_list</span><span class="src-sym">, </span><span class="src-var">$url_for_search</span>=<span class="src-str">''</span><span class="src-sym">)</span></li>
+<li><a name="a186"></a>    <span class="src-sym">{</span></li>
+<li><a name="a187"></a>        <span class="src-key">if </span><span class="src-sym">( </span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$id</span><span class="src-sym">) </span>|| <span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$label</span><span class="src-sym">) </span>|| <span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$url_to_get_list</span><span class="src-sym">) )</span></li>
+<li><a name="a188"></a>        <span class="src-sym">{</span></li>
+<li><a name="a189"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#methoddisplayException">displayException</a><span class="src-sym">(</span>__METHOD__.<span class="src-str">' : one or several parameters missing.'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a190"></a>        <span class="src-sym">}</span></li>
+<li><a name="a191"></a>        <span class="src-var">$i </span>= <a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$tabList">tabList</a><span class="src-sym">) </span>+ <span class="src-num">1</span><span class="src-sym">;</span></li>
+<li><a name="a192"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$tabList">tabList</a><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">] </span>=             <span class="src-var">$id</span><span class="src-sym">;</span></li>
+<li><a name="a193"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$tabList">tabList</a><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'label'</span><span class="src-sym">] </span>=         <span class="src-var">$label</span><span class="src-sym">;</span></li>
+<li><a name="a194"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$tabList">tabList</a><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'url_get'</span><span class="src-sym">] </span>=     <span class="src-var">$url_to_get_list</span><span class="src-sym">;</span></li>
+<li><a name="a195"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$tabList">tabList</a><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'url_search'</span><span class="src-sym">] </span>=     <span class="src-var">$url_for_search</span><span class="src-sym">;</span></li>
+<li><a name="a196"></a>        </li>
+<li><a name="a197"></a>        <span class="src-comm">// On vérifie si l'utilisateur n'a pas saisie</span></li>
+<li><a name="a198"></a>    <span class="src-sym">}</span></li>
+<li><a name="a199"></a>    </li>
+<li><a name="a200"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a201"></a><span class="src-doc">    * setViewCurrentSelectionContentButtonProperties : permet de paramétrer le fichier qui sera intérrogé via une requête ajax lorsque l'utilisateur</span></li>
+<li><a name="a202"></a><span class="src-doc">    * clique sur le bouton 'View current selection content'. Ce fichier peut avoir des paramètres. Il doit retourner la liste des éléments contenu dans la sélection courante avec leurs labels.</span></li>
+<li><a name="a203"></a><span class="src-doc">    *</span></li>
+<li><a name="a204"></a><span class="src-doc">    * Le script rajoute automatiquement en paramètre $_GET :</span></li>
+<li><a name="a205"></a><span class="src-doc">    *    $_GET['save_input'] : contenu du champ input dans lequel est stocké la sélection courrante. Attention, le nom du paramètre GET correspond au nom du champ input</span></li>
+<li><a name="a206"></a><span class="src-doc">    *    paramétré dans la méthode setSaveFieldProperties. (save_input est noté à totre d'exemple)</span></li>
+<li><a name="a207"></a><span class="src-doc">    *     $_GET['separator'] : contient le séparateur des champs enregistrés.</span></li>
+<li><a name="a208"></a><span class="src-doc">    *</span></li>
+<li><a name="a209"></a><span class="src-doc">    * Attention : si url_to_get_selection est vide, le bouton sera affiché mais le contenu retourné sera une simple liste des identifiants stockés</span></li>
+<li><a name="a210"></a><span class="src-doc">    * dans le champ input.</span></li>
+<li><a name="a211"></a><span class="src-doc">    *</span></li>
+<li><a name="a212"></a><span class="src-doc">    * Note : si cette méthode n'est pas appelée, le bouton n'est pas affiché.</span></li>
+<li><a name="a213"></a><span class="src-doc">    *</span></li>
+<li><a name="a214"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$url_to_get_selection </span></li>
+<li><a name="a215"></a><span class="src-doc">    */</span></li>
+<li><a name="a216"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodsetViewCurrentSelectionContentButtonProperties">setViewCurrentSelectionContentButtonProperties</a><span class="src-sym">(</span><span class="src-var">$url_to_get_selection </span>= <span class="src-str">''</span><span class="src-sym">)</span></li>
+<li><a name="a217"></a>    <span class="src-sym">{</span></li>
+<li><a name="a218"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$viewCurrentSelectionContentUrl">viewCurrentSelectionContentUrl</a> = <span class="src-var">$url_to_get_selection</span><span class="src-sym">;</span></li>
+<li><a name="a219"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$viewCurrentSelectionContent">viewCurrentSelectionContent</a> = <span class="src-id">true</span><span class="src-sym">;</span></li>
+<li><a name="a220"></a>    <span class="src-sym">}</span></li>
+<li><a name="a221"></a>&nbsp;</li>
+<li><a name="a222"></a>    </li>
+<li><a name="a223"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a224"></a><span class="src-doc">    * generateTab : permet de générer le code html des onglets</span></li>
+<li><a name="a225"></a><span class="src-doc">    *</span></li>
+<li><a name="a226"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">html </span></li>
+<li><a name="a227"></a><span class="src-doc">    */</span></li>
+<li><a name="a228"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodgenerateTab">generateTab</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a229"></a>    <span class="src-sym">{</span></li>
+<li><a name="a230"></a>        <span class="src-var">$html_tab </span>= <span class="src-str">'No tab specified : use addTabInIHM() method to add some tabs.'</span><span class="src-sym">;</span></li>
+<li><a name="a231"></a>        </li>
+<li><a name="a232"></a>        <span class="src-comm">// Si on a des onglets à afficher, on construit la structure html.</span></li>
+<li><a name="a233"></a>        <span class="src-key">if </span><span class="src-sym">( </span><a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$tabList">tabList</a><span class="src-sym">) </span>&gt;= <span class="src-num">1 </span><span class="src-sym">)</span></li>
+<li><a name="a234"></a>        <span class="src-sym">{</span></li>
+<li><a name="a235"></a>            <span class="src-var">$html_tab </span>= <span class="src-str">''</span><span class="src-sym">;</span></li>
+<li><a name="a236"></a>            <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$tabList">tabList</a> <span class="src-key">as </span><span class="src-var">$tab</span><span class="src-sym">)</span></li>
+<li><a name="a237"></a>            <span class="src-sym">{</span></li>
+<li><a name="a238"></a>                <span class="src-comm">// Titre d'une barre d'onglet.</span></li>
+<li><a name="a239"></a>                <span class="src-var">$html_tab </span>.= <span class="src-str">'</span></li>
+<li><a name="a240"></a><span class="src-str">                    &lt;div     id=&quot;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-var">$tab</span><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span>.<span class="src-str">'_title&quot; </span></li>
+<li><a name="a241"></a><span class="src-str">                            class=&quot;accordion_title&quot; </span></li>
+<li><a name="a242"></a><span class="src-str">                            onclick=&quot;openTab(\''</span>.<span class="src-var">$tab</span><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span>.<span class="src-str">'\',\''</span>.<span class="src-var">$tab</span><span class="src-sym">[</span><span class="src-str">'url_get'</span><span class="src-sym">]</span>.<span class="src-str">'\',\''</span>.<span class="src-var">$tab</span><span class="src-sym">[</span><span class="src-str">'url_search'</span><span class="src-sym">]</span>.<span class="src-str">'\')&quot;&gt;</span></li>
+<li><a name="a243"></a><span class="src-str">                        '</span>.<span class="src-var">$tab</span><span class="src-sym">[</span><span class="src-str">'label'</span><span class="src-sym">]</span>.<span class="src-str">'</span></li>
+<li><a name="a244"></a><span class="src-str">                    &lt;/div&gt;</span></li>
+<li><a name="a245"></a><span class="src-str">                '</span><span class="src-sym">;</span></li>
+<li><a name="a246"></a>&nbsp;</li>
+<li><a name="a247"></a>                <span class="src-comm">// Div de l'onglet qui contiendra la liste des données</span></li>
+<li><a name="a248"></a>                <span class="src-var">$html_tab </span>.= <span class="src-str">&quot;</span></li>
+<li><a name="a249"></a><span class="src-str">                    &lt;div id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-var">$tab</span><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span>.<span class="src-str">&quot;' class='accordion_element' style='display:none'&gt;</span></li>
+<li><a name="a250"></a><span class="src-str">                    &lt;/div&gt;</span></li>
+<li><a name="a251"></a><span class="src-str">                &quot;</span><span class="src-sym">;</span></li>
+<li><a name="a252"></a>            <span class="src-sym">}</span></li>
+<li><a name="a253"></a>        <span class="src-sym">}</span></li>
+<li><a name="a254"></a>        <span class="src-key">else</span></li>
+<li><a name="a255"></a>        <span class="src-sym">{</span></li>
+<li><a name="a256"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#methoddisplayException">displayException</a><span class="src-sym">(</span>__METHOD__.<span class="src-str">', No tab specified, use addTabInIHM() method to add some tabs.'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a257"></a>        <span class="src-sym">}</span></li>
+<li><a name="a258"></a>        </li>
+<li><a name="a259"></a>        <span class="src-key">return </span><span class="src-var">$html_tab</span><span class="src-sym">;</span></li>
+<li><a name="a260"></a>    <span class="src-sym">}</span></li>
+<li><a name="a261"></a>    </li>
+<li><a name="a262"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a263"></a><span class="src-doc">    * generateSearch : permet de générer le code html de la partie de recherche</span></li>
+<li><a name="a264"></a><span class="src-doc">    *</span></li>
+<li><a name="a265"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">html </span></li>
+<li><a name="a266"></a><span class="src-doc">    */</span></li>
+<li><a name="a267"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodgenerateSearch">generateSearch</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a268"></a>    <span class="src-sym">{</span></li>
+<li><a name="a269"></a>        <span class="src-var">$html_search </span>= <span class="src-str">''</span><span class="src-sym">;</span></li>
+<li><a name="a270"></a>        <span class="src-comm">/*</span></li>
+<li><a name="a271"></a><span class="src-comm">            Restriction : dans le champ input où l'utilisateur saisit l'élément à recherche (id='prefixe+neSearchInput')la propriété autocomplete='off' permet de ne pas afficher </span></li>
+<li><a name="a272"></a><span class="src-comm">            les suggestions du navigateur si l'utilisateur a sélectionné l'option 'enregistrer les données saisies dans les formulaires'. </span></li>
+<li><a name="a273"></a><span class="src-comm">            Cela ne fonctione que sur Internet Explorer.</span></li>
+<li><a name="a274"></a><span class="src-comm">        */</span></li>
+<li><a name="a275"></a>        <span class="src-var">$html_search </span>= <span class="src-str">&quot;</span></li>
+<li><a name="a276"></a><span class="src-str">            &lt;div style='margin:4px;' id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;divNeSearch' style='display:none;'&gt;</span></li>
+<li><a name="a277"></a><span class="src-str">                &lt;fieldset style='padding:2px;'&gt;</span></li>
+<li><a name="a278"></a><span class="src-str">                    &lt;label for='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;neSearchInput'&gt;</span></li>
+<li><a name="a279"></a><span class="src-str">                        Search on : &lt;span id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;divNeSearch_label'&gt;&lt;/span&gt;</span></li>
+<li><a name="a280"></a><span class="src-str">                    &lt;/label&gt; </span></li>
+<li><a name="a281"></a><span class="src-str">                    &lt;br /&gt;</span></li>
+<li><a name="a282"></a><span class="src-str">                    &lt;input type='text' name='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;neSearchInput' id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;neSearchInput' autocomplete='off' </span></li>
+<li><a name="a283"></a><span class="src-str">                        class='zoneTexteStyleNeSelection' style='width:340px;'/&gt;</span></li>
+<li><a name="a284"></a><span class="src-str">                    &amp;nbsp;</span></li>
+<li><a name="a285"></a><span class="src-str">                    &lt;input type='submit' id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;neSearchSubmit' class='bouton_go' value='' /&gt;</span></li>
+<li><a name="a286"></a><span class="src-str">                &lt;/fieldset&gt;</span></li>
+<li><a name="a287"></a><span class="src-str">            &lt;/div&gt;</span></li>
+<li><a name="a288"></a><span class="src-str">        &quot;</span><span class="src-sym">;</span></li>
+<li><a name="a289"></a>        </li>
+<li><a name="a290"></a>        <span class="src-key">return </span><span class="src-var">$html_search</span><span class="src-sym">;</span></li>
+<li><a name="a291"></a>    <span class="src-sym">}</span></li>
+<li><a name="a292"></a>    </li>
+<li><a name="a293"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a294"></a><span class="src-doc">    * generateOption : permet de générer le code html de la zone options (icônes view current selection...)</span></li>
+<li><a name="a295"></a><span class="src-doc">    *</span></li>
+<li><a name="a296"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">html </span></li>
+<li><a name="a297"></a><span class="src-doc">    */</span></li>
+<li><a name="a298"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodgenerateOption">generateOption</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a299"></a>    <span class="src-sym">{</span></li>
+<li><a name="a300"></a>        <span class="src-var">$html_option </span>= <span class="src-str">''</span><span class="src-sym">;</span></li>
+<li><a name="a301"></a>        <span class="src-var">$html_option </span>= <span class="src-str">'</span></li>
+<li><a name="a302"></a><span class="src-str">            &lt;div style=&quot;width:20px;float:left; padding:3px; padding-left:10px;&quot;&gt;</span></li>
+<li><a name="a303"></a><span class="src-str">            &lt;input type=&quot;button&quot; class=&quot;bouton_view_selection&quot; </span></li>
+<li><a name="a304"></a><span class="src-str">                onclick=&quot;loadCurrentSelection(\''</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$viewCurrentSelectionContentUrl">viewCurrentSelectionContentUrl</a>.<span class="src-str">'\')&quot; </span></li>
+<li><a name="a305"></a><span class="src-str">                value=&quot;&quot;</span></li>
+<li><a name="a306"></a><span class="src-str">                onmouseover=&quot;updateNeSelectionWindowStatus(\'View current selection content\')&quot; </span></li>
+<li><a name="a307"></a><span class="src-str">                onmouseout=&quot;updateNeSelectionWindowStatus(\'\')&quot;/&gt;</span></li>
+<li><a name="a308"></a><span class="src-str">            &lt;/div&gt;</span></li>
+<li><a name="a309"></a><span class="src-str">        '</span><span class="src-sym">;</span></li>
+<li><a name="a310"></a>        </li>
+<li><a name="a311"></a>        <span class="src-key">return </span><span class="src-var">$html_option</span><span class="src-sym">;</span></li>
+<li><a name="a312"></a>    <span class="src-sym">}</span></li>
+<li><a name="a313"></a>    </li>
+<li><a name="a314"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a315"></a><span class="src-doc">    * generateButton : permet de générer le code html des boutons de l'IHM (bouto save, reset...)</span></li>
+<li><a name="a316"></a><span class="src-doc">    *</span></li>
+<li><a name="a317"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">html </span></li>
+<li><a name="a318"></a><span class="src-doc">    */</span></li>
+<li><a name="a319"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodgenerateButton">generateButton</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a320"></a>    <span class="src-sym">{</span></li>
+<li><a name="a321"></a>        <span class="src-var">$html_button </span>= <span class="src-str">''</span><span class="src-sym">;</span></li>
+<li><a name="a322"></a>        <span class="src-var">$html_button </span>= <span class="src-str">'</span></li>
+<li><a name="a323"></a><span class="src-str">            &lt;div class=&quot;buttonsNaSelection&quot;&gt;</span></li>
+<li><a name="a324"></a><span class="src-str">                &lt;!-- Bouton Reset --&gt;</span></li>
+<li><a name="a325"></a><span class="src-str">                &lt;input type=&quot;button&quot; onclick=&quot;resetNeSelection(); closeNeSelection();&quot; </span></li>
+<li><a name="a326"></a><span class="src-str">                    value=&quot;Reset&quot; class=&quot;buttonNaSelection&quot;</span></li>
+<li><a name="a327"></a><span class="src-str">                    onmouseover=&quot;updateNeSelectionWindowStatus(\'Reset current selection\')&quot; </span></li>
+<li><a name="a328"></a><span class="src-str">                    onmouseout=&quot;updateNeSelectionWindowStatus(\'\')&quot;/&gt;</span></li>
+<li><a name="a329"></a><span class="src-str">                &amp;nbsp;&amp;nbsp;</span></li>
+<li><a name="a330"></a><span class="src-str">                &lt;!-- Bouton Save --&gt;</span></li>
+<li><a name="a331"></a><span class="src-str">                &lt;input type=&quot;button&quot; onclick=&quot;saveCurrentSelection(); closeNeSelection();&quot; </span></li>
+<li><a name="a332"></a><span class="src-str">                    value=&quot;Save&quot; class=&quot;buttonNaSelection&quot;</span></li>
+<li><a name="a333"></a><span class="src-str">                    onmouseover=&quot;updateNeSelectionWindowStatus(\'Save current selection\')&quot; </span></li>
+<li><a name="a334"></a><span class="src-str">                    onmouseout=&quot;updateNeSelectionWindowStatus(\'\')&quot;/&gt;</span></li>
+<li><a name="a335"></a><span class="src-str">            &lt;/div&gt;</span></li>
+<li><a name="a336"></a><span class="src-str">        '</span><span class="src-sym">;</span></li>
+<li><a name="a337"></a>        </li>
+<li><a name="a338"></a>        <span class="src-key">return </span><span class="src-var">$html_button</span><span class="src-sym">;</span></li>
+<li><a name="a339"></a>    <span class="src-sym">}</span></li>
+<li><a name="a340"></a>    </li>
+<li><a name="a341"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a342"></a><span class="src-doc">    * generateSaveField : permet de créer le champ input qui stocke les données sélectionnées.</span></li>
+<li><a name="a343"></a><span class="src-doc">    * On créer 2 champs : un pour stocker les éléments sélectionnés et l'autre pour stocker le séparateur choisit.</span></li>
+<li><a name="a344"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">html </span></li>
+<li><a name="a345"></a><span class="src-doc">    */</span></li>
+<li><a name="a346"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodgenerateSaveField">generateSaveField</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a347"></a>    <span class="src-sym">{</span></li>
+<li><a name="a348"></a>        <span class="src-var">$btSavedisplay </span>= <span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$saveFieldProperties">saveFieldProperties</a><span class="src-sym">[</span><span class="src-str">'display'</span><span class="src-sym">]</span>==<span class="src-num">0</span><span class="src-sym">) </span>? <span class="src-str">'hidden' </span>: <span class="src-str">'text' </span><span class="src-sym">;</span></li>
+<li><a name="a349"></a>        </li>
+<li><a name="a350"></a>        echo <span class="src-str">&quot;</span></li>
+<li><a name="a351"></a><span class="src-str">            &lt;<span class="src-id">input</span> <span class="src-id">type</span>='<span class="src-var">$btSavedisplay</span>' </span></li>
+<li><a name="a352"></a><span class="src-str">                <span class="src-id">id</span>='</span><span class="src-str">&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$saveFieldProperties">saveFieldProperties</a><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span>.<span class="src-str">&quot;'</span></li>
+<li><a name="a353"></a><span class="src-str">                name='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$saveFieldProperties">saveFieldProperties</a><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span>.<span class="src-str">&quot;' </span></li>
+<li><a name="a354"></a><span class="src-str">                value='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$saveFieldProperties">saveFieldProperties</a><span class="src-sym">[</span><span class="src-str">'value'</span><span class="src-sym">]</span>.<span class="src-str">&quot;' </span></li>
+<li><a name="a355"></a><span class="src-str">                style='width:900px'/&gt;</span></li>
+<li><a name="a356"></a><span class="src-str">            &lt;input type='hidden'</span></li>
+<li><a name="a357"></a><span class="src-str">                id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$saveFieldProperties">saveFieldProperties</a><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span>.<span class="src-str">&quot;_separator'</span></li>
+<li><a name="a358"></a><span class="src-str">                name='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$saveFieldProperties">saveFieldProperties</a><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span>.<span class="src-str">&quot;_separator' </span></li>
+<li><a name="a359"></a><span class="src-str">                value='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$saveFieldProperties">saveFieldProperties</a><span class="src-sym">[</span><span class="src-str">'separator'</span><span class="src-sym">]</span>.<span class="src-str">&quot;' /&gt;</span></li>
+<li><a name="a360"></a><span class="src-str">        &quot;</span><span class="src-sym">;</span></li>
+<li><a name="a361"></a>    <span class="src-sym">}</span></li>
+<li><a name="a362"></a>    </li>
+<li><a name="a363"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a364"></a><span class="src-doc">    * generateFreeInputField : permet de créer le champ input qui permet à l'utilisateur de saisir directement un élément.</span></li>
+<li><a name="a365"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">html </span></li>
+<li><a name="a366"></a><span class="src-doc">    */</span></li>
+<li><a name="a367"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodgenerateFreeInputField">generateFreeInputField</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a368"></a>    <span class="src-sym">{</span></li>
+<li><a name="a369"></a>        <span class="src-var">$html </span>= <span class="src-str">''</span><span class="src-sym">;</span></li>
+<li><a name="a370"></a>        <span class="src-var">$html </span>= <span class="src-str">&quot;</span></li>
+<li><a name="a371"></a><span class="src-str">        &lt;div class='freeInputFieldNaSelection' style='width:235px;'&gt;</span></li>
+<li><a name="a372"></a><span class="src-str">            &lt;input type='text' class='zoneTexteStyleNeSelection' value='' </span></li>
+<li><a name="a373"></a><span class="src-str">                id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;</span><span class="src-str"><span class="src-id">FreeInputField</span>' <span class="src-id">style</span>='<span class="src-id">width</span>:200<span class="src-id">px</span>'/&gt;</span></li>
+<li><a name="a374"></a></span><span class="src-str">            &lt;<span class="src-id">input</span> <span class="src-id">type</span>='<span class="src-id">button</span>' <span class="src-id">value</span>='' <span class="src-id">id</span>='' <span class="src-id">onclick</span>='<span class="src-id">saveInNeSelection</span>($(</span><span class="src-str">&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;</span><span class="src-str"><span class="src-id">FreeInputField</span>).<span class="src-id">value</span>); $(</span><span class="src-str">&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;FreeInputField).clear(); displayCurrentSelection(\&quot;\&quot;);' class='addInNeSelection_btn'/&gt;</span></li>
+<li><a name="a375"></a><span class="src-str">        &lt;/div&gt;</span></li>
+<li><a name="a376"></a><span class="src-str">        &quot;</span><span class="src-sym">;</span></li>
+<li><a name="a377"></a>        <span class="src-key">return </span><span class="src-var">$html</span><span class="src-sym">;</span></li>
+<li><a name="a378"></a>    <span class="src-sym">}</span></li>
+<li><a name="a379"></a>    </li>
+<li><a name="a380"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a381"></a><span class="src-doc">    * generateIHM : permet de générer le code html de l'IHM</span></li>
+<li><a name="a382"></a><span class="src-doc">    *</span></li>
+<li><a name="a383"></a><span class="src-doc">    * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">html </span></li>
+<li><a name="a384"></a><span class="src-doc">    */</span></li>
+<li><a name="a385"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodgenerateIHM">generateIHM</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a386"></a>    <span class="src-sym">{</span></li>
+<li><a name="a387"></a>        <span class="src-key">if </span><span class="src-sym">( </span><span class="src-sym">!</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$setOpenButtonPropertiesCalled">setOpenButtonPropertiesCalled</a> <span class="src-sym">)</span></li>
+<li><a name="a388"></a>        <span class="src-sym">{</span></li>
+<li><a name="a389"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#methoddisplayException">displayException</a><span class="src-sym">(</span><span class="src-str">'You must called the method setOpenButtonProperties before the method '</span>.__METHOD__<span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a390"></a>        <span class="src-sym">}</span></li>
+<li><a name="a391"></a>        </li>
+<li><a name="a392"></a>        <span class="src-var">$html </span>= <span class="src-str">''</span><span class="src-sym">;</span></li>
+<li><a name="a393"></a>    </li>
+<li><a name="a394"></a>        <span class="src-comm">// Div principal</span></li>
+<li><a name="a395"></a>        <span class="src-var">$html </span>.= <span class="src-str">&quot;&lt;div id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;window_select_na' style='width:400px; display:none;'&gt;&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a396"></a>            <span class="src-comm">// Div contenant l'image de loading.</span></li>
+<li><a name="a397"></a>            <span class="src-var">$html </span>.= <span class="src-str">&quot;</span></li>
+<li><a name="a398"></a><span class="src-str">                &lt;div id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;selection_na_loading' style='display:none;'&gt;</span></li>
+<li><a name="a399"></a><span class="src-str">                    &lt;span class='loadingNaSelectionContent'&gt;Loading content&lt;/span&gt;</span></li>
+<li><a name="a400"></a><span class="src-str">                &lt;/div&gt;</span></li>
+<li><a name="a401"></a><span class="src-str">            &quot;</span><span class="src-sym">;</span></li>
+<li><a name="a402"></a>        </li>
+<li><a name="a403"></a>            <span class="src-comm">// Ajout de la zone de recherche.</span></li>
+<li><a name="a404"></a>            <span class="src-var">$html </span>.= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#methodgenerateSearch">generateSearch</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a405"></a>        </li>
+<li><a name="a406"></a>            <span class="src-comm">// Affichage du contenu.</span></li>
+<li><a name="a407"></a>            <span class="src-var">$html </span>.= <span class="src-str">&quot;&lt;div id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;contenu_na_selection' class='contenu_na_selection_class'&gt;&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a408"></a>            </li>
+<li><a name="a409"></a>                <span class="src-comm">// On ajoute les onglets.</span></li>
+<li><a name="a410"></a>                <span class="src-var">$html </span>.= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#methodgenerateTab">generateTab</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a411"></a>            </li>
+<li><a name="a412"></a>            <span class="src-var">$html </span>.= <span class="src-str">&quot;&lt;/div&gt;&quot;</span><span class="src-sym">;</span><span class="src-comm">// fin affichage du contenu.</span></li>
+<li><a name="a413"></a>            </li>
+<li><a name="a414"></a>            <span class="src-comm">// Affichage de la zone contenant les icônes d'options, le bouton save, reset...</span></li>
+<li><a name="a415"></a>            <span class="src-var">$html </span>.= <span class="src-str">&quot;&lt;div class='toolsNaSelection'&gt;&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a416"></a>                <span class="src-comm">// Affichage de champ de saisie libre.</span></li>
+<li><a name="a417"></a>                <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$freeInputField">freeInputField</a><span class="src-sym">)</span></li>
+<li><a name="a418"></a>                    <span class="src-var">$html </span>.= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#methodgenerateFreeInputField">generateFreeInputField</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a419"></a>                <span class="src-comm">// Affichage de la zone options (view current selection...)</span></li>
+<li><a name="a420"></a>                <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$viewCurrentSelectionContent">viewCurrentSelectionContent</a><span class="src-sym">)</span></li>
+<li><a name="a421"></a>                    <span class="src-var">$html </span>.= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#methodgenerateOption">generateOption</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a422"></a>                <span class="src-comm">// Affichage des boutons (save, reset)</span></li>
+<li><a name="a423"></a>                <span class="src-var">$html </span>.= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#methodgenerateButton">generateButton</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a424"></a>            <span class="src-var">$html </span>.= <span class="src-str">&quot;&lt;/div&gt;&quot;</span><span class="src-sym">;</span><span class="src-comm">// fin affichage du options + boutons.</span></li>
+<li><a name="a425"></a>            </li>
+<li><a name="a426"></a>            <span class="src-comm">// Div permettant d'afficher des messages.</span></li>
+<li><a name="a427"></a>            <span class="src-var">$html </span>.= <span class="src-str">&quot;</span></li>
+<li><a name="a428"></a><span class="src-str">                &lt;div id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;msgNeSelection' style='margin:3px;display:none;'&gt;                </span></li>
+<li><a name="a429"></a><span class="src-str">                    &lt;fieldset&gt;</span></li>
+<li><a name="a430"></a><span class="src-str">                        &lt;legend&gt;List of selected elements&amp;nbsp;&lt;/legend&gt;</span></li>
+<li><a name="a431"></a><span class="src-str">                        &lt;div style='height:80px; overflow:auto; margin:2px; border:1px #D0D0D0 solid;'</span></li>
+<li><a name="a432"></a><span class="src-str">                            id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;msgNeSelectionContent'&gt;</span></li>
+<li><a name="a433"></a><span class="src-str">                        &lt;/div&gt;</span></li>
+<li><a name="a434"></a><span class="src-str">                    &lt;/fieldset&gt;</span></li>
+<li><a name="a435"></a><span class="src-str">                &lt;/div&gt;</span></li>
+<li><a name="a436"></a><span class="src-str">                &quot;</span><span class="src-sym">;</span></li>
+<li><a name="a437"></a>        <span class="src-var">$html </span>.= <span class="src-str">&quot;&lt;/div&gt;&quot;</span><span class="src-sym">; </span><span class="src-comm">// fin Div principal</span></li>
+<li><a name="a438"></a>        </li>
+<li><a name="a439"></a>        echo <span class="src-var">$html</span><span class="src-sym">;</span></li>
+<li><a name="a440"></a>        </li>
+<li><a name="a441"></a>        <span class="src-comm">// Initialisation des variables javascript.</span></li>
+<li><a name="a442"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#methodinitJavascriptValues">initJavascriptValues</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a443"></a>        </li>
+<li><a name="a444"></a>        <span class="src-comm">// Initialisation du champ caché contenant les valeurs sélectionnées.</span></li>
+<li><a name="a445"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#methodgenerateSaveField">generateSaveField</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a446"></a>    <span class="src-sym">}</span></li>
+<li><a name="a447"></a>&nbsp;</li>
+<li><a name="a448"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a449"></a><span class="src-doc">    * initJavascriptValues : permet de créer des champ caché contenant les paramètres nécessaires au fonctionnement</span></li>
+<li><a name="a450"></a><span class="src-doc">    * du script javascript.</span></li>
+<li><a name="a451"></a><span class="src-doc">    *</span></li>
+<li><a name="a452"></a><span class="src-doc">    */</span></li>
+<li><a name="a453"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../networkElementSelection/networkElementSelection.html#methodinitJavascriptValues">initJavascriptValues</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a454"></a>    <span class="src-sym">{</span></li>
+<li><a name="a455"></a>        <span class="src-var">$html_input_hidden </span>= <span class="src-str">''</span><span class="src-sym">;</span></li>
+<li><a name="a456"></a>    </li>
+<li><a name="a457"></a>        <span class="src-comm">// Seul ce champ a un id fixe car on doit récupérer le préfixe appliqué au id de l'interface.</span></li>
+<li><a name="a458"></a>        <span class="src-var">$html_input_hidden </span>.= <span class="src-str">&quot;</span></li>
+<li><a name="a459"></a><span class="src-str">            &lt;input type='hidden' </span></li>
+<li><a name="a460"></a><span class="src-str">                id='networkElementSelection_htmlIdPrefix' </span></li>
+<li><a name="a461"></a><span class="src-str">                value='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;' /&gt;</span></li>
+<li><a name="a462"></a><span class="src-str">        &quot;</span><span class="src-sym">;</span></li>
+<li><a name="a463"></a>        </li>
+<li><a name="a464"></a>        <span class="src-comm">// Titre de la fenêtre.</span></li>
+<li><a name="a465"></a>        <span class="src-var">$html_input_hidden </span>.= <span class="src-str">&quot;</span></li>
+<li><a name="a466"></a><span class="src-str">            &lt;input type='hidden' </span></li>
+<li><a name="a467"></a><span class="src-str">                id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;windowTitle' </span></li>
+<li><a name="a468"></a><span class="src-str">                value='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$windowTitle">windowTitle</a>.<span class="src-str">&quot;' /&gt;</span></li>
+<li><a name="a469"></a><span class="src-str">        &quot;</span><span class="src-sym">;</span></li>
+<li><a name="a470"></a>        </li>
+<li><a name="a471"></a>        <span class="src-comm">// Identifiant du bouton qui permet d'afficher l'interface.</span></li>
+<li><a name="a472"></a>        <span class="src-var">$html_input_hidden </span>.= <span class="src-str">&quot;</span></li>
+<li><a name="a473"></a><span class="src-str">            &lt;input type='hidden' </span></li>
+<li><a name="a474"></a><span class="src-str">                id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;openButtonId' </span></li>
+<li><a name="a475"></a><span class="src-str">                value='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$openButtonProperties">openButtonProperties</a><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span>.<span class="src-str">&quot;' </span></li>
+<li><a name="a476"></a><span class="src-str">                css_class_on='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$openButtonProperties">openButtonProperties</a><span class="src-sym">[</span><span class="src-str">'css_class_on'</span><span class="src-sym">]</span>.<span class="src-str">&quot;'</span></li>
+<li><a name="a477"></a><span class="src-str">                css_class_off='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$openButtonProperties">openButtonProperties</a><span class="src-sym">[</span><span class="src-str">'css_class_off'</span><span class="src-sym">]</span>.<span class="src-str">&quot;'</span></li>
+<li><a name="a478"></a><span class="src-str">                /&gt;</span></li>
+<li><a name="a479"></a><span class="src-str">        &quot;</span><span class="src-sym">;</span></li>
+<li><a name="a480"></a>        </li>
+<li><a name="a481"></a>        <span class="src-comm">// Identifiant du champ où sont stockées les valeurs.</span></li>
+<li><a name="a482"></a>        <span class="src-var">$html_input_hidden </span>.= <span class="src-str">&quot;</span></li>
+<li><a name="a483"></a><span class="src-str">            &lt;input type='hidden' </span></li>
+<li><a name="a484"></a><span class="src-str">                id='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-str">&quot;saveFieldId' </span></li>
+<li><a name="a485"></a><span class="src-str">                value='&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$htmlIdPrefix">htmlIdPrefix</a>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../networkElementSelection/networkElementSelection.html#var$saveFieldProperties">saveFieldProperties</a><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span>.<span class="src-str">&quot;' /&gt;</span></li>
+<li><a name="a486"></a><span class="src-str">        &quot;</span><span class="src-sym">;</span></li>
+<li><a name="a487"></a>        </li>
+<li><a name="a488"></a>        echo <span class="src-var">$html_input_hidden</span><span class="src-sym">;</span></li>
+<li><a name="a489"></a>        </li>
+<li><a name="a490"></a>        <span class="src-comm">// Initilisation des variables javascript.</span></li>
+<li><a name="a491"></a>        <span class="src-php">?&gt;</span></li>
+<li><a name="a492"></a>        &lt;script&gt;</li>
+<li><a name="a493"></a>            // Initialise toutes les variables globales javascript.</li>
+<li><a name="a494"></a>            initNaSelection();</li>
+<li><a name="a495"></a>        &lt;/script&gt;</li>
+<li><a name="a496"></a>        <span class="src-php">&lt;?php</span></li>
+<li><a name="a497"></a>    <span class="src-sym">}</span></li>
+<li><a name="a498"></a>&nbsp;</li>
+<li><a name="a499"></a>&nbsp;</li>
+<li><a name="a500"></a><span class="src-sym">}</span></li>
+<li><a name="a501"></a>&nbsp;</li>
+<li><a name="a502"></a>&nbsp;</li>
+<li><a name="a503"></a>&nbsp;</li>
+<li><a name="a504"></a>&nbsp;</li>
+<li><a name="a505"></a><span class="src-php">?&gt;</span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 03 Aug 2008 18:03:12 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

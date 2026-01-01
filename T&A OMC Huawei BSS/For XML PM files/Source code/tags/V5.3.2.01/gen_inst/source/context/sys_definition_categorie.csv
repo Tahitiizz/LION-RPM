@@ -1,0 +1,4 @@
+family	family_label	object_ref_table	rank	on_off	visible	network_aggregation_min	main_family	automatic_mapping	link_to_aa_3d_axis	separator	network_axe_ri	ta_bypass
+bss	BSS	edw_object_ref	1	1	1	cell	1	1	FALSE		1	
+bssgprs	BSS - GPRS	edw_object_ref	2	1	1	cell	0	1	FALSE		1	
+bsstrx	BSS - TRX	edw_object_ref	3	1	1	trxid	0	1	FALSE		1	

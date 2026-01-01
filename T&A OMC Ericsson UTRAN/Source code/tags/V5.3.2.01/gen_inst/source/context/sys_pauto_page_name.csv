@@ -1,0 +1,59 @@
+id_page	page_name	page_type	droit
+dshd.0071.01.001	Call setup success rate	page	customisateur
+gtms.0071.01.00001	Call Setup Success Rate	gtm	customisateur
+gtms.0071.01.00002	Call Setup Success Rate CS	gtm	customisateur
+gtms.0071.01.00003	Call Setup Success Rate PS	gtm	customisateur
+dshd.0071.01.002	Call drop rate	page	customisateur
+gtms.0071.01.00004	Call Drop Rate	gtm	customisateur
+gtms.0071.01.00005	Call Drop Rate CS	gtm	customisateur
+gtms.0071.01.00006	Call Drop Rate PS	gtm	customisateur
+dshd.0071.01.003	RRC connection	page	customisateur
+gtms.0071.01.00007	RRC CONNECTION SETUP Success Rate	gtm	customisateur
+gtms.0071.01.00008	RRC CONNECTION SETUP Success Rate per Establishment Cause	gtm	customisateur
+dshd.0071.01.004	RAB setup and drop	page	customisateur
+gtms.0071.01.00009	RAB Establishment Success Rate	gtm	customisateur
+gtms.0071.01.00010	CS RAB Establishment Success Rate per Service	gtm	customisateur
+gtms.0071.01.00011	PS RAB Establishment Success Rate per Service	gtm	customisateur
+gtms.0071.01.00017	RAB Establishment failures distribution	gtm	customisateur
+gtms.0071.01.00013	CS Call drop rate per Service	gtm	customisateur
+gtms.0071.01.00014	CS Call drop failures distribution	gtm	customisateur
+gtms.0071.01.00015	PS Call drop rate per Service	gtm	customisateur
+dshd.0071.01.005	HSPA RAB setup and drop	page	customisateur
+gtms.0071.01.00012	HSPA RAB Establishment Success Rate	gtm	customisateur
+gtms.0071.01.00016	HSPA Call drop rate	gtm	customisateur
+dshd.0071.01.006	Reconfiguration	page	customisateur
+gtms.0071.01.00018	Reconfiguration Success Rate	gtm	customisateur
+gtms.0071.01.00019	HSPA Reconfiguration Success Rate	gtm	customisateur
+dshd.0071.01.007	Cell availability	page	customisateur
+gtms.0071.01.00020	Cell availability	gtm	customisateur
+gtms.0071.01.00021	HSDPA service availability	gtm	customisateur
+gtms.0071.01.00022	HSUPA service availability	gtm	customisateur
+dshd.0071.01.008	Cell load	page	customisateur
+gtms.0071.01.00023	Cell Congestion	gtm	customisateur
+dshd.0071.01.009	Cell measurements	page	customisateur
+gtms.0071.01.00024	UL RSSI Average	gtm	customisateur
+dshd.0071.01.014	Traffic	page	customisateur
+gtms.0071.01.00031	CS Traffic	gtm	customisateur
+gtms.0071.01.00032	PS Traffic	gtm	customisateur
+gtms.0071.01.00033	HSPA Traffic	gtm	customisateur
+gtms.0071.01.00034	Average R99 Non Real Time PS data throughput	gtm	customisateur
+gtms.0071.01.00035	Average HSPA Non Real Time PS data throughput	gtm	customisateur
+dshd.0071.01.010	Soft handover	page	customisateur
+gtms.0071.01.00025	SHO success rate	gtm	customisateur
+dshd.0071.01.011	HSPA mobility	page	customisateur
+gtms.0071.01.00026	HSDPA Cell change success rate	gtm	customisateur
+gtms.0071.01.00027	HSUPA Cell change success rate	gtm	customisateur
+dshd.0071.01.013	Hard handover	page	customisateur
+gtms.0071.01.00036	Intra System Intra Frequency HHO success rate	gtm	customisateur
+gtms.0071.01.00037	Intra System Inter Frequency HHO success rate	gtm	customisateur
+gtms.0071.01.00038	Inter System HHO success rate	gtm	customisateur
+dshd.0071.01.012	Compressed Mode	page	customisateur
+gtms.0071.01.00028	Compressed mode success rate	gtm	customisateur
+gtms.0071.01.00029	Compressed mode activation for inter-freq	gtm	customisateur
+gtms.0071.01.00030	Compressed mode activation for inter-RAT	gtm	customisateur
+dshd.0071.04.001	Inter-frequency handover	page	customisateur
+gtms.0071.04.00001	CS Inter Frequency HO Success Rate	gtm	customisateur
+gtms.0071.04.00002	PS Inter Frequency HO Success Rate	gtm	customisateur
+dshd.0071.04.002	Inter-system handover	page	customisateur
+gtms.0071.04.00003	Inter-system Handover Success Rate (CS)	gtm	customisateur
+gtms.0071.04.00004	Inter-system Cell Change Success Rate (PS)	gtm	customisateur

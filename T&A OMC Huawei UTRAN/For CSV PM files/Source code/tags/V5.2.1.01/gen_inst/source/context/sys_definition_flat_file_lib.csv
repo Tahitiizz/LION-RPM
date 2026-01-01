@@ -1,0 +1,145 @@
+id_flat_file	flat_file_name	flat_file_naming_template	on_off	alarm_missing_file_temporization	period_type	exclusion	prefix_counter	reference	ordre	data_collection_frequency	data_chunks	granularity
+1	Cell Based - RRC Connection Setup Measurement 67109365 - RRC_CS	pmresult_67109365_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+2	Cell Based - Hard Handover Measurement 67109380 - H_HO	pmresult_67109380_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+3	Cell Based - HSDPA Measurement 67109390 - HSDPA	pmresult_67109390_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+4	Cell Based - Algorithm Measurement 67109391 - CA	pmresult_67109391_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+5	Cell Based - RB Measurement 67109440 - RB_P_RNC	pmresult_67109440_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+6	Cell Based - Inter RAT Handover Measurement 67109381 - IRAT_HO	pmresult_67109381_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+7	Cell Based - Cell Compressed Mode Measurement 67109523 - CM	pmresult_67109523_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+8	Cell Based - Cell HSUPA Service Measurement 67109471 - HSUPA	pmresult_67109471_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+9	Cell Based - Cell Throughput Measurement 67109508 - THRU	pmresult_67109508_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+10	Cell Based - CS Domain RAB Release Measurement 67109371 - CS_RAB_REL	pmresult_67109371_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+11	Cell Based - CS Domain RAB Setup Failure Measurement 67109369 - CS_RAB_SET_FAIL	pmresult_67109369_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+12	Cell Based - CS Domain RAB Setup Measurement 67109368 - CS_RAB_SET	pmresult_67109368_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+13	Cell Based - Iub Interface Traffic Measurement  67109387 - IUB_TRAFF	pmresult_67109387_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+14	Cell Based - PS Domain RAB Release Measurement 67109375 - PS_RAB_REL	pmresult_67109375_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+15	Cell Based - PS Domain RAB Setup Failure Measurement 67109373 - PS_RAB_FAIL	pmresult_67109373_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+16	Cell Based - PS Domain RAB Setup Measurement 67109372 - PS_RAB_SET	pmresult_67109372_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+17	Cell Based - RNC originated RAB Release Measurement 67109376 - RNC_RAB_REL	pmresult_67109376_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+18	Cell Based - Soft Handover Measurement 67109379 - S_HO	pmresult_67109379_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+19	Cell Based - Multi RAB Measurement 67109377 - MULT_RAB	pmresult_67109377_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+20	Cell Based - CS Domain RAB Assignment Setup Measurement RNC 67109422 - CS_RAB_SET_ASS_RNC	pmresult_67109422_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+21	Cell Based - PS Domain RAB Assignment Setup Measurement RNC 67109426 - PS_RAB_SET_ASS_RNC	pmresult_67109426_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+22	Cell Based - PS Domain RAB Release Measurement RNC 67109429 - PS_RAB_REL_RNC	pmresult_67109429_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+23	Cell Based - RNC Triggered RAB Release Measurement 67109430 - RNC_TRIG_RAB_REL	pmresult_67109430_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+24	Cell Based - AMR Measurement 67109435 - AMR	pmresult_67109435_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+25	Cell Based - Paging Measurement 67109438 - RNC_PAGING	pmresult_67109438_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+26	Cell Based - CS Domain Inter RAT Handover Measurement 67109443 - CS_IRAT_HO	pmresult_67109443_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+27	Cell Based - PS Domain Inter RAT Handover Measurement 67109444 - PS_IRAT_HO	pmresult_67109444_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+28	Cell Based - Security Mode Control Measurement 67109445 - SEC_MODE	pmresult_67109445_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+29	Cell Based - Cell Paging Measurement 67109509 - CELL_PAGING	pmresult_67109509_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+30	Cell Based - RRC connection release measurement 67109366 - RRC_CR	pmresult_67109366_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+31	Cell Based - RRC connection reject measurement 67109367 - RRC_CRJ	pmresult_67109367_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+32	Cell Based - Measurement of CS RAB assignment modification 67109370 - CS_RAB_ASS_MOD	pmresult_67109370_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+33	Cell Based - Measurement of PS RAB assignment modification 67109374 - PS_RAB_ASS_MOD	pmresult_67109374_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+34	Cell Based - Measurement of RB Procedure 67109378 - RB_P	pmresult_67109378_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+35	Cell Based - Cell Update Measurement  67109382 - CELL_UPDATE	pmresult_67109382_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+36	Cell Based - Cell TX and RX Power Measurement 67109385 - TX_RX	pmresult_67109385_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+72	Cell Based - Iub Interface Measurement per cell 67109386 - IUB	pmresult_67109386_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+38	Cell Based - Measurement related to GTPU 67109400 - GTPU	pmresult_67109400_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+39	Cell Based - IMA Group Measurement 67109402 - IMAGPR	pmresult_67109402_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+40	Cell Based - IMA Link Measurement 67109403 - IMALNK	pmresult_67109403_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+41	Cell Based - Measurement related to CS Iu interface signalling 67109405 - CS_SIG_IU	pmresult_67109405_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+42	Cell Based - Measurement related to PS Iu interface signalling 67109406 - PS_SIG_IU	pmresult_67109406_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+43	Cell Based - Measurement related to CS traffic 67109407 - CS_TRF_IU	pmresult_67109407_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+44	Cell Based - QAAL2 Measurement 67109419 - QAAL2	pmresult_67109419_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+45	Cell Based - RRC connection setup measurement per RNC 67109420 - RRC_CS_RNC	pmresult_67109420_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+46	Cell Based - Measurement of CS RAB assignment modification per RNC 67109424 - CS_RAB_ASS_MOD_RNC	pmresult_67109424_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+47	Cell Based - Measurement of PS RAB assignment modification per RNC 67109428 - PS_RAB_ASS_MOD_RNC	pmresult_67109428_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+48	Cell Based - Measurement of relocation per SRNC 67109432 - RELOC_SRNC	pmresult_67109432_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+49	Cell Based - Measurement of relocation per DRNC 67109433 - RELOC_DRNC	pmresult_67109433_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+50	Cell Based - Soft Handover Measurement per RNC 67109446 - SHO_RNC	pmresult_67109446_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+51	Cell Based - Hard Handover Measurement per RNC 67109447 - HHO_RNC	pmresult_67109447_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+52	Cell Based - RLC measurement per RNC 67109448 - RLC_RNC	pmresult_67109448_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+53	Cell Based - SAAL Link Measurement 67109451 - SAAL_LNK	pmresult_67109451_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+54	Cell Based - SCCP Measurement 67109452 - SCCP	pmresult_67109452_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+55	Cell Based - Traffic Measurement per RNC 67109460 - RNC_TRAFF	pmresult_67109460_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+56	Cell Based - Measurement related to Algorithm per NodeB 67109473 - ALG_NODEB	pmresult_67109473_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+57	Cell Based - Traffic Measurement of CN Operator per RNC 67109519 - TRAFF_LOAD_PLMN_RNC	pmresult_67109519_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+58	Cell Based - Measurement Related to SCCP for Iu Interface 67109535 - SIG_SCCP_IU	pmresult_67109535_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+59	Cell Based - Measurement related to RLC per cell 67109393 - RLC	pmresult_67109393_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+60	Cell Based - MTP3 Destination Signaling Point Measurement 67109415 - MTP3_DSP	pmresult_67109415_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+61	Cell Based - MTP3 Link Measurement 67109416 - MTP3_LNK	pmresult_67109416_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+62	Cell Based - MTP3 Link Set Measurement 67109417 - MTP3_LNKSET	pmresult_(67109417|67109552)_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+63	Cell Based - CS RABs Unsuccessfully Established on Request 67109423 - CS_RAB_UER_RNC	pmresult_67109423_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+64	Cell Based - PS RABs Unsuccessfully Established on Request 67109427 - PS_RAB_UER_RNC	pmresult_67109427_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+65	Cell Based - CPU Usage 67109453 - CPU	pmresult_67109453_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+66	Cell Based - Measurement between a cell and a UMTS cell 67109395 - CELL_NCELL	pmresult_67109395_*[0-9]{12}.csv$	1	6	hour		N/A		1	1	24	hour
+67	Cell Based - DPU Measurement 67109516 - DPU	pmresult_67109516_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+68	Cell Based - GCU Measurement 67109493 - GCU	pmresult_67109493_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+69	Cell Based - Measurement related to LCS service per RNC 67109434 - LCS_RNC	pmresult_67109434_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+70	Cell Based - MBMS Measurement per cell 67109474 - MBMS	pmresult_67109474_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+71	Cell Based - Measurement related to BLER per cell 67109392 - BLER	pmresult_67109392_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+73	Cell Based - URA Update Measurement per cell 67109383 - URA	pmresult_67109383_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+74	Cell Based - RRC Reporting Measurement per cell 67109384 - RRC_RM	pmresult_67109384_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+75	Cell Based - Measurement between a cell and a intRAT cell 67109394 - CELL_GCELL	pmresult_67109394_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+76	Cell Based - Measurement related to QOS per cell 67109413 - QOS	pmresult_67109413_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+77	Cell Based - RRC connection release measurement per RNC 67109421 - RRC_CR_RNC	pmresult_67109421_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+78	Cell Based - Measurement of multi-RAB service per RNC 67109431 - MULT_RAB_SERV_RNC	pmresult_67109431_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+79	Cell Based - Measurement related to SIRTARGET per cell 67109505 - SIR	pmresult_67109505_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+80	Cell Based - Measurement related to LCS service per cell 67109510 - LCS	pmresult_67109510_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+81	Cell Based - EFACH Measurement per cell 67109545 - EFACH	pmresult_67109545_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+82	Cell Based - Measurement of RAB assignment release per PLMN 67109554 - RAB_ASS_REL_PLMN	pmresult_67109554_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+83	Cell Based - Measurement related to traffic for Iur Interface 67109410 - IUR_TRAFF	pmresult_67109410_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+84	Cell Based - Measurement related to SRNC in Iur interface 67109411 - IUR_SNRC	pmresult_67109411_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+85	Cell Based - Measurement related to DRNC in Iur interface 67109412 - IUR_DRNC	pmresult_67109412_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+86	Cell Based - Measurement of CS RAB release per RNC 67109425 - CS_RAB_REL_RNC	pmresult_67109425_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+87	Cell Based - RRC state measurement 67109450 - RRC_STATE_RNC	pmresult_67109450_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+88	Cell Based - Measurement Related to SCCP for Iur Interface 67109536 - IUR_SCCP	pmresult_67109536_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+89	Cell Based - Measurement related to SPI per cell 82863914 - SPI	pmresult_82863914_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+90	Cell Based - ERACH Measurement per cell 82863947 - ERACH	pmresult_82863947_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+91	Cell Based - Measurement related to U2L Handover per cell 82863927 - U2L_HO	pmresult_82863927_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+92	Cell Based - Measurement related to PDCP 67109437 - PDCP	pmresult_67109437_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+93	Cell Based - Measurement related to PS traffic 67109408 - PS_TRAF	pmresult_67109408_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+94	Cell Based - IP Path Link Measurement 67109467 - IP_PATH_LINK	pmresult_67109467_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+95	Cell Based - Measurement related to Iu interface MBMS 67109478 - IU_MBMS	pmresult_67109478_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+96	Cell Based - M3UA Link Measurement 67109482 - M3UA_LNK	pmresult_67109482_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+97	Cell Based - AAL2PATH ATM Layer Measurement 67109486 - AAL2PATH_ATM	pmresult_67109486_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+98	Cell Based - FEGE Ethernet Port Measurement 67109488 - FEGE	pmresult_67109488_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+99	Cell Based - IPPATH IP Layer Measurement 67109495 - IP_PATH_LAYER	pmresult_67109495_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+100	Cell Based - IP Transport Adjacent Node Resource Operation Measurement 67109500 - ANI_IP_TRM	pmresult_67109500_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+101	Cell Based - SAAL link ATM Layer Measurement 67109517 - SAAL_LNK_ATM	pmresult_67109517_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+102	Cell Based - Measurement related to Iu interface MOCN 67109526 - IU_MOCN	pmresult_67109526_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+103	Cell Based - Measurement of RAB assignment setup per PLMN 67109553 - RAB_ASS_SET_PLMN	pmresult_67109553_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+104	Cell Based - SCTP Link Measurement 67109468 - SCTP_LNK	pmresult_67109468_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+105	Cell Based - Measurement related to SCTP link IP layer 67109485 - SCTP_IP	pmresult_67109485_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+106	Cell Based - SCU Measurement 67109515 - SCU	pmresult_67109515_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+107	Cell Based - SCTPIP Measurement 67109469 - SCTPIP	pmresult_67109469_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+108	Cell Based - Measurement related to UNI link 67109456 - UNI_LINK	pmresult_67109456_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+109	Cell Based - PPP Link Measurement 67109491 - PPP_LINK	pmresult_67109491_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+110	Cell Based - NODEB OAM FLOW Measurement 67109538 - OAM_FLOW	pmresult_67109538_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+111	Cell Based - AAL2 Path Measurement 67109466 - AAL2_PATH	pmresult_67109466_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+112	Cell Based - Fractional ATM Link Measurement 67109398 - FRAC_ATM_LINK	pmresult_67109398_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+113	Cell Based - MP Group Measurement 67109490 - MP_GROUP	pmresult_67109490_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+114	Cell Based - Logical Port Measurement 67109524 - LOGIC_PORT	pmresult_67109524_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+115	Cell Based - Dual-Stack Transport Adjacent Node Measurement 67109480 - DUAL_STACK	pmresult_67109480_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+116	Cell Based - Dual-Stack Transport Adjacent Node QAAL2 Part Measurement 67109518 - DUAL_STACK_QAAL2	pmresult_67109518_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+117	Cell Based - ATM Logical Port Measurement 67109564 - ATM_LOGIC_PORT	pmresult_67109564_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+118	Cell Based - Measurement related to DSP performance 67109546 - DSP	pmresult_67109546_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+119	Cell Based - XPU Measurement 82833917 - XPU	pmresult_82833917_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+120	Cell Based - Measurement of active algorithm per PLMN 82833952 - ALGO_PLMN	pmresult_82833952_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+121	Cell Based - E1T1 Port Bit Error Measurement 82833951 - E1T1_PORT	pmresult_82833951_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+122	Cell Based - Measurement related to INT 82833961 - INT	pmresult_82833961_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+123	Cell Based - Channelized Optical Port Measurement 82834001 - CHAN_OPTICAL_PORT	pmresult_82834001_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+124	Cell Based - Optical Port Measurement 82834002 - OPTICAL_PORT	pmresult_82834002_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+125	Cell Based - Maximum flux of UOI board 82834003 - UOI_BOARD	pmresult_82834003_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+126	Cell Based - Roaming UE Registration Measurement Under MOCN 82863925 - ROAMING_UE_REG	pmresult_82863925_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+127	Cell Based - Measurements related to PTT 82863953 - PTT	pmresult_82863953_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+128	Cell Based - Measurement of Trunk Group Performance 82863915 - TRUNK	pmresult_82863915_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+129	Cell Based - EPCH Measurement per cell 82863949 - EPCH	pmresult_82863949_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+130	Cell Based - M3UA Destination Entity Measurement 67109484 - M3UA_DEST_ENT	pmresult_67109484_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+131	Cell Based - M3UA Link Set Measurement 67109483 - M3UA_LINK_SET	pmresult_67109483_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+132	Cell Based - IP Transport Adjacent Node Connection Measurement 67109481 - IP_TRANS_ADJ_CONN	pmresult_67109481_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+133	Cell Based - E1T1 Electronical Port Measurement 67109487 - E1T1_ELEC_PORT	pmresult_67109487_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+134	Cell Based - Fractional IMA Link Measurement 67109399 - FRAC_IMA_LINK	pmresult_67109399_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+135	Cell Based - Measurement related to IMS 67109449 - IMS	pmresult_67109449_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+136	Cell Based - IPoA Link Measurement 67109457 - IPOA_LINK	pmresult_67109457_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+137	Cell Based - Dual-Stack Transport Adjacent Node IP Part Measurement 67109479 - D_STACK_TRANS_ADJ	pmresult_67109479_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+138	Cell Based - Measurement related to RTP flux in IPPATH 67109534 - RTP_IPPATH	pmresult_67109534_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+139	Cell Based - Measurement Related to IPPM 67109539 - IPPM	pmresult_67109539_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+140	Cell Based - Logical Port Queue Measurement 67109541 - LOGIC_PORT_QUEUE	pmresult_67109541_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+141	Cell Based - MP Queue Measurement 67109542 - MP_QUEUE	pmresult_67109542_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+142	Cell Based - PPP Link Queue Measurement 67109543 - PPP_LINK_QUEUE	pmresult_67109543_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+143	Cell Based - Measurement related to MPU 67109537 - MPU	pmresult_67109537_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+144	Cell Based - SDH Measurement 67109496 - SDH	pmresult_67109496_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour
+145	Cell Based - VCACROSS Measurement 67109498 - VCACROSS	pmresult_67109498_*[0-9]{12}.csv$	0	6	hour		N/A		1	1	24	hour

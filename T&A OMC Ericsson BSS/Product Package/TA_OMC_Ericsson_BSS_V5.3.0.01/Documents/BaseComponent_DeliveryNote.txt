@@ -1,0 +1,68 @@
+CB 5.3.2.07 setup
+- Refer to specific product instruction.
+
+Bug fixed:
+- P1:
+   *  BZ 44347: [IS][GPRS6.2][T&AGW_5.3.2.04] admin user is not able to save task scheduler process (only astellia_admin)
+   *  BZ 43444: [REC][CB 5.3.2.03][Top Banner and About Window] The warning message when updating an invalid key must be showed for client   
+   *  BZ 44195: [IS][GPRS6.2][T&A_CB 5.3.2.X] Servername can be selected at the beginning of the installation
+   
+An at least 2.2.0.15 Portal is needed to use this CB version.
+
+-------------------------------------------------------------------------------
+ HISTORY
+-------------------------------------------------------------------------------
+CB 5.3.2.06 setup
+- Refer to specific product instruction.
+
+Bug fixed:
+- P1:
+   *  BZ 43569: [SUP][T&A OMC NSN UTRAN 5.3.1][AVP#48088][Videotron Canada] Deactivation and loss of history during the upgrade, for raws activated by customer
+   *  BZ 43367: [SUP][T&A HPG][#46945][SFR] incorrect data integration on T&A HPG Corpo partitionned with T&A HPG affiliate non-partitionned
+- P2:
+   *  BZ 43831: [SUP][TA Gateway][AVP 47571][Zain HQ]: Patch installation on slave deactivate homepage on Master
+   *  BZ 44061: [SUP][TA Gateway][AVP 48877][Zain KW]: Weekly report scheduled on Sunday not sent
+   
+An at least 2.2.0.15 Portal is needed to use this CB version.
+
+-------------------------------------------------------------------------------
+
+CB 5.3.2.04 setup
+- Refer to specific product instruction.
+
+Bug fixed:
+- P2:
+   *  BZ 42639: [SUP][T&A CorePS][#46742][MeditelMaroc] On SGSNRNC-GGSN NE level, Link To NEx is not generated
+   *  BZ 42536: [SUP][T&A CB][#46480][OrangeCI] Wrong synchronization on sys_users and sys_users_groups tables. 
+   *  BZ 42424: [SUP][T&A CB][#46416][MeditelMaroc]Link To NovaExplorer : filtering on network element is not functional
+   *  BZ 42329: [SUP][T&A GSM][#42699][ZainIQ]Wrong SA calculation, Hourly SA not filled 
+   *  BZ 42236: [SUP][5.3.1.14][NA][EastLink]Hourly Discontinuous Dynamic alarms are applied on H-1 values not on H values
+   *  BZ 41353: [SUP][T&A CB 5.3.1.13][#43631][Zain HQ]: Wrong filtering on T&A Corpo, filters applied on Level are not applied sub-sub-level (or under)                   
+
+An at least 2.2.0.15 Portal is needed to use this CB version.
+
+-------------------------------------------------------------------------------
+
+CB 5.3.2.03 setup
+- Refer to specific product instruction.
+- This version includes the merge of 5.3.1.16 CB on 5.3.2 branch.
+
+An at least 2.2.0.15 Portal is needed to use this CB version.
+
+-------------------------------------------------------------------------------
+
+CB 5.3.2.02 setup
+- Refer to specific product instruction.
+
+New functionnalities:
+   * Mantis 4236 [Transverse] Mise à jour des logos, fav icon...
+   * Mantis 2871 [DE MKT] Affichage du produit dans la GUI de création de contexte
+   * Mantis 3516 Import/export de contexte via T&A Gateway et multi-produit
+   * Mantis 4178 Split alarm column additional details into 2 columns Avg and Overrun
+
+Bug fixed:
+- P1:
+   *  BZ 27915: [REC][T&a GSM 5.1][TC #TASW-1299][Compatibility Browser][Firefox 13.0] Error upload a context file.             
+- This version includes the merge of 5.3.0.20 CB on 5.3.1 branch.
+
+An at least 2.2.0.15 Portal is needed to use this CB version.

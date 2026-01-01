@@ -1,0 +1,7 @@
+sdcetd_id	sdcetd_table
+corporate	sys_global_parameters
+id_country	sys_global_parameters
+alarm_missing_files_temporization	sys_global_parameters
+topology_last_update_date	sys_global_parameters
+seri.gtms.0071.01.00014.03	sys_pauto_config
+seri.gtms.0071.01.00014.03	graph_data

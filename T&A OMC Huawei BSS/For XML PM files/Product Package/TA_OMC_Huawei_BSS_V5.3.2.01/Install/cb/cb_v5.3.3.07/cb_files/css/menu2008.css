@@ -1,0 +1,104 @@
+/* habillage du menu - 30/07/2008 slc */
+
+#menu_container {
+	margin: 0 0 10px 0;
+	width:100%;
+	background: url('../images/bandeau2008/header_background.png') repeat-x bottom;
+	height:30px;
+}
+
+ol#menu, ol#menu ol {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ol#menu {
+	display:block;
+	padding-top:1px;
+	height:29px;
+}
+
+
+ol#menu li { display:inline; }
+
+/* on cache les sous menus */
+ol#menu ol {
+	display: none;
+	position: absolute;
+	z-index: 102;
+	border-top:	1px solid #DBDBDB;
+	border-bottom:	1px solid #BABABA;
+}
+
+/* les liens dans les menus et sous menus */
+ol#menu a {
+	display: block;
+	float: left;
+	padding: 4px 16px 4px 6px;
+	background: #1E99DB url('../images/bandeau2008/menu_off.png') top right no-repeat;
+	min-width: 80px;
+	width: auto;
+	/*
+        maj 05/08/2010 MPR : Correction du bz 14021 La hauteur n'est plus fixe
+        height: 14px;
+        */
+	color: #FFF;
+	font-family: arial,sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+ol#menu a:hover {
+	background: #0061A6 url('../images/bandeau2008/menu_on.png') top right no-repeat;
+	text-decoration: none;
+	color: #000;
+}
+
+
+ol#menu a.nohref { cursor: default; }
+ol#menu a.nohref:hover { cursor: default; }
+
+/* les liens des sous menus */
+ol#menu ol a {
+	display:block;
+	width:auto;
+	padding: 4px 16px 2px 6px;
+        /*
+        maj 05/08/2010 MPR : Correction du bz 14021 La hauteur n'est plus fixe
+	height:15px;
+        */
+	float:none;
+	border-top:0;
+	border-left:	1px solid #DBDBDB;
+	border-right:	1px solid #BABABA;
+	font-weight: normal;
+	background: #D2D2D2 url('../images/bandeau2008/submenu_off.png') top right no-repeat;
+	color: #000;
+}
+ol#menu ol a:hover {
+	background: #D2D2D2 url('../images/bandeau2008/submenu_on.png') top right no-repeat;
+	color: #000;
+}
+
+ol#menu li ol {
+	width:180px;
+}
+
+/* les liens des sous menus ayant un sous sous menu */
+ol#menu ol a.hasSub {
+	background: #D2D2D2 url('../images/bandeau2008/submenu_off_arrow_right.png') top right no-repeat;
+	font-weight:normal;
+	color: #000; /* DBD */
+}
+ol#menu ol a.hasSub:hover {
+	background: #D2D2D2 url('../images/bandeau2008/submenu_on_arrow_right.png') top right no-repeat;
+	color: #000;
+}
+
+/* les sous sous menus */
+ol#menu ol ol a {
+	min-width: 120px;
+	color: #000;
+}
+

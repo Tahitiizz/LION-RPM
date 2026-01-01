@@ -1,0 +1,309 @@
+/*
+	Styles utilisés pour l'affichage des graphs
+*/
+
+/*  19/01/2009 - Modif. benoit : reprise de tous les styles d'affichage des GTMS 
+    11/03/2009 - Modif SPS : - prise en compte de la taille de l'élément selecteur_toggle pour le top de l'élément indexContainer 
+ 	  						 - changement de la marge haute et basse pour les balises ul de classe IndexElementsList (15px -> 5px) 
+	12/03/2009 - Ajout SPS : ajout d'une propriete sur le body pour eviter le scintillement lors du defilement
+			   - Modif SPS : - ajout d'une hauteur maximale et de l'overflow pour l'element de classe IndexElementsList
+							 - ajout d'une hauteur minimale pour l'element de classe indexContent
+	16/04/2009 - Modif SPS : ajout d'une hauteur minimale pour l'element de classe indexContent (syntaxe specifique ie6) 		
+  20/04/2009 - modif SPS : suppression de la propriete width de l'element de classe indexContainer car erreur ie6 (et aucun effet sur le positionnement)		
+
+	29/07/2009 GHX  
+		- Modif de largeur pour l'index des dashboards
+	23/09/2009 GHX
+		- Correction du BZ 11665
+*/
+
+/* 12/03/2009 - Ajout SPS : ajout de la propriete suivante pour eviter le scintillement lors du defilement */
+
+/* 01/07/2009 BBx : l'index est désormais à "fixed" afin d'éviter les problèmes de chevauchement avec "hide filter". BZ 10296 */
+/* 11/05/2010 OJT : Ajout du style pour les tables de données sous les Dashboard */
+
+body { 
+	/*background: url(null) fixed ;*/ 
+}
+
+div.gtm {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.gtmTitleBack {
+	BORDER-BOTTOM: #1479BB 1px solid;
+	
+  PADDING-LEFT: 5px;
+	PADDING-BOTTOM: 5px;	
+	PADDING-TOP: 5px;
+	padding-right: 5px;
+	
+	background-image:url('../images/bandeau2008/gtmTitleBack.png');
+	background-repeat:repeat-x;
+
+  float: left;
+	height: 25px;
+}
+
+.imgTitle {
+	margin-left:3px;
+	margin-right:0;
+}
+
+.dashTitle {
+	FONT: bold 9pt Verdana, Arial, sans-serif;
+	COLOR: #ffffff;
+	border: none;
+	padding-bottom: 10px;
+	vertical-align: middle;
+}
+
+.gtmTitle {
+	FONT: 8pt Verdana, Arial, sans-serif;
+	COLOR: #ffffff;
+	padding-bottom: 10px;
+	vertical-align: middle;
+}
+
+.gtmIcons {
+	BORDER-RIGHT: #9f9e9e 1px solid;
+	PADDING-RIGHT: 0px;
+	BORDER-TOP: #9f9e9e 1px solid;
+	PADDING-LEFT: 0px;
+	BORDER-LEFT: #9f9e9e 0px solid;
+	BORDER-BOTTOM: #9f9e9e 0px solid;
+	BACKGROUND-COLOR: #ebebeb;
+	float: left;
+	margin-top: 11px;
+	padding-bottom: 4px;
+	height: 20px!important;
+	height: 10px;
+	z-index:10;
+}
+
+.gtmIcons UL {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	PADDING-TOP: 4px;
+	list-style-type:none;
+	margin-right: 2px;
+}
+
+.gtmIcons UL LI {
+	float: left;
+}
+
+.gtmIcons UL LI IMG {
+	BORDER: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 3px;
+	PADDING-BOTTOM: 5px;
+	MARGIN-RIGHT: 0px;
+	VERTICAL-ALIGN: middle;
+	PADDING-TOP: 0px;
+	float: left;
+}
+
+.gtmComment {
+    font : normal 7pt Verdana, Arial, sans-serif;
+    color : #585858;
+	text-align: left;
+}
+
+.imgGraph {
+	PADDING-RIGHT: 4px;
+	PADDING-LEFT: 4px;
+	PADDING-BOTTOM: 4px;
+	MARGIN: 0px;
+	PADDING-TOP: 4px;
+	/* 08:42 23/09/2009 GHX Correction du BZ 11665 */
+	margin-top:0px!important;
+	margin-top:-6px;
+	z-index:100;
+	background-color:#fff;
+	clear:both;
+}
+
+.contourImage {
+	BORDER-RIGHT: #aeaeae 1px solid;
+	BORDER-TOP: #bcbbbb 1px solid;
+	BORDER-LEFT: #bcbbbb 1px solid;
+	BORDER-BOTTOM: #aeaeae 1px solid;
+	float:left;
+}
+
+.fondGraph {
+  BORDER-RIGHT: #9f9e9e 1px solid;
+	BORDER-TOP: #9f9e9e 0px solid;
+	BORDER-LEFT: #9f9e9e 1px solid;
+	BORDER-BOTTOM: #9f9e9e 0px solid;
+	BACKGROUND-COLOR: #c5c3c3;
+
+	float:left;
+	/* 08:42 23/09/2009 GHX Correction du BZ 11665 */
+	margin-top:0px!important;
+	margin-top:-6px;
+}
+
+.backToTop {
+	margin: 15px auto 15px auto;
+	clear: both;
+}
+
+.graph-no-data {
+	border : 4px solid #f75858;
+	font : normal 8pt Verdana, Arial, sans-serif;
+	color : #f75858;
+	padding:10px;
+	padding-left: 60px;
+	margin:10px;
+	text-align: left;
+}
+
+.graph-no-data h1 {
+	font : bold 20pt Verdana, Arial, sans-serif;
+	padding:0px;
+	margin:0px;
+	text-align: left;
+	padding-bottom: 5px;
+}
+
+.msgOrderByAlpha {
+	font : bold 9pt Verdana, Arial, sans-serif;
+	color: red;
+	display:block;
+	margin-bottom:10px;
+}
+
+div.spacer { clear: both; }
+
+fieldset{ 
+    -moz-border-radius: 8px;
+    padding: 5px;
+}
+
+/* Styles de l'index des GTMs */
+
+.indexContainer {
+	/* 01/07/2009 BBX : on met l'index à fixed. BZ 10296 */
+	position:fixed;
+	left:0px;
+	top:230px;
+}
+
+.indexContent {
+	height:auto;
+	/* 12/03/2009 - Modif SPS : ajout d'une hauteur minimale */
+	min-height:100px;
+	/* 16/04/2009 - Modif SPS : ajout d'une hauteur minimale (syntaxe specifique ie6) */
+	_height:100px;
+	/* 11:38 29/07/2009 GHX modif de la largeur */
+	width:180px;
+	border:1px #c8c8ca solid;
+	background-color:#e6e6e6;
+	float:left;
+	padding:0; 
+	margin:0;
+	font : normal 7pt Verdana, Arial, sans-serif;
+	color: #898989;
+	text-align: left;
+}
+
+.indexButton {
+	padding: 0px;
+	float: left;
+	margin: 0px;
+	width: 15px;
+}
+
+.indexGTM {
+	padding: 2px;
+}
+
+.IndexElementsList{
+	background-color:#fff;  
+	margin:0; 
+	padding:0;
+	height:auto;
+	/* 12/03/2009 - Modif SPS : ajout d'une hauteur maximale et de l'overflow */
+	max-height:250px;
+	overflow:auto;
+}
+
+.IndexElementsList ul{
+	margin:5px 15px;   /* 11/03/2009 SPS : Changement de la marge haute et basse pour les balises ul de classe IndexElementsList (15px -> 5px) */
+    padding-left: 0px; /* 17/09/2010 OJT : Correction bz17898 suppression du scroll sur Firefox */
+}
+
+.IndexElementsList li{
+	list-style-type:disc;
+	margin:0;
+	padding:0;
+	margin-left:6px;
+	/* 11:38 29/07/2009 GHX ajout de la largeur */
+	width:140px;
+}
+
+.IndexElementsList a, .lien_graph a{
+	font : normal 7pt Verdana, Arial, sans-serif;
+}
+.IndexElementsList a:hover, .lien_graph a:hover{
+	font : normal 7pt Verdana, Arial, sans-serif;
+	text-decoration: underline;
+}
+
+/*
+17:31 25/08/2009 GHX
+Ajout du style pour le message de confirmation du graph dans le caddy BZ 11188
+*/ 
+.updateCaddy {
+float:left;
+margin-left: 5px;
+padding:5px;
+font-family:Arial;
+font-size:10pt;
+font-weight:bold;
+color:#33762E;
+border:2px solid #33762E;
+background-color:#B1D6B7;
+}
+
+/*******************************************************************************
+    Style pour les tables de données affichées sous les DashBoard
+    OJT 11/05/2010
+*******************************************************************************/
+div.dataTableGraph{
+    float:left;
+    padding:0px;
+    margin:0px;
+    background-color: #FFFFFF;
+    font: 7pt Verdana, Arial, sans-serif;
+    color: #585858;
+    border-top: 5px solid #C5C3C3;
+    overflow: auto;
+    text-align: left;
+}
+div.dataTableFirstCell{
+    height:1px;
+    width:100px; /* La première cellule est forcée à minimum 100px (lisibilité des NE) */
+}
+div.dataTableGraph table, div.dataTableGraph table tr{
+    margin:0px;
+    padding:0px;
+}
+div.dataTableGraph table tr.odd{background-color:#FBFBFB;}
+div.dataTableGraph table tr.even{background-color:#FFFFFF;}
+div.dataTableGraph table td{
+	white-space: nowrap;
+    border-right:1px solid #DDDDDD;
+    border-bottom:1px solid #DDDDDD;
+    padding:0px 5px; /* Permet d'espacer un peu les colonnes */
+    margin:0px;
+    text-align:right; /* Style Excel, les valeurs sont alignées à droite */
+}
+div.dataTableGraph table tr:hover{background-color:#E9F3FB;}
+div.dataTableGraph *:hover{cursor:default;}
+/******************************************************************************/

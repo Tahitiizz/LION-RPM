@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<template id="template1" title="template1">
+		<row rowspan='1'>
+			<widget colspan='1' type='chart' id='chart1' target='periodchart'/>
+			<widget colspan='1' type='chart' id='chart2' target='periodchart'/>
+			<widget colspan='1' type='chart' id='chart3' target='periodchart'/>
+			<widget colspan='1' type='chart' id='chart4' target='periodchart'/>
+		</row>
+		<row rowspan='1'>
+			<widget colspan='1' type='chart' id='chart5' target='periodchart'/>
+			<widget colspan='1' type='chart' id='chart6' target='periodchart'/>
+			<widget colspan='1' type='chart' id='chart7' target='periodchart'/>
+			<widget colspan='1' type='chart' id='chart8' target='periodchart'/>
+		</row>
+		<row rowspan='2'>
+			<widget colspan='1' type='period' id='periodchart'/>
+		</row>
+</template>

@@ -1,0 +1,15 @@
+sdd_id_page	sdd_sort_by_id	sdd_sort_by_order	sdd_mode	sdd_is_online	sdd_id_menu	sdd_selecteur_default_period	sdd_selecteur_default_top_overnetwork	sdd_selecteur_default_top_overtime	sdd_selecteur_default_na	sdd_selecteur_default_na_axe3
+dshd.0091.01.call_setup_success_rate	seri.gtms.0091.01.call_setup_success_rate.kpis.0091.01.cssr	asc	bimode	1	menu.dshd.0091.01.call_setup_success_rate	15	40	3	rnc	
+dshd.0091.01.call_drop_rate	seri.gtms.0091.01.call_drop_rate.kpis.0091.01.call_drop_rate	desc	bimode	1	menu.dshd.0091.01.call_drop_rate	15	40	3	rnc	
+dshd.0091.01.rrc_connection	seri.gtms.0091.01.rrc_connection_setup_success_rate.kpis.0091.01.rrc_connection_setup_sr	asc	bimode	1	menu.dshd.0091.01.rrc_connection	15	40	3	rnc	
+dshd.0091.01.rab_setup_and_drop	seri.gtms.0091.01.rab_establishment_success_rate.kpis.0091.01.rab_establishment_sr	asc	bimode	1	menu.dshd.0091.01.rab_setup_and_drop	15	40	3	rnc	
+dshd.0091.01.hspa_rab_setup_and_drop	seri.gtms.0091.01.hspa_rab_establishment_success_rate.kpis.0091.01.rab_establishment_sr_hsdpa	asc	bimode	1	menu.dshd.0091.01.hspa_rab_setup_and_drop	15	40	3	rnc	
+dshd.0091.01.reconfiguration	seri.gtms.0091.01.reconfiguration_success_rate.kpis.0091.01.channel_upswitch_sr	asc	bimode	1	menu.dshd.0091.01.reconfiguration	15	40	3	rnc	
+dshd.0091.01.cell_availability	seri.gtms.0091.01.cell_availability.kpis.0091.01.cell_availability	asc	bimode	1	menu.dshd.0091.01.cell_availability	15	40	3	rnc	
+dshd.0091.01.cell_load	seri.gtms.0091.01.cell_congestion.kpis.0091.01.congestion_dl	desc	bimode	1	menu.dshd.0091.01.cell_load	15	40	3	rnc	
+dshd.0091.01.cell_measurements	seri.gtms.0091.01.ul_rssi_average.kpis.0091.01.rssi_ul_avg	desc	bimode	1	menu.dshd.0091.01.cell_measurements	15	40	3	rnc	
+dshd.0091.01.traffic	seri.gtms.0091.01.cs_traffic.kpis.0091.01.traffic_erl_speech	desc	bimode	1	menu.dshd.0091.01.traffic	15	40	3	rnc	
+dshd.0091.01.soft_handover	seri.gtms.0091.01.sho_success_rate.kpis.0091.01.radio_link_addition_success_rate	asc	bimode	1	menu.dshd.0091.01.soft_handover	15	40	3	rnc	
+dshd.0091.01.hspa_mobility	seri.gtms.0091.01.hsdpa_cell_change_success_rate.kpis.0091.01.hs_cell_change_sr	asc	bimode	1	menu.dshd.0091.01.hspa_mobility	15	40	3	rnc	
+dshd.0091.01.hard_handover	seri.gtms.0091.01.intra_system_intra_frequency_hho_success_rate.kpis.0091.01.isif_hho_sr	asc	bimode	1	menu.dshd.0091.01.hard_handover	15	40	3	rnc	
+dshd.0091.01.compressed_mode	seri.gtms.0091.01.compressed_mode_success_rate.kpis.0091.01.dl_cmode_sr	asc	bimode	1	menu.dshd.0091.01.compressed_mode	15	40	3	rnc	

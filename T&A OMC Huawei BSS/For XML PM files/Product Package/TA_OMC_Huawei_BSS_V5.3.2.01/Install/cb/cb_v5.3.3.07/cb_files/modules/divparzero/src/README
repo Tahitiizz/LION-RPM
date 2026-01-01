@@ -1,0 +1,10 @@
+Pour le compiler,
+
+USE_PGXS=1 make
+USE_PGXS=1 make install
+
+puis charger le contrib :
+psql ma_base -f chemin_contribs/divparzero.sql
+
+Ce module modifie l'opérateur / pour les types float, afin que la division par zero ne
+retourne plus une erreur mais NULL

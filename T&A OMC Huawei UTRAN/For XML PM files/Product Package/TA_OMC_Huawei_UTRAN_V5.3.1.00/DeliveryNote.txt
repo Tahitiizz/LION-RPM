@@ -1,0 +1,93 @@
+===================================================================
+
+		Trending&Aggregation Huawei RAN 5.3
+		Version 5.3.1.00
+		Delivered on: Feb-20-2018
+
+===================================================================
+
+Content:
+
+        T&A Base Component    : V 5.3.3.07
+        T&A Parser            : V 5.3.1.00
+        T&A Context           : V 5.3.1.00
+        T&A Package Generator : V 3.10
+
+Installation:
+	IMPORTANT: This package cannot be used to upgrade a product in V5.3.1.00 and lower. Therefore it can only be used in a new client scenario.
+
+Expertise /R&D level specifications:
+	EXP Application / Vendor	:	RF
+	EXP Restitution / Techno	:	RD
+	R&D All Products			:	T17
+	R&D Product Template		:	T19
+	R&D previous context		: 	None
+
+Tools:
+	T&A Expertise Specifications Converter	:	V 1.08
+	T&A Context Management					:	V 7.0.2.12
+	Parser Library							:	V4.06
+
+
+---------------------------------------------------------------------
+History :
+---------------------------------------------------------------------
+
+Fixed anomalies / Evolutions of version 5.3.1.00:
+		- Expected PM files are XML files (instead of CSV files).
+
+Fixed anomalies / Evolutions of version 5.2.1.01:
+        - Bug 31225 - [EVO][T&A OMC Huawei UTRAN]: manage file 82833951 used for both BSS and UTRAN
+        
+Fixed anomalies / Evolutions of version 5.2.1.00:
+        -[Evolution]: Update of the base component to version 5.2.0.33 (refer to readme_cb_5.2.0.33.txt for more details about CB bug fixes)
+        -[Evolution]: Upgrade to parser_lib v3.08 (add tasks parallelism)
+        - Bug 31225 - [EVO][T&A OMC Huawei UTRAN]: manage file 82833951 used for both BSS and UTRAN
+        - Bug 31106 - [SUP][T&A OMC Huawei UTRAN][Zain Sudan]: new files activated are not collected
+        - Bug 31047 - [SUP][TA Huawei UTRAN][AVP 31277][Telus] : Number of alarms display in mail object doesn't correspond to attachment
+        - Bug 30526 - [SUP][T&A OMC Huawei UTRAN 5.1][AVP NA]: No system alert in trace log when pm files is missing
+        - Bug 29265 - [REC][T&A OMC Huawei UTRAN] incorrect order in the "NAVIGATION" menu
+        - Bug 28830 - [SUP][AVP 26512][Telus Canada][Data Export] Compute Hourly crashed during Data Export
+        
+Fixed anomalies / Evolutions of version 5.2.0.00:
+        -[Evolution]: Update of the base component to version 5.2.0.25 (refer to readme_cb_5.2.0.25.txt for more details about CB bug fixes)
+
+Fixed anomalies / Evolutions of version 5.1.1.02:
+        - Bug 28180 - [SUP][T&A OMC Huawei UTRAN]: Files that don't need to be collected are collected by the application       
+        
+Fixed anomalies / Evolutions of version 5.1.1.01:
+        - Bug 28180 - [SUP][T&A OMC Huawei UTRAN]: Files that don't need to be collected are collected by the application
+        - Bug 28197 - [SUP][T&A OMC Huawei UTRAN] Data from multi time zone pm files are erased when reprocessing the data
+        
+Fixed anomalies / Evolutions of version 5.1.1.00:
+        - Bug 28025 - [QAL][T&A OMC Huawei UTRAN]: Counter known in specification are not removed from counter mapping  
+        
+Fixed anomalies / Evolutions of version 5.1.0.05:
+        - [EVO] : upgrade to cb 5.1.6.26 
+
+Fixed anomalies / Evolutions of version 5.1.0.04:
+        - Bug 27926 : [QAL][T&A OMC Huawei UTRAN]: Multiple retrieve without collect 
+        
+Fixed anomalies / Evolutions of version 5.1.0.03:
+        -[Evolution]: Update of the base component to version 5.1.6.25 (refer to readme_cb_5.1.6.25.txt for more details about CB bug fixes)
+        - Bug 27887 : [REC][T&A OMC Huawei UTRAN][5.1.0.02] Counters with NONE Entity in Vendor doc are present in automatic mapping
+        - Bug 27889 : [REC][T&A OMC Huawei UTRAN][5.1.0.02] Error during Collect with multitimezone pmfiles
+        - Bug 27775 : [SUP][AVP NA][V5.1.0.01][TELUS] Collect fails when using SFTP
+        
+Fixed anomalies / Evolutions of version 5.1.0.02:
+        -[Evolution]: Update of the base component to version 5.1.6.23 (refer to readme_cb_5.1.6.23.txt for more details about CB bug fixes)
+        -[Evolution]: Multi-time zone parsing
+        - Bug 27506 : [SUP][T&A OMC Huawei UTRAN]: Wrong aggregation for counter VS_AMR_Erlang_BestCell
+        - Bug 27110 : [EVO][T&A OMC Huawei UTRAN]: The update of Label should be inactivate via global parameters
+                
+Fixed anomalies / Evolutions of version 5.1.0.01:
+        - Bug 26828 : [QAL][T&A OMC Huawei UTRAN]: The KPI "NRT_PS_DATA_DROPS" value is negative
+        - Bug 26817 : [QAL][T&A OMC Huawei UTRAN]: RI=50% on all cell hour level when the pm file are 30 min granularity
+        
+        
+Fixed anomalies / Evolutions of version 5.1.0.00:
+        - Bug 22934 : [SUP][T&A OMC Huawei UTRAN]: RNc and Cell with space in their name are not inserted in toppology
+        - Bug 23216 : [SUP][T&A OMC Huawei UTRAN][Parser] Temp table "w_astellia" are not purged
+        
+
+

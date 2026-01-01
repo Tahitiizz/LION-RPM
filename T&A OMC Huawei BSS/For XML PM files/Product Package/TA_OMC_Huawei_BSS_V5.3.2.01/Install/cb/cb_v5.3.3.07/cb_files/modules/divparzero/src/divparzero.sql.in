@@ -1,0 +1,37 @@
+CREATE OR REPLACE FUNCTION
+float8divzero (float8, float8)
+RETURNS float8
+AS 'MODULE_PATHNAME'
+LANGUAGE C STRICT;
+
+CREATE OR REPLACE FUNCTION
+float4divzero (float4, float4)
+RETURNS float8
+AS 'MODULE_PATHNAME'
+LANGUAGE C STRICT;
+
+CREATE OR REPLACE FUNCTION
+float48divzero (float4, float8)
+RETURNS float8
+AS 'MODULE_PATHNAME'
+LANGUAGE C STRICT;
+
+CREATE OR REPLACE FUNCTION
+float84divzero (float8, float4)
+RETURNS float8
+AS 'MODULE_PATHNAME'
+LANGUAGE C STRICT;
+
+
+UPDATE pg_operator SET oprcode=(SELECT oid FROM pg_proc WHERE proname='float8divzero') WHERE oprname='/' AND oprleft=(SELECT oid FROM pg_type WHERE typname='float8') AND oprright=(SELECT oid FROM pg_type WHERE typname='float8');
+
+UPDATE pg_operator SET oprcode=(SELECT oid FROM pg_proc WHERE proname='float4divzero') WHERE oprname='/' AND oprleft=(SELECT oid FROM pg_type WHERE typname='float4') AND oprright=(SELECT oid FROM pg_type WHERE typname='float4');
+
+UPDATE pg_operator SET oprcode=(SELECT oid FROM pg_proc WHERE proname='float48divzero') WHERE oprname='/' AND oprleft=(SELECT oid FROM pg_type WHERE typname='float4') AND oprright=(SELECT oid FROM pg_type WHERE typname='float8');
+
+UPDATE pg_operator SET oprcode=(SELECT oid FROM pg_proc WHERE proname='float84divzero') WHERE oprname='/' AND oprleft=(SELECT oid FROM pg_type WHERE typname='float8') AND oprright=(SELECT oid FROM pg_type WHERE typname='float4');
+
+
+VACUUM FULL pg_operator;
+REINDEX TABLE pg_operator;
+

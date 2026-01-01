@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for AlarmSetup.class.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file AlarmSetup.class.php</h1>
+<p>Documentation is available at <a href="../Alarm/_AlarmSetup_class_php.html">AlarmSetup.class.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?php</span></li>
+<li><a name="a2"></a>&nbsp;</li>
+<li><a name="a3"></a><span class="src-inc">include_once </span><span class="src-str">'AlarmModel.class.php'</span><span class="src-sym">;</span></li>
+<li><a name="a4"></a><span class="src-inc">include_once </span><span class="src-str">'networkElementSelection.class.php'</span><span class="src-sym">;</span></li>
+<li><a name="a5"></a>&nbsp;</li>
+<li><a name="a6"></a><span class="src-doc">/**</span></li>
+<li><a name="a7"></a><span class="src-doc"> * Classe AlarmSetup</span></li>
+<li><a name="a8"></a><span class="src-doc"> * </span></li>
+<li><a name="a9"></a><span class="src-doc"> * Permet la création ou l'édition d'une alarme</span></li>
+<li><a name="a10"></a><span class="src-doc"> * </span></li>
+<li><a name="a11"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@package</span><span class="src-doc"> Alarm</span></li>
+<li><a name="a12"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@author</span><span class="src-doc"> BAC b.audic@astellia.com</span></li>
+<li><a name="a13"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@version</span><span class="src-doc"> 1.0.0</span></li>
+<li><a name="a14"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@copyright</span><span class="src-doc"> 2008 Astellia</span></li>
+<li><a name="a15"></a><span class="src-doc"> *</span></li>
+<li><a name="a16"></a><span class="src-doc"> */</span></li>
+<li><a name="a17"></a>&nbsp;</li>
+<li><a name="a18"></a><span class="src-key">class </span><a href="../Alarm/AlarmSetup.html">AlarmSetup</a></li>
+<li><a name="a19"></a><span class="src-sym">{</span></li>
+<li><a name="a20"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a21"></a><span class="src-doc">     * Identifiant de l'alarme à ajouter / modifier</span></li>
+<li><a name="a22"></a><span class="src-doc">     *</span></li>
+<li><a name="a23"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">integer </span></li>
+<li><a name="a24"></a><span class="src-doc">     */</span></li>
+<li><a name="a25"></a>    </li>
+<li><a name="a26"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$alarmId">$alarmId</a><span class="src-sym">;</span></li>
+<li><a name="a27"></a>    </li>
+<li><a name="a28"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a29"></a><span class="src-doc">     * Famille de l'alarme</span></li>
+<li><a name="a30"></a><span class="src-doc">     *</span></li>
+<li><a name="a31"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">string </span></li>
+<li><a name="a32"></a><span class="src-doc">     */</span></li>
+<li><a name="a33"></a>    </li>
+<li><a name="a34"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$family">$family</a><span class="src-sym">;</span></li>
+<li><a name="a35"></a>    </li>
+<li><a name="a36"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a37"></a><span class="src-doc">     * Type de l'alarme</span></li>
+<li><a name="a38"></a><span class="src-doc">     *</span></li>
+<li><a name="a39"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">string </span></li>
+<li><a name="a40"></a><span class="src-doc">     */</span></li>
+<li><a name="a41"></a>    </li>
+<li><a name="a42"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$alarmType">$alarmType</a><span class="src-sym">;</span></li>
+<li><a name="a43"></a>    </li>
+<li><a name="a44"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a45"></a><span class="src-doc">     * Indique si l'alarme est nouvelle ou non</span></li>
+<li><a name="a46"></a><span class="src-doc">     *</span></li>
+<li><a name="a47"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">boolean </span></li>
+<li><a name="a48"></a><span class="src-doc">     */</span></li>
+<li><a name="a49"></a>    </li>
+<li><a name="a50"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$newAlarm">$newAlarm</a><span class="src-sym">;</span></li>
+<li><a name="a51"></a>    </li>
+<li><a name="a52"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a53"></a><span class="src-doc">     * Liste des propriétés d'une alarme à modifier</span></li>
+<li><a name="a54"></a><span class="src-doc">     *</span></li>
+<li><a name="a55"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">array </span></li>
+<li><a name="a56"></a><span class="src-doc">     */</span></li>
+<li><a name="a57"></a>    </li>
+<li><a name="a58"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$alarmProperties">$alarmProperties</a><span class="src-sym">;</span></li>
+<li><a name="a59"></a>    </li>
+<li><a name="a60"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a61"></a><span class="src-doc">     * Liste des triggers d'une alarme à modifier</span></li>
+<li><a name="a62"></a><span class="src-doc">     *</span></li>
+<li><a name="a63"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">array </span></li>
+<li><a name="a64"></a><span class="src-doc">     */</span></li>
+<li><a name="a65"></a>    </li>
+<li><a name="a66"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$alarmTriggers">$alarmTriggers</a><span class="src-sym">;</span></li>
+<li><a name="a67"></a>    </li>
+<li><a name="a68"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a69"></a><span class="src-doc">     * Liste des champs additionnels d'une alarme à modifier</span></li>
+<li><a name="a70"></a><span class="src-doc">     *</span></li>
+<li><a name="a71"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">array </span></li>
+<li><a name="a72"></a><span class="src-doc">     */</span></li>
+<li><a name="a73"></a>    </li>
+<li><a name="a74"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$alarmAdditionnals">$alarmAdditionnals</a><span class="src-sym">;</span></li>
+<li><a name="a75"></a>    </li>
+<li><a name="a76"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a77"></a><span class="src-doc">     * Url du script appelé lors du postage du formulaire (non utilisé)</span></li>
+<li><a name="a78"></a><span class="src-doc">     *</span></li>
+<li><a name="a79"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">string </span></li>
+<li><a name="a80"></a><span class="src-doc">     */</span></li>
+<li><a name="a81"></a>    </li>
+<li><a name="a82"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$postScript">$postScript</a><span class="src-sym">;</span></li>
+<li><a name="a83"></a>    </li>
+<li><a name="a84"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a85"></a><span class="src-doc">     * Instance de la classe de connexion à la base de données</span></li>
+<li><a name="a86"></a><span class="src-doc">     *</span></li>
+<li><a name="a87"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">object </span></li>
+<li><a name="a88"></a><span class="src-doc">     */</span></li>
+<li><a name="a89"></a>    </li>
+<li><a name="a90"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$alarmModel">$alarmModel</a><span class="src-sym">;</span></li>
+<li><a name="a91"></a>    </li>
+<li><a name="a92"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a93"></a><span class="src-doc">     * Indique si les niveaux de criticité sont affichés ou non</span></li>
+<li><a name="a94"></a><span class="src-doc">     *</span></li>
+<li><a name="a95"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">boolean </span></li>
+<li><a name="a96"></a><span class="src-doc">     */</span></li>
+<li><a name="a97"></a>    </li>
+<li><a name="a98"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$showCriticity">$showCriticity</a><span class="src-sym">;</span></li>
+<li><a name="a99"></a>&nbsp;</li>
+<li><a name="a100"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a101"></a><span class="src-doc">     * Nombre de champs additionnels</span></li>
+<li><a name="a102"></a><span class="src-doc">     *</span></li>
+<li><a name="a103"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">integer </span></li>
+<li><a name="a104"></a><span class="src-doc">     */</span></li>
+<li><a name="a105"></a>    </li>
+<li><a name="a106"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$nbAdditionnalFields">$nbAdditionnalFields</a><span class="src-sym">;</span></li>
+<li><a name="a107"></a>    </li>
+<li><a name="a108"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a109"></a><span class="src-doc">     * Liste des types de triggers existants</span></li>
+<li><a name="a110"></a><span class="src-doc">     *</span></li>
+<li><a name="a111"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">array </span></li>
+<li><a name="a112"></a><span class="src-doc">     */</span></li>
+<li><a name="a113"></a>    </li>
+<li><a name="a114"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$triggerTypes">$triggerTypes</a><span class="src-sym">;</span></li>
+<li><a name="a115"></a>    </li>
+<li><a name="a116"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a117"></a><span class="src-doc">     * Liste des valeurs des types de triggers existants</span></li>
+<li><a name="a118"></a><span class="src-doc">     *</span></li>
+<li><a name="a119"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">array </span></li>
+<li><a name="a120"></a><span class="src-doc">     */</span></li>
+<li><a name="a121"></a>    </li>
+<li><a name="a122"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$triggerTypeValues">$triggerTypeValues</a><span class="src-sym">;</span></li>
+<li><a name="a123"></a>    </li>
+<li><a name="a124"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a125"></a><span class="src-doc">     * Liste des opérandes de triggers existants</span></li>
+<li><a name="a126"></a><span class="src-doc">     *</span></li>
+<li><a name="a127"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">array </span></li>
+<li><a name="a128"></a><span class="src-doc">     */</span></li>
+<li><a name="a129"></a>    </li>
+<li><a name="a130"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$triggerOperands">$triggerOperands</a><span class="src-sym">;</span></li>
+<li><a name="a131"></a>    </li>
+<li><a name="a132"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a133"></a><span class="src-doc">     * Indique si l'on affiche les champs additionnels ou non</span></li>
+<li><a name="a134"></a><span class="src-doc">     *</span></li>
+<li><a name="a135"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">boolean </span></li>
+<li><a name="a136"></a><span class="src-doc">     */</span></li>
+<li><a name="a137"></a>    </li>
+<li><a name="a138"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$displayAdditionnalFields">$displayAdditionnalFields</a><span class="src-sym">;</span></li>
+<li><a name="a139"></a>    </li>
+<li><a name="a140"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a141"></a><span class="src-doc">     * Indique si l'on peut ajpouter des triggers ou non</span></li>
+<li><a name="a142"></a><span class="src-doc">     *</span></li>
+<li><a name="a143"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">boolean </span></li>
+<li><a name="a144"></a><span class="src-doc">     */</span></li>
+<li><a name="a145"></a>    </li>
+<li><a name="a146"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$canAddTrigger">$canAddTrigger</a><span class="src-sym">;</span></li>
+<li><a name="a147"></a>    </li>
+<li><a name="a148"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a149"></a><span class="src-doc">     * Liste des na</span></li>
+<li><a name="a150"></a><span class="src-doc">     *</span></li>
+<li><a name="a151"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">array </span></li>
+<li><a name="a152"></a><span class="src-doc">     */</span></li>
+<li><a name="a153"></a>    </li>
+<li><a name="a154"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$naList">$naList</a><span class="src-sym">;</span></li>
+<li><a name="a155"></a>    </li>
+<li><a name="a156"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a157"></a><span class="src-doc">     * Liste des ne (= valeurs de na)</span></li>
+<li><a name="a158"></a><span class="src-doc">     *</span></li>
+<li><a name="a159"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">array </span></li>
+<li><a name="a160"></a><span class="src-doc">     */</span></li>
+<li><a name="a161"></a>    </li>
+<li><a name="a162"></a>    <span class="src-key">private </span><a href="../Alarm/AlarmSetup.html#var$neList">$neList</a><span class="src-sym">;</span></li>
+<li><a name="a163"></a>    </li>
+<li><a name="a164"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a165"></a><span class="src-doc">     * Constructeur de la classe</span></li>
+<li><a name="a166"></a><span class="src-doc">     *</span></li>
+<li><a name="a167"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$family </span><span class="src-doc">famille de l'alarme à créer / éditer</span></li>
+<li><a name="a168"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$type </span><span class="src-doc">type de l'alarme à créer / éditer</span></li>
+<li><a name="a169"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$post_script </span><span class="src-doc">url du script de sauvegarde de la définition de l'alarme</span></li>
+<li><a name="a170"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">integer </span><span class="src-doc-var">$alarm_id </span><span class="src-doc">identifiant de l'alarme à créer / éditer</span></li>
+<li><a name="a171"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">void </span></li>
+<li><a name="a172"></a><span class="src-doc">     */</span></li>
+<li><a name="a173"></a>&nbsp;</li>
+<li><a name="a174"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-var">$family</span><span class="src-sym">, </span><span class="src-var">$type</span><span class="src-sym">, </span><span class="src-var">$alarm_id </span>= <span class="src-str">''</span><span class="src-sym">, </span><span class="src-var">$post_script </span>= <span class="src-str">''</span><span class="src-sym">)</span></li>
+<li><a name="a175"></a>    <span class="src-sym">{</span></li>
+<li><a name="a176"></a>        <span class="src-comm">// Initialisation des variables de classe</span></li>
+<li><a name="a177"></a>        </li>
+<li><a name="a178"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$family">family</a>        = <span class="src-var">$family</span><span class="src-sym">;</span></li>
+<li><a name="a179"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmType">alarmType</a>    = <span class="src-var">$type</span><span class="src-sym">;</span></li>
+<li><a name="a180"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$postScript">postScript</a>    = <span class="src-var">$post_script</span><span class="src-sym">;</span></li>
+<li><a name="a181"></a>&nbsp;</li>
+<li><a name="a182"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$alarm_id </span>!= <span class="src-str">&quot;&quot;</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a183"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$newAlarm">newAlarm</a> = <span class="src-id">false</span><span class="src-sym">;</span></li>
+<li><a name="a184"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmId">alarmId</a> = <span class="src-var">$alarm_id</span><span class="src-sym">;</span></li>
+<li><a name="a185"></a>        <span class="src-sym">}</span></li>
+<li><a name="a186"></a>        <span class="src-key">else </span></li>
+<li><a name="a187"></a>        <span class="src-sym">{</span></li>
+<li><a name="a188"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$newAlarm">newAlarm</a> = <span class="src-id">true</span><span class="src-sym">;</span></li>
+<li><a name="a189"></a>        <span class="src-sym">}</span></li>
+<li><a name="a190"></a>&nbsp;</li>
+<li><a name="a191"></a>        <span class="src-comm">// Par defaut, on masque le choix des niveaux de criticité</span></li>
+<li><a name="a192"></a>&nbsp;</li>
+<li><a name="a193"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$showCriticity">showCriticity</a> = <span class="src-id">false</span><span class="src-sym">;</span></li>
+<li><a name="a194"></a>&nbsp;</li>
+<li><a name="a195"></a>        <span class="src-comm">// Définition de la visibilité de l'onglet &quot;Additionnal fields&quot;</span></li>
+<li><a name="a196"></a>&nbsp;</li>
+<li><a name="a197"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$displayAdditionnalFields">displayAdditionnalFields</a> = <span class="src-id">false</span><span class="src-sym">;</span></li>
+<li><a name="a198"></a>&nbsp;</li>
+<li><a name="a199"></a>        <span class="src-comm">// Définition de la possibilité d'ajouter ou non des triggers</span></li>
+<li><a name="a200"></a>&nbsp;</li>
+<li><a name="a201"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$canAddTrigger">canAddTrigger</a> = <span class="src-id">false</span><span class="src-sym">;</span></li>
+<li><a name="a202"></a>&nbsp;</li>
+<li><a name="a203"></a>        <span class="src-comm">// Définition du nombre de champs additionnels</span></li>
+<li><a name="a204"></a>&nbsp;</li>
+<li><a name="a205"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$nbAdditionnalFields">nbAdditionnalFields</a> = <span class="src-num">5</span><span class="src-sym">;</span></li>
+<li><a name="a206"></a>&nbsp;</li>
+<li><a name="a207"></a>        <span class="src-comm">// Définition d'une instance de la classe 'AlarmModel' afin de disposer des données des alarmes</span></li>
+<li><a name="a208"></a>&nbsp;</li>
+<li><a name="a209"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a> = <span class="src-key">new </span><span class="src-id"><a href="../Alarm/AlarmModel.html">AlarmModel</a></span><span class="src-sym">(</span><span class="src-str">''</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a210"></a>&nbsp;</li>
+<li><a name="a211"></a>        <span class="src-comm">// Definition des na de la famille</span></li>
+<li><a name="a212"></a>&nbsp;</li>
+<li><a name="a213"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$naList">naList</a> = <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getNetworkAgregation</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$family">family</a><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a214"></a>&nbsp;</li>
+<li><a name="a215"></a>        <span class="src-comm">// Définition de la liste des ne de celle-ci</span></li>
+<li><a name="a216"></a>&nbsp;</li>
+<li><a name="a217"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$neList">neList</a> = <span class="src-sym">((</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$newAlarm">newAlarm</a> == <span class="src-id">true</span><span class="src-sym">) </span>? <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">) </span>: <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getAlarmNetworkElements</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmId">alarmId</a><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmType">alarmType</a><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a218"></a>&nbsp;</li>
+<li><a name="a219"></a>        <span class="src-comm">// Définition des types de triggers, de leurs valeurs et des opérandes disponibles</span></li>
+<li><a name="a220"></a>        </li>
+<li><a name="a221"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$triggerTypes">triggerTypes</a>            = <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getTriggerTypes</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a222"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$triggerTypeValues">triggerTypeValues</a>    = <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getTriggerTypeValues</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$family">family</a><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a223"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$triggerOperands">triggerOperands</a>        = <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getTriggerOperands</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a224"></a>    <span class="src-sym">}</span></li>
+<li><a name="a225"></a>    </li>
+<li><a name="a226"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a227"></a><span class="src-doc">     * Génère le code HTML de l'interface de création / d'édition de l'alarme</span></li>
+<li><a name="a228"></a><span class="src-doc">     *</span></li>
+<li><a name="a229"></a><span class="src-doc">     */</span></li>
+<li><a name="a230"></a>&nbsp;</li>
+<li><a name="a231"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#methodgenerateIHM">generateIHM</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a232"></a>    <span class="src-sym">{</span></li>
+<li><a name="a233"></a>        <span class="src-comm">// Note : mettre la méthode d'envoi du formulaire en variable de session</span></li>
+<li><a name="a234"></a>&nbsp;</li>
+<li><a name="a235"></a>        <span class="src-var">$html </span>= <span class="src-str">'&lt;form id=&quot;alarmSetupForm&quot; name=&quot;alarmSetupForm&quot; method=&quot;post&quot; action=&quot;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$postScript">postScript</a>.<span class="src-str">'&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a236"></a>    </li>
+<li><a name="a237"></a>        <span class="src-comm">// Définition d'un champ caché contenant l'identifiant de l'alarme (en mode edition)</span></li>
+<li><a name="a238"></a>&nbsp;</li>
+<li><a name="a239"></a>        <span class="src-var">$html </span>.= <span class="src-str">'&lt;input type=&quot;hidden&quot; id=&quot;alarm_id&quot; name=&quot;alarm_id&quot; value=&quot;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmId">alarmId</a>.<span class="src-str">'&quot;/&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a240"></a>&nbsp;</li>
+<li><a name="a241"></a>        <span class="src-comm">// Définition de champs cachés indiquant le type et la famille de l'alarme à créer</span></li>
+<li><a name="a242"></a>&nbsp;</li>
+<li><a name="a243"></a>        <span class="src-var">$html </span>.= <span class="src-str">'&lt;input type=&quot;hidden&quot; id=&quot;alarm_type&quot; name=&quot;alarm_type&quot; value=&quot;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmType">alarmType</a>.<span class="src-str">'&quot;/&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a244"></a>        <span class="src-var">$html </span>.= <span class="src-str">'&lt;input type=&quot;hidden&quot; id=&quot;alarm_family&quot; name=&quot;alarm_family&quot; value=&quot;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$family">family</a>.<span class="src-str">'&quot;/&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a245"></a>&nbsp;</li>
+<li><a name="a246"></a>        <span class="src-var">$html </span>.= <span class="src-str">'&lt;table&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a247"></a>&nbsp;</li>
+<li><a name="a248"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$newAlarm">newAlarm</a><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a249"></a>            <span class="src-var">$html </span>.= <span class="src-str">'&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;span class=&quot;texteGris&quot;&gt;&lt;A href=&quot;javascript:history.back()&quot;&gt;&lt;u&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'G_PROFILE_FORM_LINK_BACK_TO_THE_LIST'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/u&gt;&lt;/a&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a250"></a>        <span class="src-sym">}</span></li>
+<li><a name="a251"></a>        </li>
+<li><a name="a252"></a>        <span class="src-var">$html </span>.= <span class="src-str">'&lt;tr&gt;&lt;td&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodgenerateAlarmPropertiesField">generateAlarmPropertiesField</a><span class="src-sym">(</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/td&gt;&lt;/tr&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a253"></a>        <span class="src-var">$html </span>.= <span class="src-str">'&lt;tr&gt;&lt;td&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodgenerateAlarmOnglets">generateAlarmOnglets</a><span class="src-sym">(</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/td&gt;&lt;/tr&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a254"></a>&nbsp;</li>
+<li><a name="a255"></a>        <span class="src-var">$html </span>.= <span class="src-str">'&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a256"></a>        </li>
+<li><a name="a257"></a>        <span class="src-comm">//$html .= '&lt;input type=&quot;submit&quot; class=&quot;bouton&quot; style=&quot;margin:5px&quot; name=&quot;Submit&quot; value=&quot;Save&quot;/&gt;';</span></li>
+<li><a name="a258"></a>        <span class="src-var">$html </span>.= <span class="src-str">'&lt;input type=&quot;button&quot; class=&quot;bouton&quot; style=&quot;margin:5px&quot; name=&quot;Submit&quot; value=&quot;Save&quot; onclick=&quot;checkAlarmFields()&quot;/&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a259"></a>        </li>
+<li><a name="a260"></a>        <span class="src-var">$html </span>.= <span class="src-str">'&lt;input type=&quot;button&quot; class=&quot;bouton&quot; style=&quot;margin:5px&quot; name=&quot;Cancel&quot; onclick=&quot;javascript:history.back()&quot; value=&quot;Cancel&quot;/&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a261"></a>&nbsp;</li>
+<li><a name="a262"></a>        <span class="src-var">$html </span>.= <span class="src-str">'&lt;/table&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a263"></a>&nbsp;</li>
+<li><a name="a264"></a>        <span class="src-var">$html </span>.= <span class="src-str">'&lt;/form&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a265"></a>&nbsp;</li>
+<li><a name="a266"></a>        echo <span class="src-var">$html</span><span class="src-sym">;</span></li>
+<li><a name="a267"></a>    <span class="src-sym">}</span></li>
+<li><a name="a268"></a>    </li>
+<li><a name="a269"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a270"></a><span class="src-doc">     * Génére le code HTML du fieldset des propriétés de l'alarme</span></li>
+<li><a name="a271"></a><span class="src-doc">     *</span></li>
+<li><a name="a272"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">code HTML du fieldset de propriétés de l'alarme</span></li>
+<li><a name="a273"></a><span class="src-doc">     */</span></li>
+<li><a name="a274"></a>&nbsp;</li>
+<li><a name="a275"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#methodgenerateAlarmPropertiesField">generateAlarmPropertiesField</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a276"></a>    <span class="src-sym">{</span></li>
+<li><a name="a277"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$newAlarm">newAlarm</a><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a278"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmProperties">alarmProperties</a> = <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getAlarmProperties</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmId">alarmId</a><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$family">family</a><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmType">alarmType</a><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a279"></a>        <span class="src-sym">}</span></li>
+<li><a name="a280"></a>&nbsp;</li>
+<li><a name="a281"></a>        <span class="src-comm">// Definition du conteneur des propriétés de l'alarme</span></li>
+<li><a name="a282"></a>&nbsp;</li>
+<li><a name="a283"></a>        <span class="src-var">$ppties_field </span>= <span class="src-str">'&lt;fieldset&gt;</span></li>
+<li><a name="a284"></a><span class="src-str">                                &lt;legend class=&quot;texteGrisBold&quot;&gt;&amp;nbsp;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_ALARM_PROPERTIES_LABEL'</span><span class="src-sym">)</span>.<span class="src-str">'&amp;nbsp;&lt;/legend&gt;</span></li>
+<li><a name="a285"></a><span class="src-str">                                &lt;table id=&quot;alarm_properties&quot; width=&quot;100%&quot; border=&quot;0&quot; align=&quot;center&quot; cellspacing=&quot;3&quot; cellpadding=&quot;3&quot; class=&quot;tabPrincipal&quot; &gt;</span></li>
+<li><a name="a286"></a><span class="src-str">                            '</span><span class="src-sym">;</span></li>
+<li><a name="a287"></a>&nbsp;</li>
+<li><a name="a288"></a>        <span class="src-comm">// Definition d'une ligne du tableau permettant d'afficher les erreurs</span></li>
+<li><a name="a289"></a>&nbsp;</li>
+<li><a name="a290"></a>        <span class="src-var">$ppties_field </span>.= <span class="src-str">'&lt;tr&gt;&lt;td colspan=&quot;2&quot; id=&quot;errors_summary&quot; style=&quot;display:none&quot;&gt;&lt;/td&gt;&lt;/tr&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a291"></a>        </li>
+<li><a name="a292"></a>        <span class="src-comm">// Definition du nom de l'alarme</span></li>
+<li><a name="a293"></a>&nbsp;</li>
+<li><a name="a294"></a>        <span class="src-var">$alarm_name </span>= <span class="src-sym">((</span><span class="src-sym">!</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$newAlarm">newAlarm</a> &amp;&amp; <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmProperties">alarmProperties</a><span class="src-sym">[</span><span class="src-str">'alarm_name'</span><span class="src-sym">] </span>!= <span class="src-str">''</span><span class="src-sym">) </span>? <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmProperties">alarmProperties</a><span class="src-sym">[</span><span class="src-str">'alarm_name'</span><span class="src-sym">] </span>: <span class="src-str">&quot;&quot;</span><span class="src-sym">)</span><span class="src-sym">;        </span></li>
+<li><a name="a295"></a>        </li>
+<li><a name="a296"></a>        <span class="src-var">$ppties_field </span>.= <span class="src-str">'&lt;tr&gt;&lt;td class=&quot;texteGris&quot; width=&quot;150px&quot;&gt;&lt;li&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_FORM_LABEL_ALARM_NAME'</span><span class="src-sym">)</span>.<span class="src-str">'&amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;/td&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a297"></a>        <span class="src-var">$ppties_field </span>.= <span class="src-str">'&lt;td&gt;&lt;input id=&quot;alarm_name&quot; name=&quot;alarm_name&quot; class=&quot;zoneTexteStyleXP&quot; style=&quot;width:400px&quot; maxLength=&quot;120&quot; value=&quot;'</span>.<span class="src-var">$alarm_name</span>.<span class="src-str">'&quot;&gt;&lt;/td&gt;&lt;/tr&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a298"></a>&nbsp;</li>
+<li><a name="a299"></a>        <span class="src-comm">// Definition du champ description de l'alarme</span></li>
+<li><a name="a300"></a>&nbsp;</li>
+<li><a name="a301"></a>        <span class="src-var">$alarm_desc </span>= <span class="src-sym">((</span><span class="src-sym">!</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$newAlarm">newAlarm</a> &amp;&amp; <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmProperties">alarmProperties</a><span class="src-sym">[</span><span class="src-str">'description'</span><span class="src-sym">] </span>!= <span class="src-str">''</span><span class="src-sym">) </span>? <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmProperties">alarmProperties</a><span class="src-sym">[</span><span class="src-str">'description'</span><span class="src-sym">] </span>: <span class="src-str">&quot;&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a302"></a>&nbsp;</li>
+<li><a name="a303"></a>        <span class="src-var">$ppties_field </span>.= <span class="src-str">'&lt;tr&gt;&lt;td class=&quot;texteGris&quot; width=&quot;150px&quot;&gt;&lt;li&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_FORM_LABEL_ALARM_DESCRIPTION'</span><span class="src-sym">)</span>.<span class="src-str">'&amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;/td&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a304"></a>        <span class="src-var">$ppties_field </span>.= <span class="src-str">'&lt;td&gt;&lt;textarea id=&quot;alarm_description&quot; name=&quot;alarm_description&quot; class=&quot;zoneTexteStyleXP&quot; style=&quot;overflow:auto;width:400px&quot; rows=&quot;4&quot;&gt;'</span>.<span class="src-var">$alarm_desc</span>.<span class="src-str">'&lt;/textarea&gt;&lt;/td&gt;&lt;/tr&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a305"></a>&nbsp;</li>
+<li><a name="a306"></a>        <span class="src-comm">// Definition du champ network</span></li>
+<li><a name="a307"></a>&nbsp;</li>
+<li><a name="a308"></a>        <span class="src-var">$ppties_field </span>.= <span class="src-str">'&lt;tr&gt;&lt;td class=&quot;texteGris&quot; width=&quot;150px&quot;&gt;&lt;li&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_FORM_LABEL_NETWORK_LEVEL'</span><span class="src-sym">)</span>.<span class="src-str">'&amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;/td&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a309"></a>        <span class="src-var">$ppties_field </span>.= <span class="src-str">'&lt;td&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodsetNetworkAgregationSelect">setNetworkAgregationSelect</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmProperties">alarmProperties</a><span class="src-sym">[</span><span class="src-str">'network'</span><span class="src-sym">]</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/td&gt;&lt;/tr&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a310"></a>&nbsp;</li>
+<li><a name="a311"></a>        <span class="src-comm">// Definition du champ time</span></li>
+<li><a name="a312"></a>&nbsp;</li>
+<li><a name="a313"></a>        <span class="src-var">$ppties_field </span>.= <span class="src-str">'&lt;tr&gt;&lt;td class=&quot;texteGris&quot; width=&quot;150px&quot;&gt;&lt;li&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_FORM_LABEL_TIME_RESOLUTION'</span><span class="src-sym">)</span>.<span class="src-str">'&amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;/td&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a314"></a>        <span class="src-var">$ppties_field </span>.= <span class="src-str">'&lt;td&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodsetTimeAgregationSelect">setTimeAgregationSelect</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmProperties">alarmProperties</a><span class="src-sym">[</span><span class="src-str">'time'</span><span class="src-sym">]</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/td&gt;&lt;/tr&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a315"></a>&nbsp;</li>
+<li><a name="a316"></a>        <span class="src-comm">// Definition du champ d'activation / désactivation de l'alarme</span></li>
+<li><a name="a317"></a>&nbsp;</li>
+<li><a name="a318"></a>        <span class="src-var">$alarm_checked </span>= <span class="src-sym">(((</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$newAlarm">newAlarm</a><span class="src-sym">) </span>|| <span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmProperties">alarmProperties</a><span class="src-sym">[</span><span class="src-str">'on_off'</span><span class="src-sym">] </span>== <span class="src-num">1</span><span class="src-sym">)) </span>? <span class="src-str">&quot;checked&quot; </span>: <span class="src-str">&quot;&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a319"></a>&nbsp;</li>
+<li><a name="a320"></a>        <span class="src-var">$ppties_field </span>.= <span class="src-str">'&lt;tr&gt;&lt;td colspan=&quot;2&quot; class=&quot;texteGris&quot;&gt;&lt;li&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_FORM_LABEL_ALARM_CALCULATION_ACTIVATED'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/li&gt;&amp;nbsp;&amp;nbsp;'</span><span class="src-sym">;</span></li>
+<li><a name="a321"></a>        <span class="src-var">$ppties_field </span>.= <span class="src-str">'&lt;input type=&quot;checkbox&quot; id=&quot;alarm_activated&quot; name=&quot;alarm_activated&quot; value=&quot;1&quot; '</span>.<span class="src-var">$alarm_checked</span>.<span class="src-str">'/&gt;&lt;/td&gt;&lt;/tr&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a322"></a>&nbsp;</li>
+<li><a name="a323"></a>        <span class="src-comm">// On termine la définition du tableau et du fieldset</span></li>
+<li><a name="a324"></a>&nbsp;</li>
+<li><a name="a325"></a>        <span class="src-var">$ppties_field </span>.= <span class="src-str">'&lt;/table&gt;&lt;/fieldset&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a326"></a>&nbsp;</li>
+<li><a name="a327"></a>        <span class="src-key">return </span><span class="src-var">$ppties_field</span><span class="src-sym">;</span></li>
+<li><a name="a328"></a>    <span class="src-sym">}</span></li>
+<li><a name="a329"></a>    </li>
+<li><a name="a330"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a331"></a><span class="src-doc">     * génère le code HTML des onglets de définition des triggers et des champs additionnels de l'alarme</span></li>
+<li><a name="a332"></a><span class="src-doc">     *</span></li>
+<li><a name="a333"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">le code HTML des onglets</span></li>
+<li><a name="a334"></a><span class="src-doc">     */</span></li>
+<li><a name="a335"></a>&nbsp;</li>
+<li><a name="a336"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#methodgenerateAlarmOnglets">generateAlarmOnglets</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a337"></a>    <span class="src-sym">{</span></li>
+<li><a name="a338"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$displayAdditionnalFields">displayAdditionnalFields</a><span class="src-sym">) </span><span class="src-sym">{    </span></li>
+<li><a name="a339"></a>            <span class="src-var">$alarm_onglet    </span>= <span class="src-str">'&lt;table width=&quot;100%&quot;&gt;&lt;tr&gt;&lt;td align=left&gt;&lt;div id=&quot;alarm_tab_view&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a340"></a>&nbsp;</li>
+<li><a name="a341"></a>            <span class="src-var">$first_onglet    </span>= <span class="src-str">'&lt;div class=&quot;dhtmlgoodies_aTab&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodalarmTriggerOnglet">alarmTriggerOnglet</a><span class="src-sym">(</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a342"></a>            <span class="src-var">$second_onglet    </span>= <span class="src-str">'&lt;div class=&quot;dhtmlgoodies_aTab&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodalarmAdditionnalFieldOnglet">alarmAdditionnalFieldOnglet</a><span class="src-sym">(</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a343"></a>&nbsp;</li>
+<li><a name="a344"></a>            <span class="src-comm">//$alarm_onglet  .= $this-&gt;alarmTriggerOnglet().'&lt;/div&gt;';//$first_onglet.$second_onglet.'&lt;/div&gt;';</span></li>
+<li><a name="a345"></a>&nbsp;</li>
+<li><a name="a346"></a>            <span class="src-var">$alarm_onglet  </span>.= <span class="src-var">$first_onglet</span>.<span class="src-var">$second_onglet</span>.<span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">;            </span></li>
+<li><a name="a347"></a>            </li>
+<li><a name="a348"></a>            <span class="src-comm">// Creation des onglets via la fonction initTabs</span></li>
+<li><a name="a349"></a>&nbsp;</li>
+<li><a name="a350"></a>            <span class="src-comm">// Note : vérifier que le chemin vers le dossier des images &quot;tab-view&quot; est tjs le bon</span></li>
+<li><a name="a351"></a>&nbsp;</li>
+<li><a name="a352"></a>            <span class="src-var">$trigger_onglet_label        </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_FORM_LABEL_TRIGGER'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a353"></a>            <span class="src-var">$additionnal_onglet_label    </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_FORM_LABEL_ADDITIONAL_FIELD'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a354"></a>&nbsp;</li>
+<li><a name="a355"></a>            <span class="src-var">$alarm_onglet  </span>.= <span class="src-str">'</span></li>
+<li><a name="a356"></a><span class="src-str">                                &lt;script type=&quot;text/javascript&quot;&gt;</span></li>
+<li><a name="a357"></a><span class="src-str">                                    initTabs(&quot;alarm_tab_view&quot;, Array(\''</span>.<span class="src-var">$trigger_onglet_label</span>.<span class="src-str">'\', \''</span>.<span class="src-var">$additionnal_onglet_label</span>.<span class="src-str">'\'), 0, 600, 350, null, &quot;images/tab-view/&quot;);</span></li>
+<li><a name="a358"></a><span class="src-str">                                &lt;/script&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a359"></a>            </li>
+<li><a name="a360"></a>            <span class="src-var">$alarm_onglet  </span>.= <span class="src-str">'&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a361"></a>        <span class="src-sym">}</span></li>
+<li><a name="a362"></a>        <span class="src-key">else </span></li>
+<li><a name="a363"></a>        <span class="src-sym">{</span></li>
+<li><a name="a364"></a>            <span class="src-var">$alarm_onglet </span>= <span class="src-str">'&lt;div class=&quot;dhtmlgoodies_aTab&quot; style=&quot;border-top:1px solid #919B9C;&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodalarmTriggerOnglet">alarmTriggerOnglet</a><span class="src-sym">(</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a365"></a>        <span class="src-sym">}</span></li>
+<li><a name="a366"></a>        </li>
+<li><a name="a367"></a>        <span class="src-key">return </span><span class="src-var">$alarm_onglet</span><span class="src-sym">;</span></li>
+<li><a name="a368"></a>    <span class="src-sym">}</span></li>
+<li><a name="a369"></a>    </li>
+<li><a name="a370"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a371"></a><span class="src-doc">     * Définit le code HTML de l'onglet de définition de/des trigger(s) de l'alarme</span></li>
+<li><a name="a372"></a><span class="src-doc">     *</span></li>
+<li><a name="a373"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">le </span><span class="src-doc">code HTML de l'onglet des triggers</span></li>
+<li><a name="a374"></a><span class="src-doc">     */</span></li>
+<li><a name="a375"></a>&nbsp;</li>
+<li><a name="a376"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#methodalarmTriggerOnglet">alarmTriggerOnglet</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a377"></a>    <span class="src-sym">{</span></li>
+<li><a name="a378"></a>        <span class="src-comm">// On determine la liste des triggers de l'alarme</span></li>
+<li><a name="a379"></a>&nbsp;</li>
+<li><a name="a380"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$newAlarm">newAlarm</a><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a381"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmTriggers">alarmTriggers</a> = <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getAlarmTrigger</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmId">alarmId</a><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$family">family</a><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmType">alarmType</a><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a382"></a>        <span class="src-sym">}</span></li>
+<li><a name="a383"></a>&nbsp;</li>
+<li><a name="a384"></a>        <span class="src-var">$trigger_onglet </span>= <span class="src-str">'&lt;table width=&quot;98%&quot;&gt;&lt;tr&gt;&lt;td align=&quot;left&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a385"></a>&nbsp;</li>
+<li><a name="a386"></a>        <span class="src-var">$trigger_onglet </span>.= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodtriggerFieldSet">triggerFieldSet</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a387"></a>&nbsp;</li>
+<li><a name="a388"></a>        <span class="src-var">$criticity_levels </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getCriticityLevels</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a389"></a>&nbsp;</li>
+<li><a name="a390"></a>        <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i </span>&lt; <a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$criticity_levels</span><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a391"></a>            <span class="src-var">$trigger_onglet </span>.= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodcriticityFieldSet">criticityFieldSet</a><span class="src-sym">(</span><span class="src-var">$criticity_levels</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a392"></a>        <span class="src-sym">}</span></li>
+<li><a name="a393"></a>        </li>
+<li><a name="a394"></a>        <span class="src-var">$trigger_onglet </span>.= <span class="src-str">'&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a395"></a>&nbsp;</li>
+<li><a name="a396"></a>        <span class="src-key">return </span><span class="src-var">$trigger_onglet</span><span class="src-sym">;</span></li>
+<li><a name="a397"></a>    <span class="src-sym">}</span></li>
+<li><a name="a398"></a>    </li>
+<li><a name="a399"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a400"></a><span class="src-doc">     * Définit le code HTML de l'onglet de définition des champs additionnels de l'alarme</span></li>
+<li><a name="a401"></a><span class="src-doc">     *</span></li>
+<li><a name="a402"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">le code HTML de l'onglet des champs additionnels</span></li>
+<li><a name="a403"></a><span class="src-doc">     */</span></li>
+<li><a name="a404"></a>&nbsp;</li>
+<li><a name="a405"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#methodalarmAdditionnalFieldOnglet">alarmAdditionnalFieldOnglet</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a406"></a>    <span class="src-sym">{</span></li>
+<li><a name="a407"></a>        <span class="src-comm">// Note : mettre les libellés dans le modele</span></li>
+<li><a name="a408"></a>&nbsp;</li>
+<li><a name="a409"></a>        <span class="src-var">$additionnal_onglet </span>= <span class="src-str">'&lt;fieldset&gt;&lt;legend class=&quot;texteGrisBold&quot;&gt;&amp;nbsp;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_FORM_FIELDSET_ADDITIONAL_FIELD_LIST'</span><span class="src-sym">)</span>.<span class="src-str">'&amp;nbsp;&amp;nbsp;&lt;/legend&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a410"></a>&nbsp;</li>
+<li><a name="a411"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$newAlarm">newAlarm</a><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a412"></a>            <span class="src-var">$additionnal_fields </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getAlarmAdditionnalFields</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmId">alarmId</a><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$family">family</a><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmType">alarmType</a><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a413"></a>        <span class="src-sym">}    </span></li>
+<li><a name="a414"></a>&nbsp;</li>
+<li><a name="a415"></a>        <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i </span>&lt; <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$nbAdditionnalFields">nbAdditionnalFields</a><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a416"></a>            <span class="src-var">$additionnal_onglet </span>.= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodsetAdditionnalFieldDiv">setAdditionnalFieldDiv</a><span class="src-sym">(</span><span class="src-var">$i</span>+<span class="src-num">1</span><span class="src-sym">, </span><span class="src-var">$additionnal_fields</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'type'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-var">$additionnal_fields</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a417"></a>        <span class="src-sym">}</span></li>
+<li><a name="a418"></a>&nbsp;</li>
+<li><a name="a419"></a>        <span class="src-var">$additionnal_onglet </span>.= <span class="src-str">'&lt;/fieldset&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a420"></a>&nbsp;</li>
+<li><a name="a421"></a>        <span class="src-key">return </span><span class="src-var">$additionnal_onglet</span><span class="src-sym">;</span></li>
+<li><a name="a422"></a>    <span class="src-sym">}</span></li>
+<li><a name="a423"></a>&nbsp;</li>
+<li><a name="a424"></a>    <span class="src-comm">// Note : essayer de fusionner cette méthode avec 'setTriggerDiv()'</span></li>
+<li><a name="a425"></a>&nbsp;</li>
+<li><a name="a424"></a>    </li>
+<li><a name="a425"></a>&nbsp;</li>
+<li><a name="a426"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#methodsetAdditionnalFieldDiv">setAdditionnalFieldDiv</a><span class="src-sym">(</span><span class="src-var">$id</span><span class="src-sym">, </span><span class="src-var">$type </span>= <span class="src-str">''</span><span class="src-sym">, </span><span class="src-var">$value </span>= <span class="src-str">''</span><span class="src-sym">)</span></li>
+<li><a name="a427"></a>    <span class="src-sym">{</span></li>
+<li><a name="a428"></a>        <span class="src-var">$type_list    </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$triggerTypes">triggerTypes</a><span class="src-sym">;</span></li>
+<li><a name="a429"></a>        <span class="src-var">$value_list    </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$triggerTypeValues">triggerTypeValues</a><span class="src-sym">;        </span></li>
+<li><a name="a430"></a>        </li>
+<li><a name="a431"></a>        <span class="src-comm">// Note : mettre les libellés dans le modele</span></li>
+<li><a name="a432"></a>&nbsp;</li>
+<li><a name="a433"></a>        <span class="src-var">$additional_div </span>= <span class="src-str">'&lt;div class=&quot;texteGris&quot;&gt;&lt;li&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_FORM_LABEL_ADDITIONAL_FIELD'</span><span class="src-sym">)</span>.<span class="src-str">' '</span>.<span class="src-var">$id</span>.<span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a434"></a>&nbsp;</li>
+<li><a name="a435"></a>        <span class="src-comm">// Affichage de la liste déroulante de choix du type</span></li>
+<li><a name="a436"></a>        </li>
+<li><a name="a437"></a>        <span class="src-var">$additional_div </span>.= <span class="src-str">'&lt;select class=&quot;zoneTexteStyleXP&quot; id=&quot;additional_field_type'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; name=&quot;additional_field_type'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; style=&quot;width:100px;margin-right:5px&quot; onchange=&quot;deleteCompleteAdditionalFieldLabel('</span>.<span class="src-var">$id</span>.<span class="src-str">');getFieldValue(this.value,\'additional_field'</span>.<span class="src-var">$id</span>.<span class="src-str">'\', \''</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$family">family</a>.<span class="src-str">'\')&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a438"></a>&nbsp;</li>
+<li><a name="a439"></a>        <span class="src-comm">/*if ($type == '') */</span><span class="src-var">$additional_div </span>.= <span class="src-str">'&lt;option value=&quot;makeSelection&quot; selected&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ADVANCED_CONTEXT_TYPE_LABEL'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/option&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a440"></a>&nbsp;</li>
+<li><a name="a441"></a>        <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i </span>&lt; <a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$type_list</span><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a442"></a>            <span class="src-var">$additional_div </span>.= <span class="src-str">'&lt;option value=&quot;'</span>.<span class="src-var">$type_list</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span>.<span class="src-str">'&quot; '</span>.<span class="src-sym">((</span><span class="src-var">$type_list</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">] </span>== <span class="src-var">$type</span><span class="src-sym">) </span>? <span class="src-str">&quot;selected&quot; </span>: <span class="src-str">&quot;&quot;</span><span class="src-sym">)</span>.<span class="src-str">'&gt;'</span>.<span class="src-var">$type_list</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'label'</span><span class="src-sym">]</span>.<span class="src-str">'&lt;/option&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a443"></a>        <span class="src-sym">}</span></li>
+<li><a name="a444"></a>&nbsp;</li>
+<li><a name="a445"></a>        <span class="src-var">$additional_div </span>.= <span class="src-str">'&lt;/select&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a446"></a>&nbsp;</li>
+<li><a name="a447"></a>        <span class="src-comm">// Affichage de la liste déroulante de choix des valeurs fonction du type</span></li>
+<li><a name="a448"></a>&nbsp;</li>
+<li><a name="a449"></a>        <span class="src-var">$additional_div </span>.= <span class="src-str">'&lt;select class=&quot;zoneTexteStyleXP&quot; id=&quot;additional_field'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; name=&quot;additional_field'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; style=&quot;width:417px;margin-right:15px&quot; onchange=&quot;showCompleteAdditionalFieldLabel('</span>.<span class="src-var">$id</span>.<span class="src-str">');remove_choice(this);remove_choice(this)&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a450"></a>&nbsp;</li>
+<li><a name="a451"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$value </span>== <span class="src-str">''</span><span class="src-sym">)</span><span class="src-sym">{</span></li>
+<li><a name="a452"></a>            <span class="src-var">$additional_div </span>.= <span class="src-str">'&lt;option value=&quot;makeSelection&quot; selected&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_SELECT_MAKE_A_SELECTION_LABEL'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/option&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a453"></a>        <span class="src-sym">}</span></li>
+<li><a name="a454"></a>        <span class="src-key">else</span></li>
+<li><a name="a455"></a>        <span class="src-sym">{</span></li>
+<li><a name="a456"></a>            <span class="src-var">$type_value_list </span>= <span class="src-var">$value_list</span><span class="src-sym">[</span><span class="src-var">$type</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a457"></a>&nbsp;</li>
+<li><a name="a458"></a>            <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$type_value_list </span><span class="src-key">as </span><span class="src-var">$value_id </span>=&gt; <span class="src-var">$value_labels</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a459"></a>                </li>
+<li><a name="a460"></a>                <span class="src-comm">//$type_value = $type_value_list[$i];</span></li>
+<li><a name="a461"></a>&nbsp;</li>
+<li><a name="a462"></a>                <span class="src-var">$additional_div </span>.= <span class="src-str">'&lt;option value=&quot;'</span>.<span class="src-var">$value_id</span>.<span class="src-str">'&quot; label_complete=&quot;'</span>.<span class="src-var">$value_labels</span><span class="src-sym">[</span><span class="src-str">'label_complete'</span><span class="src-sym">]</span>.<span class="src-str">'&quot; '</span>.<span class="src-sym">((</span><span class="src-var">$value_id </span>== <span class="src-var">$value</span><span class="src-sym">) </span>? <span class="src-str">&quot;selected&quot; </span>: <span class="src-str">&quot;&quot;</span><span class="src-sym">)</span>.<span class="src-str">'&gt;'</span>.<span class="src-var">$value_labels</span><span class="src-sym">[</span><span class="src-str">'label'</span><span class="src-sym">]</span>.<span class="src-str">'&lt;/option&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a463"></a>&nbsp;</li>
+<li><a name="a464"></a>                <span class="src-key">if </span><span class="src-sym">((</span><span class="src-var">$value_id </span>== <span class="src-var">$value</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a465"></a>                    <span class="src-var">$trigger_selected_complete </span>= <span class="src-sym">(</span><span class="src-var">$value_labels</span><span class="src-sym">[</span><span class="src-str">'label'</span><span class="src-sym">] </span>!= <span class="src-var">$value_labels</span><span class="src-sym">[</span><span class="src-str">'label_complete'</span><span class="src-sym">]</span><span class="src-sym">) </span>? <span class="src-var">$value_labels</span><span class="src-sym">[</span><span class="src-str">'label_complete'</span><span class="src-sym">] </span>: <span class="src-str">&quot;&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a466"></a>                <span class="src-sym">}                </span></li>
+<li><a name="a467"></a>            <span class="src-sym">}</span></li>
+<li><a name="a468"></a>        <span class="src-sym">}</span></li>
+<li><a name="a469"></a>&nbsp;</li>
+<li><a name="a470"></a>        <span class="src-var">$additional_div </span>.= <span class="src-str">'&lt;/select&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a471"></a>&nbsp;</li>
+<li><a name="a472"></a>        <span class="src-comm">// Affichage du bouton de suppression du champ additionnel</span></li>
+<li><a name="a473"></a>&nbsp;</li>
+<li><a name="a474"></a>        <span class="src-var">$additional_div </span>.= <span class="src-str">'&lt;input type=&quot;button&quot; class=&quot;drop_alarm&quot; style=&quot;width:16px&quot; onclick=&quot;deleteCompleteAdditionalFieldLabel('</span>.<span class="src-var">$id</span>.<span class="src-str">');vider_additional_field(\'additional_field'</span>.<span class="src-var">$id</span>.<span class="src-str">'\',\'additional_field_type'</span>.<span class="src-var">$id</span>.<span class="src-str">'\')&quot;/&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a475"></a>&nbsp;</li>
+<li><a name="a476"></a>        <span class="src-key">if </span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$trigger_selected_complete</span><span class="src-sym">) </span>&amp;&amp; <span class="src-var">$trigger_selected_complete </span>!= <span class="src-str">&quot;&quot;</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a477"></a>            <span class="src-var">$additional_div </span>.= <span class="src-str">'&lt;div id=&quot;additionnal_field_complete_label'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; class=&quot;texteGris&quot; style=&quot;padding-left:105px;padding-top:5px;font-size:8pt&quot;&gt;'</span>.<span class="src-var">$trigger_selected_complete</span>.<span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a478"></a>        <span class="src-sym">}</span></li>
+<li><a name="a479"></a>&nbsp;</li>
+<li><a name="a480"></a>        <span class="src-key">return </span><span class="src-var">$additional_div</span><span class="src-sym">;</span></li>
+<li><a name="a481"></a>    <span class="src-sym">}</span></li>
+<li><a name="a482"></a>    </li>
+<li><a name="a483"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a484"></a><span class="src-doc">     * Définit le code HTML du fieldset des triggers de l'alarme</span></li>
+<li><a name="a485"></a><span class="src-doc">     *</span></li>
+<li><a name="a486"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">le code HTML du fieldset triggers</span></li>
+<li><a name="a487"></a><span class="src-doc">     */</span></li>
+<li><a name="a488"></a>&nbsp;</li>
+<li><a name="a489"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#methodtriggerFieldSet">triggerFieldSet</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a490"></a>    <span class="src-sym">{</span></li>
+<li><a name="a491"></a>        <span class="src-comm">// Note : mettre les libellés dans le modele</span></li>
+<li><a name="a492"></a>&nbsp;</li>
+<li><a name="a493"></a>        <span class="src-var">$trigger_field </span>= <span class="src-str">'&lt;fieldset&gt;&lt;legend class=&quot;texteGrisBold&quot;&gt;&amp;nbsp;&amp;nbsp;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_FORM_FIELDSET_TRIGGER_LIST'</span><span class="src-sym">)</span>.<span class="src-str">'&amp;nbsp;&lt;span class=&quot;texteGrisPetit&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_NFORMATION_TRIGGER'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/span&gt;&amp;nbsp;&amp;nbsp;&lt;/legend&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a494"></a>&nbsp;</li>
+<li><a name="a495"></a>        <span class="src-comm">// Définition du bouton permettant d'ajouter des triggers (si '$this-&gt;canAddTrigger' vaut true)</span></li>
+<li><a name="a496"></a>&nbsp;</li>
+<li><a name="a497"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$canAddTrigger">canAddTrigger</a><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a498"></a>&nbsp;</li>
+<li><a name="a499"></a>            <span class="src-comm">// Note : mettre label dans le modele</span></li>
+<li><a name="a500"></a>&nbsp;</li>
+<li><a name="a501"></a>            <span class="src-var">$trigger_field </span>.= <span class="src-str">'&lt;div align=&quot;right&quot; style=&quot;padding-top:5px;padding-bottom:5px&quot;&gt;&lt;input type=&quot;button&quot; class=&quot;bouton&quot; value=&quot;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_FORM_BTN_ADD_TRIGGER'</span><span class="src-sym">)</span>.<span class="src-str">'&quot; onclick=&quot;add_trigger()&quot;/&gt;&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a502"></a>        <span class="src-sym">}</span></li>
+<li><a name="a503"></a>&nbsp;</li>
+<li><a name="a504"></a>        <span class="src-comm">// Definition de la liste des triggers</span></li>
+<li><a name="a505"></a>&nbsp;</li>
+<li><a name="a506"></a>        <span class="src-var">$triggers </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a507"></a>&nbsp;</li>
+<li><a name="a508"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$newAlarm">newAlarm</a><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a509"></a>&nbsp;</li>
+<li><a name="a510"></a>            <span class="src-comm">//$trigger_div_num = 1;</span></li>
+<li><a name="a511"></a>&nbsp;</li>
+<li><a name="a512"></a>            <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i </span>&lt; <a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmTriggers">alarmTriggers</a><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span></li>
+<li><a name="a513"></a>            <span class="src-sym">{</span></li>
+<li><a name="a514"></a>                <span class="src-var">$alarm_trigger </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmTriggers">alarmTriggers</a><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a515"></a>&nbsp;</li>
+<li><a name="a516"></a>                <span class="src-comm">// La condition suivante permet d'éviter les doublons dans la définition des triggers. En effet, si un trigger est défini sur plusieurs niveaux de criticité, on a plusieurs lignes de définition dans '$this-&gt;alarmTriggers'</span></li>
+<li><a name="a517"></a>&nbsp;</li>
+<li><a name="a518"></a>                <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><a href="http://www.php.net/in_array">in_array</a><span class="src-sym">(</span><span class="src-var">$alarm_trigger</span><span class="src-sym">[</span><span class="src-str">'alarm_trigger_data_field'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-var">$triggers</span><span class="src-sym">)) </span></li>
+<li><a name="a519"></a>                <span class="src-sym">{</span></li>
+<li><a name="a520"></a>                    <span class="src-var">$trigger_field </span>.= <span class="src-str">'&lt;div id=&quot;trigger_list_'</span>.<span class="src-sym">(</span><a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$triggers</span><span class="src-sym">)</span>+<span class="src-num">1</span><span class="src-sym">)</span>.<span class="src-str">'&quot; style=&quot;padding-top:5px&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodsetTriggerDiv">setTriggerDiv</a><span class="src-sym">((</span><a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$triggers</span><span class="src-sym">)</span>+<span class="src-num">1</span><span class="src-sym">)</span><span class="src-sym">, </span><span class="src-var">$alarm_trigger</span><span class="src-sym">[</span><span class="src-str">'alarm_trigger_type'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-var">$alarm_trigger</span><span class="src-sym">[</span><span class="src-str">'alarm_trigger_data_field'</span><span class="src-sym">]</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a521"></a>&nbsp;</li>
+<li><a name="a522"></a>                    <span class="src-var">$triggers</span><span class="src-sym">[</span><span class="src-sym">] </span>= <span class="src-var">$alarm_trigger</span><span class="src-sym">[</span><span class="src-str">'alarm_trigger_data_field'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a523"></a>                <span class="src-sym">}</span></li>
+<li><a name="a524"></a>            <span class="src-sym">}</span></li>
+<li><a name="a525"></a>        <span class="src-sym">}</span></li>
+<li><a name="a526"></a>        <span class="src-key">else</span></li>
+<li><a name="a527"></a>        <span class="src-sym">{</span></li>
+<li><a name="a528"></a>            <span class="src-var">$trigger_field </span>.= <span class="src-str">'&lt;div id=&quot;trigger_list_1&quot; style=&quot;padding-top:5px&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodsetTriggerDiv">setTriggerDiv</a><span class="src-sym">(</span><span class="src-num">1</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a529"></a>        <span class="src-sym">}</span></li>
+<li><a name="a530"></a>&nbsp;</li>
+<li><a name="a531"></a>        <span class="src-var">$trigger_field </span>.= <span class="src-str">'&lt;/fieldset&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a532"></a>&nbsp;</li>
+<li><a name="a533"></a>        <span class="src-key">return </span><span class="src-var">$trigger_field</span><span class="src-sym">;</span></li>
+<li><a name="a534"></a>    <span class="src-sym">}</span></li>
+<li><a name="a535"></a>    </li>
+<li><a name="a536"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a537"></a><span class="src-doc">     * Définit le code HTML des fieldsets des niveaux de criticité des triggers de l'alarme</span></li>
+<li><a name="a538"></a><span class="src-doc">     *</span></li>
+<li><a name="a539"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">array </span><span class="src-doc-var">$criticity_tab </span><span class="src-doc">tableau des niveaux de criticité de l'alarme</span></li>
+<li><a name="a540"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">le code HTML des fieldset des niveaux de criticité</span></li>
+<li><a name="a541"></a><span class="src-doc">     */</span></li>
+<li><a name="a542"></a>&nbsp;</li>
+<li><a name="a543"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#methodcriticityFieldSet">criticityFieldSet</a><span class="src-sym">(</span><span class="src-var">$criticity_tab</span><span class="src-sym">)</span></li>
+<li><a name="a544"></a>    <span class="src-sym">{</span></li>
+<li><a name="a545"></a>        <span class="src-var">$criticity            </span>= <span class="src-var">$criticity_tab</span><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a546"></a>        <span class="src-var">$criticity_label    </span>= <span class="src-var">$criticity_tab</span><span class="src-sym">[</span><span class="src-str">'label'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a547"></a>        <span class="src-var">$criticity_color    </span>= <span class="src-var">$criticity_tab</span><span class="src-sym">[</span><span class="src-str">'color'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a548"></a>        <span class="src-var">$criticity_field    </span>= <span class="src-str">&quot;&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a549"></a>    </li>
+<li><a name="a550"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$showCriticity">showCriticity</a><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a551"></a>            <span class="src-var">$criticity_field </span>.= <span class="src-str">'&lt;fieldset style=&quot;padding-top:5px&quot;&gt;&lt;legend class=&quot;texteGrisBold&quot;&gt;&amp;nbsp;'</span>.<span class="src-var">$criticity_label</span>.<span class="src-str">'&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color:'</span>.<span class="src-var">$criticity_color</span>.<span class="src-str">';width:10px;height:10px;&quot;&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;&lt;/legend&gt;'</span><span class="src-sym">;            </span></li>
+<li><a name="a552"></a>        <span class="src-sym">}</span></li>
+<li><a name="a553"></a>        <span class="src-key">else </span></li>
+<li><a name="a554"></a>        <span class="src-sym">{</span></li>
+<li><a name="a555"></a>            <span class="src-var">$criticity_field </span>.= <span class="src-str">'&lt;fieldset style=&quot;margin-top:10px;padding-top:5px&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a556"></a>        <span class="src-sym">}</span></li>
+<li><a name="a557"></a>            </li>
+<li><a name="a558"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$newAlarm">newAlarm</a><span class="src-sym">)</span><span class="src-sym">{</span></li>
+<li><a name="a559"></a>            <span class="src-var">$criticity_values </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getAlarmCriticityValues</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmId">alarmId</a><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$family">family</a><span class="src-sym">, </span><span class="src-var">$criticity</span><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmType">alarmType</a><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a560"></a>&nbsp;</li>
+<li><a name="a561"></a>            <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i </span>&lt; <a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$criticity_values</span><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a562"></a>&nbsp;</li>
+<li><a name="a563"></a>                <span class="src-var">$criticity_id </span>= <span class="src-var">$criticity</span>.<span class="src-sym">(</span><span class="src-var">$i</span>+<span class="src-num">1</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a564"></a>                </li>
+<li><a name="a565"></a>                <span class="src-var">$criticity_field </span>.= <span class="src-str">'&lt;div id=&quot;trigger_'</span>.<span class="src-var">$criticity_id</span>.<span class="src-str">'&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodsetCriticityDiv">setCriticityDiv</a><span class="src-sym">(</span><span class="src-var">$criticity_id</span><span class="src-sym">, </span><span class="src-var">$criticity</span><span class="src-sym">, </span><span class="src-sym">(</span><span class="src-var">$i</span>+<span class="src-num">1</span><span class="src-sym">)</span><span class="src-sym">, </span><span class="src-var">$criticity_values</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a566"></a>            <span class="src-sym">}</span></li>
+<li><a name="a567"></a>        <span class="src-sym">}</span></li>
+<li><a name="a568"></a>        <span class="src-key">else </span></li>
+<li><a name="a569"></a>        <span class="src-sym">{</span></li>
+<li><a name="a570"></a>            <span class="src-var">$criticity_id </span>= <span class="src-var">$criticity</span>.<span class="src-str">&quot;1&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a571"></a>            <span class="src-var">$criticity_field </span>.= <span class="src-str">'&lt;div id=&quot;trigger_'</span>.<span class="src-var">$criticity_id</span>.<span class="src-str">'&quot;&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodsetCriticityDiv">setCriticityDiv</a><span class="src-sym">(</span><span class="src-var">$criticity_id</span><span class="src-sym">, </span><span class="src-var">$criticity</span><span class="src-sym">, </span><span class="src-num">1</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a572"></a>        <span class="src-sym">}</span></li>
+<li><a name="a573"></a>&nbsp;</li>
+<li><a name="a574"></a>        <span class="src-var">$criticity_field </span>.= <span class="src-str">'&lt;/fieldset&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a575"></a>&nbsp;</li>
+<li><a name="a576"></a>        <span class="src-key">return </span><span class="src-var">$criticity_field</span><span class="src-sym">;</span></li>
+<li><a name="a577"></a>    <span class="src-sym">}</span></li>
+<li><a name="a578"></a>&nbsp;</li>
+<li><a name="a579"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a580"></a><span class="src-doc">     * Définit le code HTML des calques des niveaux de criticité des triggers de l'alarme</span></li>
+<li><a name="a581"></a><span class="src-doc">     *</span></li>
+<li><a name="a582"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$id </span><span class="src-doc">identifiant du trigger de l'alarme</span></li>
+<li><a name="a583"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$criticity </span><span class="src-doc">criticité du trigger</span></li>
+<li><a name="a584"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">integer </span><span class="src-doc-var">$index </span><span class="src-doc">valeur numérique du trigger</span></li>
+<li><a name="a585"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">array </span><span class="src-doc-var">$values </span><span class="src-doc">valeur du trigger pour le niveau de criticité (en mode &quot;édition&quot; seulement)</span></li>
+<li><a name="a586"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">code </span><span class="src-doc">HTML du calque du niveau de criticité du trigger de l'alarme</span></li>
+<li><a name="a587"></a><span class="src-doc">     */</span></li>
+<li><a name="a588"></a>    </li>
+<li><a name="a589"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#methodsetCriticityDiv">setCriticityDiv</a><span class="src-sym">(</span><span class="src-var">$id</span><span class="src-sym">, </span><span class="src-var">$criticity</span><span class="src-sym">, </span><span class="src-var">$index</span><span class="src-sym">, </span><span class="src-var">$values </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">))</span></li>
+<li><a name="a590"></a>    <span class="src-sym">{</span></li>
+<li><a name="a591"></a>        <span class="src-var">$criticity_div </span>= <span class="src-str">''</span><span class="src-sym">;</span></li>
+<li><a name="a592"></a>&nbsp;</li>
+<li><a name="a593"></a>        <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$values</span><span class="src-sym">) </span>&gt; <span class="src-num">0</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a594"></a>            <span class="src-var">$trigger_type        </span>= <span class="src-var">$values</span><span class="src-sym">[</span><span class="src-str">'type'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a595"></a>            <span class="src-var">$trigger_id            </span>= <span class="src-var">$values</span><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a596"></a>            <span class="src-var">$trigger_label        </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$triggerTypeValues">triggerTypeValues</a><span class="src-sym">[</span><span class="src-var">$trigger_type</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-var">$trigger_id</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'label'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a597"></a>            <span class="src-var">$trigger_operand    </span>= <span class="src-var">$values</span><span class="src-sym">[</span><span class="src-str">'operand'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a598"></a>            <span class="src-var">$trigger_value        </span>= <span class="src-var">$values</span><span class="src-sym">[</span><span class="src-str">'value'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a599"></a>        <span class="src-sym">}</span></li>
+<li><a name="a600"></a>        <span class="src-key">else </span></li>
+<li><a name="a601"></a>        <span class="src-sym">{</span></li>
+<li><a name="a602"></a>            <span class="src-var">$trigger_label </span>= <span class="src-str">&quot;No trigger selected&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a603"></a>            <span class="src-var">$trigger_value </span>= <span class="src-str">&quot;&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a604"></a>        <span class="src-sym">}</span></li>
+<li><a name="a605"></a>&nbsp;</li>
+<li><a name="a606"></a>        <span class="src-comm">// Affichage du label du trigger</span></li>
+<li><a name="a607"></a>&nbsp;</li>
+<li><a name="a608"></a>        <span class="src-var">$criticity_div </span>.= <span class="src-str">'&lt;li&gt;&lt;input tabIndex=&quot;-1&quot; class=&quot;zoneTexteStyleXP&quot; name=&quot;trigger_label_'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; style=&quot;width:325px;border:0px&quot; value=&quot;'</span>.<span class="src-var">$trigger_label</span>.<span class="src-str">'&quot; readonly&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a609"></a>&nbsp;</li>
+<li><a name="a610"></a>        <span class="src-comm">// Affichage de la liste des operandes</span></li>
+<li><a name="a611"></a>&nbsp;</li>
+<li><a name="a612"></a>        <span class="src-var">$criticity_div </span>.= <span class="src-str">'&lt;select class=&quot;zoneTexteStyleXP&quot; name=&quot;trigger_operand_'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; id=&quot;trigger_operand_'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; style=&quot;width:85px;margin-right:5px&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a613"></a>&nbsp;</li>
+<li><a name="a614"></a>        <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$j</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$j </span>&lt; <a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$triggerOperands">triggerOperands</a><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-var">$j</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a615"></a>&nbsp;</li>
+<li><a name="a616"></a>            <span class="src-var">$selected </span>= <span class="src-sym">((</span>isset<span class="src-sym">(</span><span class="src-var">$trigger_operand</span><span class="src-sym">) </span>&amp;&amp; <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$triggerOperands">triggerOperands</a><span class="src-sym">[</span><span class="src-var">$j</span><span class="src-sym">] </span>== <span class="src-var">$trigger_operand</span><span class="src-sym">) </span>? <span class="src-str">&quot;selected&quot; </span>: <span class="src-str">&quot;&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a617"></a>&nbsp;</li>
+<li><a name="a618"></a>            <span class="src-var">$criticity_div </span>.= <span class="src-str">'&lt;option value=&quot;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$triggerOperands">triggerOperands</a><span class="src-sym">[</span><span class="src-var">$j</span><span class="src-sym">]</span>.<span class="src-str">'&quot; '</span>.<span class="src-var">$selected</span>.<span class="src-str">'&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$triggerOperands">triggerOperands</a><span class="src-sym">[</span><span class="src-var">$j</span><span class="src-sym">]</span>.<span class="src-str">'&lt;/option&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a619"></a>        <span class="src-sym">}</span></li>
+<li><a name="a620"></a>&nbsp;</li>
+<li><a name="a621"></a>        <span class="src-var">$criticity_div </span>.= <span class="src-str">'&lt;/select&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a622"></a>&nbsp;</li>
+<li><a name="a623"></a>        <span class="src-comm">// Affichage de la valeur du trigger pour le niveau de criticité</span></li>
+<li><a name="a624"></a>&nbsp;</li>
+<li><a name="a625"></a>        <span class="src-var">$criticity_div </span>.= <span class="src-str">'&lt;input class=&quot;zoneTexteStyleXP&quot; name=&quot;trigger_value_'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; id=&quot;trigger_value_'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; style=&quot;width:80px;margin-right:15px&quot; value=&quot;'</span>.<span class="src-var">$trigger_value</span>.<span class="src-str">'&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a626"></a>&nbsp;</li>
+<li><a name="a627"></a>        <span class="src-comm">// Affichage du bouton de suppression</span></li>
+<li><a name="a628"></a>&nbsp;</li>
+<li><a name="a629"></a>        <span class="src-var">$criticity_div </span>.= <span class="src-str">'&lt;input class=&quot;drop_alarm&quot; style=&quot;width:16px;cursor:pointer&quot; onclick=&quot;remove_critical_level(\''</span>.<span class="src-var">$criticity</span>.<span class="src-str">'\',\''</span>.<span class="src-var">$index</span>.<span class="src-str">'\')&quot;/&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a630"></a>&nbsp;</li>
+<li><a name="a631"></a>        <span class="src-key">return </span><span class="src-var">$criticity_div</span><span class="src-sym">;</span></li>
+<li><a name="a632"></a>    <span class="src-sym">}</span></li>
+<li><a name="a633"></a>    </li>
+<li><a name="a634"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a635"></a><span class="src-doc">     * Définit le code HTML des calques des triggers de l'alarme</span></li>
+<li><a name="a636"></a><span class="src-doc">     *</span></li>
+<li><a name="a637"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">integer </span><span class="src-doc-var">$id </span><span class="src-doc">identifiant du trigger</span></li>
+<li><a name="a638"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$type </span><span class="src-doc">type du trigger</span></li>
+<li><a name="a639"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$value </span><span class="src-doc">valeur du trigger sélectionné</span></li>
+<li><a name="a640"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">le code HTML du calque du trigger</span></li>
+<li><a name="a641"></a><span class="src-doc">     */</span></li>
+<li><a name="a642"></a>&nbsp;</li>
+<li><a name="a643"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#methodsetTriggerDiv">setTriggerDiv</a><span class="src-sym">(</span><span class="src-var">$id</span><span class="src-sym">, </span><span class="src-var">$type </span>= <span class="src-str">''</span><span class="src-sym">, </span><span class="src-var">$value </span>= <span class="src-str">''</span><span class="src-sym">)</span></li>
+<li><a name="a644"></a>    <span class="src-sym">{</span></li>
+<li><a name="a645"></a>        <span class="src-var">$type_list    </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$triggerTypes">triggerTypes</a><span class="src-sym">;</span></li>
+<li><a name="a646"></a>        <span class="src-var">$value_list    </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$triggerTypeValues">triggerTypeValues</a><span class="src-sym">;</span></li>
+<li><a name="a647"></a>        </li>
+<li><a name="a648"></a>        <span class="src-key">if</span><span class="src-sym">(</span><span class="src-var">$type </span>== <span class="src-str">&quot;&quot;</span><span class="src-sym">) </span><span class="src-var">$type </span>= <span class="src-var">$type_list</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a649"></a>&nbsp;</li>
+<li><a name="a650"></a>        <span class="src-comm">// Affichage de la liste déroulante de choix du type</span></li>
+<li><a name="a651"></a>&nbsp;</li>
+<li><a name="a652"></a>        <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$type_list</span><span class="src-sym">) </span>&gt; <span class="src-num">1</span><span class="src-sym">)</span></li>
+<li><a name="a653"></a>        <span class="src-sym">{</span></li>
+<li><a name="a654"></a>            <span class="src-var">$trigger_div </span>= <span class="src-str">'&lt;select class=&quot;zoneTexteStyleXP&quot; id=&quot;trigger_type'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; name=&quot;trigger_type'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; style=&quot;width:100px;margin-right:5px&quot; onchange=&quot;getFieldValue(this.value,\'trigger_field'</span>.<span class="src-var">$id</span>.<span class="src-str">'\',\''</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$family">family</a>.<span class="src-str">'\');changerLabel('</span>.<span class="src-var">$id</span>.<span class="src-str">');remove_all_critical_level('</span>.<span class="src-var">$id</span>.<span class="src-str">')&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a655"></a>&nbsp;</li>
+<li><a name="a656"></a>            <span class="src-var">$trigger_div </span>.= <span class="src-str">'&lt;option value=&quot;makeSelection&quot; selected&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ADVANCED_CONTEXT_TYPE_LABEL'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/option&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a657"></a>&nbsp;</li>
+<li><a name="a658"></a>            <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i </span>&lt; <a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$type_list</span><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a659"></a>                <span class="src-var">$trigger_div </span>.= <span class="src-str">'&lt;option value=&quot;'</span>.<span class="src-var">$type_list</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span>.<span class="src-str">'&quot; '</span>.<span class="src-sym">((</span><span class="src-var">$type_list</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">] </span>== <span class="src-var">$type</span><span class="src-sym">) </span>? <span class="src-str">&quot;selected&quot; </span>: <span class="src-str">&quot;&quot;</span><span class="src-sym">)</span>.<span class="src-str">'&gt;'</span>.<span class="src-var">$type_list</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'label'</span><span class="src-sym">]</span>.<span class="src-str">'&lt;/option&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a660"></a>            <span class="src-sym">}</span></li>
+<li><a name="a661"></a>&nbsp;</li>
+<li><a name="a662"></a>            <span class="src-var">$trigger_div </span>.= <span class="src-str">'&lt;/select&gt;'</span><span class="src-sym">;            </span></li>
+<li><a name="a663"></a>        <span class="src-sym">}</span></li>
+<li><a name="a664"></a>        <span class="src-key">else </span></li>
+<li><a name="a665"></a>        <span class="src-sym">{</span></li>
+<li><a name="a666"></a>            <span class="src-var">$trigger_div </span>= <span class="src-str">'&lt;input type=&quot;text&quot; id=&quot;trigger_type'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; name=&quot;trigger_type'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; class=&quot;texteGris&quot; style=&quot;border: 0pt none;margin-right:5px&quot; size=&quot;'</span>.<span class="src-sym">(</span><a href="http://www.php.net/strlen">strlen</a><span class="src-sym">(</span><span class="src-var">$type_list</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'label'</span><span class="src-sym">]</span><span class="src-sym">))</span>.<span class="src-str">'&quot; value=&quot;'</span>.<span class="src-var">$type_list</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'label'</span><span class="src-sym">]</span>.<span class="src-str">'&quot; real_value=&quot;'</span>.<span class="src-var">$type_list</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span>.<span class="src-str">'&quot;/&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a667"></a>        <span class="src-sym">}</span></li>
+<li><a name="a668"></a>&nbsp;</li>
+<li><a name="a669"></a>        <span class="src-comm">// Affichage de la liste déroulante de choix des valeurs fonction du type</span></li>
+<li><a name="a670"></a>&nbsp;</li>
+<li><a name="a671"></a>        <span class="src-var">$trigger_div </span>.= <span class="src-str">'&lt;select class=&quot;zoneTexteStyleXP&quot; id=&quot;trigger_field'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; name=&quot;trigger_field'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; style=&quot;width:417px;margin-right:15px&quot; onchange=&quot;changerLabel('</span>.<span class="src-var">$id</span>.<span class="src-str">');remove_all_critical_level('</span>.<span class="src-var">$id</span>.<span class="src-str">');remove_choice(this)&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a672"></a>&nbsp;</li>
+<li><a name="a673"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$value </span>== <span class="src-str">''</span><span class="src-sym">)</span><span class="src-sym">{</span></li>
+<li><a name="a674"></a>            <span class="src-var">$trigger_div </span>.= <span class="src-str">'&lt;option value=&quot;makeSelection&quot; selected&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_SELECT_MAKE_A_SELECTION_LABEL'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/option&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a675"></a>        <span class="src-sym">}</span></li>
+<li><a name="a676"></a>        <span class="src-comm">/*else</span></li>
+<li><a name="a677"></a><span class="src-comm">        {*/</span></li>
+<li><a name="a678"></a>            <span class="src-var">$type_value_list </span>= <span class="src-var">$value_list</span><span class="src-sym">[</span><span class="src-var">$type</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a679"></a>&nbsp;</li>
+<li><a name="a680"></a>            <span class="src-key">foreach </span><span class="src-sym">(</span><span class="src-var">$type_value_list </span><span class="src-key">as </span><span class="src-var">$value_id </span>=&gt; <span class="src-var">$value_labels</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a681"></a>                </li>
+<li><a name="a682"></a>                <span class="src-comm">//$type_value = $type_value_list[$i];</span></li>
+<li><a name="a683"></a>&nbsp;</li>
+<li><a name="a684"></a>                <span class="src-var">$trigger_div </span>.= <span class="src-str">'&lt;option value=&quot;'</span>.<span class="src-var">$value_id</span>.<span class="src-str">'&quot; label_complete=&quot;'</span>.<span class="src-var">$value_labels</span><span class="src-sym">[</span><span class="src-str">'label_complete'</span><span class="src-sym">]</span>.<span class="src-str">'&quot; '</span>.<span class="src-sym">((</span><span class="src-var">$value_id </span>== <span class="src-var">$value</span><span class="src-sym">) </span>? <span class="src-str">&quot;selected&quot; </span>: <span class="src-str">&quot;&quot;</span><span class="src-sym">)</span>.<span class="src-str">'&gt;'</span>.<span class="src-var">$value_labels</span><span class="src-sym">[</span><span class="src-str">'label'</span><span class="src-sym">]</span>.<span class="src-str">'&lt;/option&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a685"></a>&nbsp;</li>
+<li><a name="a686"></a>                <span class="src-key">if </span><span class="src-sym">((</span><span class="src-var">$value_id </span>== <span class="src-var">$value</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a687"></a>                    <span class="src-var">$trigger_selected_complete </span>= <span class="src-sym">(</span><span class="src-var">$value_labels</span><span class="src-sym">[</span><span class="src-str">'label'</span><span class="src-sym">] </span>!= <span class="src-var">$value_labels</span><span class="src-sym">[</span><span class="src-str">'label_complete'</span><span class="src-sym">]</span><span class="src-sym">) </span>? <span class="src-var">$value_labels</span><span class="src-sym">[</span><span class="src-str">'label_complete'</span><span class="src-sym">] </span>: <span class="src-str">&quot;&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a688"></a>                <span class="src-sym">}                </span></li>
+<li><a name="a689"></a>            <span class="src-sym">}</span></li>
+<li><a name="a690"></a>        <span class="src-comm">//}</span></li>
+<li><a name="a691"></a>&nbsp;</li>
+<li><a name="a692"></a>        <span class="src-var">$trigger_div </span>.= <span class="src-str">'&lt;/select&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a693"></a>&nbsp;</li>
+<li><a name="a694"></a>        <span class="src-comm">// Affichage du bouton de suppression du trigger</span></li>
+<li><a name="a695"></a>&nbsp;</li>
+<li><a name="a696"></a>        <span class="src-var">$trigger_div </span>.= <span class="src-str">'&lt;input type=&quot;button&quot; class=&quot;drop_alarm&quot; onclick=&quot;remove_trigger('</span>.<span class="src-var">$id</span>.<span class="src-str">')&quot;/&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a697"></a>&nbsp;</li>
+<li><a name="a698"></a>        <span class="src-key">if </span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$trigger_selected_complete</span><span class="src-sym">) </span>&amp;&amp; <span class="src-var">$trigger_selected_complete </span>!= <span class="src-str">&quot;&quot;</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a699"></a>            <span class="src-var">$trigger_div </span>.= <span class="src-str">'&lt;div id=&quot;trigger_complete_label'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot; class=&quot;texteGris&quot; style=&quot;padding-left:105px;padding-top:5px;font-size:8pt&quot;&gt;'</span>.<span class="src-var">$trigger_selected_complete</span>.<span class="src-str">'&lt;/div&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a700"></a>        <span class="src-sym">}</span></li>
+<li><a name="a701"></a>&nbsp;</li>
+<li><a name="a702"></a>        <span class="src-key">return </span><span class="src-var">$trigger_div</span><span class="src-sym">;</span></li>
+<li><a name="a703"></a>    <span class="src-sym">}</span></li>
+<li><a name="a704"></a>    </li>
+<li><a name="a705"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a706"></a><span class="src-doc">     * Définit le code HTML de la liste de sélection du niveau d'agregation réseau</span></li>
+<li><a name="a707"></a><span class="src-doc">     *</span></li>
+<li><a name="a708"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$na </span><span class="src-doc">identifiant du niveau d'agregation (en mode &quot;édition&quot; seulement)</span></li>
+<li><a name="a709"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">le code HTML de la liste de sélection des na</span></li>
+<li><a name="a710"></a><span class="src-doc">     */</span></li>
+<li><a name="a711"></a>&nbsp;</li>
+<li><a name="a712"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#methodsetNetworkAgregationSelect">setNetworkAgregationSelect</a><span class="src-sym">(</span><span class="src-var">$na </span>= <span class="src-str">''</span><span class="src-sym">)</span></li>
+<li><a name="a713"></a>    <span class="src-sym">{</span></li>
+<li><a name="a714"></a>        <span class="src-var">$na_select </span>= <span class="src-str">''</span><span class="src-sym">;</span></li>
+<li><a name="a715"></a>        </li>
+<li><a name="a716"></a>        <span class="src-comm">// Definition des na de la famille</span></li>
+<li><a name="a717"></a>&nbsp;</li>
+<li><a name="a718"></a>        <span class="src-comm">//$na_list = $this-&gt;alarmModel-&gt;getNetworkAgregation($this-&gt;family);</span></li>
+<li><a name="a719"></a>&nbsp;</li>
+<li><a name="a720"></a>        <span class="src-comm">// Construction de la liste</span></li>
+<li><a name="a721"></a>&nbsp;</li>
+<li><a name="a722"></a>        <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$naList">naList</a><span class="src-sym">) </span>&gt; <span class="src-num">0</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a723"></a>&nbsp;</li>
+<li><a name="a724"></a>            <span class="src-comm">//$na_select .= '&lt;select id=&quot;net_to_sel&quot; name=&quot;net_to_sel&quot; class=&quot;zoneTexteStyleXP&quot; style=&quot;width:150px;&quot; onChange=&quot;remove_choice(this); updateNaSelection_alarme(this); changeNaSelectionIcon(\'on\');&quot;&gt;';</span></li>
+<li><a name="a725"></a>&nbsp;</li>
+<li><a name="a726"></a>            <span class="src-var">$na_select </span>.= <span class="src-str">'&lt;select id=&quot;net_to_sel&quot; name=&quot;net_to_sel&quot; class=&quot;zoneTexteStyleXP&quot; style=&quot;width:150px;&quot; onChange=&quot;resetNeSelection();getNEList(this.value, \'ne_list\', \'img_select_na\', \''</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$family">family</a>.<span class="src-str">'\')&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a727"></a>&nbsp;</li>
+<li><a name="a728"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$na </span>== <span class="src-str">&quot;&quot;</span><span class="src-sym">) </span><span class="src-var">$na_select </span>.= <span class="src-str">'&lt;option value=&quot;makeSelection&quot; selected&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_SELECT_MAKE_A_SELECTION_LABEL'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/option&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a729"></a>&nbsp;</li>
+<li><a name="a730"></a>            <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i </span>&lt; <a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$naList">naList</a><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a731"></a>&nbsp;</li>
+<li><a name="a732"></a>                <span class="src-var">$selected </span>= <span class="src-sym">((</span><span class="src-var">$na </span>!= <span class="src-str">&quot;&quot; </span>&amp;&amp; <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$naList">naList</a><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'agregation'</span><span class="src-sym">] </span>== <span class="src-var">$na</span><span class="src-sym">) </span>? <span class="src-str">&quot;selected&quot; </span>: <span class="src-str">&quot;&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a733"></a>&nbsp;</li>
+<li><a name="a734"></a>                <span class="src-var">$na_select </span>.= <span class="src-str">'&lt;option value=&quot;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$naList">naList</a><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'agregation'</span><span class="src-sym">]</span>.<span class="src-str">'&quot; '</span>.<span class="src-var">$selected</span>.<span class="src-str">'&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$naList">naList</a><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'agregation_label'</span><span class="src-sym">]</span>.<span class="src-str">'&lt;/option&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a735"></a>            <span class="src-sym">}</span></li>
+<li><a name="a736"></a>            </li>
+<li><a name="a737"></a>            <span class="src-var">$na_select </span>.= <span class="src-str">'&lt;/select&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a738"></a>        <span class="src-sym">}</span></li>
+<li><a name="a739"></a>        <span class="src-key">else </span><span class="src-comm">// Aucune na définie pour la famille sélectionnée</span></li>
+<li><a name="a740"></a>        <span class="src-sym">{</span></li>
+<li><a name="a741"></a>            <span class="src-var">$na_select </span>.= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_NO_NA_FOR_FAMILY_LABEL'</span><span class="src-sym">, </span><span class="src-var">$family</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a742"></a>        <span class="src-sym">}</span></li>
+<li><a name="a743"></a>&nbsp;</li>
+<li><a name="a744"></a>        <span class="src-comm">// Construction du bouton de selection des valeurs de na</span></li>
+<li><a name="a745"></a>&nbsp;</li>
+<li><a name="a746"></a>        <span class="src-var">$display_selection_na </span>= <span class="src-str">&quot;block&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a747"></a>&nbsp;</li>
+<li><a name="a748"></a>        <span class="src-var">$na_select </span>.= <span class="src-str">&quot;</span><span class="src-str">&lt;<span class="src-id">span</span> <span class="src-id">id</span>='<span class="src-id">icone_selection_des_na</span>' <span class="src-id">style</span>='<span class="src-id">display</span>:&lt;?=<span class="src-var">$display_selection_na</span>?&gt;; <span class="src-id">padding</span>-<span class="src-id">left</span>:10<span class="src-id">px</span>;'&gt;</span><span class="src-str">&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a749"></a>        </li>
+<li><a name="a750"></a>        <span class="src-comm">// On affiche une icône verte si des éléments réseaux préférés ont déjà été choisis.</span></li>
+<li><a name="a751"></a>        </li>
+<li><a name="a752"></a>        <span class="src-var">$image_select_na </span>= <span class="src-sym">((</span><a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$neList">neList</a><span class="src-sym">) </span>&gt; <span class="src-num">0</span><span class="src-sym">) </span>? <span class="src-str">'bt_on' </span>: <span class="src-str">'bt_off'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a753"></a>&nbsp;</li>
+<li><a name="a754"></a>        <span class="src-comm">// Note : mettre les libellés dans le modele</span></li>
+<li><a name="a755"></a>&nbsp;</li>
+<li><a name="a756"></a>        <span class="src-comm">//$na_select .= '&lt;input type=&quot;button&quot; id=&quot;img_select_na&quot; class=&quot;'.$image_select_na.'&quot; onclick=&quot;openNaSelection(\'ID/Account Selection\')&quot; style=&quot;cursor:pointer&quot; onmouseover=&quot;popalt_na_selection(\'No element selected\')&quot; onmouseout=&quot;kill2()&quot;&gt;';</span></li>
+<li><a name="a757"></a>        </li>
+<li><a name="a758"></a>        <span class="src-var">$na_select </span>.= <span class="src-str">'&lt;input type=&quot;button&quot; id=&quot;img_select_na&quot; class=&quot;'</span>.<span class="src-var">$image_select_na</span>.<span class="src-str">'&quot; onclick=&quot;openNaSelection(\''</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_TITRE_FENETRE_NETWORK_ELEMENT_SELECTION_ALARMES_SETUP'</span><span class="src-sym">)</span>.<span class="src-str">'\')&quot; style=&quot;cursor:pointer&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a759"></a>&nbsp;</li>
+<li><a name="a760"></a>        <span class="src-comm">// Creation du champ caché qui va contenir les valeurs de NA</span></li>
+<li><a name="a761"></a>&nbsp;</li>
+<li><a name="a762"></a>        <span class="src-comm">//$na_select .= '&lt;input type=&quot;text&quot; id=&quot;ne_list&quot; name=&quot;ne_list&quot; value=&quot;&quot;/&gt;';</span></li>
+<li><a name="a763"></a>&nbsp;</li>
+<li><a name="a764"></a>        <span class="src-var">$na_select </span>.= <span class="src-str">'&lt;/span&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a765"></a>&nbsp;</li>
+<li><a name="a766"></a>        <span class="src-key">return </span><span class="src-var">$na_select</span><span class="src-sym">;</span></li>
+<li><a name="a767"></a>    <span class="src-sym">}</span></li>
+<li><a name="a768"></a>&nbsp;</li>
+<li><a name="a769"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a770"></a><span class="src-doc">     * Définit le code HTML de la liste de sélection du niveau d'agregation temporelle</span></li>
+<li><a name="a771"></a><span class="src-doc">     *</span></li>
+<li><a name="a772"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$ta </span><span class="src-doc">identifiant du niveau d'agregation (en mode &quot;édition&quot; seulement)</span></li>
+<li><a name="a773"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">le code HTML de la liste de sélection des ta</span></li>
+<li><a name="a774"></a><span class="src-doc">     */    </span></li>
+<li><a name="a775"></a>    </li>
+<li><a name="a776"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#methodsetTimeAgregationSelect">setTimeAgregationSelect</a><span class="src-sym">(</span><span class="src-var">$ta </span>= <span class="src-str">''</span><span class="src-sym">)</span></li>
+<li><a name="a777"></a>    <span class="src-sym">{</span></li>
+<li><a name="a778"></a>        <span class="src-var">$ta_select </span>= <span class="src-str">''</span><span class="src-sym">;</span></li>
+<li><a name="a779"></a>        </li>
+<li><a name="a780"></a>        <span class="src-comm">// Definition des ta</span></li>
+<li><a name="a781"></a>&nbsp;</li>
+<li><a name="a782"></a>        <span class="src-var">$ta_list </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getTimeAgregation</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a783"></a>&nbsp;</li>
+<li><a name="a784"></a>        <span class="src-comm">// Construction de la liste</span></li>
+<li><a name="a785"></a>&nbsp;</li>
+<li><a name="a786"></a>        <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$ta_list</span><span class="src-sym">) </span>&gt; <span class="src-num">0</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a787"></a>&nbsp;</li>
+<li><a name="a788"></a>            <span class="src-comm">//$ta_select .= '&lt;select id=&quot;time_to_sel&quot; name=&quot;time_to_sel&quot; class=&quot;zoneTexteStyleXP&quot; style=&quot;width:150px&quot; onclick=&quot;save_time_to_sel(this.value)&quot; onchange=&quot;remove_choice(this);toggle_discontinuous(this.value);getTaExclusion(this.value,\'period_exclusion\');&quot;&gt;';</span></li>
+<li><a name="a789"></a>&nbsp;</li>
+<li><a name="a790"></a>            <span class="src-var">$ta_select </span>.= <span class="src-str">'&lt;select id=&quot;time_to_sel&quot; name=&quot;time_to_sel&quot; class=&quot;zoneTexteStyleXP&quot; style=&quot;width:150px&quot; onchange=&quot;remove_choice(this);&quot;&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a791"></a>&nbsp;</li>
+<li><a name="a792"></a>            <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$ta </span>== <span class="src-str">&quot;&quot;</span><span class="src-sym">) </span><span class="src-var">$ta_select </span>.= <span class="src-str">'&lt;option value=&quot;makeSelection&quot; selected&gt;'</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_ALARM_SELECT_MAKE_A_SELECTION_LABEL'</span><span class="src-sym">)</span>.<span class="src-str">'&lt;/option&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a793"></a>&nbsp;</li>
+<li><a name="a794"></a>            <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i </span>&lt; <a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$ta_list</span><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a795"></a>&nbsp;</li>
+<li><a name="a796"></a>                <span class="src-var">$selected </span>= <span class="src-sym">((</span><span class="src-var">$ta </span>!= <span class="src-str">&quot;&quot; </span>&amp;&amp; <span class="src-var">$ta_list</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'agregation'</span><span class="src-sym">] </span>== <span class="src-var">$ta</span><span class="src-sym">) </span>? <span class="src-str">&quot;selected&quot; </span>: <span class="src-str">&quot;&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a797"></a>&nbsp;</li>
+<li><a name="a798"></a>                <span class="src-var">$ta_select </span>.= <span class="src-str">'&lt;option value=&quot;'</span>.<span class="src-var">$ta_list</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'agregation'</span><span class="src-sym">]</span>.<span class="src-str">'&quot; '</span>.<span class="src-var">$selected</span>.<span class="src-str">'&gt;'</span>.<span class="src-var">$ta_list</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'agregation_label'</span><span class="src-sym">]</span>.<span class="src-str">'&lt;/option&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a799"></a>            <span class="src-sym">}</span></li>
+<li><a name="a800"></a>            </li>
+<li><a name="a801"></a>            <span class="src-var">$ta_select </span>.= <span class="src-str">'&lt;/select&gt;'</span><span class="src-sym">;</span></li>
+<li><a name="a802"></a>        <span class="src-sym">}</span></li>
+<li><a name="a803"></a>        <span class="src-key">else </span><span class="src-comm">// Aucune na définie pour la famille sélectionnée</span></li>
+<li><a name="a804"></a>        <span class="src-sym">{</span></li>
+<li><a name="a805"></a>            <span class="src-var">$ta_select </span>.= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_NO_TA_LABEL'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a806"></a>        <span class="src-sym">}</span></li>
+<li><a name="a807"></a>        <span class="src-key">return </span><span class="src-var">$ta_select</span><span class="src-sym">;        </span></li>
+<li><a name="a808"></a>    <span class="src-sym">}</span></li>
+<li><a name="a809"></a>    </li>
+<li><a name="a810"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a811"></a><span class="src-doc">     * Définit la liste des ne disponibles</span></li>
+<li><a name="a812"></a><span class="src-doc">     *</span></li>
+<li><a name="a813"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc-type">string </span><span class="src-doc-var">$btn_id </span><span class="src-doc">identifiant du bouton de sélection des ne</span></li>
+<li><a name="a814"></a><span class="src-doc">     */</span></li>
+<li><a name="a815"></a>&nbsp;</li>
+<li><a name="a816"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#methodsetNetworkElementSelection">setNetworkElementSelection</a><span class="src-sym">(</span><span class="src-var">$btn_id</span><span class="src-sym">)</span></li>
+<li><a name="a817"></a>    <span class="src-sym">{</span></li>
+<li><a name="a818"></a>        <span class="src-var">$neSelection </span>= <span class="src-key">new </span><span class="src-id"><a href="../networkElementSelection/networkElementSelection.html">networkElementSelection</a></span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a819"></a>        </li>
+<li><a name="a820"></a>        <span class="src-var">$neSelection</span><span class="src-sym">-&gt;</span><span class="src-id">setWindowTitle</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">translate</span><span class="src-sym">(</span><span class="src-str">'A_TITRE_FENETRE_NETWORK_ELEMENT_SELECTION_ALARMES_SETUP'</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a821"></a>&nbsp;</li>
+<li><a name="a822"></a>        <span class="src-comm">// On initialise le bouton qui permet d'afficher l'iHM, ainsi que les classes css du bouton.</span></li>
+<li><a name="a823"></a>        </li>
+<li><a name="a824"></a>        <span class="src-var">$neSelection</span><span class="src-sym">-&gt;</span><span class="src-id">setOpenButtonProperties</span><span class="src-sym">(</span><span class="src-var">$btn_id</span><span class="src-sym">, </span><span class="src-str">'bt_on'</span><span class="src-sym">, </span><span class="src-str">'bt_off'</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a825"></a>        </li>
+<li><a name="a826"></a>        <span class="src-var">$neSelection</span><span class="src-sym">-&gt;</span><span class="src-id">setHtmlIdPrefix</span><span class="src-sym">(</span><span class="src-str">''</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a827"></a>&nbsp;</li>
+<li><a name="a828"></a>        <span class="src-var">$neSelection</span><span class="src-sym">-&gt;</span><span class="src-id">setSaveFieldProperties</span><span class="src-sym">(</span><span class="src-str">'ne_list'</span><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#methodgetNeValuesFromAlarmNe">getNeValuesFromAlarmNe</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">, </span><span class="src-str">'|s|'</span><span class="src-sym">, </span><span class="src-num">0</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a829"></a>        </li>
+<li><a name="a830"></a>        <span class="src-comm">// On ajoute des onglets.</span></li>
+<li><a name="a831"></a>&nbsp;</li>
+<li><a name="a832"></a>        <span class="src-var">$ne_div </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a833"></a>&nbsp;</li>
+<li><a name="a834"></a>        <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i </span>&lt; <a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$naList">naList</a><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a835"></a>            <span class="src-var">$neSelection</span><span class="src-sym">-&gt;</span><span class="src-id">addTabInIHM</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$naList">naList</a><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'agregation'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$naList">naList</a><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'agregation_label'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-str">'alarm_actions_manager.php?action=get_ne&amp;display=html&amp;na='</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$naList">naList</a><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'agregation'</span><span class="src-sym">]</span>.<span class="src-str">'&amp;family='</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$family">family</a><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a836"></a>            <span class="src-var">$ne_div</span><span class="src-sym">[</span><span class="src-sym">] </span>= <span class="src-str">&quot;'&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$naList">naList</a><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'agregation'</span><span class="src-sym">]</span>.<span class="src-str">&quot;'&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a837"></a>        <span class="src-sym">}</span></li>
+<li><a name="a838"></a>&nbsp;</li>
+<li><a name="a839"></a>        <span class="src-var">$neSelection</span><span class="src-sym">-&gt;</span><span class="src-id">setViewCurrentSelectionContentButtonProperties</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a840"></a>        </li>
+<li><a name="a841"></a>        <span class="src-comm">// Génération de l'IHM.</span></li>
+<li><a name="a842"></a>        <span class="src-var">$neSelection</span><span class="src-sym">-&gt;</span><span class="src-id">generateIHM</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a843"></a>&nbsp;</li>
+<li><a name="a844"></a>        <span class="src-comm">// lancement d'un script JS pour déplacer la liste des ne au sein du formulaire lors du chargement de la page</span></li>
+<li><a name="a845"></a>&nbsp;</li>
+<li><a name="a846"></a>        echo <span class="src-str">&quot;&lt;script&gt;initNEList('ne_list', 'alarmSetupForm');showHideNE(new Array(&quot;</span>.<a href="http://www.php.net/implode">implode</a><span class="src-sym">(</span><span class="src-str">', '</span><span class="src-sym">, </span><span class="src-var">$ne_div</span><span class="src-sym">)</span>.<span class="src-str">&quot;))&lt;/script&gt;&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a847"></a>    <span class="src-sym">}</span></li>
+<li><a name="a848"></a>    </li>
+<li><a name="a849"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a850"></a><span class="src-doc">     * Définit la liste détaillée des ne d'une alarme</span></li>
+<li><a name="a851"></a><span class="src-doc">     *</span></li>
+<li><a name="a852"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">la liste détaillée des ne</span></li>
+<li><a name="a853"></a><span class="src-doc">     */</span></li>
+<li><a name="a854"></a>&nbsp;</li>
+<li><a name="a855"></a>    <span class="src-key">private </span><span class="src-key">function </span><a href="../Alarm/AlarmSetup.html#methodgetNeValuesFromAlarmNe">getNeValuesFromAlarmNe</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a856"></a>    <span class="src-sym">{        </span></li>
+<li><a name="a857"></a>        <span class="src-var">$real_ne_list </span>= <span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a858"></a>&nbsp;</li>
+<li><a name="a859"></a>        <span class="src-comm">// Cas de la selection de tous les elements ou de tous sauf quelques-uns (&quot;not_in&quot; = 1)</span></li>
+<li><a name="a860"></a>&nbsp;</li>
+<li><a name="a861"></a>        <span class="src-key">if </span><span class="src-sym">(</span><a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$neList">neList</a><span class="src-sym">) </span>&gt; <span class="src-num">0</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a862"></a>            <span class="src-key">if </span><span class="src-sym">((</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$neList">neList</a><span class="src-sym">[</span><span class="src-str">'lst_alarm_compute'</span><span class="src-sym">]  </span>== <span class="src-str">&quot;all&quot;</span><span class="src-sym">) </span>|| <span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$neList">neList</a><span class="src-sym">[</span><span class="src-str">'not_in'</span><span class="src-sym">]  </span>== <span class="src-num">1</span><span class="src-sym">)) </span><span class="src-sym">{</span></li>
+<li><a name="a863"></a>&nbsp;</li>
+<li><a name="a864"></a>                <span class="src-var">$real_ne_list</span><span class="src-sym">[</span><span class="src-sym">] </span>= <span class="src-str">&quot;all_&quot;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmProperties">alarmProperties</a><span class="src-sym">[</span><span class="src-str">'network'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a865"></a>                </li>
+<li><a name="a866"></a>                <span class="src-comm">// Dans le cas où l'on restreint la selection, on supprime de '$real_ne_list' les éléments non sélectionnés</span></li>
+<li><a name="a867"></a>&nbsp;</li>
+<li><a name="a868"></a>                <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$neList">neList</a><span class="src-sym">[</span><span class="src-str">'not_in'</span><span class="src-sym">]  </span>== <span class="src-num">1</span><span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a869"></a>&nbsp;</li>
+<li><a name="a870"></a>                    <span class="src-var">$ne_list </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmModel">alarmModel</a><span class="src-sym">-&gt;</span><span class="src-id">getNE</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$alarmProperties">alarmProperties</a><span class="src-sym">[</span><span class="src-str">'network'</span><span class="src-sym">]</span><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$family">family</a><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a871"></a>&nbsp;</li>
+<li><a name="a872"></a>                    <span class="src-key">for </span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">; </span><span class="src-var">$i </span>&lt; <a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$ne_list</span><span class="src-sym">)</span><span class="src-sym">; </span><span class="src-var">$i</span>++<span class="src-sym">) </span><span class="src-sym">{</span></li>
+<li><a name="a873"></a>                        <span class="src-var">$real_ne_list</span><span class="src-sym">[</span><span class="src-sym">] </span>= <span class="src-var">$ne_list</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'id'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a874"></a>                    <span class="src-sym">}</span></li>
+<li><a name="a875"></a>&nbsp;</li>
+<li><a name="a876"></a>                    <span class="src-var">$real_ne_list </span>= <a href="http://www.php.net/array_diff">array_diff</a><span class="src-sym">(</span><span class="src-var">$real_ne_list</span><span class="src-sym">, </span><a href="http://www.php.net/explode">explode</a><span class="src-sym">(</span><span class="src-str">'||'</span><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$neList">neList</a><span class="src-sym">[</span><span class="src-str">'lst_alarm_compute'</span><span class="src-sym">]</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a877"></a>                <span class="src-sym">}</span></li>
+<li><a name="a878"></a>            <span class="src-sym">}</span></li>
+<li><a name="a879"></a>            <span class="src-key">else </span></li>
+<li><a name="a880"></a>            <span class="src-sym">{</span></li>
+<li><a name="a881"></a>                <span class="src-var">$real_ne_list </span>= <a href="http://www.php.net/explode">explode</a><span class="src-sym">(</span><span class="src-str">'||'</span><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Alarm/AlarmSetup.html#var$neList">neList</a><span class="src-sym">[</span><span class="src-str">'lst_alarm_compute'</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a882"></a>            <span class="src-sym">}            </span></li>
+<li><a name="a883"></a>        <span class="src-sym">}    </span></li>
+<li><a name="a884"></a>        <span class="src-key">return </span><a href="http://www.php.net/implode">implode</a><span class="src-sym">(</span><span class="src-str">'|s|'</span><span class="src-sym">, </span><span class="src-var">$real_ne_list</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a885"></a>    <span class="src-sym">}</span></li>
+<li><a name="a886"></a><span class="src-sym">}</span></li>
+<li><a name="a887"></a>&nbsp;</li>
+<li><a name="a888"></a><span class="src-php">?&gt;</span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 03 Aug 2008 18:03:11 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

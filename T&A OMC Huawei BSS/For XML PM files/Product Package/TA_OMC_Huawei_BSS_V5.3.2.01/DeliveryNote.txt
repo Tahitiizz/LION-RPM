@@ -1,0 +1,121 @@
+===================================================================
+
+		Trending&Aggregation Huawei BSS 5.3
+		Version 5.3.2.01
+		Delivered on: Jan-24-2018
+
+===================================================================
+
+Content:
+
+        T&A Base Component    : V 5.3.3.07
+        T&A Parser            : V 5.3.2.01
+        T&A Context           : V 5.3.2.00
+        T&A Package Generator : V 3.11
+       
+
+Installation:
+	IMPORTANT: This package cannot be used to upgrade a product in V5.3.1.00 and lower. Therefore it can only be used in a new client scenario.
+
+Expertise /R&D level specifications:
+	EXP Application / Vendor	:	RQ
+	EXP Restitution / Techno	:	RI
+	R&D All Products			:	T17
+	R&D Product Template		:	T19
+	R&D previous context		: 	None
+
+Tools:
+	T&A Expertise Specifications Converter	:	V 1.08
+	T&A Context Management					:	V 7.0.2.12
+	Parser Library							:	V4.09
+
+Fixed Anomalies (version 5.3.2.01):
+		* #4419: Error in file demon in retrieve phase
+
+Fixed Anomalies (version 5.3.2.00):
+		* [EVO] Upgrade to cb 5.3.3.07
+		* [EVO] Upgrade to parser library 4.09
+Parser has been modified to handle XML source files.
+
+Fixed Anomalies (version 5.3.1.00):
+		* [EVO] Upgrade to cb 5.3.1.11
+		* [EVO] Upgrade to parser library 4.06
+		* Bug 34212 - [DEV][HUAWEI BSS 5.3] Method LoadDataHuaBss is not called in Class load_data
+		* Bug 33375 - [QAL][HUAWEI BSS 5.3] Counters not activated as per Vendor Specs
+	
+Fixed Anomalies (version 5.3.0.01):
+		* Bug 32582 - [REC][T&A OMC Huawei BSS] Some series marked for suppression are not deleted
+		* Bug 32071 - [REC][T&A OMC Huawei BSS v5.2] [Context] The flat file IDs have been modified
+		
+Fixed Anomalies (version 5.3.0.00):	
+		* [EVO] Upgrade to cb 5.3.0.11
+		* Bug 32077 - [REC][T&A OMC Huawei BSS v5.2] [CTU] 2 global parameters missing in "sys_definition_context_element_to_delete.csv"
+		* Bug 32071 - [REC][T&A OMC Huawei BSS v5.2] [Context] The flat file IDs have been modified
+		* Bug 32067 - [REC][T&A OMC Huawei BSS v5.2] [Counters] One counter is missing in the context
+	
+Fixed Anomalies (version 5.2.0.00):
+		* [EVO] Upgrade to cb 5.2.0.34
+		* [EVO] Upgrade to parser_lib v4.00 (improves performance with execCopyQuery parallelism)
+		* [EVO] Upgrade to new BSS template
+		* [EVO] ErlangB improvement
+		* Bug 19578 - [SUP][T&A Huawei BSS5.0][Airtel Nigeria]: GIS on GTM on BSS template
+		* Bug 20004 - [DE][T&A OMC Huawei BSS - 5.0][PM Files name] Add Huawei Tasks ID in PM filenames
+		* Bug 21606 - [REC][T&A OMC Huawei BSS v5.0.6.06][Contexte] Capture duration counter might be collapsed for all source file families
+		* Bug 25437 - [QAL][T&A OMC Huawei BSS]: Wrong formula for DL_Retransmission_Rate_in_CS1234, UL_Retransmission_Rate_in_CS1234, DL_Retransmission_Rate_in_MCS and UL_Retransmission_Rate_in_MCS
+		* Bug 28769 - [QAL][T&A OMC Huawei BSS]: File used for two different family are not taken in account in SA calculation
+		* Bug 31057 - [QAL][T&A OMC Huawei BSS]: DL_Retransmission_Rate_in_CS1234=100 at Vendor level although at PCU level the value is not at 100% on all PCUs
+		* Bug 31076 - [QAL][T&A OMC Huawei BSS]: Counters to be added in spec
+		* Bug 31226 - [EVO][T&A OMC Huawei BSS]: manage file 82833951 used for both BSS and UTRAN
+	
+Fixed Anomalies (version 5.1.0.11):	
+		* [EVO] Upgrade to cb 5.1.6.34
+		* Bug 30843 - [SUP][T&A OMC Huawei BSS]: file 1275071433 not parsed correctly
+		* Bug 30909 - [QAL][T&A OMC Huawei BSS]:The traffic capacity KPIs is limited at 100%
+	
+Fixed Anomalies (version 5.1.0.10):	
+		* [EVO] Upgrade to cb 5.1.6.32
+		
+Fixed Anomalies (version 5.1.0.09):	
+		* [EVO] Upgrade to cb 5.1.6.29
+		* Bug 29775 - [QAL][T&A OMC Huawei BSS]: BSC added as cell in db
+		
+Fixed Anomalies (version 5.1.0.08):
+		* Bug 21891 - [QAL][T&A OMC Huawei BSS]: Wrong KPI name compare to template BSS
+		
+Fixed Anomalies (version 5.1.0.07):
+		* Bug 29011 - [QAL][T&A OMC Huawei BSS]: Virtual cell are not added in edw_huab table for bsc with lower case letter in their name.
+		* Bug 29034 - [QAL][T&A OMC Huawei BSS]: global parameter update topology label should not be seen in the interface 
+	
+Fixed Anomalies (version 5.1.0.06):
+		* [EVO] Upgrade to parser_lib 2.9
+		* Bug 28843 - [QAL][T&A OMC Huawei BSS]: Not possible to activate new pm files
+	
+Fixed Anomalies (version 5.1.0.05):
+		* [EVO] Upgrade to cb 5.1.6.27
+		* [EVO] Upgrade to parser_lib 2.8
+		* Bug 25434 - [QAL][T&A Huawei BSS 5.0]Automatic mapping not working properly
+		* Bug 26363 - [QAL][T&A OMC Huawei BSS] Missing KPIs in patch context 
+		* Bug 26666 - [SUP] [T&A Huawei BSS][5.0.8.00] [Airtel NGA]: Anormal stop of dump processing on sunday and freeze of processes
+		* Bug 28619 - [QAL][T&A OMC Huawei BSS]: Counters known are present in automatic mapping in case of installation on existing customer
+		* Bug 28625 - [QAL][T&A OMC Huawei BSS]: Vendor spec must be updated with automatic mapped counters
+		* Bug 22636 - [REC][T&A OMC Huawei BSS v5.0.7.05][Contexte] ByPass BSC counter doesn't exist
+		* Bug 28627 - [QAL][T&A OMC Huawei BSS]: In spec, the BSC counters have not the bypass set to yes
+		* Bug 18032 - [REC][TA OMC BSS Huawei][5.0.2.03][Data Export]: field text 'Target File' is out of the frame
+		
+Fixed Anomalies (version 5.1.0.04):
+		* [EVO] Upgrade to cb 5.1.6.26	
+	
+Fixed Anomalies (version 5.1.0.03):
+		* [EVO] Upgrade to cb 5.1.6.23	
+	
+Fixed Anomalies (version 5.1.0.02):
+		* [EVO] Upgrade to parser lib V1.9
+		* Bug 26782 - [REC][T&A OMC Huawei BSS]In admin profile, some menus are not visible in case of reinstallation
+		* Bug 26579 - [REC][T&A OMC Huawei BSS] different KPI value between this version and the last officially delivered one
+		* Bug 26397 - [QAL][T&A OMC Huawei BSS] Wrong position of client_dashboard in existing client configuration
+		* Bug 26920 - [REC][T&A OMC Huawei BSS v5.1.0.01] Menus are disabled when upgrading to a product with CB 5.1.6.16
+	
+Fixed Anomalies (version 5.1.0.01):
+		* Bug 26484 - [DEV][T&A OMC Huawei BSS] Incorrect Counter File Name Field
+		* Bug 25438 - [QAL][T&A OMC Huawei BSS]: Wrong aggregation for counter AR9303 - Average Number of Available PDCHs
+		* Bug 26579 - [REC][T&A OMC Huawei BSS] different KPI value between this version and the last officially delivered one

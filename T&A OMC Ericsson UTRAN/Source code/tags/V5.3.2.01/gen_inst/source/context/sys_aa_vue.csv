@@ -1,0 +1,49 @@
+saav_idvue	saav_name
+0	Unknown data type
+1	Transitions
+2	Activity Report
+3	Detailed Activity
+4	SMS
+5	Timers
+6	Internet Protocol
+7	Radio Measurements
+8	Trace Accounts
+9	Trace Identities
+10	Trace Activity
+11	BLER
+12	Roamers Groups
+13	Roamers Identities
+14	Roamers Activity
+15	Map
+16	Traffic Report
+17	Setup Efficiency
+18	Resources
+19	Accounts
+20	Identities
+21	Activity
+22	Measurements Chart
+23	Cell throughput
+24	TCP Round trip time
+25	TCP Sequence
+26	IP Activity
+27	Flow Chart
+28	Distribution
+29	Services Activity
+30	Detailed Flow Chart
+31	Handset Profiling KPI
+32	Traffic Measurements
+33	Services Activity Identities
+34	Services Activity Accounts
+35	Inbound Roamers Analysis
+36	Outbound Roamers Analysis
+37	Ratio Subscribers Inbound Roamers Per VLR
+38	Inbound Roamer SMS MT International
+39	Outbound Roamer SMS MO International
+40	Outbound Roamer SMS MT International
+41	Inbound Roamer SMS MO International
+42	Procedure Report
+43	Handset Statistics
+44	Handset Statistics By User Agent
+45	Megaco MGW Statistics
+46	Megaco CIC Statistics
+47	Megaco IP Statistics

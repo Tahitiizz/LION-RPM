@@ -1,0 +1,306 @@
+<?php
+
+include('start_exemple.php');
+
+
+$myGraph = new chartFromXML("chart.xml");				// on crée l'objet en chargeant le fichier de données XML
+$myGraph->loadDefaultXML(MOD_CHARTFROMXML . "class/chart_default.xml");				// on charge les valeurs par défaut (depuis un autre fichier XML)
+$myGraph->setAbscisseInterval(2);							// on affiche un label sur deux sur l'axeX
+// $myGraph->setWidth('800');								// on définit la largeur du graphe
+// $myGraph->setType('pie3D',1);							// on définit le type du graphe
+// $myGraph->setInteractivity(0);							// on désactive les imagemaps
+// $myGraph->setBaseDir($repertoire_physique_niveau0.'png_file/');	// on définit le répertoire où doivent être sauvées les images
+// $myGraph->setBaseUrl($repertoire_niveau0.'png_file/');			// on définit l'url des images sauvées
+
+// il existe 3 façons de générer l'image
+// $myGraph->stroke();								// on génère l'image en on la renvoie au navigateur
+// $myGraph->saveImage();								// on génère l'image en on la sauve sur le disque
+echo $myGraph->getHTML();							// on génère et sauve l'image, puis on renvoit le tag <IMG> avec éventuellement l'image map
+echo "\n\n";
+
+
+$myGraph = new chartFromXML("chart_test.xml");				
+$myGraph->loadDefaultXML(MOD_CHARTFROMXML."class/chart_default.xml");
+echo $myGraph->getHTML();	
+
+
+exit;
+
+
+
+
+
+// line design square
+$myGraph->grinfo->datas->data['line_design'] = 'square';
+$myGraph->grinfo->properties->tabtitle->text[1] = ' mark square ';
+echo $myGraph->getHTML();
+echo "\n\n";
+
+// line design circle
+$myGraph->grinfo->datas->data['line_design'] = 'circle';
+$myGraph->grinfo->properties->tabtitle->text[1] = ' mark circle ';
+echo $myGraph->getHTML();
+echo "\n\n";
+
+// line design square - fill opaque
+$myGraph->grinfo->datas->data['line_design'] = 'square';
+$myGraph->grinfo->datas->data['fill_color'] = '#FF6600';
+$myGraph->grinfo->datas->data['stroke_color'] = '#FF0000';
+// $myGraph->grinfo->datas->data['fill_transparency'] = '0.8';
+$myGraph->grinfo->properties->tabtitle->text[1] = ' mark square ';
+$myGraph->grinfo->properties->tabtitle->text[2] = ' fill opaque ';
+echo $myGraph->getHTML();
+echo "\n\n";
+
+// line design square - fill transpa
+$myGraph->grinfo->datas->data['stroke_color'] = '#FF6600';
+$myGraph->grinfo->datas->data['fill_transparency'] = '0.7';
+$myGraph->grinfo->properties->tabtitle->text[2] = ' fill transpa ';
+echo $myGraph->getHTML();
+echo "\n\n";
+
+// line design circle - fill transpa
+$myGraph->grinfo->datas->data['line_design'] = 'circle';
+$myGraph->grinfo->properties->tabtitle->text[1] = ' mark circle ';
+$myGraph->grinfo->properties->tabtitle->text[2] = ' fill transpa ';
+echo $myGraph->getHTML();
+echo "\n\n";
+
+// cumulatedline
+$myGraph->grinfo->datas->data['type'] = 'cumulatedline';
+$myGraph->grinfo->properties->tabtitle->text[0] = ' one cumulatedline ';
+echo $myGraph->getHTML();
+echo "\n\n";
+
+// bar
+$myGraph->grinfo->datas->data['type'] = 'bar';
+$myGraph->grinfo->properties->tabtitle->text[0] = ' one bar ';
+$myGraph->grinfo->properties->tabtitle->text[1] = '  ';
+echo $myGraph->getHTML();
+echo "\n\n";
+
+// cumulatedbar
+$myGraph->grinfo->datas->data['type'] = 'cumulatedbar';
+$myGraph->grinfo->properties->tabtitle->text[0] = ' one cumulatedbar ';
+echo $myGraph->getHTML();
+echo "\n\n";
+
+// cumulatedbar - fill opaque
+$myGraph->grinfo->datas->data['fill_color'] = '#FF6600';
+$myGraph->grinfo->datas->data['fill_transparency'] = '0';
+$myGraph->grinfo->properties->tabtitle->text[2] = ' fill opaque ';
+echo $myGraph->getHTML();
+echo "\n\n";
+
+// bar
+$myGraph->grinfo->datas->data['type'] = 'bar';
+$myGraph->grinfo->properties->tabtitle->text[0] = ' one bar ';
+$myGraph->grinfo->datas->data['fill_color'] = '';
+$myGraph->grinfo->properties->tabtitle->text[2] = ' fill none ';
+echo $myGraph->getHTML();
+echo "\n\n";
+
+// bar - fill white@1
+$myGraph->grinfo->datas->data['fill_color'] = 'white';
+$myGraph->grinfo->datas->data['fill_tranparency'] = '1';
+$myGraph->grinfo->properties->tabtitle->text[2] = ' fill white@1 ';
+echo $myGraph->getHTML();
+echo "\n\n";
+
+unset($myGraph);
+
+
+
+
+
+
+function test_2lines($myGraph) {
+
+	// 2 lines
+	echo $myGraph->getHTML();
+	echo "\n\n";
+	
+	// line design square
+	$myGraph->grinfo->datas->data[0]['line_design'] = 'square';
+	$myGraph->grinfo->properties->tabtitle->text[2] = ' mark square / none';
+	echo $myGraph->getHTML();
+	echo "\n\n";
+	
+	// line design circle
+	$myGraph->grinfo->datas->data[0]['line_design'] = 'circle';
+	$myGraph->grinfo->properties->tabtitle->text[2] = ' mark circle / none';
+	echo $myGraph->getHTML();
+	echo "\n\n";
+	
+	// line design circle
+	$myGraph->grinfo->datas->data[1]['line_design'] = 'square';
+	$myGraph->grinfo->properties->tabtitle->text[2] = ' mark circle / square';
+	echo $myGraph->getHTML();
+	echo "\n\n";
+	
+	// fill opaque / none
+	$myGraph->grinfo->datas->data[0]['fill_color'] = '#FF6600';
+	$myGraph->grinfo->datas->data[0]['stroke_color'] = '#FF0000';
+	$myGraph->grinfo->properties->tabtitle->text[2] = ' mark square ';
+	$myGraph->grinfo->properties->tabtitle->text[3] = ' fill opaque / none ';
+	echo $myGraph->getHTML();
+	echo "\n\n";
+	
+	// fill transpa / none
+	$myGraph->grinfo->datas->data[0]['stroke_color'] = '#FF6600';
+	$myGraph->grinfo->datas->data[0]['fill_transparency'] = '0.7';
+	$myGraph->grinfo->properties->tabtitle->text[3] = ' fill transpa / none';
+	echo $myGraph->getHTML();
+	echo "\n\n";
+	
+	// fill opaque / opaque
+	$myGraph->grinfo->datas->data[0]['fill_color'] = '#FF6600';
+	$myGraph->grinfo->datas->data[0]['fill_transparency'] = '0';
+	$myGraph->grinfo->datas->data[1]['fill_color'] = 'darkcyan';
+	$myGraph->grinfo->properties->tabtitle->text[3] = ' fill opaque / opaque ';
+	echo $myGraph->getHTML();
+	echo "\n\n";
+	
+	// fill opaque / transpa
+	$myGraph->grinfo->datas->data[1]['fill_transparency'] = '0.5';
+	$myGraph->grinfo->properties->tabtitle->text[3] = ' fill opaque / transpa ';
+	echo $myGraph->getHTML();
+	echo "\n\n";
+	
+	// fill transpa / opaque
+	$myGraph->grinfo->datas->data[0]['fill_transparency'] = '0.7';
+	$myGraph->grinfo->datas->data[1]['fill_transparency'] = '0';
+	$myGraph->grinfo->properties->tabtitle->text[3] = ' fill transpa / opaque';
+	echo $myGraph->getHTML();
+	echo "\n\n";
+	
+	// fill transpa / transpa
+	$myGraph->grinfo->datas->data[1]['fill_transparency'] = '0.5';
+	$myGraph->grinfo->properties->tabtitle->text[3] = ' fill transpa / transpa';
+	echo $myGraph->getHTML();
+	echo "\n\n";
+	
+	// mark none
+	$myGraph->grinfo->datas->data[0]['line_design'] = '';
+	$myGraph->grinfo->datas->data[1]['line_design'] = '';
+	$myGraph->grinfo->properties->tabtitle->text[2] = ' mark none';
+	echo $myGraph->getHTML();
+	echo "\n\n";
+
+}
+
+
+// L: 2 lines	R: -
+$myGraph = new chartFromXML("chart_2.xml");
+$myGraph->loadDefaultXML(MOD_CHARTFROMXML."class/chart_default.xml");
+test_2lines($myGraph);
+unset($myGraph);
+
+
+// L: 1 line		R: 1 line
+$myGraph = new chartFromXML("chart_2.xml");
+$myGraph->loadDefaultXML(MOD_CHARTFROMXML."class/chart_default.xml");
+$myGraph->grinfo->datas->data[1]['yaxis'] = 'right';
+$myGraph->grinfo->properties->tabtitle->text[0] = ' L: 1 line ';
+$myGraph->grinfo->properties->tabtitle->text[1] = ' R: 1 line ';
+test_2lines($myGraph);
+unset($myGraph);
+
+
+// L: 2 cumulatedlines		R: -
+$myGraph = new chartFromXML("chart_2.xml");
+$myGraph->loadDefaultXML(MOD_CHARTFROMXML."class/chart_default.xml");
+$myGraph->grinfo->datas->data[0]['type'] = 'cumulatedline';
+$myGraph->grinfo->datas->data[1]['type'] = 'cumulatedline';
+$myGraph->grinfo->properties->tabtitle->text[0] = ' L: 2 cumulatedlines ';
+test_2lines($myGraph);
+unset($myGraph);
+
+
+// L: 1 bar, 1 line	R: -
+$myGraph = new chartFromXML("chart_2.xml");
+$myGraph->loadDefaultXML(MOD_CHARTFROMXML."class/chart_default.xml");
+$myGraph->grinfo->datas->data[0]['type'] = 'bar';
+// $myGraph->grinfo->datas->data[1]['type'] = 'bar';
+$myGraph->grinfo->properties->tabtitle->text[0] = ' L: 1 bar 1 line ';
+test_2lines($myGraph);
+unset($myGraph);
+
+
+// L: 1 bar			R: 1 line
+$myGraph = new chartFromXML("chart_2.xml");
+$myGraph->loadDefaultXML(MOD_CHARTFROMXML."class/chart_default.xml");
+$myGraph->grinfo->datas->data[0]['type'] = 'bar';
+$myGraph->grinfo->datas->data[1]['yaxis'] = 'right';
+$myGraph->grinfo->datas->data[1]['stroke_color'] = 'deeppink4';
+//$myGraph->grinfo->datas->data[1]['fill_color'] = 'deeppink4';
+$myGraph->grinfo->properties->tabtitle->text[0] = ' L: 1 bar';
+$myGraph->grinfo->properties->tabtitle->text[1] = ' R: 1 line ';
+test_2lines($myGraph);
+unset($myGraph);
+
+
+// L: 1 line			R: 1 bar
+$myGraph = new chartFromXML("chart_2.xml");
+$myGraph->loadDefaultXML(MOD_CHARTFROMXML."class/chart_default.xml");
+$myGraph->grinfo->datas->data[1]['type'] = 'bar';
+$myGraph->grinfo->datas->data[1]['yaxis'] = 'right';
+$myGraph->grinfo->datas->data[1]['stroke_color'] = 'deeppink4';
+$myGraph->grinfo->datas->data[1]['fill_color'] = 'deeppink4';
+$myGraph->grinfo->properties->tabtitle->text[0] = ' L: 1 line';
+$myGraph->grinfo->properties->tabtitle->text[1] = ' R: 1 bar';
+test_2lines($myGraph);
+unset($myGraph);
+
+
+// L: 2 bars			R: -
+$myGraph = new chartFromXML("chart_2.xml");
+$myGraph->loadDefaultXML(MOD_CHARTFROMXML."class/chart_default.xml");
+$myGraph->grinfo->datas->data[0]['type'] = 'bar';
+$myGraph->grinfo->datas->data[1]['type'] = 'bar';
+$myGraph->grinfo->properties->tabtitle->text[0] = ' L: 2 bars ';
+test_2lines($myGraph);
+unset($myGraph);
+
+
+// L: 1 bar			R: 1 bar
+$myGraph = new chartFromXML("chart_2.xml");
+$myGraph->loadDefaultXML(MOD_CHARTFROMXML."class/chart_default.xml");
+$myGraph->grinfo->datas->data[0]['type'] = 'bar';
+$myGraph->grinfo->datas->data[1]['type'] = 'bar';
+$myGraph->grinfo->datas->data[1]['yaxis'] = 'right';
+$myGraph->grinfo->properties->tabtitle->text[0] = ' L: 1 bar ';
+$myGraph->grinfo->properties->tabtitle->text[1] = ' R: 1 bar ';
+test_2lines($myGraph);
+unset($myGraph);
+
+
+// L: 2 cumulatedbars			R: -
+$myGraph = new chartFromXML("chart_2.xml");
+$myGraph->loadDefaultXML(MOD_CHARTFROMXML."class/chart_default.xml");
+$myGraph->grinfo->datas->data[0]['type'] = 'cumulatedbar';
+$myGraph->grinfo->datas->data[1]['type'] = 'cumulatedbar';
+$myGraph->grinfo->properties->tabtitle->text[0] = ' L: 2 cumulatedbars ';
+test_2lines($myGraph);
+unset($myGraph);
+
+
+
+
+
+/* cumulatedline
+$myGraph->grinfo->datas->data['type'] = 'cumulatedline';
+$myGraph->grinfo->properties->tabtitle->text[0] = ' one cumulatedline ';
+echo $myGraph->getHTML();
+echo "\n\n";
+*/
+
+
+/* line design circle - fill transpa
+$myGraph->grinfo->datas->data['line_design'] = 'circle';
+$myGraph->grinfo->properties->tabtitle->text[1] = ' mark circle ';
+$myGraph->grinfo->properties->tabtitle->text[2] = ' fill transpa ';
+echo $myGraph->getHTML();
+*/
+
+?>

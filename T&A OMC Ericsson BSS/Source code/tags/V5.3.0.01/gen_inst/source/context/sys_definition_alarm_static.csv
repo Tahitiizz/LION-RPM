@@ -1,0 +1,1 @@
+alarm_id	alarm_name	alarm_trigger_data_field	alarm_trigger_operand	alarm_trigger_type	id_group_table	network	time	hn_value	family	alarm_trigger_value	internal_id	client_type	additional_field	additional_field_type	description	critical_level	nb_iteration	period	on_off

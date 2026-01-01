@@ -1,0 +1,15 @@
+
+
+.bouton{
+	border-right : 1px solid #585858;
+	border-bottom : 1px solid #585858;
+	border-top : 1px solid #C9C9C9;
+	border-left : 1px solid #C9C9C9;
+	font : normal 9pt Verdana, Arial, sans-serif;
+	/* ancienne version des boutons */
+	/*background-image : url('../images/skin/astellia/boutons_background.gif');*/
+	background-image : url('../images/skin/astellia/bouton_style_relief.gif');
+	padding-left : 5px;
+}
+
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<chart>
+	<properties>
+		<tabtitle>
+			<text>L:2 lines </text>
+			<text> R: - </text>
+			<text color="red"> no mark </text>
+			<text color="orange" font_size="8" font_family="FF_VERDANA"> no fill</text>
+		</tabtitle>
+		<left_axis_label>Nb</left_axis_label>
+		<right_axis_label>Number</right_axis_label>
+		<horizontal_line legend="66 000" color="firebrick3" yaxis="left">66000</horizontal_line>
+		<horizontal_line legend="64 000" color="firebrick2" yaxis="left">64000</horizontal_line>
+		<horizontal_line legend="62 000" color="firebrick1" yaxis="left">62000</horizontal_line>
+		<horizontal_line legend="22 000" color="#003399" yaxis="right">22000</horizontal_line>
+		<horizontal_line legend="26 000" color="#000066" yaxis="right">26000</horizontal_line>
+		<margin_left>10</margin_left>
+		<margin_right>40</margin_right>
+		<margin_top>20</margin_top>
+		<margin_bottom>40</margin_bottom>
+		<width>800</width>
+		<height>240</height>
+	</properties>
+	<xaxis_labels title="years">
+		<label toto="2010" color="#0000FF">2000</label>
+		<label toto="2011" color="#0000FF">2001</label>
+		<label toto="2012" color="#0000FF">2002</label>
+		<label toto="2013" color="#0000FF">2003</label>
+		<label toto="2014" color="#3333FF">2004</label>
+		<label toto="2015" color="#6666FF">2005</label>
+		<label toto="2016" color="#9999FF">2006</label>
+		<label toto="2017" color="#CCCCFF">2007</label>
+		<label toto="2018" color="#CCCCCC">2008</label>
+		<label toto="2019" color="#0000FF">2009</label>
+		<label toto="2020" color="#3333FF">2010</label>
+		<label toto="2021" color="#6666FF">2011</label>
+		<label toto="2022" color="#9999FF">2012</label>
+		<label toto="2023" color="#CCCCFF">2013</label>
+		<label toto="2024" color="#CCCCCC">2014</label>
+		<label toto="2025" color="#0000FF">2015</label>
+		<label toto="2026" color="#3333FF">2016</label>
+		<label toto="2027" color="#6666FF">2017</label>
+		<label toto="2028" color="#9999FF">2018</label>
+		<label toto="2029" color="#CCCCFF">2019</label>
+		<label toto="2030" color="#CCCCCC">2020</label>
+	</xaxis_labels>
+	<datas>
+		<data label="Kpi 1" type="line" stroke_color="#FF6600" yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y&amp;arg3=$toto&amp;arg4=$tutu');"
+			onmouseover="pop('$x','$label=$y','AA.php?arg0=$label&amp;arg1=$x&amp;arg2=$y&amp;arg3=$toto&amp;arg4=$tutu');"
+			onmouseout="kill();"
+			>
+			<value tutu="truc">26000</value>
+			<value tutu="truc2">36000</value>
+			<value tutu="truc3">8000</value>
+			<value tutu="truc4">35600</value>
+			<value tutu="truc5">5100</value>
+			<value tutu="truc6">97200</value>
+			<value tutu="truc7">-24560</value>
+			<value tutu="truc8">4560</value>
+			<value tutu="truc9">14560</value>
+		</data>
+		<data label="Seconde courbe" type="line" stroke_color="darkcyan" yaxis="left"
+			href="javascript:of_2('test.php?arg0=$label&amp;arg1=$x&amp;arg2=$y&amp;arg3=$toto&amp;arg4=$tutu');"
+			onmouseover="pop('$x','$label=$y','AA.php?arg0=$label&amp;arg1=$x&amp;arg2=$y&amp;arg3=$toto&amp;arg4=$tutu');"
+			onmouseout="kill();"
+			>
+			<value tutu="truc">54000</value>
+			<value tutu="truc2">43000</value>
+			<value tutu="truc3">78000</value>
+			<value tutu="truc4">4600</value>
+			<value tutu="truc5">-56000</value>
+			<value tutu="truc6">76800</value>
+			<value tutu="truc7">2560</value>
+			<value tutu="truc8">34560</value>
+			<value tutu="truc9">44560</value>
+		</data>
+	</datas>
+</chart>

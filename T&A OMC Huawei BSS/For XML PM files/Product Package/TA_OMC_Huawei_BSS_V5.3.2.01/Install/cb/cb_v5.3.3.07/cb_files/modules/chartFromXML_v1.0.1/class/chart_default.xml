@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<chart>
+	<properties>
+		<title font_family="FF_VERDANA" font_size="8" font_style="FS_BOLD" color="black"></title>
+		<tabtitle color="black" align="left" font_family="FF_ARIAL" font_style="FS_NORMAL" font_size="8"></tabtitle>
+		<width>400</width>
+		<height>300</height>
+		<base_dir></base_dir>
+		<base_url></base_url>
+		<interactivity>1</interactivity>
+		<img_format>png</img_format>
+		<legend_position>right</legend_position>
+		<left_axis_label color="orange"></left_axis_label>
+		<right_axis_label color="blue"></right_axis_label>
+		<margin_color>white</margin_color>				<!-- couleur de fond des marges -->
+		<background_color>white</background_color>		<!-- couleur de fond du graphique (plot area) -->
+		<type data='0'>graph</type>					<!-- le data='' n'est utile que pour les camemberts -->
+		<margin_left>30</margin_left>
+		<margin_right>30</margin_right>
+		<margin_top>20</margin_top>
+		<margin_bottom>40</margin_bottom>
+		<scale>textlin</scale>	<!-- textlin | textlog -->
+	</properties>
+</chart>

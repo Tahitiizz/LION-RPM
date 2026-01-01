@@ -1,0 +1,437 @@
+=============================================================
+
+Homepage MyHomepage v1.3.1.23
+Release 1
+
+Delivered on: 28/11/17
+
+=============================================================
+
+Content:
+	Base Composant : up to v5.2.0.32
+			
+=============================================================
+Fixed anomalies / Evolutions (version 1.3.1.23):
+	-Evo new template 10 - Audit report evo
+	
+Fixed anomalies / Evolutions (version 1.3.1.22):
+	-Bug 39165 - [QAL][T&A MyHomepage] Access style is dirty
+	-Bug 45563 - [QAL][T&A MyHomepage] Display worst sub element function doesn't work properly
+	-Bug 45397 - [INT][T&A MyHomepage] Last integration date is not well return on CORE CS application
+	-Bug 44484 - [QAL][T&A MyHomepage] Tab title spaces are replaced by dashes until you select it
+	-Evo - SQL Query returning PLMN results has been improved
+
+Fixed anomalies / Evolutions (version 1.3.1.21):
+	-Bug 42475 - [QAL][T&A MyHomepage] The Week BH format display is wrong 
+	-Bug 44456 - [QAL][T&A MyHomepage] Trend/Donut mode is non operant with 3rd axes indicators 
+	-Bug 44483 - [QAL][T&A MyHomepage] Limited number of NE in trend/donut mode 
+	-Bug 44494 - [QAL][T&A MyHomepage] Network elements association sub-configuration panel can't be accessed with some screens 
+	-Bug 41626 - [SUP][T&A MyHomepage][Econet Zimbabwe] Loading a template containing gauges can somehow corrupts the gauge's configuration file 
+	-Bug 38958 - [SUP][T&A MyHomepage][Orange Mali] Legends boxes must be able to display large numbers of NE 
+	-Bug 39165 - [QAL][T&A MyHomepage] Access style is dirty 
+	-Bug 44485 - [QAL][T&A MyHomepage] Trend and Donut legends are too big (text and color) 
+	-Bug 39586 - [SUP][T&A MyHomepage][Zain Kuwait] Gauge graduation are wrong with dynamic scale and type other 
+	-Bug 39802 - [SUP][T&A MyHomepage][Zain HQ] Enhance the export of the gauges template 
+	-Bug 44573 - [QAL][T&A MyHomepage] Export present problems on all Map template modes. 
+	-Bug 45017 - [INT][T&A MyHomepage] KPI/RAW and Titles should be inversed 
+	-Bug 45138 - [INT][T&A MyHomepage] Links from Template MAP to T&A Dashboard do not work properly
+
+Fixed anomalies / Evolutions (version 1.3.1.20):
+	-Evo - Onglet Multiproduits
+Fixed anomalies / Evolutions (version 1.3.1.19):
+RESTRICTIONS AND CAUTIONS : roaming map only compatible with fullscreen mode
+	-Evo - Export for template map in roaming mode
+	-Evo - New Astellia logo is now displayed in header
+	-Evo - New coordinate are now settable in Myhomepage config to determine a home country accessible by clicking on the top left home button
+	-Evo - Map title and legend display have been reviewed to give a better user experience
+	-Evo - SQL roaming map request has been optimized to load data faster on the map
+	-Evo - When there is an error or no data to display, a message saying "No data found" is displayed and user is still able to select another kpi
+	
+Fixed anomalies / Evolutions (version 1.3.1.18):
+RESTRICTIONS AND CAUTIONS : roaming map only compatible with fullscreen mode
+	-Bug 44062 - [QAL][T&A Myhomepage][MAP] The list of PLMN on MAP is not displayed for the countries
+	-Bug 44073 - [QAL][T&A Myhomepage][MAP] the MAP is not displayed when using a KPI from the T&A Roaming product
+	-Bug 44077 - [QAL][T&A Myhomepage] [MAP]: Save button is not working when using a Template gauge
+	-Bug 44119 - [SUP][T&A MyHomepage] Selecting a couple KPI/Time level that return no data cause blank screen
+	-Bug 44120 - [SUP][T&A MyHomepage] The date displayed on the map, trend and donut are wrong for BH level
+
+Fixed anomalies / Evolutions (version 1.3.1.17):
+RESTRICTIONS AND CAUTIONS : roaming map only compatible with fullscreen mode
+	-Bug 38466 - [SUP][T&A MyHomepage][Zain Kuwait] Users configuration directories rights are wrong
+	-Bug 40917 - [Evo] [T&A Myhomepage] wrong information for date is displayed when BH is selected in gauge and trend
+	-Bug 42475 - [QAL][T&A MyHomepage] The Week BH format display is wrong
+	-Bug 35140 - [EVO][T&A MyHomepage] Weekly backup
+	-Bug 43578 - [QAL][T&A MyHomepage] [MAP]: Day BH and Week BH are not displayed in roaming mode.
+	-Bug 43579 - [QAL][T&A MyHomepage] [MAP]: The "Save" has a weird impact on the fullScreen and trend/Donut modes.
+
+Fixed anomalies / Evolutions (version 1.3.1.16):
+RESTRICTIONS AND CAUTIONS : all the evolutions below are only compatible for template map in fullscreen mode
+	-Evo - 2rd axis level mangament for roaming mode
+	-Bug 43477 - [QAL][T&A MyHomepage] [MAP]: The "Display Subelement" function doesn't work in all cases
+	-Bug 43478 - [QAL][T&A MyHomepage] [MAP]: The country are colored in green with "NaN" value
+	-Bug 43479 - [QAL][T&A MyHomepage] [MAP]: The country is not colored properly 
+	-Bug 43480 - [QAL][T&A MyHomepage] [MAP]: The displayed values are not right for some Subelements
+	-Bug 43481 - [QAL][T&A MyHomepage] [MAP]: The Subelements are not all displayed for the USA
+	-Bug 43482 - [QAL][T&A MyHomepage] [MAP]: The filter of «access T&A dashboard" doesn't work
+	-Bug 42474 - [QAL][T&A MyHomepage]: Display problem on full screen mode
+	-Bug 42271 - [SUP][T&A MyHomepage] [ZAIN HQ]: the monthly display on the trend doesn't work on the MAP template
+
+Fixed anomalies / Evolutions (version 1.3.1.15):
+RESTRICTIONS AND CAUTIONS : all the evolutions below are only compatible for template map in fullscreen mode
+	-Evo - 3rd axis level mangament for roaming mode
+	-Evo - child element are displayed in tooltip in roaming mode
+	-Evo - Automatic association between network element and map area 
+	-Evo - default time level is now settable in conf pannel 
+
+Fixed anomalies / Evolutions (version 1.3.1.14):
+	- Bug 42271 - [SUP][T&A MyHomepage] [ZAIN HQ]: the monthly display on the trend doesn't work on the MAP template
+	- Evo - gestion des caractères sepciaux et des espaces dans le nom des tabs et dans le titre des charts/jauges
+	
+Fixed anomalies / Evolutions (version 1.3.1.13):
+	- Bug 41537 - [QUAL] [T&A MyHomepage][Audit report]: the edit of an alarm graph in the configuration panel is not possible
+	- Bug 41539 - [QUAL] [T&A MyHomepage][Audit report]: the alarm list in the configuration panel for a customized graph is empty
+
+Fixed anomalies / Evolutions (version 1.3.1.12):
+	- Bug 40915 - [SUP][T&A Myhomepage] [Template gauges] Day BH, week BH and month BH are not displayed correctly in trend
+	- Bug 40917 - [Evo] [T&A Myhomepage] wrong information for date is displayed when BH is selected in gauge and trend
+	- Bug 41355 - [DEV][T&A MyHomepage] Configuring a trend without min and max treshold value leads to display issue on the trend
+	- Bug 38769 - [QAL][T&A MyHomepage] Wrong display for the trend and the donut in a exceptional case
+
+Fixed anomalies / Evolutions (version 1.3.1.11):
+	- Bug 40172 - [SUP][T&A MyHomepage][ARPTC]: the Warning/penalty list has duplicated cell.
+	- Bug 39961 - [SUP][T&A MyHomepage][PNI-ARPTC]: Strange behavior on the donut of the alarm graph in case of 1 alarm triggered.
+	- Bug 40169 - [SUP][T&A MyHomepage][ARPTC]: The export URL is wrong in reverse proxy mode.
+	- Bug 39803 - [SUP][ZAIN HQ]: The threshold line exceed the trend limit
+	- Bug 39642 - [Qual] Missing the first period values on the trend for some NE
+	- Bug 39337 - [AVP] [ZAIN HQ]:Strange behavior on the map of ZAIN HQ
+	
+Fixed anomalies / Evolutions (version 1.3.1.10):
+	- Bug 38405 - [QAL][T&A MyHomepage]: Problem on the trend popup
+	- Bug 38424 - [EVO][T&A MyHomepage]: Enhancements Trend display
+	- Bug 39165 - [QAL][T&A MyHomepage] Access style is dirty
+
+Fixed anomalies / Evolutions (version 1.3.1.09):
+	- Bug 39430 - [SUP][T&A MyHomepage][Orange Mali] Wrong display of donut when wome NE don't have values
+	- Bug 39427 - [SUP][T&A MyHomepage][Orange Mali] Wrong number of period displayed in trend when data is missing for some NE
+
+Fixed anomalies / Evolutions (version 1.3.1.08):
+	- Bug 34269 - [SUP][T&A MyHomepage] Scrollbar is superimposed with grids
+	- Bug 39137 - [QAL][T&A MyHomepage]: The dashboard orientation from the map doesn't work properly
+	- [EVO] In configuration panel, limit tab title input field to alphanumerical
+
+Fixed anomalies / Evolutions (version 1.3.1.07):
+	- Bug 38958 - [SUP][T&A MyHomepage][Orange Mali] Legends boxes must be able to display large numbers of NE (partially fixed)
+	- Bug 38934 - [QAL][T&A MyHomepage]: Values displayed doesn't correspond to the right network element
+	- Bug 38975 - [SUP][T&A MyHomePage][AVP#41362][Zain Kuwait] The Unit displayed after the value of a KPI is truncated
+	- Bug 38053 - [SUP][T&A MyHomepage][Zain Koweit] Volume always present in legend even if no kpi have been selected for trend
+	- Bug 38957 - [SUP][T&A MyHomepage]: Refresh display problem on the trend
+	- Bug 38952 - [SUP][T&A MyHomepage]: The network elements don't have the same order in donut and trend
+	- Bug 38948 - [SUP][T&A MyHomepage][Zain HQ] Gauge details are sometimes truncated
+	- Bug 36143 - [QAL][T&A MyHomepage] Selected product must be visible
+	- Bug 36142 - [EVO][T&A MyHomepage] User should be able to sort the grids content
+	- Bug 34269 - [SUP][T&A MyHomepage] Scrollbar is superimposed with grids
+
+Fixed anomalies / Evolutions (version 1.3.1.06):
+	- Bug 38466 - [SUP][T&A MyHomepage][Zain Kuwait] Users configuration directories rights are wrong
+	- Bug 38329 - [REC][T&A MyHomePage] click on trend's legend to show/hide element, KO on IE10
+	- Bug 38050 - [SUP][T&A MyHomepage][Zain Koweit] Scale between gauge and Y axis of trend graph are not consistent
+	- Bug 37821 - [SUP][T&A MyHomepage] First page empty when configured as Default tab.
+
+Fixed anomalies / Evolutions (version 1.3.1.05):
+	- Bug 35243 - [QAL][T&A MyHomepage] No lines for the trend KPI, just points, in a case
+	- Bug 38034 - [QAL][T&A MyHomepage]: The export doesn't work properly
+	-[EVO][All templates using trends] New display for trend X-axis and Y-axis labels  : avoids overlapping with large amount of periods. First and last value of X-axis and Y-axis will always be visible.
+
+Fixed anomalies / Evolutions (version 1.3.1.04):
+	- [EVO] [Gauges & Trends] Bindows gauges now compatible with Internet Explorer 9 (specific configuration for IE not needed anymore)
+	- Bug 38333 - [REC][T&A MyHomePage]template 20 gauges on IPAD
+	- Bug 38269 - [REC][T&A MyHomepage] Configuration panel is not automatically updated after configuring MyHomepage for the first time
+	- Bug 38416 - [QAL][T&A MyHomepage]:The meaningless scale option in Full screen was not in the CDC
+	- Bug 38404 - [QAL][T&A MyHomepage]: The Donut Day Busy hour time label is wrong displayed
+	- Bug 38306 - [EVO][T&A MyHomepage] All T&A time levels should be available
+	- Bug 38038 - [EVO][T&A MyHomepage]: The color of the arrows on the map should be blue instead of red
+	- Bug 38270 - [REC][T&A MyHomepage] Impossible to add an alarms to a graph already configured
+	- Bug 38267 - [REC][T&A MyHomepage] Alarms graph's table are not present in export archive
+	- Bug 38268 - [REC][T&A MyHomepage] Pie charts are not displayed automatically after checking the "piechart" box and saving
+	
+Fixed anomalies / Evolutions (version 1.3.1.03):
+	- Bug 38087 - [QAL][T&A MyHomepage]: A success KPI is colored in red instead of green for having 100% as value!
+	- Bug 38029 - [QAL][T&A MyHomepage] : the Donut part doesn't work.
+	- Bug 37473 - [REC][T&A MyHomepage] Changing time level in fullscreen mode, automatically change the kpi group selected
+	- Bug 38030 - [QAL][T&A MyHomepage]: The Donut "Time selector" doesn't have all the time option
+	- Bug 33045 - [QAL][T&A MyHomepage] Wrong display of elts in config panel
+	- Bug 37475 - [REC][T&A MyHomepage] Some kpi values are not displayed in donut popup
+	- Bug 32989 - [QAL][T&A MyHomepage] Map display to review
+	- Bug 38042 - [EVO][T&A MyHomepage]: The order of KPI couple in the panel configuration
+	- Bug 38037 - [QAL][T&A MyHomepage]: The KPI selector in the configuration panel doesn't show the KPI label.
+	- Bug 38034 - [QAL][T&A MyHomepage]: The export doesn't work properly
+	- Bug 38032 - [QAL][T&A MyHomepage]: The dashboard orientation from the map should be restricted only for "Overtime" ones.
+	- Bug 35243 - [QAL][T&A MyHomepage] No lines for the trend KPI, just points, in a case
+
+Fixed anomalies / Evolutions (version 1.3.1.02):
+	- Seen in Smart: “the Line Trend is not properly displayed when “Auto Refresh” is enabled for 8 Gauge Template.”
+	- Bug 38051 - [SUP][T&A MyHomepage][Zain Koweit] threshold max or min is out of the trend graph
+	- Bug 38050 - [SUP][T&A MyHomepage][Zain Koweit] Scale between gauge and Y axis of trend graph are not consistent
+	- Bug 38049 - [SUP][T&A MyHomepage][Zain Koweit] Weak value of KPI not displayed in trend popup
+	- Bug 36108 - [EVO][T&A MyHomepage] Bindows 4.2 gauges browsers compatibilities
+	- [EVO] [Audit report] configuration panel available
+	
+Fixed anomalies / Evolutions (version 1.3.1.01):
+	- [EVO] [Map] configuration panel : only definition of KPI groups
+	- [EVO] [Map] Auto refresh with all KPI groups
+	- [EVO] [Map] Tooltip for comparison of KPI values in the trend
+	- [EVO] [Map] Export
+	- [EVO] [Map] worldHigh map is the only available map in this package, for specific map, ask support
+	- [EVO] [Audit report] configuration panel
+	- Bug 37640 - [SUP][T&A MyHomepage][AVP39821][Zain KSA]: NaN displayed when data not yet available on the last date for Mixed KPI.
+	- [EVO] [All templates] tabscroller to access a specified tab without using arrows
+
+Fixed anomalies / Evolutions (version 1.3.1.00):
+	- Corrections
+	- [EVO] [Map] New features : multi kpi display, fullscreen mode,
+	RESTRICTIONS : no configuration management for Audit Report and Map through Configuration Panel.
+
+Fixed anomalies / Evolutions (version 1.3.0.04):
+RESTRICTIONS AND CAUTIONS : AuditReport is the only template available/working in this version. Configuration panel button is hide for the moment.
+	- Corrections
+	
+Fixed anomalies / Evolutions (version 1.3.0.03):
+RESTRICTIONS AND CAUTIONS : AuditReport is the only template available/working in this version. Configuration panel button is hide for the moment.
+	- Corrections
+	- Detailed report export
+
+Fixed anomalies / Evolutions (version 1.3.0.02):
+RESTRICTIONS AND CAUTIONS : AuditReport is the only template available/working in this version. Configuration panel button is hide for the moment.
+	- Corrections
+	- Report Upload
+	- configuration upgrade (common param history for all graps in audit report)
+
+Fixed anomalies / Evolutions (version 1.3.0.01):
+RESTRICTIONS AND CAUTIONS : AuditReport is the only template available/working in this version. Configuration panel button is hide for the moment.
+	- Export of all graphs/tables, except the CSV detailed report
+	- Alarms pie chart
+	- configuration upgrade to select the penalization mode
+	
+Fixed anomalies / Evolutions (version 1.3.0.00):
+	- [EVO] AuditReport template creation
+
+Fixed anomalies / Evolutions (version 1.2.0.13):
+	- [EVO] Upgrade to ammap 3.3.1 commercial version. Warning, maps name have changed
+	- [EVO] [Map] Zoom level and map central point coordinates added to map configuration
+	- Bug 35578 - [REC][T&A MyHomepage][V1.2.0.12]: Display issues when loading template 3 Gauges
+	- Bug 33045 - [QAL][T&A MyHomepage] Wrong display of elts in config panel
+	- Bug 35589 - [REC][T&A MyHomepage][V1.2.0.12]: Kpi/Raw value are not always well displayed in gauges
+	- Bug 35579 - [REC][T&A MyHomepage][V1.2.0.12]: Template's name are not updated after patching a product
+	- Bug 32989 - [QAL][T&A MyHomepage] Map display to review
+	- Bug 35249 - [QAL][T&A MyHomepage] The Bahrain doesn't appear on the map. It is the case for some islands.
+	- Bug 35594 - [EVO][T&A MyHomepage] The template names should be explicit
+	- Bug 35250 - [QAL][T&A MyHomepage] The map size change after a save manipulation
+	- Bug 35248 - [QAL][T&A MyHomepage] An arbitrary zoom reaction outside the map.
+
+Fixed anomalies / Evolutions (version 1.2.0.12):
+	- Bug 34797 - [REC][T&A MyHomepage][Cells Surveillance][1.2.0.08] Penalization ratio has always the value 0
+	- Bug 34299 - [REC][T&A MyHomepage][All templates][1.2.0.07] Backup issue after a patch installation
+	- Bug 35078 - [SUP][T&A MyHomepage][Gauges & Trends][Orange Mauritius] When gauge indicator has no value over the trend period trend update is not realized
+	- Bug 34928 - [SUP][T&A MyHomepage][Gauges & Trends][Zain HQ] The dashboard redirection doesn't work
+	- Bug 35101 - [EVO][T&A MyHomepage][Gauges & Trends]: add to install doc the activation of IE gauge
+	- Bug 34952 - [REC][T&A MyHomepage][Cells Surveillance][1.2.0.10]: Wrong default value for reference period
+	- Bug 35084 - [SUP][T&A MyHomepage][Gauges & Trends][Orange Mauritius] 1st and 2nd network ID selectors filters are shared
+	- Bug 35083 - [SUP][T&A MyHomepage][Gauges & Trends][Orange Mauritius] Gauges titles need a tooltip when they're too long
+	- Bug 35079 - [SUP][T&A MyHomepage][Gauges & Trends][Orange Mauritius] Trend legend can be out of its box
+	- Bug 35077 - [SUP][T&A MyHomepage][Gauges & Trends][Orange Mauritius] Trend threshold is sometimes visible out of graph
+	- Bug 35076 - [SUP][T&A MyHomepage][Gauges & Trends][Orange Mauritius] Unset gauge and set trend lead to update failure
+	- Bug 35075 - [SUP][T&A MyHomepage][Gauges & Trends][Orange Mauritius] Trend value pop-up is out of browser window
+	- Bug 31368 - [SUP][T&A MyHomepage][Gauges & Trends][Alfa Lebanon][V1.0.1.05] Bad display of Curve and volume with values out of range in trend graph
+
+Fixed anomalies / Evolutions (version 1.2.0.11):
+	- Bug 34928 - [SUP][T&A MyHomepage][Gauges & Trends][ZAIN HQ]: The dashboard redirection dosn't work
+	- Bug 34952 - [REC][T&A MyHomepage][Cells Surveillance][1.2.0.10]: Wrong default value for reference period
+	
+Fixed anomalies / Evolutions (version 1.2.0.10):
+	- Bug 34797 - [REC][T&A MyHomepage][Template Cells Surveillance][1.2.0.08]: Penalization ratio has always the value 0
+	- Bug 34862 - [REC][T&A MyHomepage][2x3 Jauges][1.2.0.09]: Export issues
+	- Bug 34798 - [REC][T&A MyHomepage][Template Cells Surveillance][1.2.0.08]: Supression tab issue
+
+Fixed anomalies / Evolutions (version 1.2.0.09):
+	- Rajout du template 8 (2x3 jauges + 1 période)
+
+Fixed anomalies / Evolutions (version 1.2.0.08):
+	- Bug 34147 - [REC][T&A MyHomepage][Cells Surveillance][1.2.0.06] Display issues regarding dashboard's drop down list
+	- Bug 34451 - [EVO][T&A MyHomepage][Cells Surveillance][MTN CI] BSC information availability
+	- Bug 34270 - [SUP][T&A MyHomepage][Cells Surveillance] Access style is difficult to read
+	- Bug 34253 - [SUP][T&A MyHomepage][Cells Surveillance][MTN CI][AVP#36350] Configuration panel is not clear enough
+	- Bug 34251 - [SUP][T&A MyHomepage][Cells Surveillance][MTN CI][AVP#36349] MyHomepage export issues
+	- Bug 34252 - [SUP][T&A MyHomepage][Cells Surveillance][MTN CI][AVP#36348] Ratio for penalization paramter value 
+
+Fixed anomalies / Evolutions (version 1.2.0.07):
+	- [EVO] Installation script now make a backup of the previous configuration in patch mode
+	- Bug 34198 - [QAL] [1.2.0.04] [Econet Zimbabwe] Unavailibility of existings templates after upgrading from V1.0.1.06 to 1.2.0.04
+	- Bug 33046 - [QAL][T&A MyHomepage][Map template]: Unit not displayed on graph
+	- Bug 33045 - [QAL][T&A MyHomepage][Map template]: wrong display of elts in config panel 
+	- Bug 33016 - [QAL][T&A MyHomepage][Map Template]: Config is erased when modifying map Template
+	- Bug 32989 - [QAL][T&A MyHomepage][Template Map]: Map display to review
+	- Bug 32988 - [QAL][T&A MyHomepage][Template Map]: color code should be the same between chart and trend
+	- Bug 32982 - [QAL][T&A MyHomepage][Template Map]: time of display in map should be the same than on trend
+	- Bug 32980 - [QAL][T&A MyHomepage][Template Map]: Wrong display of date
+
+Fixed anomalies / Evolutions (version 1.2.0.06):
+	- Bug 34133 - [DEV][T&A MyHomepage][Template Cells Surveillance][1.2.0.05] Error in tab index change
+	- Bug 34097 - [EVO][T&A MyHomepage][Cells Surveillance] Alarm dashboard can be picked up from any T&A of the Gateway
+	- Bug 34011 - [REC][T&A MyHomepage][Template Cells Surveillance][1.2.0.05]: Deleting a cells surveillance's tab is resetting the default tab
+	- Bug 34009 - [REC][T&A MyHomepage][Template Cells Surveillance][1.2.0.05]: Issue when setting in favorite a cells surveillance's tab
+	- Bug 34008 - [REC][T&A MyHomepage][Template Cells Surveillance][1.2.0.05]: No grid displayed after copying a cells surveillance's tab
+	- Bug 33806 - [QAL][T&A MyHomepage]: cannot modify configuration with third axe
+	- Bug 33687 - [REC][T&A MyHomepage][Cells Surveillance] There is no restriction regarding alarm creation
+
+Fixed anomalies / Evolutions (version 1.2.0.05):
+	- Bug 33856 - [QAL][T&A MyHomepage][Cells Surveillance] Only first carriage return is displayed in alarm comment
+	- Bug 33806 - [QAL][T&A MyHomepage]: cannot modify configuration with third axe
+	- Bug 33764 - [QAL][T&A MyHomepage][Cells Surveillance] Gauges templates must not be displayed if only Cells Surveillance template is activated
+	- Bug 33762 - [EVO][T&A MyHomepage][Cells Surveillance] Alarm name, comment and dashboard fields could be let empty
+	- Bug 33761 - [EVO][T&A MyHomepage][Cells Surveillance] Alarms grids order needs to be configured
+	- Bug 33730 - [QAL][T&A MyHomepage][Cells Surveillance] CellsSurveillance calculation query not compatible with postgres 8.2
+	- Bug 33687 - [REC][T&A MyHomepage][Cells Surveillance] There is no restriction regarding alarm creation
+	- Bug 33039 - [QAL][T&A MyHomepage]: remove apply filter on from raw/kpi pop up
+	- Bug 32906 - [QAL][T&A MyHomepage]: Conf panel for Template 3 should not contains Trend configuration
+	- Bug 32903 - [QAL][T&A MyHomepage]: Wrong config panel when no tab created
+
+Fixed anomalies / Evolutions (version 1.2.0.04):
+	- Bug 33760 - [QAL][T&A MyHomepage][Cells Surveillance] Penalisation period for reference month is calculated based on current month 
+	- Bug 33763 - [EVO][T&A MyHomepage][Cells Surveillance] Cells with on_off = 0 have must not be calculated 
+	- Bug 33761 - [EVO][T&A MyHomepage][Cells Surveillance] Alarms grids order needs to be configured 
+	- Bug 33759 - [QAL][T&A MyHomepage][Cells Surveillance] Configuration file corruption when using special characters in Alarm Comment 
+	- Bug 33793 - [QAL][T&A MyHomepage]: Cannot display the network choice for second axe
+	
+Fixed anomalies / Evolutions (version 1.2.0.03):
+	- Bug 33683 - [REC][T&A MyHomepage][Template Cells Surveillance][1.2.0.01]: Wrong value for the col "Detected in reference" in the penalization table
+
+Fixed anomalies / Evolutions (version 1.2.0.02):
+	- Bug 33692 - [REC][T&A MyHomepage][Template Cells Surveillance][1.2.0.01]: "Days before penalized" calculation is wrong
+	- Bug 33689 - [REC][T&A MyHomepage][Template Cells Surveillance][1.2.0.01]: "Days in default" calculation is wrong
+	- Bug 33688 - [REC][T&A MyHomepage][Template Cells Surveillance][1.2.0.01]: Deletion alarm issues
+	- Bug 33685 - [REC][T&A MyHomepage][Template Cells Surveillance][1.2.0.01]: Display issues regarding penalzation table
+	- Bug 33683 - [REC][T&A MyHomepage][Template Cells Surveillance][1.2.0.01]: Wrong value for the col "Detected in reference" in the penalization table
+	- Bug 33681 - [REC][T&A MyHomepage][Template Cells Surveillance][1.2.0.01]: Parameter "minimum number of days for display" must have value 3
+	
+Fixed anomalies / Evolutions (version 1.2.0.01):
+	- Bug 33645 - [REC][T&A MyHomepage][Template Cells Surveillance][1.2.0.0]: Impossible de créer un onglet cells surveillance
+
+Fixed anomalies / Evolutions (version 1.2.0.00):
+	- Bug 32928 - [QAL][T&A MyHomepage]: management of user profile
+	- Bug 33040 - [QAL][T&A MyHomepage]: Opening time of pop up  
+	- Template Cells Surveillance
+
+Fixed anomalies / Evolutions (version 1.1.0.02):
+	- Bug 31987 - [REC][T&A MyHomepage][1.1.0.00][FF] Auto refresh feature doesn't work
+	- Evo : autorefresh timer in now configurable in config/general.xml
+	
+Fixed anomalies / Evolutions (version 1.1.0.01):
+	- Bug 32032 - [REC][T&A MyHomepage][1.1.0.00][Map Template][FF] Text in donut isn't displayed properly
+	- Bug 32029 - [REC][T&A MyHomepage][1.1.0.00][Map Template][FF] Text is not included on donut popup
+	- Bug 31994 - [REC][T&A MyHomepage][1.1.0.00][IE] Missing icon for reset button on network id / kpi select
+	- Bug 31987 - [REC][T&A MyHomepage][1.1.0.00][FF] Auto refresh feature doesn't work
+	- Bug 29876 - [QAL][T&A MyHomepage][IE]: display of cells in pop up filed or make the system very slow on IE
+	
+Fixed anomalies / Evolutions (version 1.1.0.00):
+	- 31368 - [SUP][V1.0.1.05][Alfa Lebanon] Bad display of Curve and volume with values out of range in trend graph 
+	- 31343 - [QAL][T&A MyHomepage]: Value is not display in pop up when label is long 
+	- 31342 - [EVO][T&A MyHomepage]: The second axe should be displayed in label idf wanted 
+	- 30685 - [QAL][T&A MyHomepage]: IE Gauge is cut on some screen size 
+	- 29876 - [QAL][T&A MyHomepage][IE]: display of cells in pop up filed or make the system very slow on IE 
+	- Template lien vers URL
+	- Template Corporate Map
+	- Template Corporate Report
+	- Modification de l’ordre des onglets
+	- On-line help 
+
+Fixed anomalies / Evolutions (version 1.0.1.06):
+	- 31366 - [SUP][V1.0.1.05][Alfa Lebanon] The values of KPI rate (used in gauge) before the creation date of this KPI are not well displayed in trend graph
+
+Fixed anomalies / Evolutions (version 1.0.1.05):
+	- 31269 - [SUP][V1.0.1.04][alfa lebanon]: KPI T&A HPG -Bad display of the KPI HPG in the trend graph
+	- 31285 - [SUP][T&A MyHomepage]: Not possible to reset a filter
+
+Fixed anomalies / Evolutions (version 1.0.1.04):
+	- 30323 - [REC][MyHomepage][V1.0.1.03] Export does not work on IE9
+	- 30322 - [REC][MyHomepage][V1.0.1.03] No message displayed on Yes/No confirmation popup
+	- 29353 - [REC][MyHomepage][V1.0.0.04] Vertical scrolling bar doesn't work in network element selection window
+
+Fixed anomalies / Evolutions (version 1.0.1.03):
+	- 28849 [SEC][QAL][T&A OMC MyHomepage]: Improve pop up opening
+	- 28852 [SEC][QAL][T&A OMC MyHomepage]:  wrong display of Config panel after deactivation
+	- 29876 [SEC][QAL][T&A OMC MyHomepage][IE]: display of cells in pop up filed or make the system very slow on IE
+
+Fixed anomalies / Evolutions (version 1.0.1.02):
+	- 28849 [SEC][QAL][T&A OMC MyHomepage]: Improve pop up opening
+	- 28852 [SEC][QAL][T&A OMC MyHomepage]:  wrong display of Config panel after deactivation
+    - 27508 [SEC][QAL][T&A OMC Homepage MyHomepage]: No Logo MyHomepage after the activation of the homepage
+	- 27180 [QAL][T&A OMC MyHomepage]: the link to the GTM from MYHomepage does not work when a usercluster is used in the configuration.
+	- 29862 [SEC][QAL][T&A MyHomepage]: Cannot access to user login( except astellia_user and client_user) after installation on version 1.0.0.03  
+	- 29866 [SEC][QAL][T&A OMC MyHomepage]: installation not done corectly when installing on version 1.0.0.03  
+    - 29876 [SEC][QAL][T&A OMC MyHomepage][IE]: display of cells in pop up filed or make the system very slow on IE  
+
+Fixed anomalies / Evolutions (version 1.0.1.01):
+	- [EVO]Package size improvement 
+
+Fixed anomalies / Evolutions (version 1.0.1.00):
+	- 29368 [REC][MyHomepage][V1.0.0.04] Export does not work on IE9 
+	- 29353 [REC][MyHomepage][V1.0.0.04] Vertical scrolling bar doesn't work in network element selection window 
+	- 29369 [REC][MyHomepage][V1.0.0.04] Values in graph are not rounded in "Other" type resulting in overloaded graph on IE9 
+	- 29372 [REC][MyHomepage][V1.0.0.04] Green icons for selected elements in config panel are not displayed in IE9 
+	- 29373 [REC][MyHomepage][V1.0.0.04] Selected graph is not highlighted on IE9 
+
+Fixed anomalies / Evolutions (version 1.0.0.04):
+	- [EVO] Compatibility with TA_Gateway
+	- 28697 [SEC] [QAL][MyHomepage][V1.0.0.03] Popup when you move the cursor on statistics is not displaying KPI or counter name as in T&A  
+	- 28692 [SEC] [QAL] [MyHomepage][V1.0.0.3]: White text written in filter is not visible when Style Access is selected  
+	- 28691 [SEC] [QAL][MyHomepage][V1.0.0.3][AlfaLebanon]:Id filter is not working properly  
+	- 28849 [SEC] [QAL][T&A OMC MyHomepage]: Improve pop up opening 
+	- 28852 [SEC] [QAL][T&A OMC MyHomepage]:  wrong display of Config panel after déactivation
+	- 27508 [SEC] [QAL][T&A OMC Homepage MyHomepage]: No Logo MyHomepage after the activation of the homepage  
+	- 28855 [QAL][T&A OMC MyHomepage]: Not compliant with Firefiox 15
+	- 27101 [SEC] [REC][T&A HomePage MyHomepage] IE compatibility
+
+Fixed anomalies / Evolutions (version 1.0.0.03):
+	- [EVO] Creation of the template 3
+	- 27509 [QAL][T&A OMC Homepage MyHomepage]: Display of big value in the gauge
+	- 27510 [QAL][T&A OMC Homepage MyHomepage]: in the gauge, the display of unit is below the number.  
+
+Fixed anomalies / Evolutions (version 1.0.0.02):
+	- [EVO] "template.sql" and "products.xml" files are included into the installation package.
+	- [EVO] Graphs legend optimization
+	- [EVO] Select KPI & Select NE : Only the master products and its principal family are checked
+	- [EVO] Select KPI : KPI are displayed by default
+	- 27189 [REC][T&A HomePage C-Sight] Needle position and scale are incorrect in gauges with negative values 
+	- 27179 [QAL][T&A OMC MyHomepage]: The gauge is bnot corretly displayed when the value is 0
+	- 27180 [QAL][T&A OMC MyHomepage]: the link to the GTM from MYHomepage does not work when a usercluster is used in the configuration.
+
+Fixed anomalies / Evolutions (version 1.0.0.01):
+	- 27094 [QAL][T&A OMC Homepage MyHomepage]: Not working on T&A IU  
+	- 26686 [QAL][T&A Homepage MyHomepage]: Bargraph goes to black sometimes  
+	- 26990 [REC][T&A HomePage MyHomepage] Firefox compatibility  
+	- 26985 [REC][T&A HomePage MyHomepage] Export to pdf and email does not work with less than 8 gauges  
+	- 27102 [EVO][T&A HomePage MyHomepage] IPad/safari compatibility  
+	- 26986 [REC][T&A HomePage MyHomepage] Add Tab button stays in foreground when in reduce screen mode  
+	- 26984 [REC][T&A HomePage MyHomepage] Network id element Label and Level text are overlapping  
+	- 26982 [REC][T&A HomePage MyHomepage] Missing info about products.xml file in install manual  
+	- 26983 [REC][T&A HomePage MyHomepage] Warning in log file after installation  
+
+Fixed anomalies / Evolutions (version 1.0.0.00):
+	- 25415 [QAL][T&A HomePage C-Sight]: Cannot add a KPI and a raw in the trend graph
+	- [EVO] Aucune valeur de compteur/kpi retournée si le NE ciblé possède un label différent de son ID 
+	- [EVO] Utilisation de « sys_definition_network_agregation.agregation_name qui contient parfois des codes, parfois des labels  
+
+Fixed anomalies / Evolutions (version 0.0.0.07):
+	- 26247 [QAL][T&A OMC Homepage C-Sight]: 2 graph are not displayed at first login on template 1  
+	- 26248 [QAL][T&A OMC Homepage C-Sight]: raw and KPI not display in tool tip or in the pop up  
+	- 26251 [QAL][T&A OMC Homepage C-Sight]: bad message displayed when loading network or Raw/KPI pop up  
+	- 26252 [QAL][T&A OMC Homepage C-Sight]: KPI out of scale on the Graph  
+
+Fixed anomalies / Evolutions (version 0.0.0.06):
+	- 26123 [REC][T&A HomePage C-Sight] Family of network element isn't displayed in network id selection window
+	- 26121 [REC][T&A HomePage C-Sight] Couldn't select a graph by clicking on its name
+	- 26117 [REC][T&A HomePage C-Sight] Homepage is cropped when resizing/zooming window
+	- 26109 [REC][T&A HomePage C-Sight] Gauges text description does not display correctly with long kpi name
+ 
+Fixed anomalies / Evolutions (version 0.0.0.05):
+	- First delivery

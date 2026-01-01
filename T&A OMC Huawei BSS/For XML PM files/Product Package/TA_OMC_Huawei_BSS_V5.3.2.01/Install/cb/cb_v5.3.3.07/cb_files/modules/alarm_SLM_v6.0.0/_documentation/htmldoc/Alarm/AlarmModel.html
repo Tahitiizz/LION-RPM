@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class AlarmModel</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> AlarmModel</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_AlarmModel_class_php.html">/AlarmModel.class.php</a> (line <span class="field"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+								<div class="var-title">
+					<img src="../media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">object</span>
+					<a href="#$db_connection" title="details" class="var-name">$db_connection</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$messages" title="details" class="var-name">$messages</a>
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">AlarmModel</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$db_conf_url</span> = <span class="var-default">''</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#dropAlarm" title="details" class="method-name">dropAlarm</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alarm_type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alarm_family</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alarm_ta</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$del_sender</span> = <span class="var-default">true</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getAlarmAdditionnalFields" title="details" class="method-name">getAlarmAdditionnalFields</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">"static"</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getAlarmCriticityValues" title="details" class="method-name">getAlarmCriticityValues</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$criticity</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">"static"</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getAlarmList" title="details" class="method-name">getAlarmList</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getAlarmNetworkElements" title="details" class="method-name">getAlarmNetworkElements</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'static'</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getAlarmProperties" title="details" class="method-name">getAlarmProperties</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">"static"</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getAlarmSuscribers" title="details" class="method-name">getAlarmSuscribers</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alarm_type</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getAlarmTrigger" title="details" class="method-name">getAlarmTrigger</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">"static"</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getApplicationGroups" title="details" class="method-name">getApplicationGroups</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">la</span>
+										<a href="#getCriticityLevels" title="details" class="method-name">getCriticityLevels</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getKpis" title="details" class="method-name">getKpis</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getNALabel" title="details" class="method-name">getNALabel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$na</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getNE" title="details" class="method-name">getNE</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$na</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$family</span> = <span class="var-default">''</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getNetworkAgregation" title="details" class="method-name">getNetworkAgregation</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getRaws" title="details" class="method-name">getRaws</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getTALabel" title="details" class="method-name">getTALabel</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ta</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getTimeAgregation" title="details" class="method-name">getTimeAgregation</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getTriggerOperands" title="details" class="method-name">getTriggerOperands</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">la</span>
+										<a href="#getTriggerTypes" title="details" class="method-name">getTriggerTypes</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getTriggerTypeValues" title="details" class="method-name">getTriggerTypeValues</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">''</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#saveAlarmDefinition" title="details" class="method-name">saveAlarmDefinition</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$a_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$a_type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$a_family</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$a_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$a_desc</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$a_na</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$a_ne</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$a_ta</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$a_activate</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$a_triggers</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$a_additionnals</span> = <span class="var-default">array()</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#saveAlarmSuscribers" title="details" class="method-name">saveAlarmSuscribers</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alarm_ta</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alarm_type</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$suscribers_list</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#translate" title="details" class="method-name">translate</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$word_id</span>)
+									</div>
+							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$db_connection" id="$db_connection"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">object</span>
+			<span class="var-name">$db_connection</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a27">27</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Instance de la classe de connexion à la base de données</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$messages" id="$messages"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$messages</span>
+			 = <span class="var-default">array(	
+<br />								'A_TASK_SCHEDULER_SCHEDULE_SETUP_LIST_TITLE_AVAILABLE_GROUP'=&gt;'Available groups',
+<br />								'A_TASK_SCHEDULER_SCHEDULE_SETUP_LIST_TITLE_SUSCRIBED_GROUP'=&gt;'Subscribed groups',
+<br />								'A_ALARM_FORM_LABEL_ALARM_NAME'=&gt;'Alarm Name',
+<br />								'A_ALARM_FORM_LABEL_NETWORK_LEVEL'=&gt;'Level',
+<br />								'A_ALARM_FORM_LABEL_TIME_RESOLUTION'=&gt;'Time resolution',
+<br />								'A_ALARM_DESACTIVATED_INFORMATION'=&gt;'Alarms in orange are desactivated',
+<br />								'A_PAUTO_CONFIRM_OBJECT_DELETE'=&gt;'Are you sure you want to delete this element ?',
+<br />								'A_ALARM_ALARM_LIST'=&gt;'Alarm List',
+<br />								'A_ALARM_GROUP_SELECTOR'=&gt;'Group selector',
+<br />								'A_ALARM_EMAIL_SETUP_TITLE'=&gt;'Email Sending',
+<br />								'A_ALARM_NO_ALARM_REGISTRED'=&gt;'No alarm registered.',
+<br />								'A_ALARM_DELETE_CONFIRMATION_TITLE'=&gt;'Deletion confirmation',
+<br />								'A_ALARM_BTN_NEW_ALARM'=&gt;'New $1 Alarm',
+<br />								'G_PROFILE_FORM_LINK_BACK_TO_THE_LIST'=&gt;'Back to the list',
+<br />								'A_ALARM_ALARM_PROPERTIES_LABEL'=&gt;'Alarm properties',
+<br />								'A_ALARM_FORM_LABEL_ALARM_DESCRIPTION'=&gt;'Alarm Description',
+<br />								'A_ALARM_FORM_LABEL_ALARM_CALCULATION_ACTIVATED'=&gt;'Alarm calculation activated',
+<br />								'A_ALARM_FORM_LABEL_ADDITIONAL_FIELD'=&gt;'Additional field',
+<br />								'A_ALARM_FORM_LABEL_TRIGGER'=&gt;'Trigger',
+<br />								'A_ALARM_FORM_FIELDSET_ADDITIONAL_FIELD_LIST'=&gt;'Additional field list',
+<br />								'A_ADVANCED_CONTEXT_TYPE_LABEL'=&gt;'Type',
+<br />								'A_ALARM_SELECT_MAKE_A_SELECTION_LABEL'=&gt;'Make a Selection',
+<br />								'A_ALARM_NFORMATION_TRIGGER'=&gt;'(Triggers are linked using an \'AND\' condition)',
+<br />								'A_ALARM_FORM_FIELDSET_TRIGGER_LIST'=&gt;'Trigger list',
+<br />								'A_ALARM_FORM_BTN_ADD_TRIGGER'=&gt;'Add a trigger',
+<br />								'A_TITRE_FENETRE_NETWORK_ELEMENT_SELECTION_ALARMES_SETUP'=&gt;'Network element selection',
+<br />								'A_NO_NA_FOR_FAMILY_LABEL'=&gt;'No network agregation for $1',
+<br />								'A_NO_TA_LABEL'=&gt;'No time agregation'
+<br />							)</span>			(line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Liste des messages affichés dans l'application</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a71">71</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructeur de la classe</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">AlarmModel</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$db_conf_url</span> = <span class="var-default">''</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methoddropAlarm" id="dropAlarm"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">dropAlarm</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a332">332</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Permet de supprimer une alarme de la BD de l'application</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> etat de la suppression de l'alarme dans la BD</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			dropAlarm
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alarm_type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alarm_family</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alarm_ta</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$del_sender</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$alarm_id</span><span class="var-description">: identifiant de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alarm_type</span><span class="var-description">: type de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alarm_family</span><span class="var-description">: famille de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alarm_ta</span><span class="var-description">: valeur de la ta de l'alarme</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetAlarmAdditionnalFields" id="getAlarmAdditionnalFields"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAlarmAdditionnalFields</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a220">220</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne les champs additionnels d'une alarme</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> la liste des champs additionnels de l'alarme</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getAlarmAdditionnalFields
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">"static"</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$alarm_id</span><span class="var-description">: identifiant de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$family</span><span class="var-description">: famille de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: type de l'alarme</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetAlarmCriticityValues" id="getAlarmCriticityValues"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAlarmCriticityValues</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a240">240</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne les valeurs des triggers d'une alarme en fonction d'un niveau de criticité sélectionné</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> les valeurs des triggers de l'alarme</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getAlarmCriticityValues
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$criticity</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">"static"</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$alarm_id</span><span class="var-description">: identifiant de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$family</span><span class="var-description">: famille de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$criticity</span><span class="var-description">: le niveau de criticité de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: type de l'alarme</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetAlarmList" id="getAlarmList"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAlarmList</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a91">91</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne la liste des alarmes d'une famille et d'un type donné</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> la liste des alarmes recherchées</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getAlarmList
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$family</span><span class="var-description">: famille des alarmes recherchées</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: type des alarmes recherchées</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetAlarmNetworkElements" id="getAlarmNetworkElements"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAlarmNetworkElements</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a567">567</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne la liste des ne d'une alarme</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> liste des ne de l'alarme</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getAlarmNetworkElements
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'static'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$alarm_id</span><span class="var-description">: identifiant de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: type de l'alarme</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetAlarmProperties" id="getAlarmProperties"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAlarmProperties</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a183">183</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne les propirétés d'une alarme</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> les propriétés de l'alarme</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getAlarmProperties
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">"static"</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$alarm_id</span><span class="var-description">: identifiant de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$family</span><span class="var-description">: famille de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: type de l'alarme</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetAlarmSuscribers" id="getAlarmSuscribers"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAlarmSuscribers</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a114">114</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne la liste des groupes de destinataires de l'alarme</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> la liste des groupes destinataires de l'alarme</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getAlarmSuscribers
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alarm_type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$alarm_id</span><span class="var-description">: identifiant de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alarm_type</span><span class="var-description">: type de l'alarme</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetAlarmTrigger" id="getAlarmTrigger"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAlarmTrigger</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a201">201</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne les triggers définis pour une alarme</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> la liste des triggers de l'alarme</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getAlarmTrigger
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">"static"</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$alarm_id</span><span class="var-description">: identifiant de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$family</span><span class="var-description">: famille de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: type de l'alarme</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetApplicationGroups" id="getApplicationGroups"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getApplicationGroups</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a166">166</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne les groupes disponibles dans l'application</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> la liste des groupes de l'application</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getApplicationGroups
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetCriticityLevels" id="getCriticityLevels"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCriticityLevels</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a362">362</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne les niveaux de criticité existants dans l'application</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> liste des niveaux de criticité</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">la</span>
+		<span class="method-name">
+			getCriticityLevels
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetKpis" id="getKpis"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getKpis</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a461">461</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne la liste des valeurs de type &quot;kpi&quot;</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> la liste des valeurs du type &quot;kpi&quot;</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getKpis
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$family</span><span class="var-description">: famille auquelles appartiennent les valeurs de type &quot;kpi&quot;</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetNALabel" id="getNALabel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getNALabel</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a304">304</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne le libellé d'une na sélectionnée</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> libellé de la na sélectionnée</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getNALabel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$na</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$na</span><span class="var-description">: nom de la na</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$family</span><span class="var-description">: famille de la na</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetNE" id="getNE"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getNE</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a508">508</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne les valeurs des na (appelées également ne) d'une famille</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> liste des ne</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getNE
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$na</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$family</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$na</span><span class="var-description">: nom de la na sélectionnée</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$family</span><span class="var-description">: famille de la na</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetNetworkAgregation" id="getNetworkAgregation"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getNetworkAgregation</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a272">272</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne les agregations reseaux d'une famille de l'application</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> la liste des na de la famille</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getNetworkAgregation
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$family</span><span class="var-description">: famille des na recherchées</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetRaws" id="getRaws"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getRaws</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a441">441</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne la liste des valeurs de type &quot;raw&quot;</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> la liste des valeurs du type &quot;raw&quot;</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getRaws
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$family</span><span class="var-description">: famille auquelles appartiennent les valeurs de type &quot;raw&quot;</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetTALabel" id="getTALabel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getTALabel</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a313">313</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getTALabel
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ta</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetTimeAgregation" id="getTimeAgregation"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getTimeAgregation</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a287">287</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne les agregations temporelles de l'application</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> la liste des agregations temporelles de l'application</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTimeAgregation
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetTriggerOperands" id="getTriggerOperands"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getTriggerOperands</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a381">381</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne les opérandes des triggers disponbiles dans l'application</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> la liste des opérandes disponibles</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTriggerOperands
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetTriggerTypes" id="getTriggerTypes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getTriggerTypes</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a394">394</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne les types de triggers disponibles dans l'application</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> liste des types de triggers disponibles</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">la</span>
+		<span class="method-name">
+			getTriggerTypes
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgetTriggerTypeValues" id="getTriggerTypeValues"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getTriggerTypeValues</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a409">409</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retourne la liste des valeurs d'un type de trigger sélectionné</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> liste des valeurs du type de triggers</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTriggerTypeValues
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$family</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$family</span><span class="var-description">: famille auquel appartient le type</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: nom du type</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsaveAlarmDefinition" id="saveAlarmDefinition"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">saveAlarmDefinition</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a593">593</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sauvegarde de la définition d'une alarme dans la BD de l'application</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> état de l'insertion de l'alarme dans la BD</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			saveAlarmDefinition
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$a_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$a_type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$a_family</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$a_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$a_desc</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$a_na</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$a_ne</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$a_ta</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$a_activate</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$a_triggers</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$a_additionnals</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$a_id</span><span class="var-description">: identifiant de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$a_type</span><span class="var-description">: type de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$a_family</span><span class="var-description">: famille de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$a_name</span><span class="var-description">: nom de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$a_desc</span><span class="var-description">: description de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$a_na</span><span class="var-description">: agregation réseau de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$a_ne</span><span class="var-description">: liste des ne définies pour l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$a_ta</span><span class="var-description">: agregation temporelle de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$a_activate</span><span class="var-description">: état de l'activation de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$a_triggers</span><span class="var-description">: liste des triggers de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$a_additionnals</span><span class="var-description">: liste des champs additionnels de l'alarme</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsaveAlarmSuscribers" id="saveAlarmSuscribers"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">saveAlarmSuscribers</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a137">137</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Permet de sauvegarder la sélection de groupes de destinataires attachés à une alarme</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> état de l'insertion des destinataires de l'alarme dans la BD</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			saveAlarmSuscribers
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$alarm_id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alarm_ta</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alarm_type</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$suscribers_list</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$alarm_id</span><span class="var-description">: identifiant de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alarm_ta</span><span class="var-description">: valeur de l'agregation temporelle de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alarm_type</span><span class="var-description">: type de l'alarme</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$suscribers_list</span><span class="var-description">: liste des destinataires de l'alarme</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodtranslate" id="translate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">translate</span> (line <span class="line-number"><a href="..//__filesource/fsource_Alarm__AlarmModel.class.php.html#a651">651</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Permet de transcrire les messages de l'application à partir de leurs identifiants</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> le message traduit</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			translate
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$word_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$word_id</span><span class="var-description">: identifiant du message</span>			</li>
+				</ul>
+		
+		
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 03 Aug 2008 18:03:10 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class networkElementSelection</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> networkElementSelection</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Classe networkElementSelection</p>
+<p class="description"><p>Permet d'afficher une IHM listant des éléments réseaux</p></p>
+	<ul class="tags">
+				<li><span class="field">copyright:</span> ©2008 Astellia</li>
+				<li><span class="field">version:</span> 1.0.0</li>
+				<li><span class="field">author:</span> christophe chaput c.chaput@astellia.com</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_networkElementSelection_class_php.html">/networkElementSelection.class.php</a> (line <span class="field"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a13">13</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$freeInputField" title="details" class="var-name">$freeInputField</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$htmlIdPrefix" title="details" class="var-name">$htmlIdPrefix</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$openButtonProperties" title="details" class="var-name">$openButtonProperties</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$saveFieldProperties" title="details" class="var-name">$saveFieldProperties</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$setOpenButtonPropertiesCalled" title="details" class="var-name">$setOpenButtonPropertiesCalled</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$tabList" title="details" class="var-name">$tabList</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$viewCurrentSelectionContent" title="details" class="var-name">$viewCurrentSelectionContent</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$viewCurrentSelectionContentUrl" title="details" class="var-name">$viewCurrentSelectionContentUrl</a>
+				</div>
+								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$windowTitle" title="details" class="var-name">$windowTitle</a>
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">networkElementSelection</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#addTabInIHM" title="details" class="method-name">addTabInIHM</a>
+											(<span class="var-type">id</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$label</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$url_to_get_list</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$url_for_search</span> = <span class="var-default">''</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#displayException" title="details" class="method-name">displayException</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">html</span>
+										<a href="#generateButton" title="details" class="method-name">generateButton</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">html</span>
+										<a href="#generateFreeInputField" title="details" class="method-name">generateFreeInputField</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">html</span>
+										<a href="#generateIHM" title="details" class="method-name">generateIHM</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">html</span>
+										<a href="#generateOption" title="details" class="method-name">generateOption</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">html</span>
+										<a href="#generateSaveField" title="details" class="method-name">generateSaveField</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">html</span>
+										<a href="#generateSearch" title="details" class="method-name">generateSearch</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">html</span>
+										<a href="#generateTab" title="details" class="method-name">generateTab</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#initJavascriptValues" title="details" class="method-name">initJavascriptValues</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setFreeInputField" title="details" class="method-name">setFreeInputField</a>
+											(<span class="var-type">bool</span>&nbsp;<span class="var-name">$display</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setHtmlIdPrefix" title="details" class="method-name">setHtmlIdPrefix</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setOpenButtonProperties" title="details" class="method-name">setOpenButtonProperties</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$css_class_on</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$css_class_off</span> = <span class="var-default">''</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setSaveFieldProperties" title="details" class="method-name">setSaveFieldProperties</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$separator</span>, <span class="var-type">boll</span>&nbsp;<span class="var-name">$display</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setViewCurrentSelectionContentButtonProperties" title="details" class="method-name">setViewCurrentSelectionContentButtonProperties</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$url_to_get_selection</span> = <span class="var-default">''</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setWindowTitle" title="details" class="method-name">setWindowTitle</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>)
+									</div>
+							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$freeInputField" id="$freeInputField"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$freeInputField</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a76">76</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">booléen qui définit si on doit afficher le champ de saisie libre.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$htmlIdPrefix" id="$htmlIdPrefix"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$htmlIdPrefix</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a58">58</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Préfixe à ajouter à tous les identifiants 'id' html</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$openButtonProperties" id="$openButtonProperties"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$openButtonProperties</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Style CSS à appliquer au bouton qui ouvre l'interface lorsque aucun élément n'est sélectionné.</p>
+<p class="description"><p>$this-&gt;openButtonProperties['id']  : id de l'élément html qui permet d'afficher l'IHM 	$this-&gt;openButtonProperties['css_class_on']  : classe css à appliquer quand un élément est sélectionné 	$this-&gt;openButtonProperties['css_class_off'] : classe css à appliquer quand aucun élément n'est sélectionné</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$saveFieldProperties" id="$saveFieldProperties"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$saveFieldProperties</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a51">51</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Contient le nom de la propriété name et id du champ input hidden dans lequel la sélection courante est sauvegardée.</p>
+<p class="description"><p>$saveFieldProperties['id']  	$saveFieldProperties['separator']  	$saveFieldProperties['display']  	$saveFieldProperties['value']</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$setOpenButtonPropertiesCalled" id="$setOpenButtonPropertiesCalled"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$setOpenButtonPropertiesCalled</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a82">82</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">booléen qui définit si on doit afficher le champ de saisie libre.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$tabList" id="$tabList"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$tabList</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a41">41</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tableau contenant la liste des onglets à afficher. Pour chaque onglet on définit la label et les url (avec paramètre GET) vers  le fichier qui permet de liste le contenu et celui qui permet de faire la recherche.</p>
+<p class="description"><p>$tabList[$i]['label'] 		  ['url_get'] 		  ['url_search']</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$viewCurrentSelectionContent" id="$viewCurrentSelectionContent"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$viewCurrentSelectionContent</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a70">70</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">définit si le bouton 'View current selection content' est visible.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$viewCurrentSelectionContentUrl" id="$viewCurrentSelectionContentUrl"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$viewCurrentSelectionContentUrl</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a64">64</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">fichier qui sera intérrogé via une requête ajax lorsque l'utilisateur clique sur le bouton 'View current selection content'</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$windowTitle" id="$windowTitle"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$windowTitle</span>
+						(line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a21">21</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Titre de la fenêtre javascript.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a89">89</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructeur de la classe networkElementSelection</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">networkElementSelection</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodaddTabInIHM" id="addTabInIHM"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">addTabInIHM</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a185">185</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">addTabInIHM : permet d'ajouter un onglet à l'interface.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addTabInIHM
+		</span>
+					(<span class="var-type">id</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$label</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$url_to_get_list</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$url_for_search</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$label</span><span class="var-description">: label à afficher dans l'IHM</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url_to_get_list</span><span class="var-description">: url complète vers le fichier qui permet de récupérer la liste des éléments de l'onglet. Il faut que cette url contienne les paramètre GET si il y en a.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url_for_search</span><span class="var-description">: url complète vers le fichier qui permet de recherche des éléments. Il faut que cette url contienne les paramètre GET si il y en a.</span>			</li>
+					<li>
+				<span class="var-type">id</span>
+				<span class="var-name">$id</span><span class="var-description">: string $id identifiant id qui sera donné au div contenant la liste des éléments (note : le div qui affiche le nom de l'onglet a pour id : 'id'_title)</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methoddisplayException" id="displayException"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">displayException</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a172">172</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">displayException :  affiche un message d'erreur.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			displayException
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: texte à afficher.</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgenerateButton" id="generateButton"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/PrivateMethod.png" />
+		<span class="method-title">generateButton</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a289">289</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">generateButton : permet de générer le code html des boutons de l'IHM (bouto save, reset...)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">html</span>
+		<span class="method-name">
+			generateButton
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgenerateFreeInputField" id="generateFreeInputField"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/PrivateMethod.png" />
+		<span class="method-title">generateFreeInputField</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a315">315</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">generateFreeInputField : permet de créer le champ input qui permet à l'utilisateur de saisir directement un élément.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">html</span>
+		<span class="method-name">
+			generateFreeInputField
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgenerateIHM" id="generateIHM"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">generateIHM</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a328">328</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">generateIHM : permet de générer le code html de l'IHM</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">html</span>
+		<span class="method-name">
+			generateIHM
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgenerateOption" id="generateOption"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/PrivateMethod.png" />
+		<span class="method-title">generateOption</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a276">276</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">generateOption : permet de générer le code html de la zone options (icônes view current selection...)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">html</span>
+		<span class="method-name">
+			generateOption
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgenerateSaveField" id="generateSaveField"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/PrivateMethod.png" />
+		<span class="method-title">generateSaveField</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a302">302</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">generateSaveField : permet de créer le champ input qui stocke les données sélectionnées.</p>
+<p class="description"><p>On créer 2 champs : un pour stocker les éléments sélectionnés et l'autre pour stocker le séparateur choisit.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">html</span>
+		<span class="method-name">
+			generateSaveField
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgenerateSearch" id="generateSearch"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/PrivateMethod.png" />
+		<span class="method-title">generateSearch</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a258">258</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">generateSearch : permet de générer le code html de la partie de recherche</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">html</span>
+		<span class="method-name">
+			generateSearch
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgenerateTab" id="generateTab"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/PrivateMethod.png" />
+		<span class="method-title">generateTab</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a228">228</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">generateTab : permet de générer le code html des onglets</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">html</span>
+		<span class="method-name">
+			generateTab
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodinitJavascriptValues" id="initJavascriptValues"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/PrivateMethod.png" />
+		<span class="method-title">initJavascriptValues</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a383">383</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">initJavascriptValues : permet de créer des champ caché contenant les paramètres nécessaires au fonctionnement  du script javascript.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			initJavascriptValues
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodsetFreeInputField" id="setFreeInputField"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setFreeInputField</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a115">115</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">setFreeInputField : permet de définir si le champ de saisie libre est visible.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setFreeInputField
+		</span>
+					(<span class="var-type">bool</span>&nbsp;<span class="var-name">$display</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$display</span><span class="var-description">: : 0 ou 1</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetHtmlIdPrefix" id="setHtmlIdPrefix"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setHtmlIdPrefix</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a128">128</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">setHtmlIdPrefix : permet de définir un préfixe à ajouter à tous les identifiants 'id' html  cela permet d'éviter d'avoir des id identiques.</p>
+<p class="description"><p>Attention, si cette méthode est utilisée, il faut l'appeler juste après le constructeur de la classe et  venant la méthode setOpenButtonProperties pour que le préfixe soit bien pris en compte..</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setHtmlIdPrefix
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: préfixe</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetOpenButtonProperties" id="setOpenButtonProperties"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setOpenButtonProperties</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a142">142</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">setOpenButtonProperties : permet de définir le style css du bouton qui permet d'ouvrir l'interface et son id.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setOpenButtonProperties
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$css_class_on</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$css_class_off</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$css_class_on</span><span class="var-description">: classe css à appliquer au bouton quand un ou des éléments sont sélectionnés</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$css_class_off</span><span class="var-description">: classe css à appliquer au bouton quand aucun élément n'est sélectionné</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: id de l'élément html qui permet d'afficher l'IHM</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetSaveFieldProperties" id="setSaveFieldProperties"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setSaveFieldProperties</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a158">158</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">setSaveFieldProperties : permet de choisir le nom du champ 'name' et 'id' du champ input hidden qui contient la liste des éléments sélectionnés.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setSaveFieldProperties
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$separator</span>, <span class="var-type">boll</span>&nbsp;<span class="var-name">$display</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: nom de la propriété 'id' du champ</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: valeur courrante</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$separator</span><span class="var-description">: séparateur des valeurs stockées dans le champ input</span>			</li>
+					<li>
+				<span class="var-type">boll</span>
+				<span class="var-name">$display</span><span class="var-description">: 0 ou 1 si = 1, le champ caché qui permet de stocker les données est affiché.</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetViewCurrentSelectionContentButtonProperties" id="setViewCurrentSelectionContentButtonProperties"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setViewCurrentSelectionContentButtonProperties</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a216">216</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">setViewCurrentSelectionContentButtonProperties : permet de paramétrer le fichier qui sera intérrogé via une requête ajax lorsque l'utilisateur  clique sur le bouton 'View current selection content'. Ce fichier peut avoir des paramètres. Il doit retourner la liste des éléments contenu dans la sélection courante avec leurs labels.</p>
+<p class="description"><p>Le script rajoute automatiquement en paramètre $_GET : 	$_GET['save_input'] : contenu du champ input dans lequel est stocké la sélection courrante. Attention, le nom du paramètre GET correspond au nom du champ input 	paramétré dans la méthode setSaveFieldProperties. (save_input est noté à totre d'exemple)  	$_GET['separator'] : contient le séparateur des champs enregistrés.</p><p>Attention : si url_to_get_selection est vide, le bouton sera affiché mais le contenu retourné sera une simple liste des identifiants stockés  dans le champ input.</p><p>Note : si cette méthode n'est pas appelée, le bouton n'est pas affiché.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setViewCurrentSelectionContentButtonProperties
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$url_to_get_selection</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url_to_get_selection</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetWindowTitle" id="setWindowTitle"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setWindowTitle</span> (line <span class="line-number"><a href="..//__filesource/fsource_networkElementSelection__networkElementSelection.class.php.html#a105">105</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">setWindowTitle : permet de définir le titre de la fenêtre</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setWindowTitle
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: titre de la fenêtre</span>			</li>
+				</ul>
+		
+		
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 03 Aug 2008 18:03:12 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</div></body>
+</html>

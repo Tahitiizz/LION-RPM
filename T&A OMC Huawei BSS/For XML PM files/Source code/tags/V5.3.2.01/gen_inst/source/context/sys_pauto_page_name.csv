@@ -1,0 +1,61 @@
+id_page	page_name	page_type	droit
+dshd.0095.01.call_setup_and_drop	CALL SETUP AND DROP	page	customisateur
+gtms.0095.01.call_setup	Call Setup	gtm	customisateur
+gtms.0095.01.sdcch_and_tch_assignment	SDCCH And TCH Assignment	gtm	customisateur
+gtms.0095.01.sdcch_blocking_and_drop	SDCCH Blocking And Drop	gtm	customisateur
+gtms.0095.01.call_blocking_and_drop	Call Blocking And Drop	gtm	customisateur
+gtms.0095.01.call_success	Call Success	gtm	customisateur
+dshd.0095.01.sdcch	SDCCH	page	customisateur
+gtms.0095.01.immediate_assignment	Immediate Assignment	gtm	customisateur
+gtms.0095.01.sdcch_drop_causes	SDCCH Drop Causes	gtm	customisateur
+gtms.0095.01.sdcch_load	SDCCH Load	gtm	customisateur
+dshd.0095.01.tch	TCH	page	customisateur
+gtms.0095.01.assignment	Assignment	gtm	customisateur
+gtms.0095.01.tch_drop_causes	TCH Drop Causes	gtm	customisateur
+gtms.0095.01.tch_traffic	TCH Traffic	gtm	customisateur
+gtms.0095.01.tch_interference_band	TCH Interference Band	gtm	customisateur
+dshd.0095.01.handovers	HANDOVERS	page	customisateur
+gtms.0095.01.handover_causes	Handover Causes	gtm	customisateur
+gtms.0095.01.handover	Handover	gtm	customisateur
+gtms.0095.01.intra_cell_handovers	Intra Cell Handovers	gtm	customisateur
+gtms.0095.01.inter_cell_intra_bsc_handovers	Inter Cell Intra BSC Handovers	gtm	customisateur
+gtms.0095.01.inter_cell_inter_bsc_handovers	Inter Cell Inter BSC Handovers	gtm	customisateur
+dshd.0095.01.resource_availability	RESOURCE AVAILABILITY	page	customisateur
+gtms.0095.01.cell_availability	Cell Availability	gtm	customisateur
+gtms.0095.01.trx_availability	TRX Availability	gtm	customisateur
+gtms.0095.01.tch_availability	TCH Availability	gtm	customisateur
+gtms.0095.01.sdcch_availability	SDCCH Availability	gtm	customisateur
+dshd.0095.01.traffic_at_2_gos	TRAFFIC AT 2% GOS	page	customisateur
+gtms.0095.01.tch_traffic_at_2gos	TCH Traffic at 2GOS	gtm	customisateur
+gtms.0095.01.tch_ressource_needed_at_2gos	TCH ressource needed at 2GOS	gtm	customisateur
+dshd.0095.02.traffic	TRAFFIC	page	customisateur
+gtms.0095.02.traffic_volumes	Traffic Volumes	gtm	customisateur
+gtms.0095.02.llc_volumes	LLC Volumes	gtm	customisateur
+gtms.0095.02.paging	Paging	gtm	customisateur
+dshd.0095.02.tbf_allocation	TBF ALLOCATION	page	customisateur
+gtms.0095.02.tbf_allocation_efficiency	TBF Allocation Efficiency	gtm	customisateur
+gtms.0095.02.tbf_rejection_congestion	TBF Rejection Congestion	gtm	customisateur
+dshd.0095.02.throughput	THROUGHPUT	page	customisateur
+gtms.0095.02.gprs_throughput	GPRS Throughput	gtm	customisateur
+gtms.0095.02.edge_throughput	EDGE Throughput	gtm	customisateur
+gtms.0095.02.throughput_per_tbf	Throughput per TBF	gtm	customisateur
+gtms.0095.02.throughput_per_pdch	Throughput per PDCH	gtm	customisateur
+dshd.0095.02.rlc_retransmissions	RLC RETRANSMISSIONS	page	customisateur
+gtms.0095.02.rlc_retransmission_rate_gprs	RLC Retransmission Rate GPRS	gtm	customisateur
+gtms.0095.02.rlc_retransmission_rate_egprs	RLC Retransmission Rate EGPRS	gtm	customisateur
+dshd.0095.02.tbf_drop_causes	TBF DROP CAUSES	page	customisateur
+gtms.0095.02.tbf_drop_causes	TBF Drop Causes	gtm	customisateur
+dshd.0095.02.data_utilization	DATA UTILIZATION	page	customisateur
+gtms.0095.02.data_utilization	Data Utilization	gtm	customisateur
+gtms.0095.02.pdch_availability	PDCH Availability	gtm	customisateur
+dshd.0095.03.downlink_performance	DOWNLINK PERFORMANCE	page	customisateur
+gtms.0095.03.rxqualdistdown	RXQUALDISTDOWN	gtm	customisateur
+gtms.0095.03.rxlevel_distribution_downlink	RXLEVEL DISTRIBUTION DOWNLINK	gtm	customisateur
+gtms.0095.03.time_advance_distribution	TIME ADVANCE DISTRIBUTION	gtm	customisateur
+dshd.0095.03.uplink_performance	UPLINK PERFORMANCE	page	customisateur
+gtms.0095.03.rxqualdistup	RXQUALDISTUP	gtm	customisateur
+gtms.0095.03.rxlevel_distribution_uplink	RXLEVEL DISTRIBUTION UPLINK	gtm	customisateur
+gtms.0095.03.fer_distribution	FER DISTRIBUTION	gtm	customisateur
+gtms.0095.03.interference_band_distribution	INTERFERENCE BAND DISTRIBUTION	gtm	customisateur
+dshd.0095.03.tranceiver_availability	TRANCEIVER AVAILABILITY	page	customisateur
+gtms.0095.03.tranceiver_availability	Tranceiver Availability	gtm	customisateur

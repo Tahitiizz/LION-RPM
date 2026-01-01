@@ -1,0 +1,148 @@
+id_data	data_legend	position_ordonnee	display_type	line_design	color	filled_color
+seri.gtms.0071.01.00001.01	Call Setup Succes Rate (CSSR)	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0071.01.00001.02	NB RAB ESTABLISHMENT ATTEMPT	right	bar	none	#333333	#33FF00@0.5
+seri.gtms.0071.01.00002.01	Call Setup Succes Rate (CSSR) CS	left	line	circle	#9933FF	#ffffff@1
+seri.gtms.0071.01.00002.02	NB RAB ESTABLISHMENT ATTEMPT CS	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00003.01	Call Setup Succes Rate (CSSR) PS	left	line	circle	#FF0000	#ffffff@1
+seri.gtms.0071.01.00003.02	NB RAB ESTABLISHMENT ATTEMPT PS	right	bar	none	#333333	#9900FF@0.5
+seri.gtms.0071.01.00004.01	CALL DROP RATE	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00004.02	NB RAB RELEASE	right	bar	none	#333333	#FFAA00@0.5
+seri.gtms.0071.01.00005.01	CALL DROP RATE CS	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00005.02	NB RAB RELEASE CS	right	bar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00006.01	CALL DROP RATE PS	left	line	circle	#0000FF	#ffffff@1
+seri.gtms.0071.01.00006.02	NB RAB RELEASE PS	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00007.01	RRC CONNECTION SETUP SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00007.02	NB RRC CONNECTION REQ	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00008.01	RRC CONNECTION SETUP SR CS SERV	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00008.03	RRC CONNECTION SETUP SR PS SERV	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00008.04	NB RRC CONNECTION REQ PS SERV	right	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00008.05	NB RRC CONNECTION REQ SMS	right	cumulatedbar	none	#333333	#FF0099@0.5
+seri.gtms.0071.01.00008.02	NB RRC CONNECTION REQ CS SERV	right	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00009.01	RAB ESTABLISHMENT SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00009.02	NB RAB ESTABLISHMENT ATTEMPT	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00010.01	RAB ESTABLISHMENT SR SPEECH	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00010.02	NB RAB ESTABLISHMENT ATTEMPT SPEECH	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00010.03	RAB ESTABLISHMENT SR Real Time CS DATA	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00010.04	NB RAB ESTABLISHMENT ATTEMPT Real Time CS DATA	right	bar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00011.01	RAB ESTABLISHMENT SR Real Time PS DATA	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0071.01.00011.02	NB RAB ESTABLISHMENT ATTEMPT Real Time PS DATA	right	bar	none	#333333	#0000FF@0.5
+seri.gtms.0071.01.00011.03	RAB ESTABLISHMENT SR PS Non Real Time PS DATA	left	line	circle	#006600	#ffffff@1
+seri.gtms.0071.01.00011.04	NB RAB ESTABLISHMENT ATTEMPT Non Real Time PS DATA	right	bar	none	#333333	#FF0055@0.5
+seri.gtms.0071.01.00012.01	RAB ESTABLISHMENT SR HSDPA	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00012.02	NB RAB ESTABLISHMENT ATTEMPT HSDPA	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00012.03	RAB ESTABLISHMENT SR EUL (HSUPA)	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00012.04	NB RAB ESTABLISHMENT ATTEMPT EUL (HSUPA)	right	bar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00013.01	CALL DROP RATE SPEECH	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00013.02	NB RAB RELEASE SPEECH	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00013.03	CALL DROP RATE Real Time CS DATA	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00013.04	NB RAB RELEASE Real Time CS DATA	right	bar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00014.01	NB SYSTEM RELEASE SPEECH	right	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00014.02	DROPPED CALL RATE SPEECH DUE TO HANDOVER	left	cumulatedbar	none	#333333	#00CC00@0.5
+seri.gtms.0071.01.00014.04	DROPPED CALL RATE SPEECH DUE TO MISSING NEIGHBORS	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0071.01.00014.05	DROPPED CALL RATE SPEECH LOST UL SYNCH	left	cumulatedbar	none	#333333	#ff0000@0.5
+seri.gtms.0071.01.00014.06	DROPPED CALL RATE SPEECH OTHER CAUSES	left	cumulatedbar	none	#333333	#AA0070@0.5
+seri.gtms.0071.01.00014.07	DROPPED CALL RATE SPEECH RNC	left	cumulatedbar	none	#333333	#FF9900@0.5
+seri.gtms.0071.01.00014.08	DROPPED CALL RATE SPEECH BTS	left	cumulatedbar	none	#333333	#990000@0.5
+seri.gtms.0071.01.00014.09	DROPPED CALL RATE SPEECH UE	left	cumulatedbar	none	#333333	#0000FF@0.5
+seri.gtms.0071.01.00014.10	DROPPED CALL RATE SPEECH IU	left	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00014.11	DROPPED CALL RATE SPEECH IUR	left	cumulatedbar	none	#333333	#c0c0c0@0.5
+seri.gtms.0071.01.00014.12	DROPPED CALL RATE SPEECH RADIO	left	cumulatedbar	none	#333333	#AA7000@0.5
+seri.gtms.0071.01.00015.01	CALL DROP RATE Non Real Time PS DATA	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0071.01.00015.02	NB RAB RELEASE Non Real Time PS DATA	right	bar	none	#333333	#FF0099@0.5
+seri.gtms.0071.01.00015.03	CALL DROP RATE Real Time PS DATA	left	line	circle	#006600	#ffffff@1
+seri.gtms.0071.01.00015.04	NB RAB RELEASE Real Time PS DATA	right	bar	none	#333333	#FF0055@0.5
+seri.gtms.0071.01.00016.01	CALL DROP RATE HSDPA	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00016.02	NB RAB RELEASE HSDPA	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00016.03	CALL DROP RATE EUL (HSUPA)	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00016.04	NB RAB RELEASE EUL (HSUPA)	right	bar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00017.01	NB FAILED RAB EST ATTEMPT	right	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00017.02	RATE FAILED RAB EST ATTEMPT EXCEED CONN LIMIT	left	cumulatedbar	none	#333333	#00CC00@0.5
+seri.gtms.0071.01.00017.03	RATE FAILED RAB EST ATTEMPT LACK DL ASE	left	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00017.04	RATE FAILED RAB EST ATTEMPT LACK DL CHNL CODE	left	cumulatedbar	none	#333333	#FFFF00@0.5
+seri.gtms.0071.01.00017.05	RATE FAILED RAB EST ATTEMPT LACK DL HW	left	cumulatedbar	none	#333333	#ff0000@0.5
+seri.gtms.0071.01.00017.06	RATE FAILED RAB EST ATTEMPT LACK DL PWR	left	cumulatedbar	none	#333333	#FF9900@0.5
+seri.gtms.0071.01.00017.07	RATE FAILED RAB EST ATTEMPT LACK UL ASE	left	cumulatedbar	none	#333333	#0000FF@0.5
+seri.gtms.0071.01.00017.08	RATE FAILED RAB EST ATTEMPT LACK UL HW	left	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00018.01	CHANNEL DOWNSWITCH SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00018.02	NB CHANNEL DOWNSWITCH ATTEMPT	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00018.03	CHANNEL UPSWITCH SR	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00018.04	NB CHANNEL UPSWITCH ATTEMPT	right	bar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00019.01	HSDPA CHANNEL UPSWITCH SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00019.02	NB HSDPA CHANNEL UPSWITCH ATTEMPT	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00019.03	EUL CHANNEL UPSWITCH SR	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00019.04	NB EUL CHANNEL UPSWITCH ATTEMPT	right	bar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00020.01	CELL AVAILABILITY	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00020.02	CELL DOWNTIME MANUAL	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00020.03	CELL DOWNTIME SYSTEM	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0071.01.00021.01	HS_AVAILABILITY	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00021.02	CELL HS DOWNTIME MANUAL	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00021.03	CELL HS DOWNTIME SYSTEM	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0071.01.00022.01	EUL_AVAILABILITY	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00022.02	CELL EUL DOWNTIME MANUAL	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0071.01.00022.03	CELL EUL DOWNTIME SYSTEM	left	line	circle	#006600	#ffffff@1
+seri.gtms.0071.01.00023.01	CONGESTION DL	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00023.02	CONGESTION UL	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00024.01	RSSI UL AVG	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00025.01	RADIO LINK ADDITION SUCCESS RATE	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00025.02	NB TIMES RL ADD TO ACTIVE SET	right	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00025.03	NB TIMES RL DEL FROM ACTIVE SET	right	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00025.04	NB TIMES RL REP IN ACTIVE SET	right	cumulatedbar	none	#333333	#FF0099@0.5
+seri.gtms.0071.01.00036.01	INTRA SYSTEM INTRA FREQUENCY HHO SR	left	line	none	#FF0000	#ffffff@1
+seri.gtms.0071.01.00036.02	NB INTRA SYSTEM INTRA FREQUENCY HHO ATTEMPT	right	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0071.01.00036.03	INTRA SYSTEM INTRA FREQUENCY HHO SR FOR REAL TIME	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0071.01.00036.04	NB INTRA SYST INTRA FREQ HHO ATTEMPT FOR REAL TIME	right	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00036.05	INTRA SYST INTRA FREQ HHO SR FOR NON REAL TIME	left	line	circle	#006600	#ffffff@1
+seri.gtms.0071.01.00036.06	NB INTRA SYST INTRA FREQ HHO NON REAL TIME ATTEMPT	right	cumulatedbar	none	#333333	#FF0099@0.5
+seri.gtms.0071.01.00037.01	INTRA SYSTEM INTER FREQ HHO SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00037.02	NB INTRA SYSTEM INTER FREQ HHO ATTEMPT	right	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0071.01.00037.03	INTRA SYSTEM INTER FREQ HHO SR FOR REAL TIME	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0071.01.00037.04	NB INTRA SYST INTER FREQ HHO ATTEMPT FOR REAL TIME	right	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00037.05	INTRA SYSTEM INTER FREQ HHO SR FOR NON REAL TIME	left	line	circle	#006600	#ffffff@1
+seri.gtms.0071.01.00037.06	NB INTRA SYST INTER FREQ HHO NON REAL TIME ATTEMPT	right	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00038.01	INTER SYSTEM HHO SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00038.02	NB INTER SYSTEM HHO ATTEMPT	right	cumulatedbar	none	#333333	#FF0000@0.5
+seri.gtms.0071.01.00038.03	INTER SYSTEM HHO SR FOR REAL TIME	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0071.01.00038.04	NB INTER SYSTEM HHO ATTEMPT FOR REAL TIME	right	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00038.05	INTER SYSTEM HHO SR FOR NON REAL TIME	left	line	circle	#006600	#ffffff@1
+seri.gtms.0071.01.00038.06	NB INTER SYSTEM HHO ATTEMPT FOR NON REAL TIME	right	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00026.01	HSDPA CELL CHANGE SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00026.02	NB HSDPA CELL CHANGE ATTEMPTS	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00027.01	EUL (HSUPA) CELL CHANGE SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00027.02	NB EUL (HSUPA) CELL CHANGE ATTEMPTS	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00028.01	UL CMODE SR	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00028.02	NB UL CMODE ATTEMPT	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00028.03	DL CMODE SR	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00028.04	NB DL CMODE ATTEMPT	right	bar	none	#333333	#006600@0.5
+seri.gtms.0071.01.00029.01	INTERFREQ MEAS RATE WITH CMODE	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00029.02	NB INTERFREQ MEAS CM START	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00030.01	INTERRAT MEAS RATE WITH CMODE	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00030.02	NB INTERRAT MEAS CM START	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.01.00031.01	TRAFFIC ERL SPEECH	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00031.02	TRAFFIC ERL Real Time CS Data	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00032.01	TRAFFIC DL Real Time PS Data	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00032.02	TRAFFIC UL Real Time PS Data	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00032.03	TRAFFIC DL R99 Non Real Time PS Data	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0071.01.00032.04	TRAFFIC UL R99 Non Real Time PS Data	left	line	circle	#006600	#ffffff@1
+seri.gtms.0071.01.00033.01	TRAFFIC DL HSDPA Non Real Time PS Data	left	line	square	#FF9900	#ffffff@1
+seri.gtms.0071.01.00033.02	TRAFFIC UL EUL (HSUPA) Non Real Time PS Data	left	line	circle	#9900FF	#ffffff@1
+seri.gtms.0071.01.00034.01	DL TOT Non Real Time PS Data THROUGHPUT	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00034.02	UL TOT Non Real Time PS Data THROUGHPUT	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00034.03	DL USER Non Real Time PS Data THROUGHPUT	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0071.01.00034.04	UL USER Non Real Time PS Data THROUGHPUT	left	line	circle	#006600	#ffffff@1
+seri.gtms.0071.01.00035.01	DL HSDPA TOT Non Real Time PS Data THROUGHPUT	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.01.00035.02	UL HSUPA TOT Non Real Time PS Data THROUGHPUT	left	line	circle	#33FF00	#ffffff@1
+seri.gtms.0071.01.00035.03	DL HSDPA USER Non Real Time PS Data THROUGHPUT	left	line	square	#0099FF	#ffffff@1
+seri.gtms.0071.01.00035.04	UL HSUPA USER Non Real Time PS Data THROUGHPUT	left	line	circle	#006600	#ffffff@1
+seri.gtms.0071.04.00001.01	INTERFREQ HO SR CS SPEECH	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.04.00001.02	NB ATT NON BLIND INTERFREQ HO CS SPEECH	right	bar	none	#333333	#0099FF@0.5
+seri.gtms.0071.04.00001.03	INTERFREQ HO SR CS NON SPEECH	left	line	square	#33FF00	#ffffff@1
+seri.gtms.0071.04.00001.04	NB ATT NON BLIND INTERFREQ HO CS DATA	right	bar	none	#333333	#006600@0.5
+seri.gtms.0071.04.00002.01	INTERFREQ HO SR Non Real Time PS Data 	left	line	circle	#0099FF	#ffffff@1
+seri.gtms.0071.04.00002.02	NB ATT NON BLIND INTERFREQ HO Non Real Time PS Data 	right	bar	none	#333333	#FF0099@0.5
+seri.gtms.0071.04.00002.03	INTERFREQ HO SR Real Time PS Data 	left	line	circle	#006600	#ffffff@1
+seri.gtms.0071.04.00002.04	NB ATT NON BLIND INTERFREQ HO Real Time PS Data 	right	bar	none	#333333	#FF0055@0.5
+seri.gtms.0071.04.00003.01	IRAT HO SR OUTGOING SPEECH	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.04.00003.02	NB ATT IRAT HO SPEECH	right	cumulatedbar	none	#333333	#0099FF@0.5
+seri.gtms.0071.04.00003.03	NB ATT IRAT SB HO SPEECH	right	cumulatedbar	none	#333333	#006600@0.5
+seri.gtms.0071.04.00004.01	IRAT CELL CHANGE SR OUTGOING	left	line	square	#FF0000	#ffffff@1
+seri.gtms.0071.04.00004.02	NB ATT IRAT CELL CHANGE	right	cumulatedbar	none	#333333	#0099FF@0.5
